@@ -1,0 +1,42 @@
+.header {
+  @include outer-container;
+  font-size: ds-rem-calc(19);
+  padding: 60px 0;
+
+  a {
+    line-height: 50px;
+  }
+
+  &__logo {
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+
+    a { font-size: 0; }
+  }
+
+  &__navigation {
+    float: left;
+
+    a {
+      color: $ds-color-white;
+      margin-left: 20px;
+
+      &:hover {
+        color: $ds-color-orange;
+      }
+    }
+  }
+
+  &__cta {
+    float: right;
+
+    a {
+      color: $ds-color-green;
+
+      &:hover {
+        color: $ds-color-white;
+      }
+    }
+  }
+}

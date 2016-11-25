@@ -2,7 +2,11 @@
   "name": "kollegorna-middleman-boilerplate",
   "version": "1.0.0",
   "dependencies": {
-    "normalize-scss"  : "~3.0.3",
-    "modernizr": "~2.8.3"
+    "normalize-scss": "~3.0.3",
+    "modernizr": "~2.8.3",
+    "kollegorna-design-system": "kollegorna/design-system#2017",
+    "jquery": "~2.1.4",
+    "neat": "^1.8.0",
+    "packery": "~1.4.3"
   }
 }
