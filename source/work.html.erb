@@ -1,0 +1,51 @@
+---
+title: Case Studies
+---
+
+<main role="main" class="index">
+  <section class="index__feed">
+    <div class="index__feed__blocks feed">
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Lanneberg Bexelius",
+        :text => "Company branding for a personal branding company",
+        :image => "feed/case-study-lb.png",
+        :background_color => "#3b1c32",
+        :text_color => "white",
+        :full_width => "true"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Celine Beyond",
+        :text => "Be the change you want to hear in the world",
+        :image => "feed/case-study-celine-beyond.png",
+        :background_color => "#1eff7f",
+        :text_color => "black"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "The Icebreaker Machine",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-icebreaker.png",
+        :background_color => "#b3a476",
+        :text_color => "white"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-vembi.png",
+        :background_color => "#f1cb30",
+        :text_color => "white"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "SKL Genombrott",
+        :text => "Be the change you want to hear in the world",
+        :image => "feed/case-study-celine-beyond.png",
+        :background_color => "#0084ac",
+        :text_color => "white"
+      }) %>
+
+    </div>
+  </section>
+</main>

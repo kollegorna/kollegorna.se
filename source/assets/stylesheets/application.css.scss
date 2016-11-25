@@ -1,6 +1,27 @@
 @charset "utf-8";
-@import "normalize-scss/normalize";
 
-main {
-  text-align: center;
-}
+// --
+// Libraries
+// --
+@import "normalize-scss/normalize";
+@import "neat/app/assets/stylesheets/neat";
+
+// --
+// Kollegorna Design System
+// --
+@import "kollegorna-design-system/scss/design-system";
+
+// --
+// Partials
+// --
+@import "partials/__partials";
+
+// --
+// Templates
+// --
+@import "templates/__templates";
+
+// --
+// Components
+// --
+@import "components/__components";

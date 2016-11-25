@@ -1,0 +1,11 @@
+<article class="block block--blip <%= defined?(full_width) ? "full" : "" %>">
+  <div class="block__text">
+    <h3><%= text %></h3>
+  </div>
+
+  <% if defined?(image) %>
+    <div class="block__image">
+      <%= image_tag(image) %>
+    </div>
+  <% end %>
+</article>

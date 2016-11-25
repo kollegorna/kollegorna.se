@@ -1,7 +1,98 @@
 ---
-title: Index
+title: Kollegorna
 ---
-<main role="main">
-  <p>This is the boilerplate for the Middleman projects we do at <a href="https://www.kollegorna.se">Kollegorna</a>.</p>
-  <p><%= image_tag("kollegorna-k.svg") %></p>
+
+<main role="main" class="index">
+  <section class="index__hero">
+    <div class="index__hero__background">
+      <%= image_tag("index-hero.svg") %>
+    </div>
+
+    <div class="index__hero__headline">
+      <p>Hello there!</p>
+      <h1>We're a team of passionate developers and designers building first-rate web sites and web applications.</h1>
+    </div>
+  </section>
+
+  <section class="index__feed">
+    <header class="index__feed__header">
+      <h2>From our feed</h2>
+    </header>
+
+    <div class="index__feed__blocks feed">
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Lanneberg Bexelius",
+        :text => "Company branding for a personal branding company",
+        :image => "feed/case-study-lb.png",
+        :background_color => "#3b1c32",
+        :text_color => "white",
+        :full_width => "true"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Celine Beyond",
+        :text => "Be the change you want to hear in the world",
+        :image => "feed/case-study-celine-beyond.png",
+        :background_color => "#1eff7f",
+        :text_color => "black"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :text => 'We’re arranging an <a href="https://twitter.com/hashtag/ember" target="_blank">#ember</a> hack night in <a href="https://twitter.com/hashtag/stockholm" target="_blank">#stockholm</a> on Nov 15. Come join us! Food and drinks are on us. <a href="https://twitter.com/hashtag/sthlmtech" target="_blank">#sthlmtech</a>',
+        :author => "@kollegorna",
+        :author_link => "https://twitter.com/kollegorna",
+        :date => "January 22, 2015"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :text => "Voicemail using Slack, S3, 46elks and a dash of Go"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "The Icebreaker Machine",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-icebreaker.png",
+        :background_color => "#b3a476",
+        :text_color => "white"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :text => 'Rails Daily #231 - Build a Rails API, <a href="https://t.co/Rk5VI2SL16" target="_blank">bit.ly/1n6rrHR</a>, by Filippos via <a href="/kollegorna" target="_blank">@kollegorna',
+        :author => "@yourrailsdaily",
+        :author_link => "https://twitter.com/yourrailsdaily",
+        :date => "January 22, 2015"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :text => "Jekyll for Company Websites",
+        :image => "feed/blog-post.jpg"
+      }) %>
+
+      <%= partial("components/feed/blip", :locals => {
+        :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017.",
+        :image => "feed/blip.jpg"
+      }) %>
+
+      <%= partial("components/feed/quote", :locals => {
+        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
+        :author => "Adrian Lo, Soundzipper"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-vembi.png",
+        :background_color => "#f1cb30",
+        :text_color => "white"
+      }) %>
+
+      <%= partial("components/feed/gallery", :locals => {
+        :text => "New friends at the office 😊",
+        :images => [
+          "feed/gallery.jpg"
+        ]
+      }) %>
+
+    </div>
+  </section>
 </main>
