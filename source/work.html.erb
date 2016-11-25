@@ -2,9 +2,9 @@
 title: Case Studies
 ---
 
-<main role="main" class="index">
-  <section class="index__feed">
-    <div class="index__feed__blocks feed">
+<main role="main" class="work">
+  <section class="work__feed">
+    <div class="work__feed__blocks feed">
       <%= partial("components/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
         :text => "Company branding for a personal branding company",
@@ -22,27 +22,35 @@ title: Case Studies
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
-        :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "feed/case-study-icebreaker.png",
-        :background_color => "#b3a476",
-        :text_color => "white"
+        :title => "SKL Genombrott",
+        :text => "Turning ideas into improvements in healthcare",
+        :image => "feed/case-study-celine-beyond.png",
+        :background_color => "#F2F2F2",
+        :text_color => "black"
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
         :title => "Vembi",
-        :text => "What should you order and what could you possibly talk about?",
+        :text => "Unique ownership information for swedish companies",
         :image => "feed/case-study-vembi.png",
-        :background_color => "#f1cb30",
+        :background_color => "#59d3ef",
+        :text_color => "black"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "The Icebreaker Machine",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-icebreaker.png",
+        :background_color => "#225c37",
         :text_color => "white"
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
-        :title => "SKL Genombrott",
-        :text => "Be the change you want to hear in the world",
-        :image => "feed/case-study-celine-beyond.png",
-        :background_color => "#0084ac",
-        :text_color => "white"
+        :title => "Releasefest",
+        :text => "Hooray for Swedish digital projects and products!",
+        :image => "feed/case-study-vembi.png",
+        :background_color => "#fecc05",
+        :text_color => "black"
       }) %>
 
     </div>

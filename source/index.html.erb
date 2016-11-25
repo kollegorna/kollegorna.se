@@ -52,7 +52,7 @@ title: Kollegorna
         :title => "The Icebreaker Machine",
         :text => "What should you order and what could you possibly talk about?",
         :image => "feed/case-study-icebreaker.png",
-        :background_color => "#b3a476",
+        :background_color => "#225c37",
         :text_color => "white"
       }) %>
 
@@ -78,19 +78,19 @@ title: Kollegorna
         :author => "Adrian Lo, Soundzipper"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Vembi",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "feed/case-study-vembi.png",
-        :background_color => "#f1cb30",
-        :text_color => "white"
-      }) %>
-
       <%= partial("components/feed/gallery", :locals => {
         :text => "New friends at the office 😊",
         :images => [
           "feed/gallery.jpg"
         ]
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "Unique ownership information for swedish companies",
+        :image => "feed/case-study-vembi.png",
+        :background_color => "#59d3ef",
+        :text_color => "black"
       }) %>
 
     </div>
