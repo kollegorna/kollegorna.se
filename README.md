@@ -1,58 +1,32 @@
-This is the boilerplate for [Kollegornas](https://github.com/kollegorna) Middleman projects. We're currently using Middleman 4.
+This is the F/W redesign of [our website](https://www.kollegorna.se).
 
 ## Local setup
 
-1. Make sure you have [the same Ruby version installed as the repo](https://github.com/kollegorna/middleman-boilerplate/blob/master/.ruby-version).
+1. Make sure you have [the same Ruby version installed as the repo](https://github.com/kollegorna/kollegorna.se/blob/master/.ruby-version).
 2. Install [Bundler](https://rubygems.org/gems/bundler) and [Node.js](http://nodejs.org).
 3. Clone repository
 4. ``$ npm install && gulp install``
 
 ### Gulp commands
 
-The following gulp commands are at your service…
-
-`$ gulp install`
-
 Runs bundle install and bower install
 
-`$ gulp middleman`
-
-Runs bundle exec middleman
-
-`$ gulp serve`
+	$ gulp install
 
 Builds Middleman and create a BrowserSync server that watches all changes
 
-`$ gulp build`
+	$ gulp serve
 
 Builds Middleman
 
-`$ gulp deploy`
+	$ gulp build
 
 Builds Middleman and deploys with rsync
 
-`$ gulp s3`
+	$ gulp deploy
 
-Builds Middleman and deploys to s3 bucket
+## Writing posts
 
-### Configuration
+    $ middleman article NAME
 
-#### Deployment
-
-If you're planning to use rsync for deployment then you have to change the configuration:
-
-[gulpfile.js](https://github.com/kollegorna/middleman-boilerplate/blob/master/gulpfile.js#L33)
-
-By default it's configured to deploy to one of our VPS's.
-
-#### Deploy to Amazon S3
-
-You need to set the following environment variables. We recommend that you use [direnv](http://direnv.net/).
-
-```
-AWS_KEY
-AWS_SECRET
-AWS_BUCKET
-AWS_REGION
-```
-
+Will generate a file in source/posts.
