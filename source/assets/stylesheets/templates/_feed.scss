@@ -1,0 +1,25 @@
+.feed {
+
+  &__feed {
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-family: $ds-font-family-complementary;
+      font-weight: 200;
+      font-size: ds-rem-calc(20);
+      font-style: italic;
+    }
+
+    &__header {
+      @include outer-container;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__blocks {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+}
