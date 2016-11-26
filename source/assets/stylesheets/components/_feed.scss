@@ -41,6 +41,11 @@
       padding: 40px;
     }
 
+    &__caption {
+      padding: 20px;
+      font-size: ds-rem-calc(16);
+    }
+
     // --
     // Case Studies
     // --
@@ -101,7 +106,7 @@
     }
 
     // --
-    // Quote
+    // Tweet
     // --
     &--tweet {
       background: #f5f8fa;
@@ -109,6 +114,14 @@
 
       .author { color: #646464; }
       a { color: #1da1f2; }
+    }
+
+    // --
+    // Image
+    // --
+    &--image {
+      background: $ds-color-black;
+      color: $ds-color-white;
     }
   }
 }

@@ -1,0 +1,123 @@
+.case {
+  &__content {
+    @include outer-container;
+    margin-bottom: 80px;
+  }
+
+  &__description {
+    @include span-columns(7);
+    @include shift(1);
+
+    h1 {
+      font-family: $ds-font-family-complementary;
+      font-style: italic;
+      font-size: ds-rem-calc(18);
+      margin: 0 0 10px 0;
+    }
+
+    h2 {
+      font-weight: 500;
+      max-width: 500px;
+      letter-spacing: ds-rem-calc(-1);
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      max-width: 650px;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: ds-rem-calc(18);
+
+      &.highlight {
+        font-size: ds-rem-calc(24);
+        font-weight: 300;
+        line-height: 1.6;
+      }
+    }
+
+    .additional {
+      display: none;
+    }
+
+    .expand {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      cursor: pointer;
+      font-size: ds-rem-calc(16);
+      color: $ds-color-green;
+
+      &:before {
+        content: "+";
+        display: inline-block;
+        line-height: 30px;
+        width: 30px;
+        font-family: $ds-font-family;
+        border: 1px solid $ds-color-green;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 15px;
+      }
+
+      &.less:before {
+        content: "-";
+      }
+    }
+  }
+
+  &__facts {
+    @include span-columns(3);
+    display: none;
+
+    h3 {
+      font-size: ds-rem-calc(12);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: ds-rem-calc(4);
+      margin: 0 0 5px 0;
+    }
+
+    p {
+      font-size: ds-rem-calc(16);
+    }
+
+    ul {
+      list-style: none;
+      font-size: ds-rem-calc(16);
+
+      li {
+        margin: 5px 0;
+      }
+    }
+
+    .sheet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__feed {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-family: $ds-font-family-complementary;
+      font-weight: 200;
+      font-size: ds-rem-calc(20);
+      font-style: italic;
+    }
+
+    &__header {
+      @include outer-container;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__blocks {
+      @include outer-container;
+      width: 90%;
+    }
+  }
+}

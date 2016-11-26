@@ -1,7 +1,7 @@
 .header {
   @include outer-container;
   font-size: ds-rem-calc(19);
-  padding: 60px 0;
+  padding: 60px 0 30px 0;
 
   a {
     line-height: 50px;

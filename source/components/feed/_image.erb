@@ -1,0 +1,13 @@
+<article class="block block--image <%= defined?(full_width) ? "full" : "" %>">
+  <% if defined?(image) %>
+    <div class="block__image">
+      <%= image_tag(image) %>
+    </div>
+  <% end %>
+
+  <% if defined?(caption) %>
+    <div class="block__caption">
+      <%= caption %>
+    </div>
+  <% end %>
+</article>
