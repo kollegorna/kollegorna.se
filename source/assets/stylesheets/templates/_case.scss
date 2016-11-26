@@ -1,0 +1,27 @@
+.case {
+
+  &__feed {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-family: $ds-font-family-complementary;
+      font-weight: 200;
+      font-size: ds-rem-calc(20);
+      font-style: italic;
+    }
+
+    &__header {
+      @include outer-container;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    &__blocks {
+      @include outer-container;
+      width: 90%;
+    }
+  }
+}
