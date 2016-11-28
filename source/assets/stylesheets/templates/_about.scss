@@ -1,0 +1,105 @@
+.about {
+  &__intro {
+    position: relative;
+    margin-bottom: 50px;
+    position: relative;
+    @include media($tablet) { top: -100px; }
+    @include media($desktop) { top: 0; }
+
+    &__background {
+      max-width: 800px;
+      margin: 0 auto;
+      display: none;
+
+      @include media($tablet) { display: block; }
+    }
+
+    &__content {
+      @include outer-container;
+
+      @include media($tablet) {
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__headline {
+      @include span-columns(8);
+      @include shift(2);
+      @include omega;
+      text-align: center;
+
+      @include media($tablet) {
+        @include span-columns(6);
+        @include shift(3);
+      }
+
+      p {
+        margin: 0 0 10px 0;
+        font-weight: 200;
+        font-family: $ds-font-family-complementary;
+        font-style: italic;
+      }
+
+      h1 {
+        margin: 0 auto;
+        font-weight: 600;
+
+        font-size: ds-rem-calc(18);
+
+        @include media($tablet) { font-size: ds-rem-calc(28); }
+        @include media($laptop) { font-size: ds-rem-calc(30); }
+        @include media($desktop) { font-size: ds-rem-calc(32); }
+      }
+
+      h2 {
+        margin: 10px 0 0 0;
+        font-size: ds-rem-calc(18);
+        font-weight: 400;
+
+        @include media($tablet) { font-size: ds-rem-calc(20); }
+        @include media($laptop) { font-size: ds-rem-calc(22); font-weight: 300; }
+        @include media($desktop) { font-size: ds-rem-calc(24); }
+      }
+    }
+
+    &__steps {
+      @include span-columns(10);
+      @include shift(1);
+      @include omega;
+      margin-top: 50px;
+
+      .step {
+        width: 90%;
+        text-align: center;
+        padding: 0 20px;
+        margin: 20px auto 30px auto;
+
+        @include media($tablet) {
+          width: 33.33333%;
+          float: left;
+          margin: 0;
+        }
+
+        img {
+          max-width: 100px;
+        }
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: ds-rem-calc(12);
+        margin: 15px 0 5px 0;
+      }
+
+      p {
+        font-size: ds-rem-calc(16);
+        margin: 0;
+      }
+    }
+  }
+}

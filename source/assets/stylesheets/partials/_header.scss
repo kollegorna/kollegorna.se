@@ -1,8 +1,11 @@
 .header {
   @include outer-container;
+  position: relative;
+  z-index: 9;
   font-size: ds-rem-calc(19);
   padding: 30px 20px;
-  @include media($laptop) { padding: 60px 0 30px 0; }
+  @include media($laptop) { padding: 60px 20px 30px 20px; }
+  @include media($desktop) { padding: 60px 0 30px 0; }
 
   a {
     line-height: 50px;
@@ -41,6 +44,17 @@
 
       &:hover {
         color: $ds-color-white;
+      }
+
+      &.language {
+        display: inline-block;
+        border-left: 1px solid black;
+        margin-left: 20px;
+        padding-left: 20px;
+
+        img {
+          width: 24px;
+        }
       }
     }
   }

@@ -2,15 +2,41 @@
 title: Kollegorna
 ---
 
-<main role="main" class="index">
-  <section class="index__hero">
-    <div class="index__hero__background">
-      <%= image_tag("index-hero.svg") %>
+<main role="main" class="about">
+  <section class="about__intro">
+    <div class="about__intro__background">
+      <%= image_tag("about/texture_bg.png") %>
     </div>
 
-    <div class="index__hero__headline">
-      <p><%= t(:index)[:hello] %></p>
-      <h1><%= t(:index)[:short_bio] %></h1>
+    <div class="about__intro__content">
+      <div class="about__intro__headline">
+        <p>Here's the deal...</p>
+        <h1>We help the web feel, look and do good.
+          And we can do it for you too.</h1>
+
+        <h2>We can help devise your strategy, analyze your needs, propose solutions and steer your project to success.</h2>
+      </div>
+
+      <div class="about__intro__steps">
+        <div class="step step--plan">
+          <%= image_tag("about/plan.svg") %>
+
+          <h3>Plan</h3>
+          <p>Simple and efficient user interfaces, backed by a strong design expertise.</p>
+        </div>
+
+        <div class="step step--build">
+          <%= image_tag("about/build.svg") %>
+          <h3>Build</h3>
+          <p>High-quality perfmormant code for projects of any scale.</p>
+        </div>
+
+        <div class="step step--release">
+          <%= image_tag("about/release.svg") %>
+          <h3>Release</h3>
+          <p>We help you launch and monitor your products once they’re out.</p>
+        </div>
+      </div>
     </div>
   </section>
 

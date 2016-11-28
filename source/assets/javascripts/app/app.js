@@ -205,7 +205,7 @@
 
       // Make tweets look nice. Remove Twitter widget script and add profile
       // image from avatars.io.
-      caseMediaTweet: function(data) {
+      parseTweets: function(data) {
         var html = $(data.html.bold());
         html.find('script').remove();
 
