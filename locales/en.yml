@@ -1,0 +1,19 @@
+---
+en:
+  nav:
+    work: "Case studies"
+    feed: "Feed"
+    colleagues: "Colleagues"
+    about: "About us"
+    careers: "Careers"
+    contacts: "Contacts"
+    work_with: "Work with us"
+  index:
+    hello: "Hello there!"
+    short_bio: "We're a team of passionate developers and designers building first-rate web sites and web applications."
+    from_feed: "From our feed"
+  cases:
+    more_detail: "More detail"
+    client: "Client"
+    tech: "Technologies"
+    services: "Services"

@@ -25,6 +25,9 @@ activate :directory_indexes
 # Use middleman-livereload
 activate :livereload
 
+# Use multilanguage
+activate :i18n, :mount_at_root => :sv
+
 # Minimize css/js and fix assets for Build
 configure :build do
   activate :autoprefixer

@@ -1,0 +1,114 @@
+.colleagues {
+
+  &__list {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    &.feed .block {
+      width: calc(33% - 10px);
+    }
+
+    .profile {
+      background: $ds-color-black;
+      border-radius: 4px;
+      padding: 50px;
+      min-height: 450px;
+      position: relative;
+
+      &__background {
+        width: 100%;
+        height: 110%;
+        opacity: 0.15;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__image {
+        float: right;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
+        top: -10px;
+        right: -10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      &__name {
+        font-size: ds-rem-calc(24);
+        font-weight: 600;
+        letter-spacing: ds-rem-calc(-0.5);
+        margin: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      &__title {
+        font-family: $ds-font-family-complementary;
+        font-style: italic;
+        font-size: ds-rem-calc(16);
+        margin: 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      &__contact {
+        margin-top: 20px;
+        font-size: ds-rem-calc(16);
+        position: relative;
+        z-index: 1;
+
+        a {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+
+      &__location {
+        margin-top: 20px;
+        font-size: ds-rem-calc(16);
+        position: relative;
+        z-index: 1;
+      }
+
+      &__links {
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+
+        a {
+          display: block;
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+          color: $ds-color-white;
+          margin-bottom: 10px;
+          line-height: 15px;
+
+          &:hover { color: $ds-color-orange; }
+        }
+      }
+
+      &__icon {
+        width: 20px;
+        margin-right: 10px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: bottom;
+
+        img {
+          max-height: 15px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

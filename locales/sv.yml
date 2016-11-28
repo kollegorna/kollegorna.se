@@ -1,0 +1,19 @@
+---
+sv:
+  nav:
+    work: "Uppdrag"
+    feed: "Feed"
+    colleagues: "Kollegor"
+    about: "Om oss"
+    careers: "Jobba här"
+    contacts: "Kontakter"
+    work_with: "Jobba hos oss"
+  index:
+    hello: "Hej there!"
+    short_bio: "Vi är ett team passionerade utvecklare och designers som bygger förstklassiga webbplatser och webbapplikationer."
+    from_feed: "From our feed"
+  cases:
+    more_detail: "More detail"
+    client: "Kund"
+    tech: "Teknik"
+    services: "Tjänster"
