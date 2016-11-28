@@ -11,7 +11,11 @@
 
       init: function() {
         this.bindClicks();
+
         this.setupFeed();
+
+        this.setupAnimations();
+
         setTimeout(function() {
           Kollegorna.setupMaps();
         }, 1000);
@@ -48,6 +52,10 @@
             gutter: 20
           });
         });
+      },
+
+      setupAnimations: function() {
+        $('.index__hero__background').addClass('on');
       },
 
       /*
