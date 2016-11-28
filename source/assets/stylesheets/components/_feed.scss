@@ -4,14 +4,31 @@
   .block {
     border-radius: 4px;
     overflow: hidden;
-    width: calc(50% - 10px);
+    width: 100%;
+
+    @include media($tablet) {
+      width: 80%;
+      margin-left: 10%;
+    }
+    @include media($laptop) {
+      width: calc(50% - 10px);
+      margin-left: 0;
+    }
 
     h3 {
-      font-size: ds-rem-calc(24);
-      font-weight: 300;
       color: inherit;
       margin: 0;
       letter-spacing: ds-rem-calc(-0.5);
+      font-size: ds-rem-calc(16);
+      font-weight: 400;
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(18);
+      }
+      @include media($laptop) {
+        font-size: ds-rem-calc(24);
+        font-weight: 300;
+      }
     }
 
     p.category {
@@ -36,6 +53,8 @@
 
     &.full {
       width: 100%;
+      @include media($tablet) { width: 80%; }
+      @include media($laptop) { width: 100%; }
     }
 
     &__text {
@@ -54,18 +73,22 @@
       background: $ds-color-black;
 
       &.full {
-        .block__text {
-          width: 50%;
-          float: left;
-        }
-        .block__image {
-          width: 50%;
-          float: right;
+        @include media($laptop) {
+          .block__text {
+            width: 50%;
+            float: left;
+          }
+          .block__image {
+            width: 50%;
+            float: right;
+          }
         }
 
         h3 {
-          font-size: ds-rem-calc(30);
           letter-spacing: ds-rem-calc(-1);
+          font-size: ds-rem-calc(20);
+
+          @include media($laptop) { font-size: ds-rem-calc(30); }
         }
       }
     }

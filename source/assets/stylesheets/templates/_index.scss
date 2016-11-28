@@ -4,7 +4,13 @@
     @include outer-container;
     text-align: center;
     position: relative;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+    padding-top: 150px;
+
+    @include media($tablet) {
+      padding-top: 0;
+      margin-bottom: 120px;
+    }
 
     p {
       margin: 0 0 10px 0;
@@ -14,18 +20,39 @@
     }
 
     h1 {
-      max-width: 680px;
+      width: 90%;
+      max-width: 320px;
       margin: 0 auto;
-      font-size: ds-rem-calc(36);
       font-weight: 600;
+
+      font-size: ds-rem-calc(18);
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(24);
+        max-width: 450px;
+      }
+      @include media($laptop) {
+        font-size: ds-rem-calc(32);
+        max-width: 600px;
+      }
+      @include media($desktop) {
+        font-size: ds-rem-calc(36);
+        max-width: 680px;
+      }
     }
 
     &__headline {
       width: 100%;
       position: absolute;
-      top: 50%;
+
+      top: 0;
       left: 0;
-      transform: translateY(-50%);
+
+      @include media($tablet) {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
     }
   }
 

@@ -1,7 +1,8 @@
 .header {
   @include outer-container;
   font-size: ds-rem-calc(19);
-  padding: 60px 0 30px 0;
+  padding: 30px 20px;
+  @include media($laptop) { padding: 60px 0 30px 0; }
 
   a {
     line-height: 50px;
@@ -17,6 +18,8 @@
 
   &__navigation {
     float: left;
+    display: none;
+    @include media($laptop) { display: block; }
 
     a {
       color: $ds-color-white;
@@ -30,6 +33,8 @@
 
   &__cta {
     float: right;
+    display: none;
+    @include media($laptop) { display: block; }
 
     a {
       color: $ds-color-green;
