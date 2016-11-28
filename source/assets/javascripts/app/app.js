@@ -23,22 +23,14 @@
 
       bindClicks: function() {
         $('.case__content').on('click', '.expand', function() {
-          $('.case__facts').slideToggle(function() {
-            $(this).toggleClass('visible');
+          $('.case__facts').slideDown(function() {
+            $(this).addClass('visible');
           });
-          $('.additional').slideToggle(function() {
-            $(this).toggleClass('visible');
+          $('.additional').slideDown(function() {
+            $(this).addClass('visible');
           });
 
-          var text = $(this).text();
-
-          if(text === "More detail") {
-            $(this).text("Less detail");
-            $(this).addClass('less');
-          } else {
-            $(this).text("More detail");
-            $(this).removeClass('less');
-          }
+          $(this).fadeOut();
         });
       },
 

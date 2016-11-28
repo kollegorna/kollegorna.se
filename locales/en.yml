@@ -13,10 +13,10 @@ en:
     short_bio: "We're a team of passionate developers and designers building first-rate web sites and web applications."
     from_feed: "From our feed"
   cases:
-    more_detail: "More detail"
     client: "Client"
     tech: "Technologies"
     services: "Services"
+    more_detail: "More detail"
   colleagues:
     slogan: "Born in Sweden, made worldwide"
     description: "We're a distributed team spread across the world from Santo Domingo to Seoul with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria,  Portugal and the Dominican Republic."
