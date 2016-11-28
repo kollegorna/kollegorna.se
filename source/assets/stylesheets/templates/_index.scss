@@ -56,18 +56,18 @@
         transition: all 1s ease-in-out;
       }
 
-      #line2 { transition-delay: 0.4s; }
-      #line3 { transition-delay: 1.0s; }
-      #line4 { transition-delay: 1.4s; }
-      #line5 { transition-delay: 2s; }
-      #line6 { transition-delay: 2.4s; }
-      #line7 { transition-delay: 2.8s; }
+      #line2 { transition-delay: 0.2s; }
+      #line3 { transition-delay: 0.4s; }
+      #line4 { transition-delay: 0.8s; }
+      #line5 { transition-delay: 0.9s; }
+      #line6 { transition-delay: 1s; }
+      #line7 { transition-delay: 1.3s; }
 
       .cls-2 {
         fill: #f06543;
         opacity: 0;
         transform: translate(-5px, 5px);
-        transition: all 0.4s ease-out 0.8s;
+        transition: all 0.4s ease-out 0.6s;
       }
 
       .cls-3 {
@@ -75,7 +75,7 @@
         opacity: 0;
         transform-origin: 50% 50%;
         transform: rotate(-5deg) translate(-20px, -10px);
-        transition: all 0.4s ease-out 1.4s;
+        transition: all 0.4s ease-out 0.8s;
       }
 
       .cls-4 {
@@ -83,7 +83,7 @@
         opacity: 0;
         transform-origin: 50% 50%;
         transform: rotate(-5deg) translate(-20px, -10px);
-        transition: all 0.4s ease-out 2.8s;
+        transition: all 0.4s ease-out 1s;
       }
 
       #phone,
