@@ -1,0 +1,13 @@
+<article class="block block--video <%= defined?(full_width) ? "full" : "" %>">
+  <% if defined?(video) %>
+    <div class="block__video">
+      <iframe src="<%= video %>" width="640" height="355" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+  <% end %>
+
+  <% if defined?(caption) %>
+    <div class="block__caption">
+      <%= caption %>
+    </div>
+  <% end %>
+</article>

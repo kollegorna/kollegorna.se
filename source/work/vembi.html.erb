@@ -85,22 +85,18 @@ description: "Vembi har ett unikt och högkvalitativt register över ägare av s
       :caption => "Detaljerad överblick om ägarförhållandena inom företaget."
     }) %>
 
-    <div class="case__media__item case__media__item--large block">
-      <div class="case__media__object">
-        <div><iframe src="https://player.vimeo.com/video/157131115" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      </div>
-    </div>
+    <%= partial("components/feed/vimeo", :locals => {
+      :video => "https://player.vimeo.com/video/157131115"
+    }) %>
 
     <%= partial("components/feed/image", :locals => {
       :image => "case/vembi/stena-sessan-03.png",
       :caption => "Förstå hur företagskoncerner är uppbyggda."
     }) %>
 
-    <div class="case__media__item case__media__item--large block">
-      <div class="case__media__object">
-        <div><iframe src="https://player.vimeo.com/video/157131117" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      </div>
-    </div>
+    <%= partial("components/feed/vimeo", :locals => {
+      :video => "https://player.vimeo.com/video/157131117"
+    }) %>
 
     <%= partial("components/feed/image", :locals => {
       :image => "case/vembi/stena-sessan-04.png",
@@ -117,11 +113,9 @@ description: "Vembi har ett unikt och högkvalitativt register över ägare av s
       :caption => "Utforska dig vidare genom att använda nätverksgrafen."
     }) %>
 
-    <div class="case__media__item case__media__item--large block">
-      <div class="case__media__object">
-        <div><iframe src="https://player.vimeo.com/video/157171432" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      </div>
-    </div>
+    <%= partial("components/feed/vimeo", :locals => {
+      :video => "https://player.vimeo.com/video/157171432"
+    }) %>
 
     <%= partial("components/feed/image", :locals => {
       :image => "case/vembi/search.png",

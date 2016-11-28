@@ -37,6 +37,14 @@
 
     .additional {
       display: none;
+      opacity: 0;
+      transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+      transform: translateY(10px);
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .expand {
@@ -69,6 +77,14 @@
   &__facts {
     @include span-columns(3);
     display: none;
+    opacity: 0;
+    transition: opacity .2s ease-in-out .1s, transform .2s ease-in-out .1s;
+    transform: translateY(10px);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     h3 {
       font-size: ds-rem-calc(12);

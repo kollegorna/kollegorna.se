@@ -6,8 +6,12 @@ $('.feed').packery({
 });
 
 $('.case__content').on('click', '.expand', function() {
-  $('.case__facts').slideToggle();
-  $('.additional').slideToggle();
+  $('.case__facts').slideToggle(function() {
+    $(this).toggleClass('visible');
+  });
+  $('.additional').slideToggle(function() {
+    $(this).toggleClass('visible');
+  });
 
   var text = $(this).text();
 
