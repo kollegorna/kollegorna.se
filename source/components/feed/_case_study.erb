@@ -1,7 +1,7 @@
 <a href="/work/vembi/">
   <article class="block block--case-study <%= defined?(full_width) ? "full" : "" %>" style="background: <%= defined?(background_color) ? background_color : "#000000" %>; color: <%= defined?(text_color) ? text_color : "#FFFFFF" %>;">
     <div class="block__text">
-      <p class="category">Case Study<%= defined?(title) ? " > #{title}" : "" %></p>
+      <p class="category"><%= current_page.url["work"] != "work" ? "Case Study > " : ""  %><%= defined?(title) ? title : "" %></p>
       <h3><%= text %></h3>
     </div>
 
