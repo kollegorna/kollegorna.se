@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f7b05b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <title>social</title>
+  <path class="cls-1" d="M152.15,82.59A31.44,31.44,0,0,0,100,58.94,31.44,31.44,0,0,0,47.85,82.59c0,18,32.45,48.55,52.15,66.26C117.74,130.16,152.15,103.41,152.15,82.59Z"/>
+  <path class="cls-1" d="M100,58.94s-21.13,21-26.54,26C79.37,95.23,90.13,90.81,100,80c9.87,7.38,12.82,10.82,22.66,1.48"/>
+  <line class="cls-1" x1="114.29" y1="115.89" x2="89.75" y2="139.48"/>
+  <line class="cls-1" x1="105.04" y1="106.19" x2="80.5" y2="129.78"/>
+  <line class="cls-1" x1="96.03" y1="97.34" x2="71.49" y2="120.92"/>
+  <path class="cls-1" d="M82.83,91.11s-21.15,19-17.73,23.05"/>
+</svg>

@@ -1,29 +1,23 @@
 .about {
+
+  &__background {
+    position: fixed;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+  }
+
   &__intro {
     position: relative;
     margin-bottom: 50px;
+    padding: 50px 0;
     position: relative;
-    @include media($tablet) { top: -100px; }
-    @include media($desktop) { top: 0; }
-
-    &__background {
-      max-width: 800px;
-      margin: 0 auto;
-      display: none;
-
-      @include media($tablet) { display: block; }
-    }
 
     &__content {
       @include outer-container;
-
-      @include media($tablet) {
-        position: absolute;
-        width: 100%;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
     }
 
     &__headline {
@@ -99,6 +93,59 @@
       p {
         font-size: ds-rem-calc(16);
         margin: 0;
+      }
+    }
+  }
+
+  &__section {
+    @include outer-container;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+
+    &__icon {
+      @include span-columns(8);
+      @include shift(2);
+      @include omega();
+
+      @include media($desktop) {
+        @include span-columns(6);
+        @include shift(3);
+
+        img { max-width: 135px; }
+      }
+    }
+
+    &__content {
+      @include span-columns(8);
+      @include shift(2);
+      @include omega();
+
+      @include media($desktop) {
+        @include span-columns(6);
+        @include shift(3);
+        padding-top: 2  0px;
+      }
+
+      h1 {
+        font-family: $ds-font-family-complementary;
+        font-size: ds-rem-calc(16);
+        margin: 0;
+        color: $ds-color-orange;
+
+        @include media($laptop) { font-size: ds-rem-calc(18); }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: ds-rem-calc(18);
+        font-weight: 400;
+
+        @include media($laptop) {
+          font-size: ds-rem-calc(24);
+          font-weight: 300;
+        }
       }
     }
   }

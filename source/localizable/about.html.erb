@@ -3,11 +3,11 @@ title: Kollegorna
 ---
 
 <main role="main" class="about">
-  <section class="about__intro">
-    <div class="about__intro__background">
-      <%= image_tag("about/texture_bg.png") %>
-    </div>
+  <div class="about__background">
+    <%= image_tag("about/texture_bg.png") %>
+  </div>
 
+  <section class="about__intro">
     <div class="about__intro__content">
       <div class="about__intro__headline">
         <p>Here's the deal...</p>
@@ -40,95 +40,53 @@ title: Kollegorna
     </div>
   </section>
 
-  <section class="index__feed">
-    <header class="index__feed__header">
-      <h2><%= t(:index)[:from_feed] %></h2>
-    </header>
-
-    <div class="index__feed__blocks feed">
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Lanneberg Bexelius",
-        :text => "Company branding for a personal branding company",
-        :image => "feed/case-study-lb.png",
-        :background_color => "#3b1c32",
-        :text_color => "white",
-        :full_width => "true"
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Celine Beyond",
-        :text => "Be the change you want to hear in the world",
-        :image => "feed/case-study-celine-beyond.png",
-        :background_color => "#1eff7f",
-        :text_color => "black"
-      }) %>
-
-      <%= partial("components/feed/tweet", :locals => {
-        :text => 'We’re arranging an <a href="https://twitter.com/hashtag/ember" target="_blank">#ember</a> hack night in <a href="https://twitter.com/hashtag/stockholm" target="_blank">#stockholm</a> on Nov 15. Come join us! Food and drinks are on us. <a href="https://twitter.com/hashtag/sthlmtech" target="_blank">#sthlmtech</a>',
-        :author => "@kollegorna",
-        :author_link => "https://twitter.com/kollegorna",
-        :date => "January 22, 2015"
-      }) %>
-
-      <%= partial("components/feed/blog", :locals => {
-        :text => "Voicemail using Slack, S3, 46elks and a dash of Go"
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "feed/case-study-icebreaker.png",
-        :background_color => "#225c37",
-        :text_color => "white"
-      }) %>
-
-      <%= partial("components/feed/tweet", :locals => {
-        :text => 'Rails Daily #231 - Build a Rails API, <a href="https://t.co/Rk5VI2SL16" target="_blank">bit.ly/1n6rrHR</a>, by Filippos via <a href="/kollegorna" target="_blank">@kollegorna',
-        :author => "@yourrailsdaily",
-        :author_link => "https://twitter.com/yourrailsdaily",
-        :date => "January 22, 2015"
-      }) %>
-
-      <%= partial("components/feed/blog", :locals => {
-        :text => "Jekyll for Company Websites",
-        :image => "feed/blog-post.jpg"
-      }) %>
-
-      <%= partial("components/feed/blip", :locals => {
-        :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017.",
-        :image => "feed/blip.jpg"
-      }) %>
-
-      <%= partial("components/feed/quote", :locals => {
-        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
-        :author => "Adrian Lo, Soundzipper"
-      }) %>
-
-      <%= partial("components/feed/gallery", :locals => {
-        :text => "New friends at the office 😊",
-        :images => [
-          "feed/gallery.jpg"
-        ]
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Vembi",
-        :text => "Unique ownership information for swedish companies",
-        :image => "feed/case-study-vembi.png",
-        :background_color => "#59d3ef",
-        :text_color => "black"
-      }) %>
-
+  <section class="about__section about__section--social">
+    <div class="about__section__icon">
+      <%= image_tag 'about/social.svg' %>
+    </div>
+    <div class="about__section__content">
+      <h1>Social responsibility</h1>
+      <p>We want to contribute to a better and more just world and in the last few years we've supported <a href="http://www.wateraid.se">WaterAid</a>, <a href="http://www.unizon.se/">Unizon</a> and <a href="http://www.actionaid.se">ActionAid</a> in various projects, such as the <a href="https://gavoshop.wateraid.se">giftshop</a> and <a href="https://manadsgivare.wateraid.se">monthly donator solution</a> from WaterAid plus <a href="http://www.causeofdeathwoman.com">Cause of Death: Woman</a> from Unizon.</p>
     </div>
   </section>
 
-  <section class="index__colleagues colleagues__header">
-    <div class="colleagues__header__icon">
-      <%= image_tag 'born-in-sweden.svg' %>
+  <section class="about__section about__section--share">
+    <div class="about__section__icon">
+      <%= image_tag 'about/share.svg' %>
     </div>
-    <div class="colleagues__header__content">
+    <div class="about__section__content">
+      <h1>We love to share</h1>
+      <p>Whenever it's possible to break out pieces of a project for general use we love it if it can join <a href="https://labs.kollegorna.se">our open source projects</a> (including <a href="https://github.com/kollegorna/kollegorna.se">this site</a>). We've also published <a href="https://rtfm.kollegorna.se">our manual</a> that describes how we work in practice.</p>
+    </div>
+  </section>
+
+  <section class="about__section about__section--colleagues">
+    <div class="about__section__icon">
+      <%= image_tag 'about/world.svg' %>
+    </div>
+    <div class="about__section__content">
       <h1>Born in Sweden, made worldwide</h1>
       <p>We're a distributed team spread across the world from Santo Domingo to Seoul with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria,  Portugal and the Dominican Republic.</p>
+    </div>
+  </section>
+
+  <section class="about__section about__section--colleagues">
+    <div class="about__section__icon">
+      <%= image_tag 'about/kong.svg' %>
+    </div>
+    <div class="about__section__content">
+      <h1>There's no business like snow business</h1>
+      <p>Our side project <a href="http://www.konginitiative.com">The Kong Initiative</a> sells the largest snowboards on the market across Europe.</p>
+    </div>
+  </section>
+
+  <section class="about__section about__section--colleagues">
+    <div class="about__section__icon">
+      <%= image_tag 'about/tech.svg' %>
+    </div>
+    <div class="about__section__content">
+      <h1>Our technology stack</h1>
+      <p>We're experts in Ruby on Rails, but we also like to use Ember.js, Go, Node.js, Middleman and WordPress depending on the project's needs.</p>
     </div>
   </section>
 </main>

@@ -1,0 +1,24 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ffc15e;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <title>tech</title>
+  <path class="cls-1" d="M49.21,73.71H156a13.12,13.12,0,0,1,13.12,13.12v49.41a0,0,0,0,1,0,0h-133a0,0,0,0,1,0,0V86.83A13.12,13.12,0,0,1,49.21,73.71Z"/>
+  <line class="cls-1" x1="36.09" y1="102.82" x2="84.84" y2="102.82"/>
+  <line class="cls-1" x1="120.34" y1="102.82" x2="169.09" y2="102.82"/>
+  <rect class="cls-1" x="84.84" y="92.38" width="35.5" height="20.89"/>
+  <rect class="cls-1" x="56.93" y="95.89" width="12.91" height="13.86"/>
+  <rect class="cls-1" x="135.34" y="95.89" width="12.91" height="13.86"/>
+  <path class="cls-1" d="M80,52.31h45.15A14.86,14.86,0,0,1,140,67.18v6.53a0,0,0,0,1,0,0H65.15a0,0,0,0,1,0,0V67.18A14.86,14.86,0,0,1,80,52.31Z"/>
+  <path class="cls-1" d="M73.31,73.75v-8A6.87,6.87,0,0,1,80,60.31h45.15a6.87,6.87,0,0,1,6.7,5.39v8"/>
+  <line class="cls-1" x1="36.09" y1="146.1" x2="169.09" y2="146.1"/>
+  <line class="cls-1" x1="60.46" y1="156.1" x2="144.71" y2="156.1"/>
+</svg>
