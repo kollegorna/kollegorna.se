@@ -19,6 +19,18 @@ Dir[*masks].each do |file_path|
   import_file(file_path, "assets/images/#{relative_path}")
 end
 
+# Blog
+activate :blog do |blog|
+  blog.default_extension = '.md'
+  blog.paginate = true
+  blog.permalink = "blog/{year}/{month}/{title}/index.html"
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+end
+
+# Custom page layouts
+page 'posts/*', layout: :article
+page "/feed.xml", :layout => false
+
 # Use pretty urls `www.example.com/blog`
 activate :directory_indexes
 

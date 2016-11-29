@@ -1,0 +1,54 @@
+.blog {
+  &__header {
+    @include outer-container;
+    margin-bottom: 30px;
+
+    &__count {
+      @include span-columns(3);
+      @include shift(1);
+
+      h1 {
+        font-size: ds-rem-calc(18);
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+    &__rss {
+      @include span-columns(3);
+      @include omega;
+      text-align: right;
+
+      a {
+        font-size: ds-rem-calc(18);
+      }
+    }
+  }
+
+  &__posts {
+    @include outer-container;
+
+    article {
+      @include span-columns(6);
+      @include shift(1);
+      @include omega;
+      margin-bottom: 40px;
+
+      h1 {
+        font-size: ds-rem-calc(24);
+        font-weight: 600;
+        margin: 0 0 5px 0;
+      }
+
+      time {
+        display: block;
+        font-size: ds-rem-calc(16);
+        color: $ds-color-magnesium;
+        margin: 0 0 10px 0;
+      }
+
+      h1 {
+        font-size: ds-rem-calc(18);
+      }
+    }
+  }
+}

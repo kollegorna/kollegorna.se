@@ -1,0 +1,33 @@
+---
+title: Kollegornas blogg
+body_classes: blog
+---
+<main role="main" class="blog">
+
+  <header class="blog__header">
+    <div class="blog__header__count">
+      <h1><%= blog.articles.select{|article| article.data.lang == "en" }.count %> articles</h1>
+    </div>
+    <div class="blog__header__rss">
+      <p><a href="/feed.xml">Subscribe through RSS</a></p>
+    </div>
+  </header>
+
+  <section class="blog__posts">
+    <% blog.articles.select{|article| article.data.lang == "en" }.each do |article| %>
+
+      <article class="article-summary" vocab="http://schema.org/" typeof="BlogPosting">
+        <h1 property="name">
+          <a property="url" href="<%= article.url %>"><%= article.title %></a>
+        </h1>
+        <time property="datePublished" datetime="<%= article.date.strftime('%Y-%m-%d') %>">
+          <%= article.date.strftime('%Y-%m-%d') %>
+        </time>
+
+        <p>
+          <%= article.data.description %>
+        </p>
+      </article>
+    <% end %>
+  </section>
+</main>
