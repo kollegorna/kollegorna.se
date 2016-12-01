@@ -25,11 +25,11 @@
     @include media($laptop) { display: block; }
 
     a {
-      color: $ds-color-white;
+      color: $ds-color-charcoal;
       margin-left: 20px;
 
       &:hover {
-        color: $ds-color-orange;
+        color: $ds-color-green;
       }
     }
   }
@@ -43,12 +43,12 @@
       color: $ds-color-green;
 
       &:hover {
-        color: $ds-color-white;
+        color: $ds-color-charcoal;
       }
 
       &.language {
         display: inline-block;
-        border-left: 1px solid black;
+        border-left: 1px solid white;
         margin-left: 20px;
         padding-left: 20px;
 

@@ -121,7 +121,7 @@
     // Quote
     // --
     &--quote {
-      background: $ds-color-green;
+      background: $ds-color-yellow;
       color: $ds-color-charcoal;
 
       blockquote {
@@ -133,11 +133,11 @@
     // Tweet
     // --
     &--tweet {
-      background: #f5f8fa;
-      color: $ds-color-charcoal;
+      background: #1da1f2;
+      color: $ds-color-white;
 
-      .author { color: #646464; }
-      a { color: #1da1f2; }
+      .author { color: rgba($ds-color-white, 0.5); }
+      a { color: lighten(#1da1f2, 30); }
     }
 
     // --
