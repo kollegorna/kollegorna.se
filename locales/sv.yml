@@ -1,5 +1,10 @@
 ---
 sv:
+  paths:
+    about: "om"
+    work: "uppdrag"
+    colleagues: "kollegor"
+    blog: "blogg"
   nav:
     work: "Uppdrag"
     feed: "Feed"
