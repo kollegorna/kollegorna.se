@@ -19,11 +19,14 @@ Dir[*masks].each do |file_path|
   import_file(file_path, "assets/images/#{relative_path}")
 end
 
+# Use multilanguage
+activate :i18n, :mount_at_root => :sv
+
 # Blog
 activate :blog do |blog|
   blog.default_extension = '.md'
   blog.paginate = true
-  blog.permalink = "blog/{year}/{month}/{title}/index.html"
+  blog.permalink = "{lang}/{year}/{month}/{title}/index.html"
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
 end
 
@@ -36,9 +39,6 @@ activate :directory_indexes
 
 # Use middleman-livereload
 activate :livereload
-
-# Use multilanguage
-activate :i18n, :mount_at_root => :sv
 
 # Minimize css/js and fix assets for Build
 configure :build do
