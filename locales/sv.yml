@@ -17,7 +17,8 @@ sv:
   index:
     hello: "Hej there!"
     short_bio: "Vi är ett team passionerade utvecklare och designers som bygger förstklassiga webbplatser och webbapplikationer."
-    from_feed: "From our feed"
+    feed: "Feed"
+    from_feed: "Latest & Greatest"
   cases:
     client: "Kund"
     tech: "Teknik"
