@@ -21,6 +21,10 @@ The master branch is automatically deployed to S3 with Codeship.
 
 Runs bundle install, bower install and bower update.
 
+    $ gulp middleman
+
+Runs bundle exec middleman.
+
 	$ gulp serve
 
 Builds Middleman and create a BrowserSync server that watches all changes.
