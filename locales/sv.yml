@@ -5,9 +5,9 @@ sv:
     work: "projekt"
     colleagues: "kollegor"
     blog: "blogg"
+    work_types: 'projekt/typer'
   nav:
     work: "Projekt"
-    feed: "Feed"
     colleagues: "Kollegor"
     about: "Om oss"
     careers: "Jobba här"

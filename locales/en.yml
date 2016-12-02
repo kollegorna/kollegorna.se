@@ -1,8 +1,10 @@
 ---
 en:
+  paths:
+    work: 'projects'
+    work_types: 'projects/types'
   nav:
-    work: "Case studies"
-    feed: "Feed"
+    work: "Projects"
     colleagues: "Colleagues"
     about: "About us"
     careers: "Careers"
