@@ -68,15 +68,17 @@
       font-family: $ds-font-family-complementary;
       font-weight: 300;
       font-size: ds-rem-calc(16);
-      color: lighten($ds-color-charcoal, 60);
+      color: lighten($ds-color-charcoal, 50);
       position: relative;
+      background: white;
+      padding: 12px 20px;
 
       &:before {
         content: "";
         display: block;
         width: 100%;
         height: 1px;
-        background: lighten($ds-color-charcoal, 60);
+        // background: lighten($ds-color-charcoal, 60);
         position: absolute;
         bottom: -2px;
         left: 0;
