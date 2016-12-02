@@ -41,7 +41,10 @@ gulp.task('build', ['middleman-build']);
 gulp.task('install-bower', function(done) {
   cp.spawn('bower', ['install'], { stdio: 'inherit' }).on('close', done);
 });
+gulp.task('update-bower', function(done) {
+  cp.spawn('bower', ['update'], { stdio: 'inherit' }).on('close', done);
+});
 gulp.task('install-bundle', function(done) {
   cp.spawn('bundle', ['install'], { stdio: 'inherit' }).on('close', done);
 });
-gulp.task('install', ['install-bundle', 'install-bower']);
+gulp.task('install', ['install-bundle', 'install-bower', 'update-bower']);
