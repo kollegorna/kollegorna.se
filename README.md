@@ -19,7 +19,7 @@ The master branch is automatically deployed to S3 with Codeship.
 
 	$ gulp install
 
-Runs bundle install and bower install.
+Runs bundle install, bower install and bower update.
 
 	$ gulp serve
 
