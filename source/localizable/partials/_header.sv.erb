@@ -4,12 +4,10 @@
   </div>
 
   <nav class="header__navigation">
-    <a href="/uppdrag/"><%= t(:nav)[:work] %></a>
+    <a href="/<%= t(:paths)[:work] %>"><%= t(:nav)[:work] %></a>
     <a href="/feed"><%= t(:nav)[:feed] %></a>
-    <a href="/kollegor"><%= t(:nav)[:colleagues] %></a>
-    <a href="/om"><%= t(:nav)[:about] %></a>
-    <a href=""><%= t(:nav)[:careers] %></a>
-    <a href="/blogg"><%= t(:nav)[:blog] %></a>
+    <a href="/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
+    <a href="/<%= t(:paths)[:about] %>"><%= t(:nav)[:about] %></a>
   </nav>
 
   <div class="header__cta">

@@ -2,11 +2,11 @@
 sv:
   paths:
     about: "om"
-    work: "uppdrag"
+    work: "projekt"
     colleagues: "kollegor"
     blog: "blogg"
   nav:
-    work: "Uppdrag"
+    work: "Projekt"
     feed: "Feed"
     colleagues: "Kollegor"
     about: "Om oss"
