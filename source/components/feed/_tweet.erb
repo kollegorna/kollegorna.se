@@ -1,6 +1,7 @@
 <article class="block block--tweet <%= defined?(full_width) ? "full" : "" %>">
   <div class="block__text">
-    <h3><%= text %></h3>
+    <p class="category">Chirp</p>
+    <p><%= text %></p>
     <p class="author">
       <%= image_tag("icons/feed/tweet.svg") %>
       <a href="<%= author_link %>" target="_blank"><%= author %></a><%= defined?(date) ? ", #{date}" : "" %>

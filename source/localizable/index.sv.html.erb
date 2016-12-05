@@ -18,19 +18,10 @@ title: Kollegorna
     <div class="index__feed__blocks feed">
       <%= partial("components/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
-        :text => "Company branding for a personal branding company",
+        :text => "Company branding and website for a personal branding company",
         :image => "feed/case-study-lb.png",
         :background_color => "#41162f",
-        :text_color => "white",
-        :full_width => "true"
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Celine Beyond",
-        :text => "Be the change you want to hear in the world",
-        :image => "feed/case-study-celine-beyond.png",
-        :background_color => "#1eff7f",
-        :text_color => "black"
+        :text_color => "white"
       }) %>
 
       <%= partial("components/feed/tweet", :locals => {
@@ -41,15 +32,16 @@ title: Kollegorna
       }) %>
 
       <%= partial("components/feed/blog", :locals => {
-        :text => "Voicemail using Slack, S3, 46elks and a dash of Go"
+        :title => "Voicemail using Slack, S3, 46elks and a dash of Go",
+        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity."
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
-        :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "feed/case-study-icebreaker.png",
-        :background_color => "#225c37",
-        :text_color => "white"
+        :title => "Celine Beyond",
+        :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
+        :image => "feed/case-study-celine-beyond.png",
+        :background_color => "#1eff7f",
+        :text_color => "black"
       }) %>
 
       <%= partial("components/feed/tweet", :locals => {
@@ -60,11 +52,20 @@ title: Kollegorna
       }) %>
 
       <%= partial("components/feed/blog", :locals => {
-        :text => "Jekyll for Company Websites"
+        :title => "Jekyll for Company Websites",
+        :text => "Recently we made two small company websites for Blendow Group – blendow.se and bgpublishing.se. We decided to build them using Jekyll and host them on GitHub Pages."
       }) %>
 
       <%= partial("components/feed/blip", :locals => {
         :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017."
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "The Icebreaker Machine",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "feed/case-study-icebreaker.png",
+        :background_color => "#225c37",
+        :text_color => "white"
       }) %>
 
       <%= partial("components/feed/gallery", :locals => {
@@ -76,7 +77,7 @@ title: Kollegorna
 
       <%= partial("components/feed/case_study", :locals => {
         :title => "Vembi",
-        :text => "Unique ownership information for swedish companies",
+        :text => "Vembi is a startup where you can find direct owner information for more than 30 000 companies as well as being able to see who controls over 70 000 swedish companies.",
         :image => "feed/case-study-vembi.png",
         :background_color => "#59d3ef",
         :text_color => "black"
@@ -85,7 +86,7 @@ title: Kollegorna
     </div>
   </section>
 
-  <section class="index__testimonials">
+  <!-- section class="index__testimonials">
     <header class="index__testimonials__header">
       <h2><%= t(:index)[:testimonials] %></h2>
     </header>
@@ -111,5 +112,5 @@ title: Kollegorna
         :author => "Adrian Lo, Soundzipper"
       }) %>
     </div>
-  </section>
+  </section -->
 </main>

@@ -11,6 +11,7 @@
 // --
 @import "kollegorna-design-system/scss/design-system";
 
+$huge: new-breakpoint(min-width 1600px);
 $desktop: new-breakpoint(min-width 1400px);
 $laptop: new-breakpoint(min-width 1024px);
 $tablet: new-breakpoint(min-width 800px);
