@@ -67,11 +67,6 @@ title: Kollegorna
         :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017."
       }) %>
 
-      <%= partial("components/feed/quote", :locals => {
-        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
-        :author => "Adrian Lo, Soundzipper"
-      }) %>
-
       <%= partial("components/feed/gallery", :locals => {
         :text => "New friends at the office 😊",
         :images => [
@@ -87,6 +82,34 @@ title: Kollegorna
         :text_color => "black"
       }) %>
 
+    </div>
+  </section>
+
+  <section class="index__testimonials">
+    <header class="index__testimonials__header">
+      <h2><%= t(:index)[:testimonials] %></h2>
+    </header>
+
+    <div class="index__testimonials__content feed">
+      <%= partial("components/feed/quote", :locals => {
+        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
+        :author => "Adrian Lo, Soundzipper"
+      }) %>
+
+      <%= partial("components/feed/quote", :locals => {
+        :text => "“These guys are so damn good and a delight to work with”",
+        :author => "Thomas, Care of Company"
+      }) %>
+
+      <%= partial("components/feed/quote", :locals => {
+        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
+        :author => "Adrian Lo, Soundzipper"
+      }) %>
+
+      <%= partial("components/feed/quote", :locals => {
+        :text => "“I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”",
+        :author => "Adrian Lo, Soundzipper"
+      }) %>
     </div>
   </section>
 </main>

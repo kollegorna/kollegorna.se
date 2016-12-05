@@ -29,7 +29,7 @@
       margin-left: 20px;
 
       &:hover {
-        color: $ds-color-green;
+        color: $ds-color-link;
       }
     }
   }
@@ -40,8 +40,6 @@
     @include media($laptop) { display: block; }
 
     a {
-      color: $ds-color-green;
-
       &:hover {
         color: $ds-color-charcoal;
       }
