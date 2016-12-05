@@ -54,10 +54,11 @@
       &__background {
         width: 100%;
         height: 110%;
-        opacity: 0.5;
+        opacity: 0.1;
         position: absolute;
         top: 0;
         left: 0;
+        transition: opacity .2s ease-in-out;
 
         iframe {
           width: 100%;
@@ -94,6 +95,7 @@
         position: relative;
         z-index: 1;
         color: darken($ds-color-white, 40);
+        transition: opacity .2s ease-in-out;
       }
 
       &__contact {
@@ -101,6 +103,7 @@
         font-size: ds-rem-calc(16);
         position: relative;
         z-index: 1;
+        transition: opacity .2s ease-in-out;
 
         a {
           display: block;
@@ -115,12 +118,14 @@
         font-size: ds-rem-calc(16);
         z-index: 1;
         color: darken($ds-color-white, 40);
+        cursor: crosshair;
       }
 
       &__links {
         margin-top: 20px;
         position: relative;
         z-index: 1;
+        transition: opacity .2s ease-in-out;
 
         a {
           display: block;
@@ -145,6 +150,13 @@
           max-height: 15px;
           width: auto;
         }
+      }
+
+      &.hover {
+        .profile__title,
+        .profile__contact,
+        .profile__links { opacity: 0; }
+        .profile__background { opacity: 1; }
       }
     }
   }
