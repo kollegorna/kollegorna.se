@@ -5,33 +5,16 @@
 // --
 @import "normalize-scss/normalize";
 @import "neat/app/assets/stylesheets/neat";
-@import "omega-reset-for-bourbon-neat/dist/omega-reset";
 
 // --
 // Kollegorna Design System
 // --
 @import "kollegorna-design-system/scss/design-system";
 
-$huge: new-breakpoint(min-width 1600px);
-$desktop: new-breakpoint(min-width 1400px);
-$laptop: new-breakpoint(min-width 1024px);
-$tablet: new-breakpoint(min-width 800px);
-$mobile: new-breakpoint(max-width 800px);
-
-// ------------------------------------------------------------
-// Override Neat's grid settings
-// ------------------------------------------------------------
-
-$column: golden-ratio(1em, 3) !default; // Column width
-$gutter: 0em !global; // Gutter between each two columns
-
-// ------------------------------------------------------------
-// Set Bourbon's flex-grid variables to match what Neat is doing
-// http://bourbon.io/docs/#flex-grid
-// ------------------------------------------------------------
-
-$fg-column: $column;
-$fg-gutter: $gutter;
+// --
+// Partials
+// --
+@import "config/__config";
 
 // --
 // Partials

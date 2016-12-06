@@ -4,7 +4,7 @@
   &__header {
     @include outer-container;
     margin-bottom: 20px;
-    padding: 0 10px;
+    @include media($tablet) { padding: 0 10px; }
 
     h1 {
       display: inline-block;
