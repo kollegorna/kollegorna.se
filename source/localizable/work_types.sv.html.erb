@@ -3,10 +3,13 @@ title: Typer av projekt
 ---
 
 
-<main role="main" class="about">
-  <div class="about__background">
-    <%= image_tag("about/texture_bg.png") %>
-  </div>
+<main role="main" class="work">
+  <header class="work__header">
+    <div class="wrapper">
+      <h1><a href="/<%= t(:paths)[:work] %>">By Project</a></h1>
+      <h1 class="selected">By Type</h1>
+    </div>
+  </header>
 
   <section class="about__intro">
     <div class="about__intro__content">
@@ -176,4 +179,3 @@ title: Typer av projekt
   </section>
 
 </main>
-

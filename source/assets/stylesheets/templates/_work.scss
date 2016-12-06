@@ -1,10 +1,15 @@
 .work {
   padding: 0 10px;
+  background: $ds-color-white;
 
   &__header {
-    @include outer-container;
-    margin-bottom: 20px;
-    @include media($tablet) { padding: 0 10px; }
+    margin-bottom: 40px;
+    border-bottom: 1px solid $ds-color-light-gray;
+    padding: 20px 10px;
+
+    .wrapper {
+      @include outer-container;
+    }
 
     h1 {
       display: inline-block;
@@ -14,8 +19,13 @@
       font-size: ds-rem-calc(16);
       color: $ds-color-charcoal;
       position: relative;
-      background: $ds-color-yellow;
       padding: 12px 20px;
+
+      &.selected {
+        background: $ds-color-yellow;
+      }
+
+      a { color: $ds-color-charcoal; }
     }
 
     p {
