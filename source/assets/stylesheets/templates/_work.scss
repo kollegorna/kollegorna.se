@@ -41,7 +41,7 @@
   &__projects {
     &__blocks {
       @include outer-container;
-      max-width: 1500px;
+      @include media($huge) { max-width: 1500px; }
 
       .block {
         overflow: hidden;
