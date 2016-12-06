@@ -78,6 +78,8 @@
         right: -10px;
         position: relative;
         z-index: 1;
+        transform-origin: top right;
+        transition: all .2s ease-in-out .1s;
       }
 
       &__name {
@@ -87,6 +89,7 @@
         margin: 0;
         position: relative;
         z-index: 1;
+        transition: opacity .2s ease-in-out;
       }
 
       &__title {
@@ -159,10 +162,16 @@
       }
 
       &.hover {
+        .profile__image {
+          transform: scale(0.6);
+          box-shadow: 0 0 0 10px $ds-color-white;
+        }
+
+        .profile__name,
         .profile__title,
         .profile__contact,
         .profile__links { opacity: 0; }
-        .profile__background { opacity: 1; }
+        .profile__background { opacity: 0.8; }
       }
     }
   }
