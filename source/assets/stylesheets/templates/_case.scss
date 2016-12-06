@@ -112,7 +112,7 @@
       font-weight: 300;
       cursor: pointer;
       font-size: ds-rem-calc(16);
-      color: $ds-color-green;
+      color: $ds-color-link;
 
       &:before {
         content: "+";
@@ -120,7 +120,7 @@
         line-height: 30px;
         width: 30px;
         font-family: $ds-font-family;
-        border: 1px solid $ds-color-green;
+        border: 1px solid $ds-color-link;
         border-radius: 50%;
         text-align: center;
         margin-right: 15px;
@@ -133,27 +133,36 @@
   }
 
   &__feed {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
+    padding: 60px 0;
+    background: $ds-color-charcoal;
 
-    h2 {
-      margin: 0 0 10px 0;
-      font-family: $ds-font-family-complementary;
-      font-weight: 200;
-      font-size: ds-rem-calc(20);
-      font-style: italic;
-    }
-
-    &__header {
-      @include outer-container;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    &__blocks {
-      @include outer-container;
+    .feed {
       width: 90%;
+      max-width: 1500px;
+      margin: 0 auto;
+
+      .block {
+        overflow: hidden;
+        width: 100%;
+        background: $ds-color-white;
+        color: $ds-color-charcoal;
+        text-align: center;
+
+        @include media($tablet) {
+          width: 80%;
+          margin-left: 10%;
+        }
+        @include media($laptop) {
+          width: calc(50% - 10px);
+          margin-left: 0;
+        }
+        @include media($desktop) {
+          width: calc(50% - 10px);
+        }
+        @include media($huge) {
+          width: calc(33% - 15px);
+        }
+      }
     }
   }
 }
