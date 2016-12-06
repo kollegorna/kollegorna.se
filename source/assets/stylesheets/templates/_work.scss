@@ -1,6 +1,6 @@
 .work {
-  padding: 0 10px;
   background: $ds-color-white;
+  padding: 0 10px;
 
   &__header {
     margin-bottom: 40px;
@@ -41,24 +41,23 @@
   &__projects {
     &__blocks {
       @include outer-container;
-      @include media($huge) { max-width: 1500px; }
+      @include media($huge) { max-width: calc(1400px + 20px); }
 
       .block {
         overflow: hidden;
-        width: 100%;
         @include span-columns(12);
+        padding: 0 10px;
 
         @include media($tablet) {
           @include span-columns(6);
           @include omega(2n);
-          padding: 0 10px;
         }
 
-        @include media($desktop) {
+        /* @include media($desktop) {
           @include span-columns(4);
           @include omega(3n);
           @include omega-reset(2n);
-        }
+        } */
 
         h3 {
           color: $ds-color-charcoal;

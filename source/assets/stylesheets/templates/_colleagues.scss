@@ -1,4 +1,5 @@
 .colleagues {
+  padding: 0 20px;
 
   &__header {
     @include outer-container;
@@ -33,7 +34,6 @@
   }
 
   &__list {
-    width: 90%;
     max-width: 1400px;
     margin: 40px auto 0 auto;
 
