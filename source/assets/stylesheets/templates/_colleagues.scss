@@ -37,11 +37,12 @@
     max-width: 1400px;
     margin: 40px auto 0 auto;
 
-    &.feed .block {
+    &.grid .block {
       width: 100%;
       @include media($laptop) { width: calc(50% - 10px); }
       @include media($desktop) { width: calc(33% - 10px); }
       margin-left: 0;
+      overflow: hidden;
     }
 
     .profile {
@@ -99,6 +100,8 @@
       }
 
       &__contact {
+        font-family: $ds-font-family-complementary;
+        font-weight: 300;
         margin-top: 20px;
         font-size: ds-rem-calc(16);
         position: relative;
@@ -112,6 +115,8 @@
       }
 
       &__location {
+        font-family: $ds-font-family-complementary;
+        font-weight: 300;
         position: absolute;
         left: 50px;
         bottom: 50px;
@@ -122,6 +127,8 @@
       }
 
       &__links {
+        font-family: $ds-font-family-complementary;
+        font-weight: 300;
         margin-top: 20px;
         position: relative;
         z-index: 1;
@@ -130,7 +137,6 @@
         a {
           display: block;
           font-size: ds-rem-calc(16);
-          font-weight: 400;
           color: $ds-color-charcoal;
           margin-bottom: 10px;
           line-height: 15px;

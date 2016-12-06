@@ -1,4 +1,5 @@
 .work {
+  padding: 0 20px;
 
   &__header {
     @include outer-container;
@@ -8,39 +9,81 @@
       display: inline-block;
       margin: 0;
       font-family: $ds-font-family-complementary;
-      font-weight: 300;
+      font-weight: 400;
       font-size: ds-rem-calc(16);
       color: $ds-color-charcoal;
       position: relative;
       background: $ds-color-yellow;
       padding: 12px 20px;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        // background: lighten($ds-color-charcoal, 60);
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-      }
     }
 
     p {
       float: right;
       margin: 0;
       font-family: $ds-font-family-complementary;
-      font-weight: 300;
+      font-weight: 400;
       font-size: ds-rem-calc(16);
       padding: 12px 0;
     }
   }
 
-  &__feed {
+  &__projects {
     &__blocks {
       @include outer-container;
-      width: 90%;
+      max-width: 1500px;
+
+      .block {
+        overflow: hidden;
+        width: 100%;
+        @include span-columns(12);
+
+        @include media($tablet) {
+          @include span-columns(6);
+          @include omega(2n);
+        }
+
+        @include media($desktop) {
+          @include span-columns(4);
+          @include omega(3n);
+          @include omega-reset(2n);
+        }
+
+        h3 {
+          color: $ds-color-charcoal;
+          margin: 0;
+          font-size: ds-rem-calc(14);
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include media($tablet) {
+            font-size: ds-rem-calc(16);
+          }
+          @include media($laptop) {
+            font-size: ds-rem-calc(18);
+          }
+        }
+
+        p {
+          color: $ds-color-charcoal;
+          font-family: $ds-font-family-complementary;
+          font-size: ds-rem-calc(14);
+          font-weight: 400;
+          margin: 0 auto;
+        }
+
+        &__image {
+          img { width: 100%; }
+        }
+
+        &__text {
+          padding: 20px 0 40px 0;
+        }
+
+        a {
+          color: $ds-color-charcoal;
+          &:hover { color: $ds-color-link; }
+        }
+      }
     }
   }
 }

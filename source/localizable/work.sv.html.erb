@@ -8,54 +8,42 @@ title: Uppdrag
     <p>You may also <a href="/<%= t(:paths)[:work_types] %>">browse projects by type</a></p>
   </header>
 
-  <section class="work__feed">
-    <div class="work__feed__blocks feed">
-      <%= partial("components/feed/case_study", :locals => {
+  <section class="work__projects">
+    <div class="work__projects__blocks">
+      <%= partial("components/project", :locals => {
         :title => "Lanneberg Bexelius",
-        :text => "Company branding for a personal branding company",
-        :image => "feed/case-study-lb.png",
-        :background_color => "#3b1c32",
-        :text_color => "white"
+        :text => "Promotional Websites, Identity",
+        :image => "case/thumbnails/lanneberg-bexelius.png"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("components/project", :locals => {
         :title => "Celine Beyond",
-        :text => "Be the change you want to hear in the world",
-        :image => "feed/case-study-celine-beyond.png",
-        :background_color => "#1eff7f",
-        :text_color => "black"
+        :text => "Promotional Websites, Identity",
+        :image => "case/thumbnails/celine-beyond.png"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Releasefest",
-        :text => "Hooray for Swedish digital projects and products!",
-        :image => "feed/case-study-releasefest.png",
-        :background_color => "#fecc05",
-        :text_color => "black"
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("components/project", :locals => {
         :title => "Vembi",
-        :text => "Unique ownership information for swedish companies",
-        :image => "feed/case-study-vembi.png",
-        :background_color => "#59d3ef",
-        :text_color => "black"
+        :text => "Branding, Fintech",
+        :image => "case/thumbnails/vembi.png"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("components/project", :locals => {
+        :title => "Releasefest",
+        :text => "News & Media",
+        :image => "case/thumbnails/releasefest.png"
+      }) %>
+
+      <%= partial("components/project", :locals => {
         :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "feed/case-study-icebreaker.png",
-        :background_color => "#225c37",
-        :text_color => "white"
+        :text => "Hardware, Campaigns, Social Media API:s",
+        :image => "case/thumbnails/icebreaker.png"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("components/project", :locals => {
         :title => "SKL Genombrott",
-        :text => "Turning ideas into improvements in healthcare",
-        :image => "feed/case-study-skl.png",
-        :background_color => "#1386AD",
-        :text_color => "white"
+        :text => "Tools",
+        :image => "case/thumbnails/skl-genombrott.png"
       }) %>
 
     </div>

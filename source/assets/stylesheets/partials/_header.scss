@@ -2,7 +2,7 @@
   @include outer-container;
   position: relative;
   z-index: 9;
-  font-size: ds-rem-calc(19);
+  font-size: ds-rem-calc(20);
   padding: 30px 20px;
   @include media($laptop) { padding: 30px 20px; }
   @include media($desktop) { padding: 30px 0; }

@@ -1,6 +1,4 @@
 .feed {
-  display: none;
-
   .block {
     overflow: hidden;
     width: 100%;
@@ -26,9 +24,10 @@
 
     h3 {
       color: inherit;
-      margin: 0 0 10px 0;
+      max-width: 350px;
+      margin: 0 auto 10px auto;
       font-size: ds-rem-calc(14);
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
 
       @include media($tablet) {
@@ -42,13 +41,14 @@
     p {
       font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(14);
-      font-weight: 300;
-      margin: 0;
+      font-weight: 400;
+      max-width: 350px;
+      margin: 0 auto;
 
       &.category {
         display: inline-block;
         font-size: ds-rem-calc(14);
-        font-weight: 200;
+        font-weight: 300;
         margin: 0 0 20px 0;
         color: $ds-color-red;
         border-bottom: 1px solid $ds-color-red;

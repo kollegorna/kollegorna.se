@@ -35,8 +35,8 @@
       },
 
       setupFeed: function() {
-        var $feed = $('.feed').imagesLoaded( function() {
-          $('.feed').fadeIn('medium');
+        var $feed = $('.grid').imagesLoaded( function() {
+          $('.grid').fadeIn('medium');
 
           $feed.packery({
             itemSelector: '.block',
