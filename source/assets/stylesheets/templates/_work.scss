@@ -1,9 +1,10 @@
 .work {
-  padding: 0 20px;
+  padding: 0 10px;
 
   &__header {
     @include outer-container;
     margin-bottom: 20px;
+    padding: 0 10px;
 
     h1 {
       display: inline-block;
@@ -40,6 +41,7 @@
         @include media($tablet) {
           @include span-columns(6);
           @include omega(2n);
+          padding: 0 10px;
         }
 
         @include media($desktop) {

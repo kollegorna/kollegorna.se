@@ -1,11 +1,11 @@
 ---
-title: Uppdrag
+title: Projekt
 ---
 
 <main role="main" class="work">
   <header class="work__header">
-    <h1>Selected projects</h1>
-    <p>You may also <a href="/<%= t(:paths)[:work_types] %>">browse projects by type</a></p>
+    <h1>By Project</h1>
+    <h1><a href="/<%= t(:paths)[:work_types] %>">By Type</a></h1>
   </header>
 
   <section class="work__projects">
@@ -46,6 +46,23 @@ title: Uppdrag
         :image => "case/thumbnails/skl-genombrott.png"
       }) %>
 
+      <%= partial("components/project", :locals => {
+        :title => "Dina Risker",
+        :text => "Campaigns, Fun & Games",
+        :image => "case/thumbnails/dina-risker.png"
+      }) %>
+
+      <%= partial("components/project", :locals => {
+        :title => "Medievärlden Premium",
+        :text => "News & Media, Paid Services",
+        :image => "case/thumbnails/medievarlden-premium.png"
+      }) %>
+
+      <%= partial("components/project", :locals => {
+        :title => "BG Play",
+        :text => "News & Media, Paid Services",
+        :image => "case/thumbnails/bg-play.png"
+      }) %>
     </div>
   </section>
 </main>
