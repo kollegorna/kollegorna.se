@@ -141,6 +141,10 @@
       max-width: 1500px;
       margin: 0 auto;
 
+      @include media($huge) {
+        max-width: 1800px;
+      }
+
       .block {
         overflow: hidden;
         width: 100%;
@@ -152,15 +156,9 @@
           width: 80%;
           margin-left: 10%;
         }
-        @include media($laptop) {
-          width: calc(50% - 10px);
-          margin-left: 0;
-        }
         @include media($desktop) {
           width: calc(50% - 10px);
-        }
-        @include media($huge) {
-          width: calc(33% - 15px);
+          margin-left: 0;
         }
       }
     }
