@@ -5,30 +5,44 @@
     @include outer-container;
 
     &__content {
-      @include span-columns(8);
-      @include shift(2);
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+      }
 
       @include media($desktop) {
         @include span-columns(5);
-        @include shift(1);
-        padding-top: 60px;
+        @include shift(0);
+        padding-top: 20px;
       }
 
       h1 {
-        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(16);
         margin: 0;
-        color: $ds-color-red;
+        font-weight: 500;
+        color: $ds-color-link;
+        text-align: center;
 
-        @include media($laptop) { font-size: ds-rem-calc(18); }
+        @include media($laptop) {
+          text-align: left;
+          font-size: ds-rem-calc(18);
+        }
       }
 
       p {
+        font-family: $ds-font-family-complementary;
         margin-top: 10px;
-        font-size: ds-rem-calc(18);
-        font-weight: 400;
+        font-size: ds-rem-calc(14);
+        font-weight: 300;
+        text-align: center;
 
-        @include media($laptop) { font-size: ds-rem-calc(24); }
+        @include media($laptop) {
+          text-align: left;
+          font-size: ds-rem-calc(18);
+        }
       }
     }
   }

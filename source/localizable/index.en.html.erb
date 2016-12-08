@@ -1,3 +1,98 @@
 ---
 title: Index
 ---
+
+<main role="main" class="index">
+  <section class="index__hero">
+    <div class="index__hero__headline">
+      <p><%= t(:index)[:hello] %></p>
+      <h1><%= t(:index)[:short_bio] %></h1>
+    </div>
+  </section>
+
+  <section class="index__feed">
+    <header class="index__feed__header">
+      <h2><%= t(:index)[:from_feed] %></h2>
+    </header>
+
+    <div class="index__feed__blocks feed grid">
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Lanneberg Bexelius",
+        :text => "Company branding and website for a personal branding company",
+        :image => "case/thumbnails/lanneberg-bexelius.png",
+        :background_color => "#F5EFEC",
+        :text_color => "#41162f"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :text => 'We’re arranging an <a href="https://twitter.com/hashtag/ember" target="_blank">#ember</a> hack night in <a href="https://twitter.com/hashtag/stockholm" target="_blank">#stockholm</a> on Nov 15. Come join us! Food and drinks are on us. <a href="https://twitter.com/hashtag/sthlmtech" target="_blank">#sthlmtech</a>',
+        :author => "@kollegorna",
+        :author_link => "https://twitter.com/kollegorna",
+        :date => "January 22, 2015"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Voicemail using Slack, S3, 46elks and a dash of Go",
+        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity."
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Celine Beyond",
+        :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
+        :image => "case/thumbnails/celine-beyond.png",
+        :background_color => "#EFEFEF",
+        :text_color => "black"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :text => 'Rails Daily #231 - Build a Rails API, <a href="https://t.co/Rk5VI2SL16" target="_blank">bit.ly/1n6rrHR</a>, by Filippos via <a href="/kollegorna" target="_blank">@kollegorna',
+        :author => "@yourrailsdaily",
+        :author_link => "https://twitter.com/yourrailsdaily",
+        :date => "January 22, 2015"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Jekyll for Company Websites",
+        :text => "Recently we made two small company websites for Blendow Group – blendow.se and bgpublishing.se. We decided to build them using Jekyll and host them on GitHub Pages."
+      }) %>
+
+      <%= partial("components/feed/blip", :locals => {
+        :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017."
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "The Icebreaker Machine",
+        :text => "What should you order and what could you possibly talk about?",
+        :image => "case/thumbnails/releasefest.png",
+        :background_color => "#f7f9f9",
+        :text_color => "#005293"
+      }) %>
+
+      <%= partial("components/feed/gallery", :locals => {
+        :text => "New friends at the office 😊",
+        :images => [
+          "feed/gallery.jpg"
+        ]
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "Vembi is a startup where you can find direct owner information for more than 30 000 companies as well as being able to see who controls over 70 000 swedish companies.",
+        :image => "case/thumbnails/vembi.png",
+        :background_color => "#FFFFFF",
+        :text_color => "#565656"
+      }) %>
+
+    </div>
+  </section>
+
+  <section class="index__testimonials">
+    <header class="index__testimonials__header">
+      <h2><%= t(:index)[:testimonials] %></h2>
+    </header>
+
+    <div class="index__testimonials__content">
+      “I went through the trouble of learning how Kollegorna is pronounced. That’s how good they are.”
+    </div>
+  </section>
+</main>

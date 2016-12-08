@@ -75,7 +75,7 @@
     }
 
     &__text {
-      padding: 30px 40px 40px 40px;
+      padding: 25px 40px 40px 40px;
     }
 
     &__caption {
@@ -146,6 +146,12 @@
 
       blockquote {
         border: 0;
+
+        p {
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+          font-style: normal;
+        }
       }
     }
 

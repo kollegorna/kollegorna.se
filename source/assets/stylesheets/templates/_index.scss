@@ -103,7 +103,7 @@
   &__testimonials {
     margin-top: 60px;
     padding: 60px 0;
-    background: white;
+    background: $ds-color-charcoal;
 
     h2 {
       display: inline-block;
@@ -113,7 +113,8 @@
       font-size: ds-rem-calc(16);
       color: white;
       position: relative;
-      background: $ds-color-charcoal;
+      background: $ds-color-yellow;
+      color: $ds-color-charcoal;
       padding: 12px 20px;
 
       &:before {
@@ -135,11 +136,11 @@
     }
     &__content {
       @include outer-container;
-      width: 80%;
-      max-width: 600px;
+      width: 1000px;
+      max-width: 90%;
 
       .block {
-        width: 100% !important;
+        width: calc(50% - 10px) !important;
       }
     }
   }
