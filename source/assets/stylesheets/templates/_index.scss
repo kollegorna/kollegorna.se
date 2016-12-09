@@ -67,8 +67,8 @@
     h2 {
       display: inline-block;
       margin: 0;
-      font-weight: 300;
       font-size: ds-rem-calc(16);
+      font-style: italic;
       color: lighten($ds-color-charcoal, 50);
       position: relative;
       background: white;
@@ -102,17 +102,17 @@
   &__testimonials {
     margin-top: 60px;
     padding: 60px 0;
-    background: $ds-color-charcoal;
+    background: $ds-color-yellow;
 
     h2 {
       display: inline-block;
       margin: 0;
-      font-weight: 300;
       font-size: ds-rem-calc(16);
+      font-style: italic;
       color: white;
       position: relative;
-      background: $ds-color-yellow;
-      color: $ds-color-charcoal;
+      background: $ds-color-charcoal;
+      color: $ds-color-yellow;
       padding: 12px 20px;
 
       &:before {
@@ -134,11 +134,13 @@
     }
     &__content {
       @include outer-container;
-      width: 1000px;
+      width: 1500px;
       max-width: 90%;
 
-      .block {
-        width: calc(50% - 10px) !important;
+      &.feed {
+        .block {
+          &__text { padding-bottom: 0; }
+        }
       }
     }
   }

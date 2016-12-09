@@ -150,9 +150,15 @@
         border: 0;
 
         p {
-          font-size: ds-rem-calc(16);
-          font-weight: 300;
+          font-family: $ds-font-family-complementary;
+          font-size: ds-rem-calc(18);
+          font-weight: 600;
           font-style: normal;
+          max-width: 450px;
+
+          @include media($tablet) { font-size: ds-rem-calc(20); }
+          @include media($desktop) { font-size: ds-rem-calc(22); }
+          @include media($huge) { font-size: ds-rem-calc(24); }
         }
       }
     }

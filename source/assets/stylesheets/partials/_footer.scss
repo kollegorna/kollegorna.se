@@ -1,0 +1,83 @@
+.footer {
+  color: $ds-color-light-gray;
+  background: $ds-color-charcoal;
+  position: relative;
+  z-index: 9;
+  font-size: ds-rem-calc(18);
+  font-weight: 300;
+  padding: 40px 20px;
+  @include media($laptop) { padding: 60px 20px; }
+  @include media($desktop) { padding: 60px 0; }
+
+  h1 {
+    color: $ds-color-white;
+    font-family: $ds-font-family-complementary;
+    font-size: ds-rem-calc(14);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: ds-rem-calc(1);
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  a, p {
+    font-size: ds-rem-calc(16);
+  }
+
+  &__container {
+    @include outer-container;
+  }
+
+  &__logo {
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+
+    a { font-size: 0; }
+    svg {
+      max-width: 50px;
+      .cls-1 { fill: $ds-color-light-gray; }
+      .cls-2 { stroke: $ds-color-light-gray; }
+    }
+
+    @include span-columns(12);
+
+    @include media($laptop) {
+      @include span-columns(3);
+    }
+  }
+
+  &__contacts {
+    @include span-columns(12);
+
+    @include media($laptop) {
+      @include span-columns(3);
+    }
+
+    a {
+      color: $ds-color-light-gray;
+      margin-left: 20px;
+
+      &:hover {
+        color: $ds-color-yellow;
+      }
+    }
+  }
+
+  &__navigation {
+    @include span-columns(12);
+
+    @include media($laptop) {
+      @include span-columns(3);
+    }
+
+    a {
+      display: block;
+      color: $ds-color-light-gray;
+
+      &:hover {
+        color: $ds-color-yellow;
+      }
+    }
+  }
+}
