@@ -18,11 +18,9 @@
       width: calc(33% - 10px);
       margin-left: 0;
     }
-    @include media($huge) {
-      width: calc(25% - 15px);
-    }
 
     h3 {
+      font-family: $ds-font-family-complementary;
       color: inherit;
       max-width: 350px;
       margin: 0 auto 10px auto;
@@ -31,19 +29,23 @@
       text-transform: uppercase;
 
       @include media($tablet) {
-        font-size: ds-rem-calc(16);
+        font-size: ds-rem-calc(18);
       }
       @include media($laptop) {
-        font-size: ds-rem-calc(18);
+        font-size: ds-rem-calc(20);
       }
     }
 
     p {
-      font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(14);
       font-weight: 400;
       max-width: 350px;
       margin: 0 auto;
+
+      @include media($laptop) {
+        font-size: ds-rem-calc(16);
+        font-weight: 300;
+      }
 
       &.category {
         display: inline-block;

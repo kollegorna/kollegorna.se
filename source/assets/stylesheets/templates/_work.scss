@@ -14,7 +14,6 @@
     h1 {
       display: inline-block;
       margin: 0;
-      font-family: $ds-font-family-complementary;
       font-weight: 400;
       font-size: ds-rem-calc(16);
       color: $ds-color-charcoal;
@@ -31,7 +30,6 @@
     p {
       float: right;
       margin: 0;
-      font-family: $ds-font-family-complementary;
       font-weight: 400;
       font-size: ds-rem-calc(16);
       padding: 12px 0;
@@ -64,6 +62,7 @@
         }
 
         h3 {
+          font-family: $ds-font-family-complementary;
           color: $ds-color-charcoal;
           margin: 0;
           font-size: ds-rem-calc(14);
@@ -80,7 +79,6 @@
 
         p {
           color: $ds-color-charcoal;
-          font-family: $ds-font-family-complementary;
           font-size: ds-rem-calc(14);
           font-weight: 400;
           margin: 0 auto;

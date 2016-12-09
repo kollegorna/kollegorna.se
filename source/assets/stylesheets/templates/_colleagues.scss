@@ -20,6 +20,7 @@
       }
 
       h1 {
+        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(16);
         margin: 0;
         font-weight: 500;
@@ -33,7 +34,6 @@
       }
 
       p {
-        font-family: $ds-font-family-complementary;
         margin-top: 10px;
         font-size: ds-rem-calc(14);
         font-weight: 300;
@@ -97,8 +97,9 @@
       }
 
       &__name {
+        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(24);
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: ds-rem-calc(-0.5);
         margin: 0;
         position: relative;
@@ -107,7 +108,6 @@
       }
 
       &__title {
-        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(16);
         margin: 0;
         position: relative;
@@ -117,7 +117,6 @@
       }
 
       &__contact {
-        font-family: $ds-font-family-complementary;
         font-weight: 300;
         margin-top: 20px;
         font-size: ds-rem-calc(16);
@@ -132,7 +131,6 @@
       }
 
       &__location {
-        font-family: $ds-font-family-complementary;
         font-weight: 300;
         position: absolute;
         left: 50px;
@@ -144,7 +142,6 @@
       }
 
       &__links {
-        font-family: $ds-font-family-complementary;
         font-weight: 300;
         margin-top: 20px;
         position: relative;
