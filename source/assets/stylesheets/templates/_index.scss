@@ -134,12 +134,24 @@
     }
     &__content {
       @include outer-container;
-      width: 1500px;
+      width: 1200px;
       max-width: 90%;
 
       &.feed {
         .block {
-          &__text { padding-bottom: 0; }
+          text-align: left;
+
+          @include media($tablet) {
+            width: 80%;
+            margin-left: 10%;
+          }
+          @include media($laptop) {
+            width: calc(50% - 10px);
+            margin-left: 0;
+          }
+          @include media($desktop) {
+            width: calc(50% - 10px);
+          }
         }
       }
     }

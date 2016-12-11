@@ -87,28 +87,14 @@ title: Index
   </section>
 
   <section class="index__testimonials">
-    <header class="index__testimonials__header">
-      <h2><%= t(:index)[:testimonials] %></h2>
-    </header>
-
-    <div class="index__testimonials__content feed">
+    <div class="index__testimonials__content feed grid">
       <%= partial("components/feed/quote", :locals => {
-        :text => "So good and such a pleasure to work with. Highly reccommended.",
+        :text => "Portland pok pok lo-fi, brooklyn banh mi normcore cornhole vape fap helvetica. Health goth XOXO 8-bit tote bag, intelligentsia twee +1. Occupy hexagon semiotics, ennui iceland yuccie skateboard. Viral af direct trade pug.",
         :author => "Adrian Lo, Soundzipper"
       }) %>
 
       <%= partial("components/feed/quote", :locals => {
-        :text => "I went through the trouble of learning how Kollegorna is pronounced just because of these guys. That's how good I think they are.",
-        :author => "Adrian Lo, Soundzipper"
-      }) %>
-
-      <%= partial("components/feed/quote", :locals => {
-        :text => "I went through the trouble of learning how Kollegorna is pronounced. That's how good I think these guys are.",
-        :author => "Adrian Lo, Soundzipper"
-      }) %>
-
-      <%= partial("components/feed/quote", :locals => {
-        :text => "I went through the trouble of learning how Kollegorna is pronounced. That's how good I think these guys are.",
+        :text => "Cornhole shabby chic affogato, hoodie pabst put a bird on it cred small batch food truck. Gluten-free godard venmo sriracha direct trade bicycle rights. Hot chicken literally neutra YOLO flannel.",
         :author => "Adrian Lo, Soundzipper"
       }) %>
     </div>

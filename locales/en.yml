@@ -1,10 +1,10 @@
 ---
 en:
   paths:
-    work: 'projects'
-    work_types: 'projects/types'
+    work: 'work'
+    work_types: 'work/types'
   nav:
-    work: "Projects"
+    work: "Work"
     colleagues: "Colleagues"
     about: "About"
     careers: "Careers"
