@@ -1,5 +1,5 @@
 .colleagues {
-  padding: 0 0 60px 0;
+  padding: 0 20px 60px 20px;
 
   &__header {
     @include outer-container;
@@ -62,9 +62,13 @@
     .profile {
       background: white;
       border-radius: 4px;
-      padding: 50px;
+      padding: 30px 40px 30px 30px;
       min-height: 450px;
       position: relative;
+
+      @include media($tablet) {
+        padding: 50px;
+      }
 
       &__background {
         width: 100%;
@@ -84,8 +88,8 @@
       &__image {
         float: right;
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         overflow: hidden;
         position: relative;
         top: -10px;
@@ -94,32 +98,45 @@
         z-index: 1;
         transform-origin: top right;
         transition: all .2s ease-in-out .1s;
+
+        @include media($tablet) {
+          width: 100px;
+          height: 100px;
+        }
       }
 
       &__name {
         font-family: $ds-font-family-complementary;
-        font-size: ds-rem-calc(24);
+        font-size: ds-rem-calc(18);
         font-weight: 700;
         letter-spacing: ds-rem-calc(-0.5);
         margin: 0;
         position: relative;
         z-index: 1;
         transition: opacity .2s ease-in-out;
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(24);
+        }
       }
 
       &__title {
-        font-size: ds-rem-calc(16);
+        font-size: ds-rem-calc(14);
         margin: 0;
         position: relative;
         z-index: 1;
         color: darken($ds-color-white, 40);
         transition: opacity .2s ease-in-out;
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+        }
       }
 
       &__contact {
         font-weight: 300;
         margin-top: 20px;
-        font-size: ds-rem-calc(16);
+        font-size: ds-rem-calc(14);
         position: relative;
         z-index: 1;
         transition: opacity .2s ease-in-out;
@@ -128,6 +145,10 @@
           display: block;
           margin-bottom: 5px;
         }
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+        }
       }
 
       &__location {
@@ -135,10 +156,14 @@
         position: absolute;
         left: 50px;
         bottom: 50px;
-        font-size: ds-rem-calc(16);
+        font-size: ds-rem-calc(14);
         z-index: 1;
         color: darken($ds-color-white, 40);
         cursor: crosshair;
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+        }
       }
 
       &__links {
@@ -150,12 +175,16 @@
 
         a {
           display: block;
-          font-size: ds-rem-calc(16);
+          font-size: ds-rem-calc(14);
           color: $ds-color-charcoal;
           margin-bottom: 10px;
           line-height: 15px;
 
           &:hover { color: $ds-color-link; }
+
+          @include media($tablet) {
+            font-size: ds-rem-calc(16);
+          }
         }
       }
 
