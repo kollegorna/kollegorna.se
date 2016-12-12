@@ -5,7 +5,7 @@ sv:
     work: "projekt"
     colleagues: "kollegor"
     blog: "blogg"
-    work_types: 'projekt/typer'
+    work_types: "projekt/typer"
   nav:
     work: "Projekt"
     colleagues: "Kollegor"

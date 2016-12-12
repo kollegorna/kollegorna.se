@@ -1,8 +1,12 @@
 ---
 en:
   paths:
-    work: 'work'
-    work_types: 'work/types'
+    work: "work"
+    work_types: "work/types"
+    colleagues: "colleagues"
+    about: "about"
+    contacts: "contacts"
+    careers: "careers"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -24,4 +28,4 @@ en:
     more_detail: "More detail"
   colleagues:
     slogan: "Born in Sweden, made worldwide"
-    description: "We're a distributed team spread across the world from Santo Domingo to Seoul with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria,  Portugal and the Dominican Republic."
+    description: "Kollegorna (Swedish for colleagues) is a distributed team spread across the world from Santo Domingo to Plovdiv with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria,  Portugal and the Dominican Republic."
