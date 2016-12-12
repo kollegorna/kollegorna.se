@@ -173,7 +173,28 @@
         border-color: #1da1f2;
       }
 
-      .author { color: rgba($ds-color-charcoal, 0.5); }
+      blockquote {
+        font-style: normal;
+        font-weight: 300;
+        border: 0;
+        color: rgba($ds-color-charcoal, 0.5);
+        font-size: ds-rem-calc(14);
+        margin: 0;
+        padding: 0;
+
+        p {
+          font-size: ds-rem-calc(14);
+          color: $ds-color-charcoal;
+          max-width: 450px;
+          margin-bottom: 10px;
+
+          @include media($laptop) {
+            font-size: ds-rem-calc(16);
+            font-weight: 300;
+          }
+        }
+      }
+
       a { color: #1da1f2; }
     }
 

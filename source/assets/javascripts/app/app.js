@@ -34,6 +34,17 @@
         });
       },
 
+      caseMediaTweet: function(data) {
+        var html = $(data.html.bold());
+        html.find('script').remove();
+
+        var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
+
+        var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
+
+        return html.html();
+      },
+
       setupFeed: function() {
         var $feed = $('.grid').imagesLoaded( function() {
           $('.grid').fadeIn('medium');
@@ -42,6 +53,18 @@
             itemSelector: '.block',
             layoutMode: 'masonry',
             gutter: 20
+          });
+        });
+
+        $('.block--tweet').each(function(i) {
+          var tweet = $(this);
+          $.ajax({
+            url: "https://api.twitter.com/1/statuses/oembed.json?url="+tweet.attr('data-tweet'),
+            dataType: "jsonp",
+            success: function(data){
+              tweet.find('.block__text').append(Kollegorna.caseMediaTweet(data));
+              $feed.packery();
+            }
           });
         });
       },
