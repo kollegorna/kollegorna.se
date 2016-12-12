@@ -80,45 +80,10 @@
         @include media($desktop) { font-size: ds-rem-calc(24); }
       }
     }
-
-    &__steps {
-      @include span-columns(10);
-      @include shift(1);
-      @include omega;
-      margin-top: 50px;
-
-      .step {
-        width: 90%;
-        text-align: center;
-        padding: 0 20px;
-        margin: 20px auto 30px auto;
-
-        @include media($tablet) {
-          width: 33.33333%;
-          float: left;
-          margin: 0;
-        }
-
-        img {
-          max-width: 100px;
-        }
-      }
-
-      h3 {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: ds-rem-calc(12);
-        margin: 15px 0 5px 0;
-      }
-
-      p {
-        font-size: ds-rem-calc(16);
-        margin: 0;
-      }
-    }
   }
 
   &__features {
+    padding-bottom: 60px;
 
     &__row {
       @include outer-container;
@@ -181,8 +146,12 @@
 
         p {
           margin-top: 10px;
-          font-size: ds-rem-calc(16);
-          font-weight: 300;
+          font-size: ds-rem-calc(14);
+
+          @include media($tablet) {
+            font-size: ds-rem-calc(16);
+            font-weight: 300;
+          }
         }
       }
     }
