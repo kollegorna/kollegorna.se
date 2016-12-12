@@ -1,0 +1,98 @@
+---
+title: Dina Risker – case study | Kollegorna
+description: "How good are you at assessing risk? Play the game Dina Risker that we built together with Edelman Deportivo for the insurance company Dina Försäkringar."
+---
+
+<article role="main" class="case">
+
+  <section class="case__content">
+    <div class="case__description">
+      <h2>How good are you at assessing risk?</h2>
+
+      <p class="highlight">Play the game Dina Risker that we built together with Edelman Deportivo for the insurance company Dina Försäkringar.</p>
+
+      <div class="additional">
+        <p>Resultatet blev spelet Dina Risker. Spelaren får här under tidspress jämföra olika risker, som slumpas fram, mot varandra för att sedan få ett omdöme om ens riskbedömningsförmåga.</p>
+
+        <p>Efter att spelet avslutats får spelaren en unik länk med sitt resultat att dela/skryta med i sociala medier samt möjligheten att läsa och lära sig mer om de olika riskerna hen nyss bedömt.</p>
+
+        <p>
+          <a href="http://feber.se/webb/art/332921/dina_frskringar_slpper_riskbed/">Feber.se: Dina Försäkringar släpper riskbedömningsspel</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="case__facts">
+      <div class="sheet">
+        <h3><%= t(:cases)[:client] %></h3>
+        <p>
+          <a href="http://www.edelmandeportivo.com">Edelman Deportivo</a><br>
+          <a href="http://www.dina.se">Dina Försäkringar</a>
+        </p>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:tech] %></h3>
+        <ul>
+          <li>Ruby on Rails</li>
+          <li>GreenSock</li>
+          <li>PostgreSQL</li>
+          <li>Redis</li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:services] %></h3>
+        <ul>
+          <li>Heroku</li>
+          <li>Mixpanel</li>
+          <li>Google Analytics</li>
+          <li>Honeybadger</li>
+          <li>Circle CI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case__cta">
+      <a class="expand">More detail</a>
+    </div>
+  </section>
+
+  <section class="case__feed">
+    <div class="feed grid">
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/dina-risker/desktop-1.png"
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/dina-risker/desktop-2.png"
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/dina-risker/desktop-3.png"
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/dina-risker/desktop-4.png"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/606798114767421440"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :link => "https://twitter.com/mattiasronge/status/633323160977440768"
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/dina-risker/dashboard.png",
+        :caption => "Adminverktyg som ger en översikt av statistik samt möjlighet att hantera innehållet.",
+        :full_width => "true"
+      }) %>
+
+    </div>
+  </section>
+  <!-- / .case__media -->
+</article>
+<!-- / .case -->

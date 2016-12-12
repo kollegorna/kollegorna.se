@@ -1,0 +1,83 @@
+---
+title: BG Play – case study | Kollegorna
+description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges främsta experter dig aktuella nyheter och vidareutbildning för olika områden inom juridiken."
+---
+
+<article role="main" class="case">
+
+  <section class="case__content">
+    <div class="case__description">
+      <h2>Plattform för webb-TV inom juridik.</h2>
+
+      <p class="highlight">På BG Play ger Sveriges främsta experter dig aktuella nyheter och vidareutbildning för olika områden inom juridiken.</p>
+
+      <div class="additional">
+        <p>En en playtjänst för juridik från Blendow Group för webb-TV och utbildningsprogram som de själva producerar. Tjänsten består av publikt innehåll som Veckans Juridik samt Blendow Lexnova Expertnyheter för betalande prenumeranter. Vem som helst kan är välkommen att registrera ett konto på tjänsten. Som ny användare får du tillgång till en del av utbudet av Blendow Lexnova Expertnyheter under en begränsad tid. För att få tillgång till det du behöver finns olika paket uppdelat på olika rättsområden.</p>
+
+        <h3>Tester för professionell vidareutbildning</h3>
+        <p>Som advokat kan man i samband med vissa av videoklippen från Blendow Lexnova Expertnyheter genomgå ett test. Om man klarar testet får man tillgodoräkna sig en viss mängd tid för den <a href="https://www.advokatsamfundet.se/Advokatnatet/Advokatverksamheten/Professionell-vidareutbildning/">årliga professionella vidareutbildningen</a> för advokater.</p>
+      </div>
+    </div>
+
+    <div class="case__facts">
+      <div class="sheet">
+        <h3><%= t(:cases)[:client] %></h3>
+        <p><a href="http://www.blendow.se">Blendow Group</a></p>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:tech] %></h3>
+        <ul>
+          <li>Ruby on Rails</li>
+          <li>PostgreSQL</li>
+          <li>Redis</li>
+          <li>ElasticSearch</li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:services] %></h3>
+        <ul>
+          <li>Heroku</li>
+          <li>Mailchimp</li>
+          <li>Mandrill</li>
+          <li>Mixpanel</li>
+          <li>Google Analytics</li>
+          <li>Honeybadger</li>
+          <li>Circle CI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case__cta">
+      <a class="expand">More detail</a>
+    </div>
+  </section>
+
+  <section class="case__feed">
+    <div class="feed grid">
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/bgplay/desktop-1-video.png"
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/bgplay/chapters.png",
+        :caption => "Långa avsnitt är indelade i sektioner så att videon ska startas där det är relevant för användaren."
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/bgplay/keep-watching.png",
+        :caption => "Tjänsten håller koll på hur långt man tittat på en video."
+      }) %>
+
+      <%= partial("components/feed/image", :locals => {
+        :image => "case/bgplay/desktop-2-person.png",
+        :caption => "Profilsidor för de som deltar i de olika programmen."
+      }) %>
+
+    </div>
+  </section>
+  <!-- / .case__media -->
+</article>
+<!-- / .case -->
