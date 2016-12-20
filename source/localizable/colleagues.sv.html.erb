@@ -414,5 +414,55 @@ title: Kollegor
         </a>
       </div>
     </article>
+    <article class="profile block" itemscope itemtype="http://schema.org/Person">
+      <div class="profile__background map" data-markers="false">
+        <div class="marker" data-lat="55.7085666" data-lng="21.1332599"></div>
+      </div>
+
+      <figure class="profile__image">
+        <img itemprop="image" src="<%= image_path('avatars/osvaldas.jpg') %>" alt="Osvaldas Valutis">
+      </figure>
+
+      <h1 class="profile__name" itemprop="name">Osvaldas Valutis</h1>
+      <h2 class="profile__title" itemprop="jobTitle">Utvecklare</h2>
+
+      <div class="profile__contact">
+        <a href="mailto:osvaldas@kollegorna.se" itemprop="email">osvaldas@kollegorna.se</a>
+      </div>
+
+      <div class="profile__location">
+        <div class="profile__icon">
+          <%= image_tag 'icon-map-pin.svg' %>
+        </div>
+        Klaipeda, Lithuania
+      </div>
+
+      <div class="profile__links">
+        <a href="https://twitter.com/osvaldas" itemprop="sameAs">
+          <div class="profile__icon">
+            <%= image_tag 'icon-twitter.svg' %>
+          </div>
+          @osvaldas
+        </a>
+        <a href="https://github.com/osvaldasvalutis" itemprop="sameAs">
+          <div class="profile__icon">
+            <%= image_tag 'icon-github.svg' %>
+          </div>
+          osvaldasvalutis
+        </a>
+        <a href="https://dribbble.com/osvaldas" itemprop="sameAs">
+          <div class="profile__icon">
+            <%= image_tag 'icon-dribbble.svg' %>
+          </div>
+          osvaldas
+        </a>
+        <a href="https://instagram.com/osvaldas" itemprop="sameAs">
+          <div class="profile__icon">
+            <%= image_tag 'icon-instagram.svg' %>
+          </div>
+          osvaldas
+        </a>
+      </div>
+    </article>
   </section>
 </main>
