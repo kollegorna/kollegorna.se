@@ -1,6 +1,6 @@
 .work {
   background: $ds-color-white;
-  padding: 60px 10px;
+  padding: 20px 10px;
 
   &__header {
     margin-bottom: 40px;
@@ -39,10 +39,10 @@
   &__projects {
     &__blocks {
       @include outer-container;
-      max-width: calc(1400px + 20px);
+      max-width: 1420px;
 
       @include media($huge) {
-        max-width: 96%;
+        max-width: 100%;
       }
 
       .block {

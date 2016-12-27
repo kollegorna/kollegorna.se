@@ -1,0 +1,228 @@
+.careers {
+
+  &__intro {
+    position: relative;
+    margin-bottom: 50px;
+    padding: 50px 0;
+    padding-bottom: 190px;
+    position: relative;
+    overflow: hidden;
+
+    @include media($laptop) {
+      padding-bottom: 60px;
+    }
+
+    &__content {
+      @include outer-container;
+    }
+
+    &__headline {
+      @include span-columns(8);
+      @include shift(2);
+      @include omega;
+      text-align: center;
+
+      @include media($laptop) {
+        @include span-columns(4);
+        @include shift(4);
+      }
+
+      p {
+        margin: 0 0 10px 0;
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      h1 {
+        margin: 0 0 20px 0;
+        font-weight: 600;
+        font-family: $ds-font-family-complementary;
+        font-size: ds-rem-calc(18);
+
+        @include media($tablet) { font-size: ds-rem-calc(28); }
+        @include media($laptop) { font-size: ds-rem-calc(30); }
+        @include media($desktop) { font-size: ds-rem-calc(32); }
+      }
+
+      h2 {
+        margin: 10px 0;
+        font-size: ds-rem-calc(18);
+        font-family: $ds-font-family-complementary;
+        font-weight: 400;
+
+        @include media($tablet) { font-size: ds-rem-calc(20); }
+        @include media($laptop) { font-size: ds-rem-calc(22); font-weight: 300; }
+        @include media($desktop) { font-size: ds-rem-calc(24); }
+      }
+    }
+  }
+
+  &__positions {
+    @include outer-container;
+    padding-bottom: 60px;
+
+    .position {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      @include media($laptop) {
+        @include span-columns(6);
+        @include shift(3);
+      }
+
+      h1 {
+        display: table;
+        margin: 0;
+        font-size: ds-rem-calc(16);
+        font-style: italic;
+        color: $ds-color-white;
+        position: relative;
+        background: $ds-color-green;
+        padding: 12px 20px;
+        margin: 0 auto 40px auto;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: ds-rem-calc(14);
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+        }
+
+        @include media($laptop) {
+          font-size: ds-rem-calc(18);
+        }
+      }
+    }
+  }
+
+  &__about {
+    background: $ds-color-green;
+    padding: 60px 0;
+
+    &__content {
+      @include outer-container;
+    }
+
+    &__text {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      @include media($laptop) {
+        @include span-columns(6);
+        @include shift(3);
+      }
+
+      h1 {
+        display: table;
+        margin: 0;
+        font-size: ds-rem-calc(16);
+        font-style: italic;
+        color: $ds-color-green;
+        position: relative;
+        background: $ds-color-white;
+        padding: 12px 20px;
+        margin: 0 auto 40px auto;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: ds-rem-calc(14);
+        color: $ds-color-white;
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+        }
+
+        @include media($laptop) {
+          font-size: ds-rem-calc(18);
+        }
+      }
+
+      a {
+        color: $ds-color-white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__workplace {
+    @include outer-container;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &__content {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      @include media($laptop) {
+        @include span-columns(6);
+        @include shift(3);
+      }
+
+      h1 {
+        display: table;
+        margin: 0;
+        font-size: ds-rem-calc(16);
+        font-style: italic;
+        color: $ds-color-white;
+        position: relative;
+        background: $ds-color-green;
+        padding: 12px 20px;
+        margin: 0 auto 40px auto;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: ds-rem-calc(14);
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+        }
+
+        @include media($laptop) {
+          font-size: ds-rem-calc(18);
+        }
+      }
+
+      ul {
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: ds-rem-calc(14);
+        list-style-position: outside;
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+          font-weight: 300;
+        }
+
+        @include media($laptop) {
+          font-size: ds-rem-calc(18);
+        }
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
