@@ -12,6 +12,11 @@
       @include span-columns(7);
     }
 
+    @include media($desktop) {
+      @include span-columns(8);
+      @include shift(0);
+    }
+
     h1 {
       font-style: italic;
       font-size: ds-rem-calc(18);
@@ -19,17 +24,16 @@
     }
 
     h2 {
-      font-family: $ds-font-family-complementary;
       font-weight: 700;
       max-width: 500px;
       letter-spacing: ds-rem-calc(-1);
       margin: 0 0 20px 0;
       font-size: ds-rem-calc(24);
+      line-height: 1.2;
       @include media($laptop) { font-size: ds-rem-calc(32); }
     }
 
     h3 {
-      font-family: $ds-font-family-complementary;
       font-weight: 600;
       max-width: 500px;
       margin: 30px 0 10px 0;
@@ -40,10 +44,20 @@
 
     p {
       max-width: 650px;
-      font-weight: 300;
       line-height: 1.8;
       font-size: ds-rem-calc(16);
       @include media($laptop) { font-size: ds-rem-calc(18); }
+    }
+
+    small {
+      font-size: ds-rem-calc(14);
+      color: darken($ds-color-white, 50);
+      display: block;
+      line-height: 1.2;
+
+      @include media($laptop) {
+        font-size: ds-rem-calc(16);
+      }
     }
 
     .additional {
@@ -79,7 +93,6 @@
     }
 
     h3 {
-      font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(12);
       font-weight: 700;
       text-transform: uppercase;
@@ -89,7 +102,6 @@
 
     p {
       font-size: ds-rem-calc(16);
-      font-weight: 300;
     }
 
     ul {
@@ -98,7 +110,6 @@
 
       li {
         margin: 5px 0;
-        font-weight: 300;
       }
     }
 
@@ -111,9 +122,14 @@
     @include span-columns(10);
     @include shift(1);
 
+    @include media($desktop) {
+      @include shift(0);
+    }
+
     .expand {
       display: inline-block;
       margin-top: 20px;
+      font-family: $ds-font-family-complementary;
       font-weight: 300;
       cursor: pointer;
       font-size: ds-rem-calc(16);

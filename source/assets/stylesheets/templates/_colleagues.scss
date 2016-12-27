@@ -20,7 +20,6 @@
       }
 
       h1 {
-        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(16);
         margin: 0;
         font-weight: 600;
@@ -36,7 +35,6 @@
       p {
         margin-top: 10px;
         font-size: ds-rem-calc(14);
-        font-weight: 300;
         text-align: center;
 
         @include media($laptop) {
@@ -106,7 +104,6 @@
       }
 
       &__name {
-        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(18);
         font-weight: 700;
         letter-spacing: ds-rem-calc(-0.5);
@@ -121,6 +118,7 @@
       }
 
       &__title {
+        font-family: $ds-font-family-complementary;
         font-size: ds-rem-calc(14);
         margin: 0;
         position: relative;
@@ -134,7 +132,6 @@
       }
 
       &__contact {
-        font-weight: 300;
         margin-top: 20px;
         font-size: ds-rem-calc(14);
         position: relative;
@@ -152,14 +149,19 @@
       }
 
       &__location {
+        font-family: $ds-font-family-complementary;
         font-weight: 300;
         position: absolute;
-        left: 50px;
+        left: 40px;
         bottom: 50px;
         font-size: ds-rem-calc(14);
         z-index: 1;
         color: darken($ds-color-white, 40);
+        border: 1px solid rgba($ds-color-light-gray, 0);
         cursor: crosshair;
+        padding: 5px 15px 8px 10px;
+        border-radius: 4px;
+        transition: opacity .2s ease-in-out;
 
         @include media($tablet) {
           font-size: ds-rem-calc(16);
@@ -167,6 +169,7 @@
       }
 
       &__links {
+        font-family: $ds-font-family-complementary;
         font-weight: 300;
         margin-top: 20px;
         position: relative;
@@ -212,6 +215,10 @@
         .profile__contact,
         .profile__links { opacity: 0; }
         .profile__background { opacity: 0.8; }
+
+        .profile__location {
+          background: $ds-color-white;
+        }
       }
     }
   }

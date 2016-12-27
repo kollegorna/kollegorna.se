@@ -2,6 +2,7 @@
   @include outer-container;
   position: relative;
   z-index: 9;
+  font-family: $ds-font-family-complementary;
   font-size: ds-rem-calc(18);
   font-weight: 300;
   padding: 30px 20px;

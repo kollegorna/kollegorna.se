@@ -62,7 +62,6 @@
         }
 
         h3 {
-          font-family: $ds-font-family-complementary;
           color: $ds-color-charcoal;
           margin: 0;
           font-size: ds-rem-calc(14);
@@ -78,9 +77,10 @@
         }
 
         p {
+          font-family: $ds-font-family-complementary;
           color: $ds-color-charcoal;
           font-size: ds-rem-calc(14);
-          font-weight: 400;
+          font-weight: 300;
           margin: 0 auto;
         }
 
