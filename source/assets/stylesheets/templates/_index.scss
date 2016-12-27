@@ -73,17 +73,6 @@
       position: relative;
       background: white;
       padding: 12px 20px;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        // background: lighten($ds-color-charcoal, 60);
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-      }
     }
 
     &__header {
@@ -114,17 +103,6 @@
       background: $ds-color-charcoal;
       color: $ds-color-yellow;
       padding: 12px 20px;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        // background: lighten($ds-color-charcoal, 60);
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-      }
     }
 
     &__header {
