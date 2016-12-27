@@ -1,0 +1,24 @@
+$lb-orange: #FFA433 !default;
+$lb-teal: #00D1DA !default;
+$lb-pink: #FF446B !default;
+$lb-gray: #F7EFEE !default;
+$lb-gray-dark: #E1E1E1 !default;
+$lb-purple: #544563 !default;
+$lb-purple-dark: #40162F !default;
+$lb-purple-light: #B0AAB7 !default;
+$lb-white: #FFFFFF !default;
+
+.case--lanneberg-bexelius {
+
+  .intro {
+    background: $lb-gray image-url('case/lanneberg-bexelius/intro.png') repeat-x center center;
+    background-size: 1800px 800px;
+    width: 100%;
+    height: 800px;
+  }
+
+  .brand {
+    background: $lb-teal;
+    min-height: 500px;
+  }
+}
