@@ -18,7 +18,41 @@ $lb-white: #FFFFFF !default;
   }
 
   .brand {
+    text-align: center;
     background: $lb-teal;
-    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .screens {
+    text-align: center;
+    background: $lb-gray;
+
+    #laptop {
+      max-height: 700px;
+    }
+
+    #tablet,
+    #phones {
+      max-height: 500px;
+    }
+
+    #desktop {
+      max-height: 925px;
+    }
+  }
+
+  .details {
+    font-size: 0;
+    
+    img {
+      width: 33.33%;
+      width: calc(100% / 3);
+    }
   }
 }
