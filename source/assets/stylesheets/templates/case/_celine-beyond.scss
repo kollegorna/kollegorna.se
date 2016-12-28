@@ -5,6 +5,10 @@
 		padding-top: 5%;
 		background: image-url('case/celine-beyond/cb-hero.jpg') no-repeat center;
 		background-size: cover;
+
+		img {
+			max-width: 1260px;
+		}
 	}
 
 	.brand {
@@ -12,6 +16,10 @@
 		width: 100%;
 		padding-top: 5%;
 		background: white;
+
+		img {
+			max-width: 1233px;
+		}
 	}
 
 	.responsive {
