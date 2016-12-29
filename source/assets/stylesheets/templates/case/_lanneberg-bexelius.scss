@@ -49,10 +49,19 @@ $lb-white: #FFFFFF !default;
 
   .details {
     font-size: 0;
-    
+
     img {
-      width: 33.33%;
-      width: calc(100% / 3);
+      width: 100%;
+
+      @include media($tablet) {
+        width: 50%;
+        width: calc(100% / 2);
+      }
+
+      @include media($desktop) {
+        width: 33.33%;
+        width: calc(100% / 3);
+      }
     }
   }
 }
