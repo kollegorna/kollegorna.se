@@ -45,7 +45,7 @@
       }
       @include media($laptop) {
         font-size: ds-rem-calc(32);
-        max-width: 600px;
+        max-width: 580px;
       }
       @include media($desktop) {
         font-size: ds-rem-calc(36);
