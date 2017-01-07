@@ -16,10 +16,10 @@ sv:
     work_with: "Jobba hos oss"
   index:
     hello: "Trevlig att råkas!"
-    short_bio: "Vi är ett team designers, utvecklare och strateger som gör förstklassiga digitala produkter och tjänster."
+    short_bio: "Vi är ett team designers, utvecklare och strateger som bygger förstklassiga digitala produkter och tjänster."
     feed: "Feed"
-    from_feed: "Latest & Greatest"
-    about: "About Us"
+    from_feed: "Aktuellt"
+    about: "Om oss"
     testimonials: "Testimonials"
   cases:
     client: "Kund"
