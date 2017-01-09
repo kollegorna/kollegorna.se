@@ -8,7 +8,7 @@
   @include media($laptop) { padding: 60px 20px; }
   @include media($desktop) { padding: 60px 0; }
 
-  h1 {
+  h4 {
     color: $ds-color-white;
     font-size: ds-rem-calc(14);
     font-weight: 600;
@@ -54,7 +54,6 @@
 
     a {
       color: $ds-color-light-gray;
-      margin-left: 20px;
 
       &:hover {
         color: $ds-color-yellow;
