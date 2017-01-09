@@ -89,26 +89,30 @@
     // Case Studies
     // --
     &--case-study {
-      background: $ds-color-charcoal;
-      p.category { color: inherit; }
+      a{
+        color: inherit;
+        display: block;
+        // background: $ds-color-charcoal;
+        p.category { color: inherit; }
 
-      &.full {
-        @include media($laptop) {
-          .block__text {
-            width: 50%;
-            float: left;
+        &.full {
+          @include media($laptop) {
+            .block__text {
+              width: 50%;
+              float: left;
+            }
+            .block__image {
+              width: 50%;
+              float: right;
+            }
           }
-          .block__image {
-            width: 50%;
-            float: right;
+
+          h3 {
+            letter-spacing: ds-rem-calc(-1);
+            font-size: ds-rem-calc(20);
+
+            @include media($laptop) { font-size: ds-rem-calc(30); }
           }
-        }
-
-        h3 {
-          letter-spacing: ds-rem-calc(-1);
-          font-size: ds-rem-calc(20);
-
-          @include media($laptop) { font-size: ds-rem-calc(30); }
         }
       }
     }

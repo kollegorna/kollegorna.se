@@ -1,15 +1,15 @@
-<a href="<%= defined?(link) ? link : "#" %>">
   <article class="block block--case-study <%= defined?(full_width) ? "full" : "" %>" style="background: <%= defined?(background_color) ? background_color : "#000000" %>; color: <%= defined?(text_color) ? text_color : "#FFFFFF" %>;">
-    <div class="block__text">
-      <p class="category" style="border-color: <%= defined?(text_color) ? text_color : "#000000" %>;">Case Study</p>
-      <h3><%= title %></h3>
-      <p><%= text %></p>
-    </div>
-
-    <% if defined?(image) %>
-      <div class="block__image">
-        <%= image_tag(image) %>
+    <a href="<%= defined?(link) ? link : "#" %>">
+      <div class="block__text">
+        <p class="category" style="border-color: <%= defined?(text_color) ? text_color : "#000000" %>;">Case Study</p>
+        <h3><%= title %></h3>
+        <p><%= text %></p>
       </div>
-    <% end %>
+
+      <% if defined?(image) %>
+        <div class="block__image">
+          <%= image_tag(image) %>
+        </div>
+      <% end %>
+    </a>
   </article>
-</a>
