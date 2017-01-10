@@ -10,6 +10,8 @@
     var Kollegorna = {
 
       init: function() {
+        this.mobileNav();
+
         this.bindClicks();
 
         this.setupFeed();
@@ -19,6 +21,18 @@
         setTimeout(function() {
           Kollegorna.setupMaps();
         }, 1000);
+      },
+
+      mobileNav: function() {
+        $(".header__button").on("click", function() {
+          if ($("nav").is(":hidden")) {
+            $("nav").slideDown();
+            $(".header__button").addClass("active");
+          } else {
+            $("nav").slideUp();
+            $(".header__button").removeClass("active");
+          }
+        });
       },
 
       bindClicks: function() {
