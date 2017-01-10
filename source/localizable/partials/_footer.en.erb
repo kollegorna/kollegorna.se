@@ -1,35 +1,33 @@
 <footer class="footer" role="contentinfo">
   <div class="footer__container">
     <div class="footer__logo">
-      <a href="/en/"><%= partial("components/illustrations/logo") %></a>
+      <a href="/<%= I18n.locale %>"><%= partial("components/illustrations/logo") %></a>
     </div>
 
     <nav class="footer__contacts">
-      <h4>New Projects</h4>
+      <h1>New business</h1>
       <p>Per Sandström<br>
       <a href="mailto:per@kollegorna.se">per@kollegorna.se</a><br>
       <a href="tel:+46702420750">+46 (0) 70 242 07 50</p>
-      
-      <h4>Adress</h4>
-      <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank">Karlbergsvägen 52,<br>
-      113 37 Stockholm</a></p>
+
+      <h4>Address</h4>
+
+      <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank">Karlbergsvägen 52<br>
+      113 37 Stockholm<br>Sweden</a></p>
 
     </nav>
 
     <div class="footer__navigation">
-      <a href="/en/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
-      <a href="/en/about"><%= t(:nav)[:about] %></a>
-      <a href="/en/colleagues"><%= t(:nav)[:colleagues] %></a>
-      <a href="/en/contacts"><%= t(:nav)[:contacts] %></a>
-      <a href="/en/careers"><%= t(:nav)[:careers] %></a>
+      <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+      <a href="/<%= I18n.locale %>/about"><%= t(:nav)[:about] %></a>
+      <a href="/<%= I18n.locale %>/colleagues"><%= t(:nav)[:colleagues] %></a>
     </div>
 
     <div class="footer__navigation">
-      <%# <a href="#">Behance</a> %>
       <a href="https://dribbble.com/kollegorna" target="_blank">Dribbble</a>
       <a href="https://www.facebook.com/kollegorna" target="_blank">Facebook</a>
       <a href="https://github.com/kollegorna/" target="_blank">Github</a>
-      <a href="https://www.instagram.com/kollegorna" target="_blank">Instagram</a>
+      <a href="https://instagram.com/kollegorna" target="_blank">Instagram</a>
       <a href="https://twitter.com/kollegorna" target="_blank">Twitter</a>
     </div>
   </div>

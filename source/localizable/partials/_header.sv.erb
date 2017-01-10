@@ -1,6 +1,6 @@
 <header class="header" role="contentinfo">
   <div class="header__logo">
-    <a href="/"><%= partial("components/illustrations/logo") %></a>
+    <a href="/<%= I18n.locale %>"><%= partial("components/illustrations/logo") %></a>
   </div>
 
   <div class="header__button">
@@ -10,9 +10,9 @@
   </div>
 
   <nav class="header__navigation">
-    <a href="/<%= t(:paths)[:work] %>"><%= t(:nav)[:work] %></a>
-    <a href="/<%= t(:paths)[:about] %>"><%= t(:nav)[:about] %></a>
-    <a href="/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>"><%= t(:nav)[:work] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>"><%= t(:nav)[:about] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
   </nav>
 
   <div class="header__cta">
