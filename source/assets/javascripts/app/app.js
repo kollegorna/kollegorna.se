@@ -42,9 +42,16 @@
           });
           $('.additional').slideDown(function() {
             $(this).addClass('visible');
-          });
 
-          $(this).fadeOut();
+            $('.expand').animate({
+              'opacity': 0
+            }, function() {
+              $(this).animate({
+                'width': 0,
+                'margin': 0
+              });
+            });
+          });
         });
       },
 

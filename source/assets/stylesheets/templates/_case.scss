@@ -124,6 +124,7 @@
   &__cta {
     @include span-columns(10);
     @include shift(1);
+    margin-top: 20px;
 
     @include media($desktop) {
       @include shift(0);
@@ -131,20 +132,24 @@
 
     .expand {
       display: inline-block;
-      margin-top: 20px;
+      margin-right: 40px;
       font-family: $ds-font-family-complementary;
       font-weight: 300;
       cursor: pointer;
       font-size: ds-rem-calc(16);
       color: $ds-color-link;
+      overflow: hidden;
+      white-space: nowrap;
+      vertical-align: top;
 
       &:before {
         content: "+";
+        font-weight: 500;
         display: inline-block;
-        line-height: 30px;
+        line-height: 26px;
         width: 30px;
         font-family: $ds-font-family;
-        border: 1px solid $ds-color-link;
+        border: 2px solid $ds-color-link;
         border-radius: 50%;
         text-align: center;
         margin-right: 15px;
@@ -162,17 +167,20 @@
       cursor: pointer;
       font-size: ds-rem-calc(16);
       color: $ds-color-link;
+      vertical-align: top;
 
       &:before {
         content: "→";
+        font-weight: 500;
         display: inline-block;
-        line-height: 30px;
+        line-height: 26px;
         width: 30px;
         font-family: $ds-font-family;
-        border: 1px solid $ds-color-link;
+        border: 2px solid $ds-color-link;
         border-radius: 50%;
         text-align: center;
         margin-right: 15px;
+        transform: rotate(-45deg);
       }
     }
   }
