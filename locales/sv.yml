@@ -1,5 +1,7 @@
 ---
 sv:
+  meta:
+    description: "Vi är ett team designers, utvecklare och strateger som bygger förstklassiga digitala produkter och tjänster."
   paths:
     about: "om"
     work: "projekt"

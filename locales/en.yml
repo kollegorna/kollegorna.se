@@ -1,5 +1,7 @@
 ---
 en:
+  meta:
+    description: "We're a team of designers, developers and strategists building first-rate digital products and services."
   paths:
     work: "work"
     work_types: "work/types"

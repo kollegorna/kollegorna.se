@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= I18n.locale || "sv" %>">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
 
-  <title><%= current_page.data.title || "Title" %></title>
+  <title><%= current_page.data.title || "Kollegorna" %></title>
+
+  <meta name="description" content="<%= current_page.data.description || t(:meta)[:description] %>">
+
 
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6077114/7879172/css/fonts.css" />
 
@@ -13,6 +16,17 @@
 
   <%= javascript_include_tag "modernizr" %>
   <%= stylesheet_link_tag "application" %>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-11425486-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  </script>
 </head>
 <body>
   <%= partial "partials/header" %>
