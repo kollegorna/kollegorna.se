@@ -27,12 +27,13 @@ activate :blog do |blog|
   blog.default_extension = '.md'
   blog.paginate = true
   blog.permalink = "{lang}/{year}/{month}/{title}/index.html"
-  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.sources = "posts/{lang}/{year}-{month}-{day}-{title}.html"
 end
 
 # Custom page layouts
 page 'posts/*', layout: :article
-page "/feed.xml", :layout => false
+page "sv/feed.xml", :layout => false
+page "en/feed.xml", :layout => false
 
 # Use pretty urls `www.example.com/blog`
 activate :directory_indexes
