@@ -15,32 +15,39 @@
 
       @include media($desktop) {
         @include span-columns(5);
-        @include shift(1);
+        @include shift(0);
         padding-top: 20px;
       }
 
       h1 {
-        font-size: ds-rem-calc(16);
-        margin: 0;
+        margin: 0 0 20px 0;
         font-weight: 600;
-        color: $ds-color-link;
+        font-size: ds-rem-calc(18);
         text-align: center;
 
+        @include media($tablet) { font-size: ds-rem-calc(28); }
         @include media($laptop) {
           text-align: left;
-          font-size: ds-rem-calc(24);
+          font-size: ds-rem-calc(42);
+          letter-spacing: ds-rem-calc(-1);
+          line-height: 1.2;
         }
       }
 
       p {
-        margin-top: 10px;
+        margin: 10px 0;
+        font-weight: 400;
         font-size: ds-rem-calc(14);
         text-align: center;
 
         @include media($laptop) {
           text-align: left;
-          font-size: ds-rem-calc(18);
+          font-size: ds-rem-calc(22);
+          font-weight: 300;
         }
+
+        @include media($tablet) { font-size: ds-rem-calc(20); }
+        @include media($desktop) { font-size: ds-rem-calc(24); }
       }
     }
   }

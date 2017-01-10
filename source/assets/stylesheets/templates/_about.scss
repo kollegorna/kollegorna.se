@@ -57,7 +57,7 @@
         font-size: 1.11111rem;
         font-style: italic;
         font-family: $ds-font-family-complementary;
-        margin: 0;
+        margin: 0 0 15px 0;
         text-align: center;
         @include media($laptop) {
           text-align: left;
@@ -74,11 +74,8 @@
         @include media($laptop) {
           text-align: left;
           font-size: ds-rem-calc(42);
+          letter-spacing: ds-rem-calc(-1);
           line-height: 1.2;
-        }
-        @include media($desktop) {
-          font-size: ds-rem-calc(48);
-
         }
       }
 
