@@ -1,7 +1,10 @@
 .case {
   &__content {
     @include outer-container;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    @include media($laptop) {
+      margin-bottom: 80px;
+    }
   }
 
   &__description {
@@ -149,6 +152,27 @@
 
       &.less:before {
         content: "-";
+      }
+    }
+
+    .link {
+      display: inline-block;
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      cursor: pointer;
+      font-size: ds-rem-calc(16);
+      color: $ds-color-link;
+
+      &:before {
+        content: "→";
+        display: inline-block;
+        line-height: 30px;
+        width: 30px;
+        font-family: $ds-font-family;
+        border: 1px solid $ds-color-link;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 15px;
       }
     }
   }
