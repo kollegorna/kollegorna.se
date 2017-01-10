@@ -40,6 +40,7 @@ gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('build', ['middleman-build']);
 gulp.task('install-bower', function(done) {
   cp.spawn('bower', ['install'], { stdio: 'inherit' }).on('close', done);
+  cp.spawn('bower', ['update'], { stdio: 'inherit' }).on('close', done);
 });
 gulp.task('update-bower', function(done) {
   cp.spawn('bower', ['update'], { stdio: 'inherit' }).on('close', done);
