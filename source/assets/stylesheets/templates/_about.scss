@@ -1,5 +1,9 @@
 .about {
 
+  a {
+    @extend .underlined;
+  }
+
   &__background {
     position: fixed;
     z-index: 0;
