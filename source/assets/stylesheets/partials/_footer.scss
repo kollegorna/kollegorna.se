@@ -1,11 +1,12 @@
 .footer {
   color: $ds-color-light-gray;
   background: $ds-color-charcoal;
+  text-align: center;
   position: relative;
   z-index: 9;
   font-size: ds-rem-calc(18);
   padding: 40px 20px;
-  @include media($laptop) { padding: 60px 20px; }
+  @include media($laptop) { padding: 60px 20px; text-align: left; }
   @include media($desktop) { padding: 60px 0; }
 
   h4 {
@@ -20,6 +21,8 @@
 
   a, p {
     font-size: ds-rem-calc(16);
+    margin-top: 10px;
+    line-height: ds-rem-calc(30);
   }
 
   &__container {
@@ -29,7 +32,9 @@
   &__logo {
     width: 50px;
     float: left;
-    margin-right: 10px;
+    margin-bottom: 20px;
+
+    @include media($laptop) { margin-right: 10px; }
 
     a { font-size: 0; }
     svg {
