@@ -20,7 +20,7 @@ Dir[*masks].each do |file_path|
 end
 
 # Use multilanguage
-activate :i18n, :mount_at_root => :sv
+activate :i18n, :mount_at_root => false
 
 # Blog
 activate :blog do |blog|
