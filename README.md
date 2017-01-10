@@ -1,4 +1,4 @@
-This is the F/W redesign of [our website](https://www.kollegorna.se).
+This is [our website](https://www.kollegorna.se).
 
 ## Local setup
 
