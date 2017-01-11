@@ -1,7 +1,33 @@
 ---
-title: Kollegornas blogg
+title: Blog | Kollegorna
 body_classes: blog
 ---
+
+<main role="main" class="blog blog--list">
+
+  <header class="blog__header">
+    <h1>Blog</h1>
+    <a href="/" class="blog-rss-link">Subscribe via RSS <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
+  </header>
+
+  <ul class="blog__list">
+
+    <% blog.articles.select{ |article| article.data.lang == "sv" }.each do |article| %>
+
+    <li>
+      <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+      <time datetime="<%= article.date.strftime('%Y-%m-%d') %>">
+        <%= article.date.strftime('%Y-%m-%d') %>
+      </time>
+    </li>
+
+    <% end %>
+
+  </ul>
+
+</main>
+
+<!--
 <main role="main" class="blog">
 
   <header class="blog__header">
@@ -31,3 +57,4 @@ body_classes: blog
     <% end %>
   </section>
 </main>
+-->
