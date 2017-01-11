@@ -69,6 +69,7 @@
       setupFeed: function() {
         var $feed = $('.grid').imagesLoaded( function() {
           $('.grid').fadeIn('medium');
+          $('#gridloader').fadeOut('fast');
 
           $feed.packery({
             itemSelector: '.block',
