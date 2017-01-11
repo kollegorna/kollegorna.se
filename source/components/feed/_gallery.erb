@@ -1,6 +1,12 @@
 <article class="block block--gallery <%= defined?(full_width) ? "full" : "" %>">
   <div class="block__text">
-    <p class="category">Gallery</p>
+    <p class="category">
+      <% if defined?(category) %>
+        <%= category %>
+      <% else %>
+        Galleri
+      <% end %>
+    </p>
     <p><%= text %></p>
   </div>
 

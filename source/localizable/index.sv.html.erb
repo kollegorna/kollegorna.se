@@ -27,22 +27,23 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
     <div class="index__feed__blocks feed grid">
       <%= partial("components/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
-        :text => "Company branding and website for a personal branding company",
+        :text => "Varumärke och digital identitet",
         :image => "case/thumbnails/lanneberg-bexelius.png",
         :background_color => "#F5EFEC",
-        :text_color => "#41162f"
+        :text_color => "#41162f",
+        :link => "/sv/projekt/lanneberg-bexelius"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/785417357279817729"
-      }) %>
+
 
       <%= partial("components/feed/blog", :locals => {
-        :title => "Voicemail using Slack, S3, 46elks and a dash of Go",
-        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity."
+        :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
+        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Vårt företagsnummer där var under ett tag Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
+        :category => "Labb",
+        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%#= partial("components/feed/case_study", :locals => {
         :title => "Celine Beyond",
         :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
         :image => "case/thumbnails/celine-beyond.png",
@@ -50,40 +51,61 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :text_color => "black"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/yourrailsdaily/status/748108790499704832"
-      }) %>
+
 
       <%= partial("components/feed/blog", :locals => {
-        :title => "Jekyll for Company Websites",
-        :text => "Recently we made two small company websites for Blendow Group – blendow.se and bgpublishing.se. We decided to build them using Jekyll and host them on GitHub Pages."
+        :title => "Välkommen Osvaldas!",
+        :text => "Vi har fått en tidig julklapp i form av en ny UX-designer och front end-utvecklare.",
+        :category => "Nyförvärv",
+        :link => "/sv/2016/12/osvaldas-valutis/"
       }) %>
 
-      <%= partial("components/feed/blip", :locals => {
-        :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017."
+      <%#= partial("components/feed/blip", :locals => {
+        :category => "Nytt 2017!",
+        :text => "Nya projekt på gång: Webbplats för utbildningsprojekt finansierat av SR MDO samt kampanjsajt för Kommunal."
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
-        :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
+        :title => "Releasefest",
+        :text => "Låt oss fira det digitala Sverige",
         :image => "case/thumbnails/releasefest.png",
         :background_color => "#f7f9f9",
-        :text_color => "#005293"
+        :text_color => "#005293",
+        :link => "/sv/projekt/releasefest"
       }) %>
 
       <%= partial("components/feed/gallery", :locals => {
-        :text => "New friends at the office 😊",
+        :category => "Hårdvaruhack",
+        :text => "Nya vänner på kontoret 😊",
         :images => [
           "feed/gallery.jpg"
         ]
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
+        :title => "Genombrott",
+        :text => "Digitalt verktyg för förbättringsarbete inom vården",
+        :image => "case/thumbnails/releasefest.png",
+        :background_color => "#f7f9f9",
+        :text_color => "#005293",
+        :link => "/sv/projekt/genombrott"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
         :title => "Vembi",
-        :text => "Vembi is a startup where you can find direct owner information for more than 30 000 companies as well as being able to see who controls over 70 000 Swedish companies.",
+        :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
         :image => "case/thumbnails/vembi.png",
         :background_color => "#FFFFFF",
-        :text_color => "#565656"
+        :text_color => "#565656",
+        :link => "/sv/projekt/vembi"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/801793962696646656"
+      }) %>
+
+      <%= partial("components/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/791282896493481984"
       }) %>
 
     </div>

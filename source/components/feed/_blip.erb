@@ -1,6 +1,16 @@
 <article class="block block--blip <%= defined?(full_width) ? "full" : "" %>">
+  <% if defined?(link) %>
+    <a href="<%= link %>">
+  <% end %>
+
   <div class="block__text">
-    <p class="category">Heads up!</p>
+    <p class="category">
+      <% if defined?(category) %>
+        <%= category %>
+      <% else %>
+        Heads up!
+      <% end %>
+    </p>
     <p><%= text %></p>
   </div>
 
@@ -8,5 +18,9 @@
     <div class="block__image">
       <%= image_tag(image) %>
     </div>
+  <% end %>
+
+  <% if defined?(link) %>
+    </a>
   <% end %>
 </article>
