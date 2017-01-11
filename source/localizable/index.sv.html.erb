@@ -36,12 +36,7 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
 
 
 
-      <%= partial("components/feed/blog", :locals => {
-        :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
-        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Vårt företagsnummer där var under ett tag Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
-        :category => "Labb",
-        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
-      }) %>
+
 
       <%#= partial("components/feed/case_study", :locals => {
         :title => "Celine Beyond",
@@ -57,7 +52,8 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :title => "Välkommen Osvaldas!",
         :text => "Vi har fått en tidig julklapp i form av en ny UX-designer och front end-utvecklare.",
         :category => "Nyförvärv",
-        :link => "/sv/2016/12/osvaldas-valutis/"
+        :link => "/sv/2016/12/osvaldas-valutis/",
+        :image => "feed/osvaldas.jpg"
       }) %>
 
       <%#= partial("components/feed/blip", :locals => {
@@ -74,13 +70,7 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :link => "/sv/projekt/releasefest"
       }) %>
 
-      <%= partial("components/feed/gallery", :locals => {
-        :category => "Vinternöje…",
-        :text => "Hårdvaruhack med nya vänner på kontoret 😊",
-        :images => [
-          "feed/gallery.jpg"
-        ]
-      }) %>
+
 
       <%= partial("components/feed/case_study", :locals => {
         :title => "Genombrott",
@@ -108,6 +98,14 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :link => "https://twitter.com/kollegorna/status/791282896493481984"
       }) %>
 
+      <%= partial("components/feed/gallery", :locals => {
+        :category => "Vinternöje…",
+        :text => "Hårdvaruhack med nya vänner på kontoret 😊",
+        :images => [
+          "feed/gallery.jpg"
+        ]
+      }) %>
+
       <%= partial("components/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779271643680088064"
       }) %>
@@ -116,8 +114,23 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :link => "https://twitter.com/kollegorna/status/779273525756583940"
       }) %>
 
+      <%= partial("components/feed/blog", :locals => {
+        :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
+        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Vårt företagsnummer där var under ett tag Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
+        :category => "Labb",
+        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
+      }) %>
+
       <%= partial("components/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779272851727810560"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Inblick i designprocessen",
+        :text => "Vi har kört igång ett konto på Dribbble där ni kan följa mer från våra designers.",
+        :category => "Nyhet",
+        :link => "https://dribbble.com/kollegorna",
+        :image => "feed/dribbble-hey.gif"
       }) %>
 
       <%= partial("components/feed/tweet", :locals => {

@@ -11,11 +11,12 @@
       <h3><%= title %></h3>
       <p><%= text %></p>
     </div>
-  </a>
 
-  <% if defined?(image) %>
-    <div class="block__image">
-      <%= image_tag(image) %>
-    </div>
-  <% end %>
+
+    <% if defined?(image) %>
+      <div class="block__image">
+        <%= image_tag(image) %>
+      </div>
+    <% end %>
+  </a>
 </article>
