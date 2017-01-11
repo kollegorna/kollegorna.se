@@ -93,6 +93,10 @@ description: "Stöd och inspiration för förbättringsarbete inom vården. Geno
         :video => "https://player.vimeo.com/video/119757512?title=0&byline=0&portrait=0"
       }) %>
 
+      <%= partial("components/feed/tweet", :locals => {
+        :link => "https://twitter.com/catrinhagerholm/status/791355897050238976"
+      }) %>
+
       <%= partial("components/feed/image", :locals => {
         :image => "case/genombrott/workplace.png",
         :caption => "Varje arbetsplats har sin egen översiktssida."
@@ -121,10 +125,6 @@ description: "Stöd och inspiration för förbättringsarbete inom vården. Geno
       <%= partial("components/feed/image", :locals => {
         :image => "case/genombrott/inspiration.png",
         :caption => "Ett delat inspirationsbibliotek gör att de olika verksamheterna kan lära av"
-      }) %>
-
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/558252921578876928"
       }) %>
 
     </div>
