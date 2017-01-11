@@ -6,10 +6,31 @@ title: Projekt
   <section class="work__projects">
     <div class="work__projects__blocks">
       <%= partial("components/project", :locals => {
+        :title => "Genombrott",
+        :text => "UI Design, Web Development",
+        :image => "case/thumbnails/skl-genombrott.png",
+        :link => "/sv/projekt/skl-genombrott"
+      }) %>
+
+      <%= partial("components/project", :locals => {
+        :title => "Vembi",
+        :text => "Branding, UI Design, Web Development",
+        :image => "case/thumbnails/vembi.png",
+        :link => "/sv/projekt/vembi"
+      }) %>
+
+      <%= partial("components/project", :locals => {
         :title => "Lanneberg Bexelius",
         :text => "Branding, UI Design, Web Development",
         :image => "case/thumbnails/lanneberg-bexelius.png",
         :link => "/sv/projekt/lanneberg-bexelius"
+      }) %>
+
+      <%= partial("components/project", :locals => {
+        :title => "Medievärlden Premium",
+        :text => "Branding, UI Design, Web Development",
+        :image => "case/thumbnails/medievarlden-premium.png",
+        :link => "/sv/projekt/medievarlden-premium"
       }) %>
 
       <%= partial("components/project", :locals => {
@@ -34,24 +55,10 @@ title: Projekt
       }) %>
 
       <%= partial("components/project", :locals => {
-        :title => "Vembi",
-        :text => "Branding, UI Design, Web Development",
-        :image => "case/thumbnails/vembi.png",
-        :link => "/sv/projekt/vembi"
-      }) %>
-
-      <%= partial("components/project", :locals => {
         :title => "Dina Risker",
         :text => "UI Design, Web Development",
         :image => "case/thumbnails/dina-risker.png",
         :link => "/sv/projekt/dina-risker"
-      }) %>
-
-      <%= partial("components/project", :locals => {
-        :title => "Medievärlden Premium",
-        :text => "Branding, UI Design, Web Development",
-        :image => "case/thumbnails/medievarlden-premium.png",
-        :link => "/sv/projekt/medievarlden-premium"
       }) %>
 
       <%= partial("components/project", :locals => {
@@ -61,12 +68,7 @@ title: Projekt
         :link => "/sv/projekt/bg-play"
       }) %>
 
-      <%= partial("components/project", :locals => {
-        :title => "SKL Genombrott",
-        :text => "UI Design, Web Development",
-        :image => "case/thumbnails/skl-genombrott.png",
-        :link => "/sv/projekt/skl-genombrott"
-      }) %>
+
     </div>
   </section>
 </main>
