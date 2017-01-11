@@ -1,0 +1,27 @@
+---
+title: Blog | Kollegorna
+---
+
+<main role="main" class="blog">
+
+  <header class="blog__header blog__header--listing">
+    <h1><%= t(:nav)[:blog] %></h1>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link"><%= t(:blog)[:subscribe_rss] %> <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
+  </header>
+
+  <ul class="blog__list">
+
+    <% blog.articles.select{ |article| article.lang[ I18n.locale.to_s ] }.each do |article| %>
+
+    <li>
+      <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+      <time datetime="<%= article.date.strftime('%Y-%m-%d') %>">
+        <%= article.date.strftime('%Y-%m-%d') %>
+      </time>
+    </li>
+
+    <% end %>
+
+  </ul>
+
+</main>

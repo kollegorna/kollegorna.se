@@ -9,6 +9,8 @@ en:
     about: "about"
     contacts: "contacts"
     careers: "careers"
+    blog: "blog"
+    feed: "feed.xml"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -31,3 +33,6 @@ en:
   colleagues:
     slogan: "A World Wide Workforce."
     description: "Kollegorna (Swedish for colleagues) is a distributed team spread across the world from Santo Domingo to Plovdiv with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic."
+  blog:
+      subscribe_rss: "Subscribe via RSS"
+      back_to_list: "All posts"

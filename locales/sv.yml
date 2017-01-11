@@ -8,6 +8,7 @@ sv:
     colleagues: "kollegor"
     blog: "blogg"
     work_types: "projekt/typer"
+    feed: "feed.xml"
   nav:
     work: "Projekt"
     colleagues: "Kollegor"
@@ -32,3 +33,6 @@ sv:
   colleagues:
     slogan: "World Wide Workforce"
     description: "Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken."
+  blog:
+      subscribe_rss: "Prenumerera via RSS"
+      back_to_list: "Alla inlägg"

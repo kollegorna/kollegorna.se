@@ -12,4 +12,3 @@ Getting Christmas presents in advance is always nice. This year we got one in th
 Osvaldas is also an [author over at CSS Tricks](https://css-tricks.com/author/osvaldasvalutis/) — one of the highest quality and best-known web development blogs — and he also runs the [RSS reader service Readerrr](http://readerrr.com/).
 
 Welcome Osvaldas!
-
