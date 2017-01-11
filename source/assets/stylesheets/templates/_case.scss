@@ -145,7 +145,8 @@
       color: $ds-color-link;
       overflow: hidden;
       white-space: nowrap;
-      vertical-align: top;
+      line-height: 26px;
+      vertical-align: middle;
 
       &:before {
         content: "+";
@@ -172,7 +173,8 @@
       cursor: pointer;
       font-size: ds-rem-calc(16);
       color: $ds-color-link;
-      vertical-align: top;
+      line-height: 26px;
+      vertical-align: middle;
 
       &:before {
         content: "→";
