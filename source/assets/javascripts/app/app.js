@@ -18,6 +18,8 @@
 
         this.setupAnimations();
 
+        this.initComments();
+
         setTimeout(function() {
           Kollegorna.setupMaps();
         }, 1000);
@@ -93,6 +95,10 @@
 
       setupAnimations: function() {
         $('.index__hero__background').addClass('on');
+      },
+
+      initComments: function(){
+        $.disqusLoader( '.disqus', { scriptUrl: '//kollegorna.disqus.com/embed.js' });
       },
 
       /*

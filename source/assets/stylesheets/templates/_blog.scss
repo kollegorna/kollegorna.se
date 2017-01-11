@@ -1,54 +1,197 @@
 .blog {
+  @include outer-container( $max-width / 2 );
+  padding: 0 20px 60px;
+
   &__header {
-    @include outer-container;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
-    &__count {
-      @include span-columns(3);
-      @include shift(1);
-
-      h1 {
-        font-size: ds-rem-calc(18);
-        font-weight: 300;
-        margin: 0;
+    h1 {
+      font-size: ds-rem-calc(42);
+      font-weight: 600;
+      letter-spacing: ds-rem-calc(-1);
+      line-height: 1.2;
+      @include media($mobile) {
+        font-size: ds-rem-calc(30);
       }
     }
-    &__rss {
-      @include span-columns(3);
-      @include omega;
-      text-align: right;
+
+    &--listing {
+      > * {
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+
+    &--article {
+      position: relative;
+
+      h1 {
+        @include media($mobile) {
+          display: inline;
+        }
+      }
 
       a {
-        font-size: ds-rem-calc(18);
+        font-weight: 600;
+        color: $ds-color-link;
+        &:hover,
+        &:focus  { color: darken($ds-color-link, 10); }
+        &:active { color: darken($ds-color-link, 20); }
+      }
+
+      span {
+        white-space: nowrap;
+        position: absolute;
+        top: 14px;
+        right: 100%;
+        margin-right: 10px;
+
+        &:after {
+          font-weight: 300;
+          color: darken($ds-color-white, 25);
+          content: '/';
+          margin-left: 10px;
+        }
+
+        @include media($mobile) {
+          position: static;
+          margin-right: 5px;
+        }
+      }
+
+      time {
+        font-size: ds-rem-calc(16);
+        @include media($mobile) {
+          display: block;
+          margin-top: 20px;
+        }
       }
     }
   }
 
-  &__posts {
-    @include outer-container;
+  &__list {
+    list-style: none;
 
-    article {
-      @include span-columns(6);
-      @include shift(1);
-      @include omega;
-      margin-bottom: 40px;
+    li {
+      position: relative;
+    }
+    li + li {
+      margin-top: 20px;
+    }
 
-      h1 {
-        font-size: ds-rem-calc(24);
-        font-weight: 600;
-        margin: 0 0 5px 0;
-      }
+    h2 {
+      font-size: ds-rem-calc(20);
+      font-weight: 600;
+      margin: 0;
+    }
 
-      time {
-        display: block;
-        font-size: ds-rem-calc(16);
-        color: $ds-color-magnesium;
-        margin: 0 0 10px 0;
-      }
+    a {
+      color: $ds-color-link;
+      &:hover,
+      &:focus  { color: darken($ds-color-link, 10); }
+      &:active { color: darken($ds-color-link, 20); }
+    }
 
-      h1 {
-        font-size: ds-rem-calc(18);
+    time {
+      font-size: ds-rem-calc(14);
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      margin: 4px 10px 0 0;
+
+      @include media($mobile) {
+        position: static;
+        margin: 10px 0 0;
       }
     }
+  }
+
+  &__footer {
+    padding-top: 20px;
+
+    &__meta {
+      @include clearfix;
+    }
+
+    &__author {
+      font-weight: 600;
+      @include media($tablet) {
+        @include span-columns(6);
+        padding-right: 20px;
+      }
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+
+    &__rss {
+      margin-top: 5px;
+      @include media($tablet) {
+        @include span-columns(6);
+        text-align: right;
+        padding-left: 20px;
+      }
+    }
+
+    &__more {
+      position: relative;
+      text-align: center;
+      clear: both;
+      margin-top: 40px;
+
+      &:before {
+        width: 100%;
+        border-top: 1px solid darken($ds-color-white, 20);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+
+      a {
+        font-size: ds-rem-calc(16);
+        font-family: $ds-font-family-complementary;
+        font-style: italic;
+        color: #fff;
+        background-color: $ds-color-link;
+        display: inline-block;
+        position: relative;
+        padding: 10px 20px;
+
+        &:hover,
+        &:focus  { background-color: darken($ds-color-link, 10); }
+        &:active { background-color: darken($ds-color-link, 20); }
+      }
+    }
+  }
+
+  &__comments {
+    font-size: ds-rem-calc(16);
+    text-align: center;
+    color: darken($ds-color-white, 50);
+    margin-top: 40px;
+
+    .no-js & {
+      display: none;
+    }
+  }
+
+  time {
+    font-family: $ds-font-family-complementary;
+    color: darken($ds-color-white, 50);
+  }
+}
+
+.blog-rss-link {
+  color: $ds-color-orange;
+  &:hover,
+  &:focus  { color: darken($ds-color-orange, 10); }
+  &:active { color: darken($ds-color-orange, 20); }
+
+  svg {
+    width: 14px;
+    height: 14px;
   }
 }

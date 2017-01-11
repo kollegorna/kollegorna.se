@@ -8,6 +8,7 @@
     "jquery": "~2.1.4",
     "neat": "^1.8.0",
     "packery": "~1.4.3",
-    "imagesloaded": "~3.1.8"
+    "imagesloaded": "~3.1.8",
+    "disqusLoader.js": "osvaldasvalutis/disqusLoader.js"
   }
 }
