@@ -1,0 +1,42 @@
+.err404 {
+  text-align: center;
+  padding: 5vh 20px;
+  margin-bottom: 60px;
+
+  h1 {
+    font-size: ds-rem-calc(42);
+    font-weight: 600;
+    letter-spacing: ds-rem-calc(-1);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    @include media($mobile) {
+      font-size: ds-rem-calc(30);
+    }
+  }
+
+  img {
+    max-width: 80%;
+    max-height: 300px;
+    margin-bottom: 40px;
+    @include media($mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    font-size: ds-rem-calc(16);
+    font-family: $ds-font-family-complementary;
+    font-style: italic;
+    color: $ds-color-link;
+
+    &:hover,
+    &:focus  { color: darken($ds-color-link, 10); }
+    &:active { color: darken($ds-color-link, 20); }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-bottom: -2px;
+    }
+  }
+}
