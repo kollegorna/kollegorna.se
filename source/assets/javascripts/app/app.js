@@ -38,7 +38,9 @@
       },
 
       bindClicks: function() {
-        $('.case__content').on('click', '.expand', function() {
+        $('.case__content').on('click', '.expand', function(e) {
+          e.preventDefault();
+
           $('.case__facts').slideDown(function() {
             $(this).addClass('visible');
           });
