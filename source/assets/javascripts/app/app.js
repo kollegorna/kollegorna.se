@@ -73,6 +73,8 @@
       },
 
       setupFeed: function() {
+        $(".index__feed a[href^='http']").attr("target","_blank");
+
         var $feed = $('.grid').imagesLoaded( function() {
           $('.grid').fadeIn('medium');
           $('#gridloader').fadeOut('fast');
