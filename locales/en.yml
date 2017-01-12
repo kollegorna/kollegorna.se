@@ -36,3 +36,6 @@ en:
   blog:
       subscribe_rss: "Subscribe via RSS"
       back_to_list: "All posts"
+  err404:
+      title: "Oops, the page was not found!"
+      link: "Keep calm and go to the homepage"
