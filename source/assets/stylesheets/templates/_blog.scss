@@ -107,6 +107,12 @@
     }
   }
 
+  &__content {
+    a {
+      @extend %ds-underlined;
+    }
+  }
+
   &__footer {
     padding-top: 20px;
 
