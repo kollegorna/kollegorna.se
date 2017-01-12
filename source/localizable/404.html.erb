@@ -1,0 +1,14 @@
+---
+title: Page Not Found | Kollegorna
+---
+
+<main role="main" class="err404">
+
+  <%= image_tag '404.svg', alt: '404', role: 'presentation' %>
+  <h1>Oops, the page was not found!</h1>
+  <p><a href="/<%= I18n.locale %>"><svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-larr"></use></svg> Keep calm and go to the homepage</a></p>
+  <p>
+    <%= I18n.locale %>
+  </p>
+
+</main>
