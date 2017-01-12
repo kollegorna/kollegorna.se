@@ -36,8 +36,15 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.4.6)
+    htmlcompressor (0.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    jasmine (2.2.0)
+      jasmine-core (~> 2.2)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.5.2)
     kramdown (1.13.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -87,6 +94,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     middleman-sitemap (0.0.13)
       middleman-core (>= 3.2.2)
     middleman-sprockets (4.0.0)
@@ -103,13 +113,16 @@ GEM
     padrino-support (0.13.3.3)
       activesupport (>= 3.1)
     parallel (1.10.0)
+    phantomjs (2.1.1.0)
     public_suffix (2.0.4)
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
+    rake (12.0.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redcarpet (3.2.3)
     rouge (2.0.7)
     sass (3.4.22)
     servolux (0.12.0)
@@ -129,13 +142,16 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.2.2)
+  jasmine (~> 2.2.0)
   middleman (~> 4.1.2)
   middleman-autoprefixer
   middleman-blog
   middleman-livereload
+  middleman-minify-html
   middleman-sitemap
   middleman-sprockets (~> 4.0.0.rc)
   middleman-syntax
+  redcarpet (~> 3.2.3)
 
 BUNDLED WITH
    1.13.7
