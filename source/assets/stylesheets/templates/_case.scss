@@ -135,6 +135,14 @@
       @include shift(0);
     }
 
+    a {
+      margin-bottom: 10px;
+
+      @media (min-width: 480px) {
+        margin-bottom: 0;
+      }
+    }
+
     .expand {
       display: inline-block;
       margin-right: 40px;

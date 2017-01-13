@@ -20,6 +20,8 @@
 
         this.initComments();
 
+        this.fitVids();
+
         setTimeout(function() {
           Kollegorna.setupMaps();
         }, 1000);
@@ -38,7 +40,9 @@
       },
 
       bindClicks: function() {
-        $('.case__content').on('click', '.expand', function() {
+        $('.case__content').on('click', '.expand', function(e) {
+          e.preventDefault();
+
           $('.case__facts').slideDown(function() {
             $(this).addClass('visible');
           });
@@ -69,6 +73,8 @@
       },
 
       setupFeed: function() {
+        $(".index__feed a[href^='http']").attr("target","_blank");
+
         var $feed = $('.grid').imagesLoaded( function() {
           $('.grid').fadeIn('medium');
           $('#gridloader').fadeOut('fast');
@@ -97,8 +103,12 @@
         $('.index__hero__background').addClass('on');
       },
 
-      initComments: function(){
+      initComments: function() {
         $.disqusLoader( '.disqus', { scriptUrl: '//kollegorna.disqus.com/embed.js' });
+      },
+
+      fitVids: function() {
+        $('.blog__content').fitVids();
       },
 
       /*

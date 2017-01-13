@@ -70,8 +70,6 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :link => "/sv/projekt/releasefest"
       }) %>
 
-
-
       <%= partial("components/feed/case_study", :locals => {
         :title => "Genombrott",
         :text => "Digitalt verktyg för förbättringsarbete inom vården",
@@ -88,6 +86,12 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :background_color => "#FFFFFF",
         :text_color => "#565656",
         :link => "/sv/projekt/vembi"
+      }) %>
+
+      <%= partial("components/feed/blip", :locals => {
+        :category => "Ses vi?",
+        :text => "Vi är med och ställer till med dumheter på Stupid Hackathon Sverige i februari.",
+        :link => "https://www.stupidhackathon.se/"
       }) %>
 
       <%= partial("components/feed/tweet", :locals => {
@@ -137,8 +141,8 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
 
       <%= partial("components/feed/blog", :locals => {
         :title => "Inblick i designprocessen",
-        :text => "Vi har kört igång ett konto på Dribbble där ni kan följa mer från våra designers.",
-        :category => "Nyhet",
+        :text => "Kolla in vårt konto på Dribbble där ni kan följa mer från våra designers.",
+        :category => "Ögongodis",
         :link => "https://dribbble.com/kollegorna",
         :image => "feed/dribbble-hey.gif"
       }) %>

@@ -35,8 +35,11 @@ page 'posts/*', layout: :article
 page "sv/feed.xml", :layout => false
 page "en/feed.xml", :layout => false
 
-# Use pretty urls `www.example.com/blog`
 activate :directory_indexes
+activate :syntax
+
+set :markdown, fenced_code_blocks: true
+set :markdown_engine, :redcarpet
 
 # Use middleman-livereload
 activate :livereload
@@ -44,8 +47,10 @@ activate :livereload
 # Minimize css/js and fix assets for Build
 configure :build do
   activate :autoprefixer
+  activate :gzip
   activate :minify_css
   activate :minify_javascript
+  activate :minify_html
   activate :relative_assets
-  activate :asset_hash
+  activate :asset_hash, :ignore => [/^images*/]
 end
