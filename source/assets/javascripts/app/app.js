@@ -260,7 +260,7 @@
       },
 
       setupMaps: function() {
-        $('.map').each(function(){
+        $('.colleague-map').each(function(){
           var show_marker = $(this).attr('data-markers');
           map = Kollegorna.new_map($(this), show_marker);
         });
