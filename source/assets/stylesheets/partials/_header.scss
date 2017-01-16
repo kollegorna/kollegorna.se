@@ -6,12 +6,10 @@
   font-size: ds-rem-calc(18);
   font-weight: 300;
   padding: 30px 20px;
+
   @include media($laptop) { padding: 30px 20px; }
   @include media($desktop) { padding: 30px 0; }
 
-  a {
-    line-height: 50px;
-  }
 
   &__logo {
     width: 50px;
@@ -21,19 +19,88 @@
     a { font-size: 0; }
   }
 
+
+
   &__button {
-    cursor: pointer;
-    display: block;
-    height: 14px;
-    position: absolute;
-    right: 5%;
-    top: 50px;
-    width: 30px;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin: 0;
 
     @include media($laptop) {
       display: none;
     }
 
+    a {
+      width: 100;
+      height: 100%;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+
+      $header-btn-stick-height: 2px;
+
+      span {
+        background-image: linear-gradient( to right, $ds-color-charcoal 0%, $ds-color-charcoal 100% );
+        background-repeat: no-repeat;
+      	background-position: 0 50%;
+      	background-size: 60% $header-btn-stick-height;
+        position: absolute;
+        top: 32%;
+        bottom: 32%;
+        left: 20%;
+        right: 20%;
+
+        &:before,
+        &:after {
+          height: $header-btn-stick-height;
+          background-color: $ds-color-charcoal;
+          transition: .3s cubic-bezier( 0.165, 0.84, 0.44, 1 );
+          transition-property: width, transform, top, bottom, margin-top;
+          will-change: width, transform, top, bottom, margin-top;
+          content: '';
+          position: absolute;
+          left: 0;
+        }
+        &:before {
+          width: 80%;
+          top: 0;
+        }
+        &:after {
+          width: 100%;
+          top: 100%;
+          margin-top: -$header-btn-stick-height;
+        }
+      }
+      &.is-active span {
+        background-image: none;
+
+        &:before {
+          width: 100%;
+          transform: rotate(45deg);
+          top: 50%;
+        }
+        &:after {
+          width: 100%;
+          transform: rotate(-45deg);
+          top: 50%;
+          margin-top: 0;
+        }
+      }
+
+    }
+    a:last-child,
+    .header:target & a:first-child {
+      display: none;
+    }
+    .header:target & a:last-child {
+      display: block;
+    }
+
+    /*
     .before,
     .main,
     .after {
@@ -59,7 +126,7 @@
 
     &:hover .after { transform: translateY(2px); }
 
-    &.active {
+    &.is-active {
       .main { display: none; }
 
       .before {
@@ -76,19 +143,24 @@
         width: 20px;
       }
     }
+    */
   }
 
   &__navigation {
     display: none;
-    position: absolute;
     width: 90%;
+    padding: 20px;
+    line-height: 50px;
+    background: $ds-color-charcoal;
+    box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
+    position: absolute;
+    z-index: 9;
     left: 5%;
     top: 100px;
-    background: $ds-color-charcoal;
-    padding: 20px;
 
-    box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
-    z-index: 9;
+    .header:target & {
+      display: block;
+    }
 
     &:after {
       bottom: 100%;

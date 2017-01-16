@@ -28,14 +28,16 @@
       },
 
       mobileNav: function() {
-        $(".header__button").on("click", function() {
-          if ($("nav").is(":hidden")) {
-            $("nav").slideDown();
-            $(".header__button").addClass("active");
-          } else {
-            $("nav").slideUp();
-            $(".header__button").removeClass("active");
-          }
+        var $nav = $( '.header__navigation' ),
+            $btn = $( '.header__button a' );
+
+        $btn.on( 'click', function( e ){
+          e.preventDefault();
+          $btn.toggleClass( 'is-active' );
+          if( $btn.hasClass( 'is-active' ))
+            $nav.slideDown();
+          else
+            $nav.slideUp();
         });
       },
 
@@ -93,6 +95,10 @@
             dataType: "jsonp",
             success: function(data){
               tweet.find('.block__text').append(Kollegorna.caseMediaTweet(data));
+              $feed.packery();
+            },
+            error: function(){
+              tweet.remove();
               $feed.packery();
             }
           });
