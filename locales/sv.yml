@@ -37,6 +37,12 @@ sv:
   colleagues:
     slogan: "World Wide Workforce"
     description: 'Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken. <a href="/sv/karta">Se vår världskarta</a>.'
+    country_sweden: "Sverige"
+    country_portugal: "Portugal"
+    country_slovakia: "Slovakien"
+    country_dominicanrep: "Dominikanska Republiken"
+    country_bulgaria: "Bulgarien"
+    country_lithuania: "Litauen"
   blog:
     subscribe_rss: "Prenumerera via RSS"
     back_to_list: "Alla inlägg"

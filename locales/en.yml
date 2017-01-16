@@ -37,6 +37,12 @@ en:
   colleagues:
     slogan: "A World Wide Workforce."
     description: "We're a distributed team where everyone is an expert in their field. From Santo Domingo in the west to Plovdiv in the east with our heart in Stockholm. In our blend of nationalities you find Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic. <a href='/en/map'>See our world map</a>."
+    country_sweden: "Sweden"
+    country_portugal: "Portugal"
+    country_slovakia: "Slovakia"
+    country_dominicanrep: "Dominican Republic"
+    country_bulgaria: "Bulgaria"
+    country_lithuania: "Lithuania"
   blog:
     subscribe_rss: "Subscribe via RSS"
     back_to_list: "All posts"

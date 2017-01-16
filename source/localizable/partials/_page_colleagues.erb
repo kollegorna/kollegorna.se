@@ -1,0 +1,314 @@
+<%
+
+  persons = [
+    {
+      id:           "per",
+      name:         "Per Sandström",
+      role:         "Designer + Partner",
+      image:        "per.jpg",
+      email:        "per@kollegorna.se",
+      phone:        "070 – 242 07 50",
+      phoneUri:     "+46702420750",
+      location:     "Stockholm, #{t(:colleagues)[:country_sweden]}",
+      locLat:       "59.329323",
+      locLng:       "18.068581",
+      links: {
+        github: {
+          name: "persand",
+          link: "https://github.com/persand"
+        },
+        twitter: {
+          name: "@persand",
+          link: "https://twitter.com/persand"
+        },
+        facebook: {
+          name: "Per Sandström",
+          link: "https://www.facebook.com/permalink"
+        },
+        linkedin: {
+          name: "Per Sandström",
+          link: "https://se.linkedin.com/in/psandstrom"
+        }
+      }
+    },
+    {
+      id:           "henrik",
+      name:         "Henrik Sjökvist",
+      role:         "Utvecklare + Partner",
+      image:        "henrik.jpg",
+      email:        "henrik@kollegorna.se",
+      phone:        "073 – 505 29 29",
+      phoneUri:     "+46735052929",
+      location:     "Stockholm, #{t(:colleagues)[:country_sweden]}",
+      locLat:       "59.329323",
+      locLng:       "18.068581",
+      links: {
+        github: {
+          name: "henrrrik",
+          link: "https://github.com/henrrrik"
+        },
+        twitter: {
+          name: "@henrrrik",
+          link: "https://twitter.com/henrrrik"
+        },
+        linkedin: {
+          name: "Per Sandström",
+          link: "https://se.linkedin.com/in/hsjokvist"
+        }
+      }
+    },
+    {
+      id:           "eduardo",
+      name:         "Eduardo Nunes",
+      role:         "Designer + Partner",
+      image:        "eduardo.jpg",
+      email:        "eduardo@kollegorna.se",
+      location:     "Braga, #{t(:colleagues)[:country_portugal]}",
+      locLat:       "41.545449",
+      locLng:       "-8.426507",
+      links: {
+        github: {
+          name: "emmnunes",
+          link: "https://github.com/emmnunes"
+        },
+        tumblr: {
+          name: "tumblr.eduardonunes.me",
+          link: "http://tumblr.eduardonunes.me"
+        },
+        dribbble: {
+          name: "eduardonunes",
+          link: "https://dribbble.com/eduardonunes"
+        },
+        linkedin: {
+          name: "Eduardo Nunes",
+          link: "https://pt.linkedin.com/in/emnunes"
+        }
+      }
+    },
+    {
+      id:           "ivan",
+      name:         "Ivan Novosad",
+      role:         "Utvecklare",
+      image:        "ivan.jpg",
+      email:        "ivan@kollegorna.se",
+      location:     "Trnava, #{t(:colleagues)[:country_slovakia]}",
+      locLat:       "48.370911",
+      locLng:       "17.583322",
+      links: {
+        github: {
+          name: "ivannovosad",
+          link: "https://github.com/ivannovosad"
+        },
+        twitter: {
+          name: "@ivannovosad",
+          link: "https://twitter.com/ivannovosad"
+        }
+      }
+    },
+    {
+      id:           "raymall",
+      name:         "Raymall Pérez",
+      role:         "Designer",
+      image:        "raymall.jpg",
+      email:        "raymall@kollegorna.se",
+      location:     "Santo Domingo, #{t(:colleagues)[:country_dominicanrep]}",
+      locLat:       "18.486058",
+      locLng:       "-69.931212",
+      links: {
+        github: {
+          name: "raymallperez",
+          link: "https://github.com/raymallperez"
+        },
+        twitter: {
+          name: "@raymallperez",
+          link: "https://twitter.com/raymallperez"
+        }
+      }
+    },
+    {
+      id:           "dennis",
+      name:         "Dennis Carlsson",
+      role:         "Utvecklare",
+      image:        "dennis.jpg",
+      email:        "dennis@kollegorna.se",
+      location:     "Falkenberg, #{t(:colleagues)[:country_sweden]}",
+      locLat:       "56.9027",
+      locLng:       "12.4888",
+      links: {
+        github: {
+          name: "dencarlsson",
+          link: "https://github.com/dencarlsson"
+        },
+        twitter: {
+          name: "@dencarlsson",
+          link: "https://twitter.com/dencarlsson"
+        }
+      }
+    },
+    {
+      id:           "filippos",
+      name:         "Filippos Vasilakis",
+      role:         "Utvecklare",
+      image:        "filippos.jpg",
+      email:        "filippos@kollegorna.se",
+      location:     "Stockholm, #{t(:colleagues)[:country_sweden]}",
+      locLat:       "41.545449",
+      locLng:       "-8.426507",
+      links: {
+        github: {
+          name: "vasilakisfil",
+          link: "https://github.com/vasilakisfil"
+        },
+        twitter: {
+          name: "@vasilakisfil",
+          link: "https://twitter.com/vasilakisfil"
+        }
+      }
+    },
+    {
+      id:           "nikolay",
+      name:         "Nikolay Lechev",
+      role:         "Designer",
+      image:        "nikolay.jpg",
+      email:        "nikolay@kollegorna.se",
+      location:     "Plovdiv, #{t(:colleagues)[:country_bulgaria]}",
+      locLat:       "42.135408",
+      locLng:       "24.745290",
+      links: {
+        dribbble: {
+          name: "iamlechev",
+          link: "https://dribbble.com/iamlechev"
+        },
+        twitter: {
+          name: "@iamlechev",
+          link: "https://twitter.com/iamlechev"
+        }
+      }
+    },
+    {
+      id:           "osvaldas",
+      name:         "Osvaldas Valutis",
+      role:         "Utvecklare",
+      image:        "osvaldas.jpg",
+      email:        "osvaldas@kollegorna.se",
+      location:     "Klaipeda, #{t(:colleagues)[:country_lithuania]}",
+      locLat:       "55.7085666",
+      locLng:       "21.1332599",
+      links: {
+        twitter: {
+          name: "@osvaldas",
+          link: "https://twitter.com/osvaldas"
+        },
+        dribbble: {
+          name: "osvaldas",
+          link: "https://dribbble.com/osvaldas"
+        },
+        github: {
+          name: "osvaldasvalutis",
+          link: "https://github.com/osvaldasvalutis"
+        },
+        instagram: {
+          name: "osvaldas",
+          link: "https://instagram.com/osvaldas"
+        },
+      }
+    },
+  ]
+
+%>
+
+<main role="main" class="colleagues">
+  <header class="colleagues__header">
+    <div class="colleagues__header__content">
+      <h1><%= t(:colleagues)[:slogan] %></h1>
+      <p><%= t(:colleagues)[:description] %></p>
+    </div>
+  </header>
+
+  <section class="colleagues__list grid">
+
+    <% persons.each do |person| %>
+
+    <article class="profile block" id="<%= person[:id] %>">
+      <div class="profile__background colleague-map" data-markers="false">
+        <div class="marker" data-lat="<%= person[:locLat] %>" data-lng="<%= person[:locLng] %>"></div>
+      </div>
+
+      <figure class="profile__image">
+        <img src="<%= image_path("avatars/#{person[:image]}") %>" alt="<%= person[:name] %>">
+      </figure>
+
+      <h1 class="profile__name"><%= person[:name] %></h1>
+      <h2 class="profile__title"><%= person[:role] %></h2>
+
+      <div class="profile__contact">
+        <a href="mailto:<%= person[:email] %>"><%= person[:email] %></a>
+        <a href="callto:<%= person[:phoneUri] %>"><%= person[:phone] %></a>
+      </div>
+
+      <div class="profile__location">
+        <div class="profile__icon">
+          <%= image_tag 'icon-map-pin.svg' %>
+        </div>
+        <%= person[:location] %>
+      </div>
+
+      <% if person.has_key?(:links) %>
+
+      <div class="profile__links">
+
+        <% person[:links].each do |linkKey, link| %>
+
+        <a href="<%= link[:link] %>">
+          <div class="profile__icon">
+            <%= image_tag "icon-#{linkKey}.svg" %>
+          </div>
+          <%= link[:name] %>
+        </a>
+
+        <% end %>
+
+      </div>
+
+      <% end %>
+
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "<%= person[:name] %>",
+          "jobTitle": "<%= person[:role] %>",
+          "image": "<%= image_path("avatars/#{person[:image]}") %>",
+          "email": "mailto:<%= person[:email] %>",
+          "address": "<%= person[:location] %>",
+          "telephone": "<%= person[:phone] %>",
+          "url": "<%= current_page.url + "#" + person[:id] %>",
+
+          <% if person.has_key?(:links) %>
+
+          "sameAs": [
+
+            <%
+              i = 0
+              length = person[:links].size
+              person[:links].each do |linkKey, link|
+                i += 1
+            %>
+
+            "<%= link[:link] %>"<%= "," if i != length %>
+
+            <% end %>
+
+          ]
+
+          <% end %>
+
+        }
+      </script>
+
+    </article>
+
+    <% end %>
+
+  </section>
+</main>
