@@ -46,7 +46,9 @@ activate :livereload
 
 # Minimize css/js and fix assets for Build
 configure :build do
-  activate :autoprefixer
+  activate :autoprefixer do |config|
+    config.ignore = ['fonts/535951/']
+  end
   activate :gzip
   activate :minify_css
   activate :minify_javascript
