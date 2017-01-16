@@ -52,5 +52,5 @@ configure :build do
   activate :minify_javascript
   activate :minify_html
   activate :relative_assets
-  activate :asset_hash, :ignore => [/^images*/]
+  activate :asset_hash, :ignore => [/images/, /fonts/]
 end
