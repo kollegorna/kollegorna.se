@@ -96,6 +96,10 @@
             success: function(data){
               tweet.find('.block__text').append(Kollegorna.caseMediaTweet(data));
               $feed.packery();
+            },
+            error: function(){
+              tweet.remove();
+              $feed.packery();
             }
           });
         });
