@@ -10,7 +10,8 @@ en:
     contacts: "contacts"
     careers: "careers"
     blog: "blog"
-    feed: "feed.xml"
+    feed: "feed"
+    map: "map"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -32,10 +33,10 @@ en:
     more_detail: "More detail"
   colleagues:
     slogan: "A World Wide Workforce."
-    description: "Kollegorna (Swedish for colleagues) is a distributed team spread across the world from Santo Domingo to Plovdiv with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic."
+    description: 'Kollegorna (Swedish for colleagues) is a distributed team spread across the world from Santo Domingo to Plovdiv with the heart in Stockholm. We have team members from Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic. <a href="/en/map">See our world map</a>.'
   blog:
-      subscribe_rss: "Subscribe via RSS"
-      back_to_list: "All posts"
+    subscribe_rss: "Subscribe via RSS"
+    back_to_list: "All posts"
   err404:
-      title: "Oops, the page was not found!"
-      link: "Keep calm and go to the homepage"
+    title: "Oops, the page was not found!"
+    link: "Keep calm and go to the homepage"
