@@ -1,6 +1,12 @@
-<header class="header" role="contentinfo">
+<header class="header" role="banner" id="header">
+
   <div class="header__logo">
     <a href="/<%= I18n.locale %>"><%= partial("components/illustrations/logo") %></a>
+  </div>
+
+  <div class="header__button" id="nav-toggler">
+    <a href="#header" role="button" title="<%= t(:nav)[:nav_show] %>"><%= t(:nav)[:nav_show] %><span></span></a>
+    <a href="#nav-toggler" role="button" title="<%= t(:nav)[:nav_hide] %>"><%= t(:nav)[:nav_hide] %><span></span></a>
   </div>
 
   <nav class="header__navigation">
@@ -9,13 +15,8 @@
     <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
   </nav>
 
-  <div class="header__button">
-    <span class="before"></span>
-    <span class="main"></span>
-    <span class="after"></span>
-  </div>
-
   <div class="header__cta">
     <a class="language" href="/sv"><%= image_tag("SE.png") %></a>
   </div>
+
 </header>
