@@ -215,22 +215,27 @@
           width: auto;
         }
       }
+    }
+  }
+}
 
-      &.hover {
-        .profile__image {
-          transform: scale(0.6);
-          box-shadow: 0 0 0 10px $ds-color-white;
-        }
 
-        .profile__name,
-        .profile__title,
-        .profile__contact,
-        .profile__links { opacity: 0; }
-        .profile__background { opacity: 0.8; }
+.no-touch .colleagues {
+  .profile {
+    &.hover {
+      .profile__image {
+        transform: scale(0.6);
+        box-shadow: 0 0 0 10px $ds-color-white;
+      }
 
-        .profile__location {
-          background: $ds-color-white;
-        }
+      .profile__name,
+      .profile__title,
+      .profile__contact,
+      .profile__links { opacity: 0; }
+      .profile__background { opacity: 0.8; }
+
+      .profile__location {
+        background: $ds-color-white;
       }
     }
   }
