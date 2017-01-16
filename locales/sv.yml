@@ -8,7 +8,8 @@ sv:
     colleagues: "kollegor"
     blog: "blogg"
     work_types: "projekt/typer"
-    feed: "feed.xml"
+    feed: "feed"
+    map: "karta"
   nav:
     work: "Projekt"
     colleagues: "Kollegor"
@@ -32,10 +33,10 @@ sv:
     visit: "Besök"
   colleagues:
     slogan: "World Wide Workforce"
-    description: "Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken."
+    description: 'Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken. <a href="/sv/karta">Se vår världskarta</a>.'
   blog:
-      subscribe_rss: "Prenumerera via RSS"
-      back_to_list: "Alla inlägg"
+    subscribe_rss: "Prenumerera via RSS"
+    back_to_list: "Alla inlägg"
   err404:
-      title: "Finns ingen sån sida :("
-      link: "Behåll lugnet och surfa till startsidan"
+    title: "Finns ingen sån sida :("
+    link: "Behåll lugnet och surfa till startsidan"

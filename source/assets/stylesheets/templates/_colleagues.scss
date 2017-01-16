@@ -48,6 +48,10 @@
 
         @include media($tablet) { font-size: ds-rem-calc(20); }
         @include media($desktop) { font-size: ds-rem-calc(24); }
+
+        a {
+          @extend %ds-underlined;
+        }
       }
     }
   }
