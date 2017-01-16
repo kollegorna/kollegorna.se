@@ -17,6 +17,8 @@ sv:
     blog: "Blogg"
     contacts: "Kontakter"
     work_with: "Jobba hos oss"
+    nav_show: "Visa meny"
+    nav_hide: "Dölj meny"
   index:
     hello: "Trevlig att råkas!"
     short_bio: "Vi är ett team designers, utvecklare och strateger som bygger förstklassiga digitala produkter och tjänster."
