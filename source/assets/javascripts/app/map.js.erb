@@ -4,17 +4,21 @@
 (function() {
 
   if ($('#map').length) {
-    
+
     var southWest = L.latLng(1.694562, -109.829743),
         northEast = L.latLng(78.543425, 50.370820),
         bounds = L.latLngBounds(southWest, northEast);
-    
+
     L.mapbox.accessToken = 'pk.eyJ1Ijoia29sbGVnb3JuYSIsImEiOiJjaXh1djlqZGswMDV2MzJsbWhleWk2NDg3In0.OARv9pBnZ-365KatdGyR7g';
     var map = L.mapbox.map('map', 'mapbox.streets', {
       maxBounds: bounds,
       maxZoom: 15,
       minZoom: 2
     }).setView([40, -74.50], 5);
+
+    if (map.scrollWheelZoom) {
+      map.scrollWheelZoom.disable();
+    }
 
     var myLayer = L.mapbox.featureLayer().addTo(map);
 
