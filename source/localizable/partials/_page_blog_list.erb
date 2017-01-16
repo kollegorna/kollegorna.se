@@ -2,7 +2,7 @@
 
   <header class="blog__header blog__header--listing">
     <h1><%= t(:nav)[:blog] %></h1>
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link"><%= t(:blog)[:subscribe_rss] %> <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>.xml" class="blog-rss-link"><%= t(:blog)[:subscribe_rss] %> <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
   </header>
 
   <ul class="blog__list">
