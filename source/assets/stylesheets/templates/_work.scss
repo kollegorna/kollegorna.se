@@ -14,7 +14,6 @@
     h1 {
       display: inline-block;
       margin: 0;
-      font-weight: 400;
       font-size: ds-rem-calc(16);
       color: $ds-color-charcoal;
       position: relative;
@@ -30,7 +29,6 @@
     p {
       float: right;
       margin: 0;
-      font-weight: 400;
       font-size: ds-rem-calc(16);
       padding: 12px 0;
     }
@@ -65,7 +63,7 @@
           color: $ds-color-charcoal;
           margin: 0;
           font-size: ds-rem-calc(14);
-          font-weight: 700;
+          font-weight: 600;
           text-transform: uppercase;
 
           @include media($tablet) {
@@ -78,9 +76,9 @@
 
         p {
           font-family: $ds-font-family-complementary;
-          color: $ds-color-charcoal;
-          font-size: ds-rem-calc(14);
           font-weight: 300;
+          font-size: ds-rem-calc(14);
+          color: $ds-color-charcoal;
           margin: 0 auto;
         }
 

@@ -27,7 +27,7 @@
     }
 
     h2 {
-      font-weight: 700;
+      font-weight: 600;
       max-width: 500px;
       letter-spacing: ds-rem-calc(-1);
       margin: 0 0 20px 0;
@@ -102,7 +102,7 @@
 
     h3 {
       font-size: ds-rem-calc(12);
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: ds-rem-calc(1);
       margin: 0 0 5px 0;
@@ -158,7 +158,6 @@
 
       &:before {
         content: "+";
-        font-weight: 500;
         display: inline-block;
         line-height: 26px;
         width: 30px;
@@ -186,7 +185,6 @@
 
       &:before {
         content: "→";
-        font-weight: 500;
         display: inline-block;
         line-height: 26px;
         width: 30px;

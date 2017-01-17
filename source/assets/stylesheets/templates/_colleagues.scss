@@ -36,14 +36,12 @@
 
       p {
         margin: 10px 0;
-        font-weight: 400;
         font-size: ds-rem-calc(14);
         text-align: center;
 
         @include media($laptop) {
           text-align: left;
           font-size: ds-rem-calc(22);
-          font-weight: 300;
         }
 
         @include media($tablet) { font-size: ds-rem-calc(20); }
@@ -116,7 +114,7 @@
 
       &__name {
         font-size: ds-rem-calc(18);
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: ds-rem-calc(-0.5);
         margin: 0;
         position: relative;
@@ -130,6 +128,7 @@
 
       &__title {
         font-family: $ds-font-family-complementary;
+        font-weight: 300;
         font-size: ds-rem-calc(14);
         margin: 0;
         position: relative;

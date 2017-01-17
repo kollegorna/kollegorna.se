@@ -29,7 +29,6 @@
 
       p {
         margin: 0 0 10px 0;
-        font-weight: 200;
         font-style: italic;
       }
 
@@ -46,10 +45,9 @@
       h2 {
         margin: 10px 0;
         font-size: ds-rem-calc(18);
-        font-weight: 400;
 
         @include media($tablet) { font-size: ds-rem-calc(20); }
-        @include media($laptop) { font-size: ds-rem-calc(22); font-weight: 300; }
+        @include media($laptop) { font-size: ds-rem-calc(22); }
         @include media($desktop) { font-size: ds-rem-calc(24); }
       }
     }
@@ -127,6 +125,7 @@
         display: table;
         margin: 0;
         font-family: $ds-font-family-complementary;
+        font-weight: 300;
         font-size: ds-rem-calc(16);
         font-style: italic;
         color: $ds-color-green;
@@ -180,6 +179,7 @@
         display: table;
         margin: 0;
         font-family: $ds-font-family-complementary;
+        font-weight: 300;
         font-size: ds-rem-calc(16);
         font-style: italic;
         color: $ds-color-white;

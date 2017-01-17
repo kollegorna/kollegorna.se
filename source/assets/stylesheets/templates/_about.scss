@@ -56,11 +56,11 @@
       }
 
       h2 {
+        font-family: $ds-font-family-complementary;
         font-weight: 300;
-        color: $ds-color-green;
         font-size: 1.11111rem;
         font-style: italic;
-        font-family: $ds-font-family-complementary;
+        color: $ds-color-green;
         margin: 0 0 15px 0;
         text-align: center;
         @include media($laptop) {
@@ -85,14 +85,12 @@
 
       p {
         margin: 10px 0;
-        font-weight: 400;
         font-size: ds-rem-calc(14);
         text-align: center;
 
         @include media($laptop) {
           text-align: left;
           font-size: ds-rem-calc(22);
-          font-weight: 300;
         }
 
         @include media($tablet) { font-size: ds-rem-calc(20); }
@@ -157,7 +155,7 @@
         h1 {
           font-size: ds-rem-calc(16);
           margin: 0;
-          font-weight: 700;
+          font-weight: 600;
 
           @include media($tablet) { font-size: ds-rem-calc(18); }
         }

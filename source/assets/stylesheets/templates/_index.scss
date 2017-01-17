@@ -22,11 +22,12 @@
     }
 
     p {
-      margin: 0;
-      font-weight: 300;
-      color: $ds-color-green;
-      font-style: italic;
       font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      font-style: italic;
+      margin: 0;
+      color: $ds-color-green;
+
     }
 
     h1 {
@@ -66,15 +67,16 @@
     margin-bottom: 40px;
 
     h2 {
-      display: inline-block;
-      margin: 0;
       font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(16);
+      font-weight: 300;
       font-style: italic;
       color: lighten($ds-color-charcoal, 50);
-      position: relative;
       background: white;
+      display: inline-block;
+      position: relative;
       padding: 12px 20px;
+      margin: 0;
     }
 
     &__header {

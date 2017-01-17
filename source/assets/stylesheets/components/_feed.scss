@@ -24,7 +24,7 @@
       max-width: 350px;
       margin: 0 auto 10px auto;
       font-size: ds-rem-calc(14);
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
 
       @include media($tablet) {
@@ -37,7 +37,6 @@
 
     p {
       font-size: ds-rem-calc(14);
-      font-weight: 400;
       max-width: 350px;
       margin: 0 auto;
 
@@ -59,6 +58,7 @@
 
     .author {
       font-family: $ds-font-family-complementary;
+      font-weight: 300;
       font-size: ds-rem-calc(14);
       line-height: 20px;
       margin-top: 20px;
@@ -156,7 +156,6 @@
         p {
           font-size: ds-rem-calc(16);
           line-height: 1.6;
-          font-weight: 500;
           font-style: normal;
 
           @include media($tablet) { font-size: ds-rem-calc(18); }
