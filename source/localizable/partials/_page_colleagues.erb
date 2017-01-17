@@ -253,7 +253,7 @@
         <%= person[:location] %>
       </div>
 
-      <% if person.has_key?(:links) %>
+      <% if person[:links].present? %>
 
       <div class="profile__links">
 
@@ -284,7 +284,7 @@
           "telephone": "<%= person[:phone] %>",
           "url": "<%= current_page.url + "#" + person[:id] %>",
 
-          <% if person.has_key?(:links) %>
+          <% if person[:links].present? %>
 
           "sameAs": [
 

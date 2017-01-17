@@ -50,26 +50,26 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "<%= current_article.title %>",
-    "url": "<%= current_page.url %>",
+    "url": "<%= current_article.url %>",
+    "mainEntityOfPage": "<%= current_article.url %>",
     "inLanguage": "<%= I18n.locale %>",
     "datePublished": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-    "mainEntityOfPage": "<%= "/#{I18n.locale}/#{t(:paths)[:blog]}" %>",
+
+    <% if current_article.data.image.present? %>
+
+    "image": "<%= current_article.data.image %>",
+
+    <% end %>
+
     "publisher": {
       "@type": "Organization",
       "name": "kollegorna",
       "url": "https://www.kollegorna.se",
       "logo": "<%= image_path('logo.svg') %>"
     },
-
-    <% if current_article.data.has_key?(:image) %>
-
-    "image": "<%= current_article.data.image %>",
-
-    <% end %>
-
     "author": {
       "@type": "Person",
       "name": "Per Sandström",

@@ -1,3 +1,7 @@
+<%
+  posts = blog.articles.select{ |article| article.lang[ I18n.locale.to_s ] }
+%>
+
 <main role="main" class="blog">
 
   <header class="blog__header blog__header--listing">
@@ -7,17 +11,62 @@
 
   <ul class="blog__list">
 
-    <% blog.articles.select{ |article| article.lang[ I18n.locale.to_s ] }.each do |article| %>
+    <% posts.each do |post| %>
 
     <li>
-      <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
-      <time datetime="<%= article.date.strftime('%Y-%m-%d') %>">
-        <%= article.date.strftime('%Y-%m-%d') %>
+      <h2><a href="<%= post.url %>"><%= post.title %></a></h2>
+      <time datetime="<%= post.date.strftime('%Y-%m-%d') %>">
+        <%= post.date.strftime('%Y-%m-%d') %>
       </time>
     </li>
 
     <% end %>
 
   </ul>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Blog",
+      "name": "<%= "Kollegorna #{t(:nav)[:blog]}" %>",
+      "url": "<%= current_page.url %>",
+      "description": "<%= t(:meta)[:description] %>",
+      "blogPosts": [
+
+        <% posts.each do |post| %>
+
+        {
+          "@type": "BlogPosting",
+          "headline": "<%= post.title %>",
+          "url": "<%= post.url %>",
+          "mainEntityOfPage": "<%= post.url %>",
+          "inLanguage": "<%= I18n.locale %>",
+          "datePublished": "<%= post.date.strftime('%Y-%m-%d') %>",
+          "dateModified": "<%= post.date.strftime('%Y-%m-%d') %>",
+          "description": "<%= post.data.description %>",
+          "image": "<%= post.data.image.present? ? post.data.image : image_path('og-image.jpg') %>",
+          "publisher": {
+            "@type": "Organization",
+            "name": "kollegorna",
+            "url": "https://www.kollegorna.se",
+            "logo": "<%= image_path('logo.svg') %>"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Per Sandström",
+            "email": "mailto:per@kollegorna.se",
+            "address": "Karlbergsvägen 52, 113 37 Stockholm",
+            "telephone": "+46702420750",
+            "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
+            "image": "<%= image_path('avatars/per.jpg') %>"
+          }
+        }
+
+        <%= "," if posts.last != post %>
+        <% end %>
+
+      ]
+    }
+  </script>
 
 </main>
