@@ -2,17 +2,17 @@
 
 <main role="main">
 
-  <article class="blog" role="article" vocab="http://schema.org/" typeof="BlogPosting">
+  <article class="blog" role="article">
 
     <header class="blog__header blog__header--article">
       <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:nav)[:blog] %></a></span>
-      <h1 property="name"><%= current_article.title %></h1>
-      <time property="datePublished" datetime="<%= current_article.date.strftime('%Y-%m-%d') %>">
+      <h1><%= current_article.title %></h1>
+      <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
       </time>
     </header>
 
-    <div property="articleBody" class="blog__content">
+    <div class="blog__content">
       <%= yield %>
     </div>
 
@@ -44,5 +44,42 @@
   </article>
 
 </main>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<%= current_article.title %>",
+    "url": "<%= current_page.url %>",
+    "inLanguage": "<%= I18n.locale %>",
+    "datePublished": "<%= current_article.date.strftime('%Y-%m-%d') %>",
+    "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
+    "description": "<%= current_article.data.description %>",
+    "articleBody": <%= yield.to_json %>,
+    "mainEntityOfPage": "<%= "/#{I18n.locale}/#{t(:paths)[:blog]}" %>",
+    "publisher": {
+      "@type": "Organization",
+      "name": "kollegorna",
+      "url": "https://www.kollegorna.se",
+      "logo": "<%= image_path('logo.svg') %>"
+    },
+
+    <% if current_article.data.has_key?(:image) %>
+
+    "image": "<%= current_article.data.image %>",
+
+    <% end %>
+
+    "author": {
+      "@type": "Person",
+      "name": "Per Sandström",
+      "email": "mailto:per@kollegorna.se",
+      "address": "Karlbergsvägen 52, 113 37 Stockholm",
+      "telephone": "+46702420750",
+      "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
+      "image": "<%= image_path('avatars/per.jpg') %>"
+    }
+  }
+</script>
 
 <% end %>
