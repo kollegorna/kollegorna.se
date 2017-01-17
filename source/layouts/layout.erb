@@ -2,8 +2,11 @@
 <html lang="<%= I18n.locale || "sv" %>">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title><%= current_page.data.title ? "#{current_page.data.title} | Kollegorna" : "Kollegorna | #{t(:meta)[:title]}" %></title>
+  <meta name="description" content="<%= current_page.data.description || t(:meta)[:description] %>">
 
   <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path('favicons/apple-touch-icon.png') %>">
   <link rel="icon" type="image/png" href="<%= image_path('favicons/favicon-32x32.png') %>" sizes="32x32">
@@ -11,10 +14,6 @@
   <link rel="manifest" href="<%= image_path('favicons/manifest.json') %>">
   <link rel="mask-icon" href="<%= image_path('favicons/safari-pinned-tab.svg') %>" color="#5bbad5">
   <meta name="theme-color" content="#f5f5f5">
-
-  <title><%= current_page.data.title || "Kollegorna" %></title>
-
-  <meta name="description" content="<%= current_page.data.description || t(:meta)[:description] %>">
 
   <meta property="fb:app_id" content="327184264341676">
   <meta property="og:title" content="<%= current_page.data.title || "Kollegorna" %>">

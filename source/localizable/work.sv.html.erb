@@ -1,10 +1,12 @@
 ---
-title: Projekt | Kollegorna
+title: Projekt
 ---
 
 <main role="main" class="work">
+  <h1 class="visuallyhidden"><%= current_page.data.title %></h1>
   <section class="work__projects">
     <div class="work__projects__blocks">
+
       <%= partial("components/project", :locals => {
         :title => "Genombrott",
         :text => "UI/UX-Design, Utveckling",
@@ -67,7 +69,6 @@ title: Projekt | Kollegorna
         :image => "case/thumbnails/bg-play.png",
         :link => "/sv/projekt/bg-play"
       }) %>
-
 
     </div>
   </section>
