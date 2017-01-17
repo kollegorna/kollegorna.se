@@ -57,13 +57,7 @@
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-
-    <% if current_article.data.image.present? %>
-
-    "image": "<%= current_article.data.image %>",
-
-    <% end %>
-
+    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('og-image.jpg') %>",
     "publisher": {
       "@type": "Organization",
       "name": "kollegorna",

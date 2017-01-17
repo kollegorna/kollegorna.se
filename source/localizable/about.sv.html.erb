@@ -4,6 +4,7 @@ description: "Vi tänker, leder, skruvar, analyserar, uppfinner, prövar, kodar,
 ---
 
 <main role="main" class="about">
+
   <section class="about__intro">
     <div class="about__intro__background"></div>
     <div class="about__intro__content">
@@ -62,4 +63,28 @@ description: "Vi tänker, leder, skruvar, analyserar, uppfinner, prövar, kodar,
           <p>Vi är experter på Ruby on Rails och blandar även in Ember, Go, Node.js, Middleman samt WordPress beroende på vad som är bäst för varje projekt.</p>
         </div>
       </div>
+
+    </div>
+  </section>
+
 </main>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "AboutPage",
+    "name": "<%= current_page.data.title %>",
+    "description": "<%= current_page.data.description %>",
+    "url": "<%= current_page.url %>",
+    "mainEntityOfPage": "<%= current_page.url %>",
+    "image": "<%= image_path("og-image.jpg") %>",
+    "inLanguage": "<%= I18n.locale %>",
+    "sameAs": [
+      "https://dribbble.com/kollegorna",
+      "https://www.facebook.com/kollegorna",
+      "https://github.com/kollegorna/",
+      "https://www.instagram.com/kollegorna",
+      "https://twitter.com/kollegorna"
+    ]
+  }
+</script>
