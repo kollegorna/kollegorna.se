@@ -89,3 +89,22 @@ title: Kollegorna — Born in Sweden, Built Worldwide
     </div>
   </section>
 </main>
+
+<script type="application/ld+json">
+  {
+    "@type": "Organization",
+    "name": "Kollegorna",
+    "url": "https://www.kollegorna.se",
+    "mainEntityOfPage": "<%= current_page.url %>",
+    "logo": "<%= image_path('logo.svg') %>",
+    "image": "<%= image_path("og-image.jpg") %>",
+    "description": "<%= current_page.data.description || t(:meta)[:description] %>",
+    "sameAs": [
+      "https://dribbble.com/kollegorna",
+      "https://www.facebook.com/kollegorna",
+      "https://github.com/kollegorna/",
+      "https://www.instagram.com/kollegorna",
+      "https://twitter.com/kollegorna"
+    ]
+  }
+</script>

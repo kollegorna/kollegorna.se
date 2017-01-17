@@ -35,9 +35,6 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
       }) %>
 
 
-
-
-
       <%#= partial("components/feed/case_study", :locals => {
         :title => "Celine Beyond",
         :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
@@ -45,7 +42,6 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
         :background_color => "#EFEFEF",
         :text_color => "black"
       }) %>
-
 
 
       <%= partial("components/feed/blog", :locals => {
@@ -176,3 +172,22 @@ title: Kollegorna | Digital byrå — Design, teknik &amp; strategi
     </div>
   </section>-->
 </main>
+
+<script type="application/ld+json">
+  {
+    "@type": "Organization",
+    "name": "Kollegorna",
+    "url": "https://www.kollegorna.se",
+    "mainEntityOfPage": "<%= current_page.url %>",
+    "logo": "<%= image_path('logo.svg') %>",
+    "image": "<%= image_path("og-image.jpg") %>",
+    "description": "<%= current_page.data.description || t(:meta)[:description] %>",
+    "sameAs": [
+      "https://dribbble.com/kollegorna",
+      "https://www.facebook.com/kollegorna",
+      "https://github.com/kollegorna/",
+      "https://www.instagram.com/kollegorna",
+      "https://twitter.com/kollegorna"
+    ]
+  }
+</script>

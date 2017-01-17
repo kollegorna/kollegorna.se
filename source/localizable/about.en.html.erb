@@ -4,6 +4,7 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
 ---
 
 <main role="main" class="about">
+
   <section class="about__intro">
     <div class="about__intro__background"></div>
     <div class="about__intro__content">
@@ -62,5 +63,28 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
           <p>We're experts in Ruby on Rails, but we also like to use Ember.js, Go, Node.js, Middleman and WordPress depending on the project's needs.</p>
         </div>
       </div>
-    </section>
+
+    </div>
+  </section>
+
 </main>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "AboutPage",
+    "name": "<%= current_page.data.title %>",
+    "description": "<%= current_page.data.description %>",
+    "url": "<%= current_page.url %>",
+    "mainEntityOfPage": "<%= current_page.url %>",
+    "image": "<%= image_path("og-image.jpg") %>",
+    "inLanguage": "<%= I18n.locale %>",
+    "sameAs": [
+      "https://dribbble.com/kollegorna",
+      "https://www.facebook.com/kollegorna",
+      "https://github.com/kollegorna/",
+      "https://www.instagram.com/kollegorna",
+      "https://twitter.com/kollegorna"
+    ]
+  }
+</script>
