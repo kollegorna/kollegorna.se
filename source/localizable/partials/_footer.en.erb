@@ -1,14 +1,16 @@
 <footer class="footer" role="contentinfo">
   <div class="footer__container">
     <div class="footer__logo">
-      <a href="/<%= I18n.locale %>"><%= partial("components/illustrations/logo") %></a>
+      <a href="/<%= I18n.locale %>">
+        <svg><title>Kollegorna logo</title><use xlink:href="<%= image_path 'logo.svg' %>#i"></use></svg>
+      </a>
     </div>
 
     <nav class="footer__contacts">
       <h4>New business</h4>
       <p>Per Sandström<br>
       <a href="mailto:per@kollegorna.se">per@kollegorna.se</a><br>
-      <a href="tel:+46702420750">+46 (0) 70 242 07 50</p>
+      <a href="tel:+46702420750">+46 (0) 70 242 07 50</a></p>
       <h4>Address</h4>
       <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank">Karlbergsvägen 52<br>
       113 37 Stockholm<br>Sweden</a></p>

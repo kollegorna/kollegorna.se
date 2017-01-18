@@ -31,11 +31,7 @@
   <meta name="twitter:site" content="@kollegorna">
   <meta name="twitter:creator" content="@kollegorna">
 
-
-  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6077114/7879172/css/fonts.css" />
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Z3idP4mO8UBkWokGNLtf47NT522C6YQ"></script>
-
+  <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
   <%= inline_javascript "modernizr" %>
 
@@ -58,7 +54,7 @@
 
   <%= partial "partials/footer" %>
 
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application", defer: true %>
 
 </body>
 </html>

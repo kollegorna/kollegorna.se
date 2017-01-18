@@ -230,8 +230,7 @@
     <% persons.each do |person| %>
 
     <article class="profile block" id="<%= person[:id] %>">
-      <div class="profile__background colleague-map" data-markers="false">
-        <div class="marker" data-lat="<%= person[:locLat] %>" data-lng="<%= person[:locLng] %>"></div>
+      <div class="profile__background colleague-map" data-lat="<%= person[:locLat] %>" data-lng="<%= person[:locLng] %>">
       </div>
 
       <figure class="profile__image">

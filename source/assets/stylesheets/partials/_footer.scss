@@ -15,12 +15,9 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: ds-rem-calc(1);
+    color: darken( $ds-color-white, 40 );
     margin: 0;
     margin-bottom: 10px;
-  }
-
-  h4, a, p {
-    color: currentColor;
   }
 
   a, p {
@@ -29,8 +26,12 @@
     line-height: ds-rem-calc(30);
   }
 
-  a:hover {
-    color: $ds-color-yellow;
+  a {
+    color: currentColor;
+
+    &:hover {
+      color: $ds-color-yellow;
+    }
   }
 
   &__container {

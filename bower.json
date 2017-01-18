@@ -10,6 +10,7 @@
     "packery": "~1.4.3",
     "imagesloaded": "~3.1.8",
     "disqusLoader.js": "osvaldasvalutis/disqusLoader.js",
+    "lazyLoadGoogleMaps.js": "osvaldasvalutis/lazyLoadGoogleMaps.js",
     "mapbox.js": "~2.2.1",
     "fitvids": "^1.2.0"
   }
