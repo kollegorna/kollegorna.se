@@ -9,17 +9,21 @@
         northEast = L.latLng(78.543425, 50.370820),
         bounds = L.latLngBounds(southWest, northEast);
 
-    L.mapbox.accessToken = 'pk.eyJ1Ijoia29sbGVnb3JuYSIsImEiOiJjaXh1djlqZGswMDV2MzJsbWhleWk2NDg3In0.OARv9pBnZ-365KatdGyR7g';
-    var map = L.mapbox.map('map', 'mapbox.streets', {
+    L.mapbox.accessToken = 'pk.eyJ1Ijoia29sbGVnb3JuYSIsImEiOiJvWk5VR3FjIn0.1zlsFncPm_sHrDcmmpzudg';
+    var map = L.mapbox.map('map', 'mapbox.satellite', {
       maxBounds: bounds,
       maxZoom: 15,
       minZoom: 2
     }).setView([40, -74.50], 5);
+//    var map = L.mapbox.map('map').setView([40, -74.50], 5);
+    L.mapbox.styleLayer('mapbox://styles/kollegorna/ciy35srsb008g2rmhkm6gca1m').addTo(map);
 
     if (map.scrollWheelZoom) {
       map.scrollWheelZoom.disable();
     }
 
+//    L.tileLayer('https://api.mapbox.com/styles/v1/kollegorna/ciy35srsb008g2rmhkm6gca1m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia29sbGVnb3JuYSIsImEiOiJvWk5VR3FjIn0.1zlsFncPm_sHrDcmmpzudg').addTo(map);
+//    L.mapbox.styleLayer('mapbox://styles/kollegorna/ciy35srsb008g2rmhkm6gca1m').addTo(map);
     var myLayer = L.mapbox.featureLayer().addTo(map);
 
     var geoJson = {
