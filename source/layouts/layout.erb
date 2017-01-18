@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%= I18n.locale || "sv" %>">
+<html lang="<%= I18n.locale || "sv" %>" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -20,11 +20,7 @@
   <meta property="og:url" content="https://www.kollegorna.se<%= current_page.url %>">
   <meta property="og:description" content="<%= current_page.data.description || t(:meta)[:description] %>">
   <meta property="og:image" content="https://www.kollegorna.se<%= current_page.data.share_image || "/images/og-image.jpg" %>">
-  <% if I18n.locale.to_s == 'sv' %>
-    <meta property="og:locale" content="sv_SE">
-  <% else %>
-    <meta property="og:locale" content="en_US">
-  <% end %>
+  <meta property="og:locale" content="<%= I18n.locale.to_s == 'sv' ? 'sv_SE' : 'en_US' %>">
   <meta property="og:site_name" content="Kollegorna">
   <meta property="og:type" content="website">
 
@@ -40,8 +36,8 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Z3idP4mO8UBkWokGNLtf47NT522C6YQ"></script>
 
-  <%= javascript_include_tag "modernizr" %>
   <%= stylesheet_link_tag "application" %>
+  <%= inline_javascript "modernizr" %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -55,6 +51,7 @@
   </script>
 </head>
 <body>
+
   <%= partial "partials/header" %>
 
   <%= yield %>
@@ -62,5 +59,6 @@
   <%= partial "partials/footer" %>
 
   <%= javascript_include_tag "application" %>
+
 </body>
 </html>

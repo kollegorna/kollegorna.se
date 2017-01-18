@@ -49,8 +49,21 @@ configure :build do
   activate :autoprefixer, :ignore => ['/assets/fonts/535951/*.css']
   activate :gzip
   activate :minify_css, :ignore => ['/assets/fonts/535951/*.css']
-  activate :minify_javascript
+  activate :minify_javascript, inline: true
   activate :minify_html
   activate :relative_assets
   activate :asset_hash, :ignore => [/images/, /fonts/]
+end
+
+
+# Helpers
+helpers do
+
+  # Renders a javascript asset inline
+  def inline_javascript( name )
+    content_tag :script do
+      sprockets[ "#{name}.js" ].to_s
+    end
+  end
+
 end
