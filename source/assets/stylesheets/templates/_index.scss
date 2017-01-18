@@ -66,6 +66,10 @@
   &__feed {
     margin-bottom: 40px;
 
+    .no-js & {
+      display: none;
+    }
+
     h2 {
       font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(16);
