@@ -6,6 +6,7 @@
 
       init: function()
       {
+        this.labsRssFeed();
         this.mobileNav();
         this.bindClicks();
         this.setupFeed();
@@ -13,6 +14,83 @@
         this.initComments();
         this.fitVids();
         this.setupMaps();
+      },
+      
+      xmlToJson: function(xml) {
+	
+          // Create the return object
+          var obj = {};
+
+          if (xml.nodeType == 1) { // element
+              // do attributes
+              if (xml.attributes.length > 0) {
+              obj["@attributes"] = {};
+                  for (var j = 0; j < xml.attributes.length; j++) {
+                      var attribute = xml.attributes.item(j);
+                      obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+                  }
+              }
+          } else if (xml.nodeType == 3) { // text
+              obj = xml.nodeValue;
+          }
+
+          // do children
+          if (xml.hasChildNodes()) {
+              for(var i = 0; i < xml.childNodes.length; i++) {
+                  var item = xml.childNodes.item(i);
+                  var nodeName = item.nodeName;
+                  if (typeof(obj[nodeName]) == "undefined") {
+                      obj[nodeName] = xmlToJson(item);
+                  } else {
+                      if (typeof(obj[nodeName].push) == "undefined") {
+                          var old = obj[nodeName];
+                          obj[nodeName] = [];
+                          obj[nodeName].push(old);
+                      }
+                      obj[nodeName].push(xmlToJson(item));
+                  }
+              }
+          }
+          return obj;
+      },
+
+      labsRssFeed: function () {
+        if ($('.about__labs').length) {
+          $.ajax({
+            url      : 'https://labs.kollegorna.se/feed.xml',
+            dataType : 'xml',
+            success  : function (data) {
+              console.log(data);
+              console.log(this.xmlToJson(data));
+//              if (data.responseData.feed && data.responseData.feed.entries) {
+//                $('.about__labs p').after('<ul></ul>');
+//
+//                $.each(data.responseData.feed.entries, function (i, e) {
+//                  if (i < 5) {
+//                    var press_date = new Date(e.publishedDate);
+//                    $('.about__labs ul').append('<li><a href="' + e.link + '">' + e.title + '</a><time class="t-meta t-meta--small">' + Kollegorna.formatRssDate(press_date) + '</time></li>');
+//                  }
+//                });
+//              }
+            }
+          });
+        }
+      },
+
+      formatRssDate: function (d) {
+        var curr_date = d.getDate();
+        var curr_month = d.getMonth();
+        var curr_year = d.getFullYear();
+
+        if ($('html').attr('lang') == 'sv') {
+          var month_names = new Array("januari", "februari", "mars",
+          "april", "maj", "juni", "juli", "augusti", "september",
+          "oktober", "november", "december");
+
+          return curr_date + ' ' + month_names[curr_month] + ' ' + curr_year;
+        } else {
+          return d.toISOString().substring(0, 10);
+        }
       },
 
 
