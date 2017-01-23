@@ -47,6 +47,24 @@ sv:
     country_dominicanrep: "Dominikanska Republiken"
     country_bulgaria: "Bulgarien"
     country_lithuania: "Litauen"
+    per:
+        role: "Designer + Partner"
+    henrik:
+        role: "Utvecklare + Partner"
+    eduardo:
+        role: "Designer + Partner"
+    ivan:
+        role: "Utvecklare"
+    raymall:
+        role: "Designer"
+    dennis:
+        role: "Utvecklare"
+    filippos:
+        role: "Utvecklare"
+    nikolay:
+        role: "Designer"
+    osvaldas:
+        role: "Utvecklare"
   blog:
     subscribe_rss: "Prenumerera via RSS"
     back_to_list: "Alla inlägg"
