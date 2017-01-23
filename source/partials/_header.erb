@@ -18,13 +18,11 @@
   </nav>
 
   <div class="header__cta">
-
     <% if I18n.locale == :en %>
-
-    <a class="language" href="/sv"><%= image_tag("SE.png") %></a>
-
+      <a class="language" href="/sv"><%= image_tag("SE.png") %></a>
+    <% else %>
+      <a class="language" href="/en"><%= image_tag("EN.png") %></a>
     <% end %>
-
   </div>
 
 </header>

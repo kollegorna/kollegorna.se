@@ -226,7 +226,7 @@
     padding-right: 15%;
     // display: none;
     // @include media($laptop) { display: block; }
-    @include media($laptop) { padding: 0; }
+    @include media($laptop) { padding: 13px 0 0; }
 
     a {
       color: $ds-color-green;
