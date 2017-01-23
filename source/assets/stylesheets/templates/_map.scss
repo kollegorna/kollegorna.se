@@ -87,6 +87,16 @@
   background-color: rgba($ds-color-green, .8);
 }
 
+.leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.leaflet-popup-content {
+  border: 1px solid $ds-color-light-gray;
+}
+
 .map__popup {
   width: 150px;
   height: auto;
@@ -119,7 +129,8 @@
   position: relative;
   width: 95%;
   height: 150px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
