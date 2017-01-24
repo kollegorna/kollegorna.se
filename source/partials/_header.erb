@@ -17,11 +17,11 @@
     <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
   </nav>
 
-  <div class="header__cta">
+  <div class="header__lang">
     <% if I18n.locale == :en %>
-      <a class="language" href="/sv"><%= image_tag("SE.png") %></a>
+      <a href="/sv"><%= image_tag("SE.png") %></a>
     <% else %>
-      <a class="language" href="/en"><%= image_tag("EN.png") %></a>
+      <a href="/en"><%= image_tag("EN.png") %></a>
     <% end %>
   </div>
 
