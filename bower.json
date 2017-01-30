@@ -4,7 +4,7 @@
   "dependencies": {
     "normalize-scss": "~3.0.3",
     "modernizr": "https://modernizr.com/download/?touchevents-addtest-domprefixes-prefixes-setclasses-testallprops-testprop-teststyles",
-    "kollegorna-design-system": "kollegorna/design-system#2017",
+    "kollegorna-design-system": "kollegorna/design-system",
     "jquery": "~2.1.4",
     "neat": "^1.8.0",
     "packery": "~1.4.3",
