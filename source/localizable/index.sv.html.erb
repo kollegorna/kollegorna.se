@@ -51,9 +51,11 @@
         :image => "feed/osvaldas.jpg"
       }) %>
 
-      <%#= partial("components/feed/blip", :locals => {
-        :category => "Nytt 2017!",
-        :text => "Nya projekt på gång: Webbplats för utbildningsprojekt finansierat av SR MDO samt kampanjsajt för Kommunal."
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Efter tre år med Ruby on Rails",
+        :text => "En blandad lista av saker som som vår backend-⭐️ Filippos lärt sig under åren. Och ni kan inte tro vad som hä… Skojar bara :)",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
@@ -74,6 +76,13 @@
         :link => "/sv/projekt/skl-genombrott"
       }) %>
 
+      <%= partial("components/feed/blog", :locals => {
+        :title => "PDD i November",
+        :text => "Var 6:e vecka tar vi en paus från vanligt jobb torsdag – måndag för att istället ha Personal Development Days. Följande gjordes denna gång…",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
+      }) %>
+
       <%= partial("components/feed/case_study", :locals => {
         :title => "Vembi",
         :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
@@ -81,12 +90,6 @@
         :background_color => "#FFFFFF",
         :text_color => "#565656",
         :link => "/sv/projekt/vembi"
-      }) %>
-
-      <%= partial("components/feed/blip", :locals => {
-        :category => "Ses vi?",
-        :text => "Vi är med och ställer till med dumheter på Stupid Hackathon Sverige i februari.",
-        :link => "https://www.stupidhackathon.se/"
       }) %>
 
       <%= partial("components/feed/tweet", :locals => {
