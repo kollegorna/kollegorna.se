@@ -47,4 +47,15 @@
 			max-width: 1099px;
 		}
 	}
+
+	.graffiti {
+		text-align: center;
+		background: #040F0F image-url('case/celine-beyond/grunge.jpg') no-repeat center top;
+		background-size: cover;
+		padding: 100px 0;
+
+		img {
+			width: 500px;
+		}
+	}
 }
