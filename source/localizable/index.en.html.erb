@@ -25,21 +25,20 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("components/feed/case_study", :locals => {
+        :title => "Celine Beyond",
+        :text => "We've helped this Singapore-based organisation on its journey to make cities sound better.",
+        :image => "case/thumbnails/celine-beyond.png",
+        :background_color => "#EFEFEF",
+        :text_color => "black"
+      }) %>
+
+      <%= partial("components/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
         :text => "Brand and digital identity",
         :image => "feed/case-study-lb.jpg",
         :background_color => "#F5EFEC",
         :text_color => "#41162f",
         :link => "/en/work/lanneberg-bexelius"
-      }) %>
-
-
-      <%#= partial("components/feed/case_study", :locals => {
-        :title => "Celine Beyond",
-        :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
-        :image => "case/thumbnails/celine-beyond.png",
-        :background_color => "#EFEFEF",
-        :text_color => "black"
       }) %>
 
 
