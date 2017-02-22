@@ -24,6 +24,14 @@
     </div>
 
     <div class="index__feed__blocks feed grid">
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Spoil movies instead of lives",
+        :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
+        :category => "Campaign",
+        :link => "https://www.spoilmoviessavelives.com/en",
+        :image => "feed/spoil-movies-save-lives.jpg"
+      }) %>
+
       <%= partial("components/feed/case_study", :locals => {
         :title => "Celine Beyond",
         :text => "We've helped this Singapore-based organisation on its journey to make cities sound better.",
