@@ -58,7 +58,6 @@
           e.preventDefault();
 
           var height = $('.index__feed__blocks').height();
-          console.log(height);
 
           $('.index__feed').animate({
             'height': height + 113
