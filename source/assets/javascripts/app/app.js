@@ -53,6 +53,21 @@
             });
           });
         });
+
+        $('.index__feed').on('click', '.expand', function(e) {
+          e.preventDefault();
+
+          var height = $('.index__feed__blocks').height();
+          console.log(height);
+
+          $('.index__feed').animate({
+            'height': height + 113
+          }, 1000, function() {
+            $(this).find('.expand').fadeOut(function() {
+              $('.index__feed').css('height', 'auto').addClass('expanded');
+            });
+          });
+        });
       },
 
 

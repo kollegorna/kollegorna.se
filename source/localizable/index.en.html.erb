@@ -23,6 +23,10 @@
       <div class="blob blob-5"></div>
     </div>
 
+    <div class="expand expand--feed">
+      See more
+    </div>
+
     <div class="index__feed__blocks feed grid">
       <%= partial("components/feed/blog", :locals => {
         :title => "Spoil movies instead of lives",
@@ -73,9 +77,13 @@
         :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
       }) %>
 
-      <%#= partial("components/feed/blip", :locals => {
-        :category => "Nytt 2017!",
-        :text => "Nya projekt på gång: Webbplats för utbildningsprojekt finansierat av SR MDO samt kampanjsajt för Kommunal."
+      <%= partial("components/feed/case_study", :locals => {
+        :title => "Releasefest",
+        :text => "Let's celebrate Swedish made digital stuff",
+        :image => "feed/case-study-releasefest.jpg",
+        :background_color => "#f7f9f9",
+        :text_color => "#005293",
+        :link => "/en/work/releasefest"
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
@@ -85,6 +93,13 @@
         :background_color => "#0d121e",
         :text_color => "#e0e9ff",
         :link => "/en/work/skl-genombrott"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
+        :title => "Voicemail using Slack, S3, 46elks and dash of Go",
+        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
       <%= partial("components/feed/case_study", :locals => {
