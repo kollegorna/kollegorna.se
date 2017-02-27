@@ -29,6 +29,13 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("components/feed/blog", :locals => {
+        :title => "Hej Rails-utvecklare!",
+        :text => "Vill du ha en fullt marknadsmässig lön, flexibla arbetstider, kunna jobba var du vill, fina förmåner, fantastiska kollegor och massor av roliga projekt?",
+        :category => "Jobba här",
+        :link => "/sv/2017/02/rails-utvecklare/"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
         :title => "Spoila filmer istället för liv",
         :text => "Som organdonator kan du rädda upp till åtta liv. Allt som krävs för att bli en är en statusuppdatering. DO IT!",
         :category => "Kampanj",
