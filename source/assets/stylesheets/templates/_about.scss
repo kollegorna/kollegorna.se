@@ -172,4 +172,16 @@
       }
     }
   }
+
+  &__section {
+    @include outer-container;
+
+    &__content {
+      @include span-columns(12);
+
+      @include media($tablet) {
+        @include span-columns(6);
+      }
+    }
+  }
 }
