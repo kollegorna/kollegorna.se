@@ -29,6 +29,13 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("components/feed/blog", :locals => {
+        :title => "Hello Rails Developers!",
+        :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
+        :category => "Work here",
+        :link => "/en/2017/02/rails-developer/"
+      }) %>
+
+      <%= partial("components/feed/blog", :locals => {
         :title => "Spoil movies instead of lives",
         :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
         :category => "Campaign",
