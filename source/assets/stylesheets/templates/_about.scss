@@ -151,23 +151,39 @@
           @include shift(0);
           padding-top: 2  0px;
         }
+      }
 
-        h1 {
+      h1 {
+        font-size: ds-rem-calc(16);
+        margin: 0;
+        font-weight: 600;
+
+        @include media($tablet) { font-size: ds-rem-calc(18); }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: ds-rem-calc(14);
+        line-height: 1.6;
+
+        @include media($tablet) {
           font-size: ds-rem-calc(16);
-          margin: 0;
-          font-weight: 600;
+        }
+      }
 
-          @include media($tablet) { font-size: ds-rem-calc(18); }
+      &--careers {
+        p {
+          max-width: 360px;
+          width: 90%;
+          margin: 10px auto;
         }
 
-        p {
-          margin-top: 10px;
-          font-size: ds-rem-calc(14);
-          line-height: 1.6;
+        @include media($tablet) {
+          @include span-columns(4);
+          @include omega-reset(2n);
+          @include omega(3n);
 
-          @include media($tablet) {
-            font-size: ds-rem-calc(16);
-          }
+          p { margin: 10px 0; }
         }
       }
     }
@@ -181,6 +197,63 @@
 
       @include media($tablet) {
         @include span-columns(6);
+      }
+    }
+  }
+
+  &__details {
+    padding: 50px 0;
+    color: white;
+    background: $ds-color-charcoal;
+    width: 100%;
+
+    h1, h2, a { color: white; }
+    a { border-color: rgba(white, 0.4); }
+  }
+
+  &__work {
+    padding: 50px 0;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .about__section {
+
+      &__content {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($tablet) {
+          @include span-columns(6);
+          @include shift(3);
+        }
+      }
+    }
+  }
+
+  &__job-opening {
+    padding: 50px 0;
+    background: white;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .about__section {
+
+      &__content {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($tablet) {
+          @include span-columns(6);
+          @include shift(3);
+        }
       }
     }
   }
