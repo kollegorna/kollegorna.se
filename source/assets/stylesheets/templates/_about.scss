@@ -4,6 +4,11 @@
     @extend .underlined;
   }
 
+  ul {
+    list-style: disc outside;
+    margin-left: 20px;
+  }
+
   &__background {
     position: fixed;
     z-index: 0;
