@@ -1,4 +1,5 @@
 <div class="block">
+
   <% if defined?(image) %>
     <a href="<%= defined?(link) ? link : "#" %>">
       <div class="block__image">
@@ -13,4 +14,23 @@
     </h3>
     <p><%= text %></p>
   </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "VisualArtwork",
+      "headline": "<%= title %>",
+      "url": "https://www.kollegorna.se<%= link %>",
+      "inLanguage": "<%= I18n.locale %>",
+      "description": "<%= text %>",
+      "image": "https://www.kollegorna.se<%= image_path image || "og-image.jpg" %>",
+      "author": {
+        "@type": "Organization",
+        "name": "Kollegorna",
+        "url": "https://www.kollegorna.se",
+        "logo": "https://www.kollegorna.se<%= image_path "logo.svg" %>"
+      }
+    }
+  </script>
+
 </div>
