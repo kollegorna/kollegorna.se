@@ -9,7 +9,7 @@ var messages = {
   build:  'Building Middleman...'
 };
 
-const setBuildTime = () => {
+var setBuildTime = function() {
   fs.writeFileSync('.build-time', (new Date()).getTime());
 };
 
