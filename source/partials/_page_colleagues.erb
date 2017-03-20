@@ -246,9 +246,7 @@
       </div>
 
       <div class="profile__location">
-        <div class="profile__icon">
-          <%= image_tag 'icon-map-pin.svg' %>
-        </div>
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-pin"></use></svg>
         <%= person[:location] %>
       </div>
 
@@ -259,9 +257,7 @@
         <% person[:links].each do |linkKey, link| %>
 
         <a href="<%= link[:link] %>">
-          <div class="profile__icon">
-            <%= image_tag "icon-#{linkKey}.svg" %>
-          </div>
+          <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-<%= linkKey %>"></use></svg>
           <%= link[:name] %>
         </a>
 

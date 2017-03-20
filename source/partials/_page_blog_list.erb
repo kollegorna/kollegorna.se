@@ -44,7 +44,7 @@
           "datePublished": "<%= post.date.strftime('%Y-%m-%d') %>",
           "dateModified": "<%= post.date.strftime('%Y-%m-%d') %>",
           "description": "<%= post.data.description %>",
-          "image": "<%= post.data.image.present? ? post.data.image : image_path('og-image.jpg') %>",
+          "image": "<%= post.data.image.present? ? post.data.image : image_path('meta/og-image.jpg') %>",
           "publisher": {
             "@type": "Organization",
             "name": "Kollegorna",

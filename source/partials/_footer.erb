@@ -2,35 +2,36 @@
   <div class="footer__container">
     <div class="footer__logo">
       <a href="/<%= I18n.locale %>">
-        <svg><title>Kollegorna logo</title><use xlink:href="<%= image_path 'logo.svg' %>#i"></use></svg>
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-logo"></use></svg>
       </a>
     </div>
 
     <nav class="footer__contacts">
       <h4><%= t(:footer)[:new_business] %></h4>
-      <p>Per Sandström<br>
-      <a href="mailto:per@kollegorna.se">per@kollegorna.se</a><br>
-      <a href="tel:+46702420750">+46 (0) 70 242 07 50</a></p>
+      <p>
+        Per Sandström<br>
+        <a href="mailto:per@kollegorna.se">per@kollegorna.se</a><br>
+        <a href="tel:+46702420750">+46 (0) 70 242 07 50</a>
+      </p>
 
       <h4><%= t(:footer)[:address] %></h4>
-      <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank">Karlbergsvägen 52,<br>
-      113 37 Stockholm</a></p>
+      <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank" rel="noopener">Karlbergsvägen 52,<br>113 37 Stockholm</a></p>
     </nav>
 
     <div class="footer__navigation">
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a>
-      <a href="https://labs.kollegorna.se" target="_blank"><%= t(:nav)[:labs] %></a>
+      <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>"><%= t(:nav)[:work] %></a>
+      <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>"><%= t(:nav)[:about] %></a>
+      <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
+      <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:nav)[:blog] %></a>
+      <a href="https://labs.kollegorna.se" target="_blank" rel="noopener"><%= t(:nav)[:labs] %></a>
     </div>
 
     <div class="footer__navigation">
-      <a href="https://dribbble.com/kollegorna" target="_blank">Dribbble</a>
-      <a href="https://www.facebook.com/kollegorna" target="_blank">Facebook</a>
-      <a href="https://github.com/kollegorna/" target="_blank">Github</a>
-      <a href="https://www.instagram.com/kollegorna" target="_blank">Instagram</a>
-      <a href="https://twitter.com/kollegorna" target="_blank">Twitter</a>
+      <a href="https://dribbble.com/kollegorna" target="_blank" rel="noopener">Dribbble</a>
+      <a href="https://www.facebook.com/kollegorna" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://github.com/kollegorna/" target="_blank" rel="noopener">Github</a>
+      <a href="https://www.instagram.com/kollegorna" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://twitter.com/kollegorna" target="_blank" rel="noopener">Twitter</a>
     </div>
   </div>
 </footer>

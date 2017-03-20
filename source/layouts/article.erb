@@ -25,7 +25,10 @@
           </a>
         </div>
         <div class="blog__footer__rss">
-          <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link"><%= t(:blog)[:subscribe_rss] %> <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
+          <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
+            <%= t(:blog)[:subscribe_rss] %>
+            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg>
+          </a>
         </div>
       </div>
       <div class="blog__footer__more">
@@ -57,7 +60,7 @@
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('og-image.jpg') %>",
+    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
     "publisher": {
       "@type": "Organization",
       "name": "Kollegorna",

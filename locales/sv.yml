@@ -11,6 +11,7 @@ sv:
     work_types: "projekt/typer"
     feed: "feed"
     map: "karta"
+    offline: "offline"
   nav:
     work: "Projekt"
     colleagues: "Kollegor"
@@ -71,3 +72,6 @@ sv:
   err404:
     title: "Finns ingen sån sida :("
     link: "Behåll lugnet och surfa till startsidan"
+  offline:
+    title: "Oops, seems like you're offline!"
+    description: "This page cannot be displayed at the moment. Try once again later when your internet connection improves!"

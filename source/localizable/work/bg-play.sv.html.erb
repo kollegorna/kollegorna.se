@@ -55,7 +55,7 @@ share_image: case/bgplay/desktop-1-video.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.bgplay.se/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.bgplay.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -70,21 +70,21 @@ share_image: case/bgplay/desktop-1-video.png
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/desktop-1-video.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/chapters.png",
         :caption => "Långa avsnitt är indelade i sektioner så att videon ska startas där det är relevant för användaren."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/keep-watching.png",
         :caption => "Tjänsten håller koll på hur långt man tittat på en video."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/desktop-2-person.png",
         :caption => "Profilsidor för de som deltar i de olika programmen."
       }) %>

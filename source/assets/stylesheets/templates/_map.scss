@@ -17,7 +17,7 @@
   .leaflet-control-zoom-in,
   .leaflet-control-zoom-out,
   .leaflet-popup-close-button {
-    background-image: image-url('icons-000000@2x.png');
+    background-image: image-url('map/sprite.png');
   }
 
   .leaflet-popup-content {
@@ -69,7 +69,7 @@
 #map-filippos { background-image: image-url('avatars/filippos.jpg'); }
 #map-nikolay { background-image: image-url('avatars/nikolay.jpg'); }
 #map-osvaldas { background-image: image-url('avatars/osvaldas.jpg'); }
-#map-kollegorna-hq { background-image: image-url('hq.jpg'); }
+#map-kollegorna-hq { background-image: image-url('map/hq.jpg'); }
 
 .map__container {
   display: block;
@@ -129,7 +129,7 @@
   display: inline-block;
   width: 8px;
   height: 12px;
-  background-image: image-url('icon-map-pin.svg') !important;
+  background-image: image-url('map/icon-map-pin.svg') !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;

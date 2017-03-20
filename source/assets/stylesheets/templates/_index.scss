@@ -6,7 +6,7 @@
     text-align: center;
     position: relative;
     margin-bottom: 30px;
-    background: image-url('index-hero.svg') no-repeat center center;
+    background: image-url('index/hero.svg') no-repeat center center;
     background-size: auto 300px;
 
     @include media($tablet) {

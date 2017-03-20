@@ -12,7 +12,7 @@ en:
     careers: "careers"
     blog: "blog"
     feed: "feed"
-    map: "map"
+    offline: "offline"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -72,3 +72,6 @@ en:
   err404:
     title: "Oops, the page was not found!"
     link: "Keep calm and go to the homepage"
+  offline:
+    title: "Oops, seems like you're offline!"
+    description: "This page cannot be displayed at the moment. Try once again later when your internet connection improves!"

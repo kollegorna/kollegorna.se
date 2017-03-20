@@ -55,7 +55,7 @@ share_image: case/medievarlden-premium/desktop-1.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="http://www.medievarlden.se" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="http://www.medievarlden.se" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -70,35 +70,35 @@ share_image: case/medievarlden-premium/desktop-1.png
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-1.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/644887451031445504"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/medievarlden/status/638991983797792768"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-2.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-3.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/axelanden/status/540485121821147136"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-4.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-5.png"
       }) %>
 

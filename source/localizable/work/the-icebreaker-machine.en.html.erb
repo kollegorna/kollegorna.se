@@ -65,7 +65,7 @@ share_image: case/ice-breaker/desktop-1.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.theicebreakermachine.com/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.theicebreakermachine.com/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -81,51 +81,51 @@ share_image: case/ice-breaker/desktop-1.png
 
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/desktop-1.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/desktop-2.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/desktop-3.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/desktop-4.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/phone-1.jpg"
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/170152226?title=0&byline=0&portrait=0"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/the-ice-breaker-machine.jpg"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/th_drinking/status/740299650712768512"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/deportivo/status/738406870407348224"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/the-ice-breaker-machine-drink.jpg"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/mattiasronge/status/737701988012568580"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/ice-breaker/ice-breaker-facebook.jpg"
       }) %>
 

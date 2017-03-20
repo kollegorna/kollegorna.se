@@ -1,11 +1,10 @@
-(function() {
+'use strict';
 
-    'use strict';
+(function() {
 
     var Kollegorna = {
 
-      init: function()
-      {
+      init: function() {
         this.mobileNav();
         this.bindClicks();
         this.setupFeed();
@@ -16,24 +15,25 @@
       },
 
 
-      mobileNav: function()
-      {
-        var $nav = $( '.header__navigation' ),
-            $btn = $( '.header__button a' );
+      mobileNav: function() {
 
-        $btn.on( 'click', function( e ){
+        var $nav = $('.header__navigation'),
+            $btn = $('.header__button a');
+
+        $btn.on('click', function(e){
           e.preventDefault();
-          $btn.toggleClass( 'is-active' );
-          if( $btn.hasClass( 'is-active' ))
+          $btn.toggleClass('is-active');
+          if($btn.hasClass('is-active'))
             $nav.slideDown();
           else
             $nav.slideUp();
         });
+
       },
 
 
-      bindClicks: function()
-      {
+      bindClicks: function() {
+
         $('.case__content').on('click', '.expand', function(e) {
           e.preventDefault();
 
@@ -67,27 +67,26 @@
             });
           });
         });
+
       },
 
 
-      caseMediaTweet: function(data)
-      {
+      caseMediaTweet: function(data) {
+
         var html = $(data.html.bold());
         html.find('script').remove();
-
         var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
-
         var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
-
         return html.html();
+
       },
 
 
-      setupFeed: function()
-      {
+      setupFeed: function() {
+
         $(".index__feed a[href^='http']").attr("target","_blank");
 
-        var $feed = $('.grid').imagesLoaded( function() {
+        var $feed = $('.grid').imagesLoaded(function() {
           $('.grid').fadeIn('medium');
           $('#gridloader').fadeOut('fast');
 
@@ -113,58 +112,58 @@
             }
           });
         });
+
       },
 
 
-      setupAnimations: function()
-      {
+      setupAnimations: function() {
+
         $('.index__hero__background').addClass('on');
+
       },
 
 
-      initComments: function()
-      {
-        $.disqusLoader( '.disqus', { scriptUrl: '//kollegorna.disqus.com/embed.js' });
+      initComments: function() {
+
+        $.disqusLoader('.disqus', { scriptUrl: '//kollegorna.disqus.com/embed.js' });
+
       },
 
 
-      fitVids: function()
-      {
+      fitVids: function() {
+
         $('.blog__content').fitVids();
+
       },
 
 
       // Make tweets look nice. Remove Twitter widget script and add profile
       // image from avatars.io.
-      parseTweets: function(data)
-      {
+      parseTweets: function(data) {
+
         var html = $(data.html.bold());
         html.find('script').remove();
-
         var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
-
         var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
-
         html = '<div class="case__media__tweet__content">' + html.html() + '</div>';
         html = twitter_profile_image + html;
-
         return html;
+
       },
 
 
-      setupMaps: function()
-      {
-        var $maps = $( '.colleague-map' );
-        if( !$maps.length )
+      setupMaps: function() {
+
+        var $maps = $('.colleague-map');
+        if(!$maps.length)
             return true;
 
-        $maps.lazyLoadGoogleMaps(
-        {
+        $maps.lazyLoadGoogleMaps({
             key: 'AIzaSyD8Z3idP4mO8UBkWokGNLtf47NT522C6YQ',
-            callback: function( container, map )
+            callback: function(container, map)
             {
-                var $container  = $( container ),
-                    center      = new google.maps.LatLng( $container.attr( 'data-lat' ), $container.attr( 'data-lng' ) );
+                var $container  = $(container),
+                    center      = new google.maps.LatLng($container.attr('data-lat'), $container.attr('data-lng'));
 
                 map.setOptions({
                   center: center,
@@ -187,7 +186,9 @@
         .mouseleave(function() {
           $(this).closest('.profile').removeClass('hover');
         });
+
       },
+
     };
 
 

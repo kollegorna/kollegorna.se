@@ -78,7 +78,7 @@ share_image: case/vembi/start.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.vembi.se/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.vembi.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -93,61 +93,61 @@ share_image: case/vembi/start.png
     </div>
 
     <div class="feed grid">
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/start.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/vembiab/status/641349729297633280"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/dashboard.png",
         :caption => "Översikt av de bolag och personer som du följer."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-01.png",
         :caption => "Detailed overiew of the ownership of a company."
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157131115"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-03.png",
         :caption => "Understand how corporate groups are structured."
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157131117"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-04.png",
         :caption => "See connections between companies and persons."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-05.png",
         :caption => "Browse your way through companies and persons by using the network graph."
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157171432"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/search.png",
         :caption => "Search and filter on different companies and persons."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/about.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/kollegorna.png",
         :caption => "Overview of our own company page."
       }) %>

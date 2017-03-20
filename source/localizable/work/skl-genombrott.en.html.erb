@@ -65,7 +65,7 @@ share_image: case/genombrott/workplace.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.genombrott.nu/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.genombrott.nu/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -80,36 +80,36 @@ share_image: case/genombrott/workplace.png
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/123012724?title=0&byline=0&portrait=0"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/workplace.png",
         :caption => "Every workplace have their own dashboard."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/stats.png",
         :caption => "Stats for different periods."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/survey.png",
         :caption => "After performing different changes these can be evaluated by creating surveys."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/periods.png",
         :caption => "All workplaces can setup measurement periods that fits their operations."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/pdsa-overview.png",
         :caption => "Quick and simple overview of differents PDSA:s."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/inspiration.png",
         :caption => "After performing a PDSA it can be shared within a global library for inspiration that's accessible to all workplaces using the tool."
       }) %>

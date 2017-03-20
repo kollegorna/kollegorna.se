@@ -36,7 +36,7 @@
       position: absolute;
       top: calc(100% - 170px);
       left: 0;
-      background: image-url('about-hero.svg') repeat-x left top;
+      background: image-url('about/hero.svg') repeat-x left top;
       background-size: contain;
 
       @include media($laptop) {

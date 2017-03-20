@@ -177,6 +177,12 @@
         @include media($tablet) {
           font-size: ds-rem-calc(16);
         }
+
+        svg {
+          width: ds-rem-calc(16);
+          height: ds-rem-calc(16);
+          vertical-align: baseline;
+        }
       }
 
       &__links {
@@ -200,18 +206,13 @@
             font-size: ds-rem-calc(16);
           }
         }
-      }
 
-      &__icon {
-        width: 20px;
-        margin-right: 10px;
-        text-align: center;
-        display: inline-block;
-        vertical-align: bottom;
-
-        img {
-          max-height: 15px;
-          width: auto;
+        svg {
+          width: ds-rem-calc(16);
+          height: ds-rem-calc(16);
+          vertical-align: middle;
+          margin-top: ds-rem-calc(-2);
+          margin-right: ds-rem-calc(10);
         }
       }
     }

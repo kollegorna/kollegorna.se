@@ -4,7 +4,7 @@
       <p><%= text %></p>
     </blockquote>
     <p class="author">
-      <%= image_tag("icons/feed/quote.svg") %>
+      <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-quote"></use></svg>
       — <%= author %>
     </p>
   </div>

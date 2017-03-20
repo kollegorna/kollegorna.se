@@ -9,7 +9,12 @@ var messages = {
   build:  'Building Middleman...'
 };
 
+const setBuildTime = () => {
+  fs.writeFileSync('.build-time', (new Date()).getTime());
+};
+
 gulp.task('middleman-build', function(done) {
+  setBuildTime();
   browserSync.notify(messages.build);
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', done);
 });
@@ -33,6 +38,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('middleman', function(done) {
+  setBuildTime();
   cp.spawn('bundle', ['exec', 'middleman'], { stdio: 'inherit' }).on('close', done);
 });
 

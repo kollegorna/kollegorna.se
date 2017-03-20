@@ -28,14 +28,14 @@
     </div>
 
     <div class="index__feed__blocks feed grid">
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Hej Rails-utvecklare!",
         :text => "Vill du ha en fullt marknadsmässig lön, flexibla arbetstider, kunna jobba var du vill, fina förmåner, fantastiska kollegor och massor av roliga projekt?",
         :category => "Jobba här",
         :link => "/sv/2017/02/rails-utvecklare/"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Spoila filmer istället för liv",
         :text => "Som organdonator kan du rädda upp till åtta liv. Allt som krävs för att bli en är en statusuppdatering. DO IT!",
         :category => "Kampanj",
@@ -43,7 +43,7 @@
         :image => "feed/spoil-movies-save-lives.jpg"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
         :text => "Varumärke och digital identitet",
         :image => "feed/case-study-lb.jpg",
@@ -53,7 +53,7 @@
       }) %>
 
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
         :text => "Identitet, design och utveckling för en organisation som påbörjat sina resa för få städer att låta bättre.",
         :image => "case/thumbnails/celine-beyond.png",
@@ -63,7 +63,7 @@
       }) %>
 
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Välkommen Osvaldas!",
         :text => "Vi har fått en tidig julklapp i form av en ny UX-designer och front end-utvecklare.",
         :category => "Nyförvärv",
@@ -71,14 +71,14 @@
         :image => "feed/osvaldas.jpg"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Efter tre år med Ruby on Rails",
         :text => "En blandad lista av saker som som vår backend-⭐️ Filippos lärt sig under åren. Och ni kan inte tro vad som hä… Skojar bara :)",
         :category => "Labs",
         :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Releasefest",
         :text => "Låt oss fira det digitala Sverige",
         :image => "feed/case-study-releasefest.jpg",
@@ -87,7 +87,7 @@
         :link => "/sv/projekt/releasefest"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Genombrott",
         :text => "Digitalt verktyg för förbättringsarbete inom vården",
         :image => "feed/case-study-skl.jpg",
@@ -96,14 +96,14 @@
         :link => "/sv/projekt/skl-genombrott"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "PDD i November",
         :text => "Var 6:e vecka tar vi en paus från vanligt jobb torsdag – måndag för att istället ha Personal Development Days. Följande gjordes denna gång…",
         :category => "Labs",
         :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Vembi",
         :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
         :image => "feed/case-study-vembi.jpg",
@@ -112,15 +112,15 @@
         :link => "/sv/projekt/vembi"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/801793962696646656"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/791282896493481984"
       }) %>
 
-      <%= partial("components/feed/gallery", :locals => {
+      <%= partial("partials/feed/gallery", :locals => {
         :category => "Vinternöje…",
         :text => "Hårdvaruhack med nya vänner på kontoret 😊",
         :images => [
@@ -128,22 +128,22 @@
         ]
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779271643680088064"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779273525756583940"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
         :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Vårt företagsnummer där var under ett tag Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
         :category => "Labb",
         :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Fungerande distribuerade team",
         :text => "Sedan ett par år tillbaka så arbetar vi med fjärrteam som sitter utspridda över hela jorden. Så här gör vi för att arbeta effektivt.",
         :category => "Distansarbete",
@@ -153,11 +153,11 @@
 
 
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779272851727810560"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Inblick i designprocessen",
         :text => "Kolla in vårt konto på Dribbble där ni kan följa mer från våra designers.",
         :category => "Ögongodis",
@@ -165,15 +165,15 @@
         :image => "feed/dribbble-hey.gif"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/715079987515105281"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/720241420024414208"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/708327597248290816"
       }) %>
 
@@ -182,12 +182,12 @@
 
   <!--<section class="index__testimonials">
     <div class="index__testimonials__content feed grid">
-      <%= partial("components/feed/quote", :locals => {
+      <%= partial("partials/feed/quote", :locals => {
         :text => "Portland pok pok lo-fi, brooklyn banh mi normcore cornhole vape fap helvetica. Health goth XOXO 8-bit tote bag, intelligentsia twee +1. Occupy hexagon semiotics, ennui iceland yuccie skateboard. Viral af direct trade pug.",
         :author => "Person, Company"
       }) %>
 
-      <%= partial("components/feed/quote", :locals => {
+      <%= partial("partials/feed/quote", :locals => {
         :text => "Cornhole shabby chic affogato, hoodie pabst put a bird on it cred small batch food truck. Gluten-free godard venmo sriracha direct trade bicycle rights. Hot chicken literally neutra YOLO flannel.",
         :author => "Person, Company"
       }) %>

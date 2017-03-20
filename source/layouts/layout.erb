@@ -3,7 +3,7 @@
   meta_name        = "Kollegorna"
   meta_title       = t(:meta)[:title]
   meta_description = current_page.data.description || t(:meta)[:description]
-  meta_og_img      = "https://www.kollegorna.se/#{image_path current_page.data.share_image || "og-image.jpg"}"
+  meta_og_img      = "https://www.kollegorna.se/#{image_path current_page.data.share_image || "meta/og-image.jpg"}"
   meta_og_title    = current_page.data.title || meta_title
 
 %><!DOCTYPE html>
@@ -17,20 +17,20 @@
   <meta name="description" content="<%= meta_description %>">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="<%= image_path "favicons/favicon.ico" %>">
-  <link rel="icon" href="<%= image_path "favicons/icon-256.png" %>">
+  <link rel="shortcut icon" href="<%= image_path "meta/favicon.ico" %>">
+  <link rel="icon" href="<%= image_path "meta/icon-256.png" %>">
 
   <!-- Chrome -->
   <meta name="theme-color" content="#00C66B"><!-- green -->
-  <link rel="manifest" href="<%= image_path "favicons/manifest.json" %>">
+  <link rel="manifest" href="/manifest.json">
 
   <!-- Safari -->
-  <link rel="mask-icon" color="#222222" href="<%= image_path "favicons/safari-pinned-tab.svg" %>">
-  <link rel="apple-touch-icon" href="<%= image_path "favicons/apple-touch-icon.png" %>">
+  <link rel="mask-icon" color="#222222" href="<%= image_path "meta/safari-pinned-tab.svg" %>">
+  <link rel="apple-touch-icon" href="<%= image_path "meta/apple-touch-icon.png" %>">
 
   <!-- IE -->
   <meta name="application-name" content="<%= meta_name %>">
-  <meta name="msapplication-TileImage" content="<%= image_path "favicons/icon-256.png" %>">
+  <meta name="msapplication-TileImage" content="<%= image_path "meta/icon-256.png" %>">
   <meta name="msapplication-TileColor" content="#FFFFFF">
 
   <!-- Google+, Schema.org -->
@@ -57,9 +57,17 @@
   <!-- Other social networks -->
   <link rel="image_src" href="<%= meta_og_img %>" />
 
-  <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
+  <%#= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
-  <%= inline_javascript "modernizr" %>
+
+  <script>
+    var APP_BUILD        = '<%= get_build_time %>',
+        APP_ENV          = '<%= environment %>',
+        FONTS_FILE_WOFF  = '<%= asset_path :css, "fonts/woff.css" %>',
+        FONTS_FILE_WOFF2 = '<%= asset_path :css, "fonts/woff2.css" %>';
+  </script>
+
+  <%= inline_javascript "head" %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -80,8 +88,6 @@
   <%= yield %>
 
   <%= partial "partials/footer" %>
-
-  <%= javascript_include_tag "application", defer: true %>
 
   <% if current_page.data.page_type == "work-item" %>
 
@@ -112,7 +118,7 @@
       "name": "Kollegorna",
       "url": "https://www.kollegorna.se",
       "logo": "https://www.kollegorna.se/<%= image_path "logo.svg" %>",
-      "image": "https://www.kollegorna.se/<%= image_path "og-image.jpg" %>",
+      "image": "https://www.kollegorna.se/<%= image_path "meta/og-image.jpg" %>",
       "description": "<%= meta_description %>",
       "sameAs": [
         "https://dribbble.com/kollegorna",
@@ -123,6 +129,25 @@
       ]
     }
   </script>
+
+  <%= javascript_include_tag "application", defer: true %>
+
+  <% if development? %>
+
+    <script>
+      if(navigator.serviceWorker) {
+        navigator.serviceWorker.register('/serviceworker.js', {
+          scope: '/'
+        });
+        window.addEventListener('load', function() {
+          if(navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
+          }
+        });
+      }
+    </script>
+
+  <% end %>
 
 </body>
 </html>

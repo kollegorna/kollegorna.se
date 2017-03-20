@@ -84,7 +84,7 @@ share_image: case/genombrott/workplace.png
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.genombrott.nu/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.genombrott.nu/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -99,40 +99,40 @@ share_image: case/genombrott/workplace.png
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/119757512?title=0&byline=0&portrait=0"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/catrinhagerholm/status/791355897050238976"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/workplace.png",
         :caption => "Varje arbetsplats har sin egen översiktssida."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/stats.png",
         :caption => "Statistik för olika perioder."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/survey.png",
         :caption => "Efter att ha genomfört olika förändringar kan dessa utvärderas genom att skapa enkäter."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/periods.png",
         :caption => "Verksamheterna kan själva sätta upp olika mätperioder."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/pdsa-overview.png",
         :caption => "Snabböversikt av olika PDSA."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/inspiration.png",
         :caption => "Ett delat inspirationsbibliotek gör att de olika verksamheterna kan lära av"
       }) %>
