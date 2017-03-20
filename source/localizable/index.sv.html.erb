@@ -36,6 +36,14 @@
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
+        :title => "Slutsnaskat",
+        :text => "Handlar du hos Mathem eller Coop? Vår snaskblocker hjälper dig att shoppa sundare.",
+        :category => "Skaffa nu!",
+        :link => "https://snaskblock.se",
+        :image => "feed/snaskblock.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Spoila filmer istället för liv",
         :text => "Som organdonator kan du rädda upp till åtta liv. Allt som krävs för att bli en är en statusuppdatering. DO IT!",
         :category => "Kampanj",
@@ -52,7 +60,6 @@
         :link => "/sv/projekt/lanneberg-bexelius"
       }) %>
 
-
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
         :text => "Identitet, design och utveckling för en organisation som påbörjat sina resa för få städer att låta bättre.",
@@ -61,7 +68,6 @@
         :text_color => "black",
         :link => "/sv/projekt/celine-beyond"
       }) %>
-
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "Välkommen Osvaldas!",
@@ -150,8 +156,6 @@
         :link => "/sv/2015/11/fjarrteam/",
         :image => "feed/lumbergh.svg"
       }) %>
-
-
 
       <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/779272851727810560"
