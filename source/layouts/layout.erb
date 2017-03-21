@@ -136,10 +136,8 @@
 
     <script>
       if(navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-           for(let registration of registrations) {
-            registration.unregister()
-          }
+        navigator.serviceWorker.getRegistration().then(function(r) {
+          r.unregister();
         });
         // navigator.serviceWorker.register('/serviceworker.js', {
         //   scope: '/'
