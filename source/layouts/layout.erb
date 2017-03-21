@@ -136,14 +136,19 @@
 
     <script>
       if(navigator.serviceWorker) {
-        navigator.serviceWorker.register('/serviceworker.js', {
-          scope: '/'
-        });
-        window.addEventListener('load', function() {
-          if(navigator.serviceWorker.controller) {
-            navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+           for(let registration of registrations) {
+            registration.unregister()
           }
         });
+        // navigator.serviceWorker.register('/serviceworker.js', {
+        //   scope: '/'
+        // });
+        // window.addEventListener('load', function() {
+        //   if(navigator.serviceWorker.controller) {
+        //     navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
+        //   }
+        // });
       }
     </script>
 
