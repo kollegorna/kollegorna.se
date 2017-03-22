@@ -132,7 +132,7 @@
 
   <%= javascript_include_tag "application", defer: true %>
 
-  <% if development? %>
+  <% if production? %>
 
     <script>
       if(navigator.serviceWorker) {
