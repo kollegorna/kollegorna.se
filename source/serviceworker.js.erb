@@ -8,12 +8,12 @@ const version         = '<%= File.read("./.build-time").to_s %>',
 
       criticalResources = [
         '/',
-        '/sv',
-        '/en',
-        '/sv/offline',
-        '/en/offline',
-        '<%= asset_path :css, "application.css" %>',
-        '<%= asset_path :js, "application.js" %>',
+        '/sv/',
+        '/en/',
+        '/sv/offline/',
+        '/en/offline/',
+        '<%= asset_path :css, "/#{app.config[:css_dir]}/application" %>',
+        '<%= asset_path :js, "/#{app.config[:js_dir]}/application" %>',
         '<%= asset_path :images, "logo.svg" %>',
         '<%= asset_path :images, "sprite.svg" %>',
         '<%= asset_path :images, "flag-en.png" %>',
@@ -21,14 +21,14 @@ const version         = '<%= File.read("./.build-time").to_s %>',
         '<%= asset_path :images, "index/hero.svg" %>',
       ],
       otherResources = [
-        '/sv/projekt',
-        '/sv/om',
+        '/sv/projekt/',
+        '/sv/om/',
         '/sv/kollegor',
-        '/sv/blogg',
-        '/en/work',
-        '/en/about',
-        '/en/colleagues ',
-        '/en/blog',
+        '/sv/blogg/',
+        '/en/work/',
+        '/en/about/',
+        '/en/colleagues/',
+        '/en/blog/',
       ],
       logMsg = (msg) => {
         if('<%= app.config[:environment] %>' == 'development') {
@@ -46,7 +46,7 @@ function updateStaticCache() {
 
 function stashInCache(cacheName, request, response) {
   logMsg('stashInCache');
-  caches.open(cacheName).then( cache => cache.put(request, response));
+  caches.open(cacheName).then(cache => cache.put(request, response));
 }
 
 // Limit the number of items in a specified cache.
@@ -89,8 +89,9 @@ self.addEventListener('fetch', event => {
   //   return;
   // }
 
-  // look in the CACHE FIRST, fall back to the network
+  // look in the CACHE FIRST, fallback to the network
   event.respondWith(
+    // TODO: "/about" doesn't get matched with "/about/"
     caches.match(request).then(response => {
       // TODO: fix old cache maches for the first visit when $version is updated
       return response || fetch(request).then(response => {
@@ -120,7 +121,7 @@ self.addEventListener('fetch', event => {
         else { // is other resource
           let lang = url.pathname.substr(1, 2);
           lang = appLangs.includes(lang) ? lang : lang[0];
-          return caches.match(request).then(response => response || caches.match(`/${lang}/offline`));
+          return caches.match(`/${lang}/offline/`);
         }
       });
     })

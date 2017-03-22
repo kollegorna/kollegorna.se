@@ -132,21 +132,22 @@
 
   <%= javascript_include_tag "application", defer: true %>
 
-  <% if production? %>
+  <% if development? %>
 
     <script>
       if(navigator.serviceWorker) {
-        navigator.serviceWorker.getRegistration().then(function(r) {
-          r.unregister();
+        // navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        //  for(var registration in registrations) {
+        //   registration.unregister();
+        // }});
+        navigator.serviceWorker.register('/serviceworker.js', {
+          scope: '/'
         });
-        // navigator.serviceWorker.register('/serviceworker.js', {
-        //   scope: '/'
-        // });
-        // window.addEventListener('load', function() {
-        //   if(navigator.serviceWorker.controller) {
-        //     navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
-        //   }
-        // });
+        window.addEventListener('load', function() {
+          if(navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
+          }
+        });
       }
     </script>
 
