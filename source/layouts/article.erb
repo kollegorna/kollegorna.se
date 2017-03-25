@@ -5,7 +5,7 @@
   <article class="blog" role="article">
 
     <header class="blog__header blog__header--article">
-      <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:nav)[:blog] %></a></span>
+      <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a></span>
       <h1><%= current_article.title %></h1>
       <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="blog__footer__more">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:blog)[:back_to_list] %></a>
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
       </div>
     </footer>
 

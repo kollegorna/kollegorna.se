@@ -94,7 +94,7 @@ self.addEventListener('fetch', event => {
     // TODO: "/about" doesn't get matched with "/about/"
     caches.match(request).then(response => {
       // TODO: fix old cache maches for the first visit when $version is updated
-      return response || fetch(request, {redirect: 'follow'}).then(response => {
+      return response || fetch(request).then(response => {
         // NETWORK: not cached, try network
         if(location.origin === url.origin) { // cache only resources from this domain
           let copy = response.clone();
