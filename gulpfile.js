@@ -16,7 +16,7 @@ var setBuildTime = function() {
 
 gulp.task('middleman-build', function(done) {
   setBuildTime();
-  gulp.src('build/serviceworker.js', {read: false}).pipe(clean());
+  gulp.src('serviceworker.js', {read: false}).pipe(clean());
 
   browserSync.notify(messages.build);
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', done);
