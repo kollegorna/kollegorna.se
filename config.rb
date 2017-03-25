@@ -51,10 +51,10 @@ configure :build do
   activate :autoprefixer, :ignore => ['/assets/fonts/*']
   activate :gzip
   activate :minify_css, :ignore => ['/assets/fonts/*', '/assets/stylesheets/fonts/*.css']
-  activate :minify_javascript, :inline => true, :ignore => [/serviceworker/]
+  activate :minify_javascript, :inline => true, :ignore => [/service-worker/]
   activate :minify_html
   activate :relative_assets
-  activate :asset_hash, :ignore => [/images/, /fonts/, /serviceworker/]
+  activate :asset_hash, :ignore => [/images/, /fonts/, /service-worker/]
 end
 
 
