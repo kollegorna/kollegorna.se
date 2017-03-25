@@ -7,7 +7,6 @@ const version         = '<%= File.read("./.build-time").to_s %>------',
       imagesCacheName = version + '-images',
 
       criticalResources = [
-        '/',
         '/sv/',
         '/en/',
         '/sv/offline/',
@@ -89,6 +88,11 @@ self.addEventListener('fetch', event => {
   //   return;
   // }
 
+  if(url.pathname == '/') {
+    event.respondWith(caches.match(`/${appLangs[0]}/`));
+    return;
+  }
+
   // look in the CACHE FIRST, fallback to the network
   event.respondWith(
     // TODO: "/about" doesn't get matched with "/about/"
@@ -120,7 +124,7 @@ self.addEventListener('fetch', event => {
         }
         else { // is other resource
           let lang = url.pathname.substr(1, 2);
-          lang = appLangs.includes(lang) ? lang : lang[0];
+          lang = appLangs.includes(lang) ? lang : appLangs[0];
           return caches.match(`/${lang}/offline/`);
         }
       });
