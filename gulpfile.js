@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 var browserSync = require('browser-sync');
 var cp = require('child_process');
 var fs = require('fs');
-var clean = require('gulp-clean');
 
 var messages = {
   reload: 'Reloading...',
@@ -16,8 +15,6 @@ var setBuildTime = function() {
 
 gulp.task('middleman-build', function(done) {
   setBuildTime();
-  gulp.src('serviceworker.js', {read: false}).pipe(clean());
-
   browserSync.notify(messages.build);
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', done);
 });
