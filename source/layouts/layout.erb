@@ -140,7 +140,7 @@
         //  for(var registration in registrations) {
         //   registration.unregister();
         // }});
-        navigator.serviceWorker.register('<%= asset_path :js, "/serviceworker.js" %>', {
+        navigator.serviceWorker.register('/serviceworker.js', {
           scope: '/'
         });
         window.addEventListener('load', function() {
