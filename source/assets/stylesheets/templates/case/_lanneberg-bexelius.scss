@@ -12,9 +12,18 @@ $lb-white: #FFFFFF !default;
 
   .intro {
     background: $lb-gray image-url('case/lanneberg-bexelius/intro.png') repeat-x center center;
-    background-size: 1800px 800px;
+    background-size: 675px 300px;
     width: 100%;
-    height: 800px;
+    height: 300px;
+
+    @include media($tablet) {
+      background-size: 900px 400px;
+      height: 400px;
+    }
+    @include media($laptop) {
+      background-size: 1800px 800px;
+      height: 800px;
+    }
   }
 
   .brand {
