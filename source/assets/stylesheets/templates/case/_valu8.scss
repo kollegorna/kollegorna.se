@@ -4,6 +4,16 @@
 		max-width: 1400px;
 		margin-bottom: 40px;
 	}
+
+	.ui {
+		background: #F0F0F0;
+		text-align: center;
+
+		img {
+			max-width: 1400px;
+		}
+	}
+
 	.green {
 		@include outer-container;
 		background: #b5cf8a;
