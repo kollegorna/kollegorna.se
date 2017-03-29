@@ -57,12 +57,12 @@
   <!-- Other social networks -->
   <link rel="image_src" href="<%= meta_og_img %>" />
 
-  <%#= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
+  <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
 
   <script>
     var APP_BUILD        = '<%= get_build_time %>',
-        APP_ENV          = '<%= environment %>',
+        APP_ENV          = '<%= environment %>';
         FONTS_FILE_WOFF  = '<%= asset_path :css, "fonts/woff.css" %>',
         FONTS_FILE_WOFF2 = '<%= asset_path :css, "fonts/woff2.css" %>';
   </script>
