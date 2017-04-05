@@ -1,3 +1,5 @@
+require 'uglifier'
+
 # Configure where assets are stored
 config[:css_dir] = 'assets/stylesheets'
 config[:js_dir] = 'assets/javascripts'
@@ -20,7 +22,7 @@ Dir[*masks].each do |file_path|
 end
 
 # Use multilanguage
-activate :i18n, :mount_at_root => false
+activate :i18n, :mount_at_root => false, :langs => [:sv, :en]
 
 # Blog
 activate :blog do |blog|
@@ -46,13 +48,13 @@ activate :livereload
 
 # Minimize css/js and fix assets for Build
 configure :build do
-  activate :autoprefixer, :ignore => ['/assets/fonts/536750/*.css']
+  activate :autoprefixer, :ignore => ['/assets/fonts/*']
   activate :gzip
-  activate :minify_css, :ignore => ['/assets/fonts/536750/*.css']
-  activate :minify_javascript, inline: true
+  activate :minify_css, :ignore => ['/assets/fonts/*', '/assets/stylesheets/fonts/*.css']
+  activate :minify_javascript, :inline => true, :ignore => [/serviceworker/]
   activate :minify_html
-  activate :relative_assets
-  activate :asset_hash, :ignore => [/images/, /fonts/]
+  #activate :relative_assets <- doesn't work with service worker
+  activate :asset_hash, :ignore => [/images/, /fonts/, /serviceworker/]
 end
 
 
@@ -60,10 +62,16 @@ end
 helpers do
 
   # Renders a javascript asset inline
-  def inline_javascript( name )
+  def inline_javascript(name)
     content_tag :script do
-      sprockets[ "#{name}.js" ].to_s
+      src = sprockets["#{name}.js"].to_s
+      Uglifier.compile(src, :output => { :inline_script => true })
     end
+  end
+
+  # Reads current build timestamp from a file
+  def get_build_time()
+    File.read("./.build-time").to_s
   end
 
 end

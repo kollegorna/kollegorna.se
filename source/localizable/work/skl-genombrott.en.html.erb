@@ -1,23 +1,34 @@
 ---
 title: Genombrott – case study
-description: "Stöd och inspiration för förbättringsarbete inom vården. Genombrott är ett verktyg från Sveriges Kommuner och Landsting som i nuläget testkörs hos olika arbetsplatser inom psykiatrin."
+description: "Genombrott is a comprehensive tool for healthcare professionals from the Swedish Association of Local Authorities and Regions (SKL), currently being evaluated within psychiatric care."
+page_type: work-item
+share_image: case/genombrott/workplace.png
 ---
 
 <article role="main" class="case">
 
   <section class="case__content">
     <div class="case__description">
-      <h2>Turning ideas into improvements in healthcare.</h2>
+      <h2>Turning ideas into improvements in the Swedish healthcare system.</h2>
 
-      <p class="highlight">Genombrott is a comprehensive tool for healthcare professionals from the Swedish Association of Local Authorities and Regions, currently being tested in psychiatric care.</p>
+      <p class="highlight">Genombrott is a comprehensive tool for healthcare professionals from the Swedish Association of Local Authorities and Regions (SKL), currently being evaluated within psychiatric care.</p>
 
       <div class="additional">
-        <p>Sveriges Kommuner och Landsting (SKL) ville ta fram ett digitalt verktyg som stöder förändringsarbete inom vården.  Metoden är sprungen ur Breakthrough Series från Institute for Healthcare Improvement. Verktyget hjälper verksamheterna att samla in idéer, genomföra projekt med avstamp i dessa, studera utfall och besluta huruvida de ska införlivas i verksamheten på permanent basis.</p>
+        <p>SKL wanted to create a digital tool that supports work of change within the Swedish healthcare. The method is based on the Breakthrough Series from The Institute for Healthcare Improvement. The tool helps the workplaces to collect ideas, complete projects (called PDSA:s – plan, do, study, act) based on these, study the outcome and the make a decision whether that idea should be incorporated in the operations permanently.</p>
 
-        <p>Genombrott släpptes i en första version i november 2014 och började primärt användas av psykiatrin. Sedan dess har fler verksamheter börjat testa verktyget och vi har vidareutvecklat det baserat på den feedback testerna gett.</p>
+        <p>Genombrott was released in a first version in November 2014 and was by then primarily used by the psychiatric care. Since then other healthcare areas has begun using the tool and we've improved it based on the feedback obtained from those tests.</p>
 
-        <p>Lösningen består av två separata applikationer:<br>
-        Backend är byggd med Ruby on Rails och frontend är byggd med Ember.js. Vi har ansvarat för tekniken och jobbar vidare med projektet på löpande basis.</p>
+        <p>Read more:</p>
+
+        <p>
+          <a href="http://www.ihi.org/resources/pages/ihiwhitepapers/thebreakthroughseriesihiscollaborativemodelforachievingbreakthroughimprovement.aspx">The Breakthrough Series: IHI’s Collaborative Model for Achieving Breakthrough Improvement</a><br>
+          <small>Institute for Healthcare Improvement</small>
+        </p>
+
+        <p>
+          <a href="https://skl.se/halsasjukvard/psykiskhalsa/digitaltstodforbattringsarbete.3308.html">Digitalt stöd i vårdens förbättringsarbete</a><br>
+          <small>SKL (Swedish)</small>
+        </p>
       </div>
     </div>
 
@@ -25,7 +36,7 @@ description: "Stöd och inspiration för förbättringsarbete inom vården. Geno
       <div class="sheet">
         <h3><%= t(:cases)[:client] %></h3>
         <ul>
-          <li><a href="http://www.skl.se">Sveriges Kommuner och Landsting</a></li>
+          <li><a href="https://skl.se/tjanster/englishpages.411.html">Sveriges Kommuner och Landsting</a></li>
         </ul>
       </div>
 
@@ -53,8 +64,8 @@ description: "Stöd och inspiration för förbättringsarbete inom vården. Geno
     </div>
 
     <div class="case__cta">
-      <a href="#" class="expand">More detail</a>
-      <a href="https://www.genombrott.nu/" target="_blank" class="link">Visit</a>
+      <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
+      <a href="https://www.genombrott.nu/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -69,42 +80,38 @@ description: "Stöd och inspiration för förbättringsarbete inom vården. Geno
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/vimeo", :locals => {
-        :video => "https://player.vimeo.com/video/119757512?title=0&byline=0&portrait=0"
+      <%= partial("partials/feed/vimeo", :locals => {
+        :video => "https://player.vimeo.com/video/123012724?title=0&byline=0&portrait=0"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/workplace.png",
-        :caption => "Varje arbetsplats har sin egen översiktssida."
+        :caption => "Every workplace have their own dashboard."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/stats.png",
-        :caption => "Statistik för olika perioder."
+        :caption => "Stats for different periods."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/survey.png",
-        :caption => "Efter att ha genomfört olika förändringar kan dessa utvärderas genom att skapa enkäter."
+        :caption => "After performing different changes these can be evaluated by creating surveys."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/periods.png",
-        :caption => "Verksamheterna kan själva sätta upp olika mätperioder."
+        :caption => "All workplaces can setup measurement periods that fits their operations."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/pdsa-overview.png",
-        :caption => "Snabböversikt av olika PDSA."
+        :caption => "Quick and simple overview of differents PDSA:s."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/genombrott/inspiration.png",
-        :caption => "Ett delat inspirationsbibliotek gör att de olika verksamheterna kan lära av"
-      }) %>
-
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/558252921578876928"
+        :caption => "After performing a PDSA it can be shared within a global library for inspiration that's accessible to all workplaces using the tool."
       }) %>
 
     </div>

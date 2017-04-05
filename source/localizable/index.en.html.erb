@@ -23,87 +23,130 @@
       <div class="blob blob-5"></div>
     </div>
 
+    <div class="expand expand--feed">
+      See more
+    </div>
+
     <div class="index__feed__blocks feed grid">
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Lanneberg Bexelius",
-        :text => "Company branding and website for a personal branding company",
-        :image => "case/thumbnails/lanneberg-bexelius.png",
-        :background_color => "#F5EFEC",
-        :text_color => "#41162f"
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Hello Rails Developers!",
+        :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
+        :category => "Work here",
+        :link => "/en/2017/02/rails-developer/"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/785417357279817729"
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Spoil movies instead of lives",
+        :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
+        :category => "Campaign",
+        :link => "https://www.spoilmoviessavelives.com/en",
+        :image => "feed/spoil-movies-save-lives.jpg"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
-        :title => "Voicemail using Slack, S3, 46elks and a dash of Go",
-        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity."
-      }) %>
-
-      <%= partial("components/feed/case_study", :locals => {
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
-        :text => "We've helped this Singapore-based organisation on its journey to rid the world of noise.",
+        :text => "We've helped this Singapore-based organisation on its journey to make cities sound better.",
         :image => "case/thumbnails/celine-beyond.png",
         :background_color => "#EFEFEF",
-        :text_color => "black"
+        :text_color => "black",
+        :link => "/en/work/celine-beyond"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
-        :link => "https://twitter.com/yourrailsdaily/status/748108790499704832"
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Lanneberg Bexelius",
+        :text => "A digital-first brand and website for a Swedish Personal Branding company.",
+        :image => "feed/case-study-lb.jpg",
+        :background_color => "#F5EFEC",
+        :text_color => "#41162f",
+        :link => "/en/work/lanneberg-bexelius"
       }) %>
 
-      <%= partial("components/feed/blog", :locals => {
-        :title => "Jekyll for Company Websites",
-        :text => "Recently we made two small company websites for Blendow Group – blendow.se and bgpublishing.se. We decided to build them using Jekyll and host them on GitHub Pages."
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Things Filippos has learned developing Ruby and Rails apps over the past 3+ years",
+        :text => "Some of the stuff our superstar backend dev Filippos has learned after more than three years working with Rails. Number 4 will surpr... just kidding :)",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
       }) %>
 
-      <%= partial("components/feed/blip", :locals => {
-        :text => "Be sure to catch our talk, Crossfitting your way into Rails, on RubyConf Stockholm 2017."
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Welcome Osvaldas!",
+        :text => "A christmas gift in advance, in the form of a UX designer and Front End Developer.",
+        :category => "New team mate",
+        :link => "/en/2016/12/osvaldas-valutis/",
+        :image => "feed/osvaldas.jpg"
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "The Icebreaker Machine",
-        :text => "What should you order and what could you possibly talk about?",
-        :image => "case/thumbnails/releasefest.png",
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "November's PDDs",
+        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to this time...",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Releasefest",
+        :text => "A home for Swedish-born digital products.",
+        :image => "feed/case-study-releasefest.jpg",
         :background_color => "#f7f9f9",
-        :text_color => "#005293"
+        :text_color => "#005293",
+        :link => "/en/work/releasefest"
       }) %>
 
-      <%= partial("components/feed/gallery", :locals => {
-        :text => "New friends at the office 😊",
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Genombrott",
+        :text => "Turning ideas into improvements in the Swedish healthcare system.",
+        :image => "feed/case-study-skl.jpg",
+        :background_color => "#0d121e",
+        :text_color => "#e0e9ff",
+        :link => "/en/work/skl-genombrott"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Voicemail using Slack, S3, 46elks and dash of Go",
+        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "A fintech startup that that provides unique ownership data for Swedish unlisted companies.",
+        :image => "feed/case-study-vembi.jpg",
+        :background_color => "#FFFFFF",
+        :text_color => "#565656",
+        :link => "/en/work/vembi"
+      }) %>
+
+      <%= partial("partials/feed/gallery", :locals => {
+        :category => "Winter joy!",
+        :text => "Hacking hardware with new friends at the office 😊",
         :images => [
           "feed/gallery.jpg"
         ]
       }) %>
 
-      <%= partial("components/feed/case_study", :locals => {
-        :title => "Vembi",
-        :text => "Vembi is a startup where you can find direct owner information for more than 30 000 companies as well as being able to see who controls over 70 000 Swedish companies.",
-        :image => "case/thumbnails/vembi.png",
-        :background_color => "#FFFFFF",
-        :text_color => "#565656"
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Our design process",
+        :text => "Check out our Dribbble account where you can follow the work of our designers.",
+        :category => "Eye candy",
+        :link => "https://dribbble.com/kollegorna",
+        :image => "feed/dribbble-hey.gif"
       }) %>
-
     </div>
   </section>
-</main>
 
-<script type="application/ld+json">
-  {
-    "@type": "Organization",
-    "name": "Kollegorna",
-    "url": "https://www.kollegorna.se",
-    "mainEntityOfPage": "<%= current_page.url %>",
-    "logo": "<%= image_path('logo.svg') %>",
-    "image": "<%= image_path("og-image.jpg") %>",
-    "description": "<%= current_page.data.description || t(:meta)[:description] %>",
-    "sameAs": [
-      "https://dribbble.com/kollegorna",
-      "https://www.facebook.com/kollegorna",
-      "https://github.com/kollegorna/",
-      "https://www.instagram.com/kollegorna",
-      "https://twitter.com/kollegorna"
-    ]
-  }
-</script>
+  <!--<section class="index__testimonials">
+    <div class="index__testimonials__content feed grid">
+      <%= partial("partials/feed/quote", :locals => {
+        :text => "Portland pok pok lo-fi, brooklyn banh mi normcore cornhole vape fap helvetica. Health goth XOXO 8-bit tote bag, intelligentsia twee +1. Occupy hexagon semiotics, ennui iceland yuccie skateboard. Viral af direct trade pug.",
+        :author => "Person, Company"
+      }) %>
+
+      <%= partial("partials/feed/quote", :locals => {
+        :text => "Cornhole shabby chic affogato, hoodie pabst put a bird on it cred small batch food truck. Gluten-free godard venmo sriracha direct trade bicycle rights. Hot chicken literally neutra YOLO flannel.",
+        :author => "Person, Company"
+      }) %>
+    </div>
+  </section>-->
+</main>

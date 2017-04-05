@@ -1,7 +1,7 @@
 ---
 en:
   meta:
-    title: "Born in Sweden, Built Worldwide"
+    title: "Digital agency — Design, technology &amp; strategy"
     description: "We're a team of designers, developers and strategists building first-rate digital products and services."
   paths:
     work: "work"
@@ -12,7 +12,7 @@ en:
     careers: "careers"
     blog: "blog"
     feed: "feed"
-    map: "map"
+    offline: "offline"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -38,18 +38,40 @@ en:
     tech: "Technologies"
     services: "Services"
     more_detail: "More detail"
+    visit: "Visit"
   colleagues:
     slogan: "A World Wide Workforce."
-    description: "We're a distributed team where everyone is an expert in their field. From Santo Domingo in the west to Plovdiv in the east with our heart in Stockholm. In our blend of nationalities you find Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic. <a href='/en/map'>See our world map</a>."
+    description: "We're a distributed team where everyone is an expert in their field. From Santo Domingo in the west to Plovdiv in the east with our heart in Stockholm. In our blend of nationalities you find Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic. <a href='/en/map/'>See our world map</a>."
     country_sweden: "Sweden"
     country_portugal: "Portugal"
     country_slovakia: "Slovakia"
     country_dominicanrep: "Dominican Republic"
     country_bulgaria: "Bulgaria"
     country_lithuania: "Lithuania"
+    per:
+        role: "Designer + Partner"
+    henrik:
+        role: "Developer + Partner"
+    eduardo:
+        role: "Designer + Partner"
+    ivan:
+        role: "Developer"
+    raymall:
+        role: "Designer"
+    dennis:
+        role: "Developer"
+    filippos:
+        role: "Developer"
+    nikolay:
+        role: "Designer"
+    osvaldas:
+        role: "Developer"
   blog:
     subscribe_rss: "Subscribe via RSS"
     back_to_list: "All posts"
   err404:
     title: "Oops, the page was not found!"
     link: "Keep calm and go to the homepage"
+  offline:
+    title: "Oops, seems like you're offline!"
+    description: "This page cannot be displayed at the moment. Try once again later when your internet connection improves!"

@@ -1,7 +1,7 @@
 <header class="header" role="banner" id="header">
 
   <div class="header__logo">
-    <a href="/<%= I18n.locale %>">
+    <a href="/<%= I18n.locale %>/">
       <%= image_tag "logo.svg", alt: "Kollegorna logo" %>
     </a>
   </div>
@@ -12,19 +12,17 @@
   </div>
 
   <nav class="header__navigation">
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>"><%= t(:nav)[:work] %></a>
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>"><%= t(:nav)[:about] %></a>
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>"><%= t(:nav)[:colleagues] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
+    <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
   </nav>
 
-  <div class="header__cta">
-
+  <div class="header__lang">
     <% if I18n.locale == :en %>
-
-    <a class="language" href="/sv"><%= image_tag("SE.png") %></a>
-
+      <a href="/sv/"><%= image_tag("flag-se.png") %></a>
+    <% else %>
+      <a href="/en/"><%= image_tag("flag-en.png") %></a>
     <% end %>
-
   </div>
 
 </header>

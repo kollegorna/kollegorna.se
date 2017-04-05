@@ -63,10 +63,12 @@
       line-height: 20px;
       margin-top: 20px;
 
-      img {
-        width: 20px;
-        height: 20px;
-        margin: 0 5px 0 0;
+      svg {
+        width: ds-rem-calc(20);
+        height: ds-rem-calc(20);
+        vertical-align: middle;
+        margin-top: ds-rem-calc(-2);
+        margin-right: ds-rem-calc(5);
       }
     }
 

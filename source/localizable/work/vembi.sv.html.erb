@@ -1,6 +1,8 @@
 ---
 title: Vembi – case study
 description: "Vembi har ett unikt och högkvalitativt register över ägare av svenska onoterade aktiebolag är man en av Sveriges mest spännande nya startups inom fintech. Här hittar du direkt ägarinformation till mer än 30 000 företag samt kan se vilka som kontrollerar över 70 000 svenska onoterade aktiebolag."
+page_type: work-item
+share_image: case/vembi/start.png
 ---
 
 <article role="main" class="case">
@@ -21,10 +23,20 @@ description: "Vembi har ett unikt och högkvalitativt register över ägare av s
         <p>Vembi lanserades i februari 2016. I juni samma år köptes det upp av Valu8 Group.</p>
 
         <p>
-          <a href="/blogg/2016/03/vembi/">Bloggpost: Lansering av Vembi</a><br>
-          <a href="http://www.breakit.se/artikel/3058/vem-ager-vad-och-hur-mycket-i-ett-bolag-vembi-vill-guida-dig">Breakit: Vem äger vad och hur mycket i ett bolag? Vembi vill guida dig</a><br>
-          <a href="http://www.vafinans.se/aktier/nyheter/Finansinformationsfoeretaget-Valu8-koeper-upp-Vembi-1001252767">VA Finans: Finansinformationsföretaget Valu8 köper upp Vembi</a><br>
-          <a href="http://www.realtid.se/svarare-gomma-sig-i-smabolag">Realtid: Svårare gömma sig i småbolag</a>
+          <a href="/blogg/2016/03/vembi/">Lansering av Vembi</a><br>
+          <small>Bloggpost</small>
+        </p>
+        <p>
+          <a href="http://www.breakit.se/artikel/3058/vem-ager-vad-och-hur-mycket-i-ett-bolag-vembi-vill-guida-dig">Vem äger vad och hur mycket i ett bolag? Vembi vill guida dig</a><br>
+          <small>Breakit</small>
+        </p>
+        <p>
+          <a href="http://www.vafinans.se/aktier/nyheter/Finansinformationsfoeretaget-Valu8-koeper-upp-Vembi-1001252767">Finansinformationsföretaget Valu8 köper upp Vembi</a><br>
+          <small>VA Finans</small>
+        </p>
+        <p>
+          <a href="http://www.realtid.se/svarare-gomma-sig-i-smabolag">Svårare gömma sig i småbolag</a><br>
+          <small>Realtid</small>
         </p>
       </div>
     </div>
@@ -64,7 +76,7 @@ description: "Vembi har ett unikt och högkvalitativt register över ägare av s
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.vembi.se/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.vembi.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -79,66 +91,61 @@ description: "Vembi har ett unikt och högkvalitativt register över ägare av s
     </div>
 
     <div class="feed grid">
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/start.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/vembiab/status/641349729297633280"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/dashboard.png",
         :caption => "Översikt av de bolag och personer som du följer."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-01.png",
         :caption => "Detaljerad överblick om ägarförhållandena inom företaget."
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157131115"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-03.png",
         :caption => "Förstå hur företagskoncerner är uppbyggda."
       }) %>
 
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157131117"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-04.png",
         :caption => "Se kopplingar mellan personer och företag."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/stena-sessan-05.png",
         :caption => "Utforska dig vidare genom att använda nätverksgrafen."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
-        :image => "case/vembi/stena-sessan-05.png",
-        :caption => "Utforska dig vidare genom att använda nätverksgrafen."
-      }) %>
-
-      <%= partial("components/feed/vimeo", :locals => {
+      <%= partial("partials/feed/vimeo", :locals => {
         :video => "https://player.vimeo.com/video/157171432"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/search.png",
         :caption => "Sök och filtrera på bolag och personer."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/about.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/vembi/kollegorna.png",
         :caption => "Översikt av vår egen bolagssida."
       }) %>

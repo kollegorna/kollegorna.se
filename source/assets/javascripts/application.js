@@ -5,5 +5,6 @@
 //= require lazyLoadGoogleMaps.js/jquery.lazyLoadGoogleMaps.js
 //= require fitvids/jquery.fitvids.js
 //= require mapbox.js/mapbox.js
-//= require app/app
-//= require app/map
+//= require application/app
+//  require application/serviceworker
+//= require application/map

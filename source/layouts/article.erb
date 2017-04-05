@@ -5,7 +5,7 @@
   <article class="blog" role="article">
 
     <header class="blog__header blog__header--article">
-      <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:nav)[:blog] %></a></span>
+      <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a></span>
       <h1><%= current_article.title %></h1>
       <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
@@ -25,11 +25,14 @@
           </a>
         </div>
         <div class="blog__footer__rss">
-          <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link"><%= t(:blog)[:subscribe_rss] %> <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg></a>
+          <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
+            <%= t(:blog)[:subscribe_rss] %>
+            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg>
+          </a>
         </div>
       </div>
       <div class="blog__footer__more">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>"><%= t(:blog)[:back_to_list] %></a>
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
       </div>
     </footer>
 
@@ -57,12 +60,12 @@
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('og-image.jpg') %>",
+    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
     "publisher": {
       "@type": "Organization",
       "name": "Kollegorna",
       "url": "https://www.kollegorna.se",
-      "logo": "<%= image_path('logo.svg') %>"
+      "logo": "https://www.kollegorna.se<%= image_path "logo.svg" %>"
     },
     "author": {
       "@type": "Person",
@@ -71,7 +74,7 @@
       "address": "Karlbergsvägen 52, 113 37 Stockholm",
       "telephone": "+46702420750",
       "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
-      "image": "<%= image_path('avatars/per.jpg') %>"
+      "image": "https://www.kollegorna.se<%= image_path "avatars/per.jpg" %>"
     }
   }
 </script>

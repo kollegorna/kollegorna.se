@@ -9,11 +9,7 @@ This is [our website](https://www.kollegorna.se).
 
 ## Deployment
 
-The master branch is automatically deployed to S3 with Codeship.
-
-[Codeship project](https://app.codeship.com/projects/186828)
-
-[S3 bucket](http://www.kollegorna.se.s3-website-eu-west-1.amazonaws.com/)
+The master branch is automatically deployed to our VPS on Digital Ocean with Codeship.
 
 ## Gulp commands
 
@@ -35,6 +31,6 @@ Builds Middleman.
 
 ## Writing posts
 
-    $ middleman article NAME
+    $ bundle exec middleman article NAME
 
 Will generate a file in source/posts.

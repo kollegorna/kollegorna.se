@@ -1,0 +1,11 @@
+<article class="block block--quote <%= defined?(full_width) ? "full" : "" %>">
+  <div class="block__text">
+    <blockquote>
+      <p><%= text %></p>
+    </blockquote>
+    <p class="author">
+      <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-quote"></use></svg>
+      — <%= author %>
+    </p>
+  </div>
+</article>

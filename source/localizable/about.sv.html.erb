@@ -16,7 +16,7 @@ description: "Vi tänker, leder, skruvar, analyserar, uppfinner, prövar, kodar,
 
         <p>Om du redan har en idé om vad du ska göra kan vi jobba vidare med den. Annars tar vi fram ett lösningsförslag. Eller så jobbar vi fram något ihop.</p>
 
-        <p>Låt oss göra något fantastiskt tillsammans. Hör av dig till Per Sandström på <a href="mailto: per@kollegorna.se">mail</a> eller <a href="tel:+46702420750">telefon</a>.</p>
+        <p>Låt oss göra något fantastiskt tillsammans. Hör av dig till Per Sandström på <a href="mailto: per@kollegorna.se">mail</a>, <a href="skype:ps1100?call">Skype</a> eller <a href="tel:+46702420750">telefon</a>.</p>
       </div>
     </div>
   </section>
@@ -64,6 +64,16 @@ description: "Vi tänker, leder, skruvar, analyserar, uppfinner, prövar, kodar,
         </div>
       </div>
 
+      <div class="feature">
+        <div class="feature__icon">
+          <%= image_tag 'about/work.svg' %>
+        </div>
+        <div class="feature__content">
+          <h1>Jobba hos oss</h1>
+          <p>Just nu söker vi en <strong>Rails-utvecklare</strong>! <a href="/en/careers/">Mer information</a>.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -77,7 +87,7 @@ description: "Vi tänker, leder, skruvar, analyserar, uppfinner, prövar, kodar,
     "description": "<%= current_page.data.description %>",
     "url": "<%= current_page.url %>",
     "mainEntityOfPage": "<%= current_page.url %>",
-    "image": "<%= image_path("og-image.jpg") %>",
+    "image": "https://www.kollegorna.se<%= image_path "meta/og-image.jpg" %>",
     "inLanguage": "<%= I18n.locale %>",
     "sameAs": [
       "https://dribbble.com/kollegorna",

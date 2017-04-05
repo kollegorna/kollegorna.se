@@ -1,6 +1,8 @@
 ---
 title: BG Play – case study
 description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges främsta experter dig aktuella nyheter och vidareutbildning för olika områden inom juridiken."
+page_type: work-item
+share_image: case/bgplay/desktop-1-video.png
 ---
 
 <article role="main" class="case">
@@ -15,7 +17,7 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
         <p>En en playtjänst för juridik från Blendow Group för webb-TV och utbildningsprogram som de själva producerar. Tjänsten består av publikt innehåll som Veckans Juridik samt Blendow Lexnova Expertnyheter för betalande prenumeranter. Vem som helst kan är välkommen att registrera ett konto på tjänsten. Som ny användare får du tillgång till en del av utbudet av Blendow Lexnova Expertnyheter under en begränsad tid. För att få tillgång till det du behöver finns olika paket uppdelat på olika rättsområden.</p>
 
         <h3>Tester för professionell vidareutbildning</h3>
-        <p>Som advokat kan man i samband med vissa av videoklippen från Blendow Lexnova Expertnyheter genomgå ett test. Om man klarar testet får man tillgodoräkna sig en viss mängd tid för den <a href="https://www.advokatsamfundet.se/Advokatnatet/Advokatverksamheten/Professionell-vidareutbildning/">årliga professionella vidareutbildningen</a> för advokater.</p>
+        <p>Som advokat kan man i samband med vissa av videoklippen från Blendow Lexnova Expertnyheter genomgå ett test. Om man klarar testet får man tillgodoräkna sig en viss mängd tid för den <a href="https://www.advokatsamfundet.se/for-advokater/Advokatverksamheten/Professionell-vidareutbildning/">årliga professionella vidareutbildningen</a> för advokater.</p>
       </div>
     </div>
 
@@ -53,7 +55,7 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
 
     <div class="case__cta">
       <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
-      <a href="https://www.bgplay.se/" target="_blank" class="link"><%= t(:cases)[:visit] %></a>
+      <a href="https://www.bgplay.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -68,21 +70,21 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/desktop-1-video.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/chapters.png",
         :caption => "Långa avsnitt är indelade i sektioner så att videon ska startas där det är relevant för användaren."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/keep-watching.png",
         :caption => "Tjänsten håller koll på hur långt man tittat på en video."
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/desktop-2-person.png",
         :caption => "Profilsidor för de som deltar i de olika programmen."
       }) %>

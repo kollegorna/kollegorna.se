@@ -1,6 +1,8 @@
 ---
 title: Medievärlden Premium – case study
-description: "Rapporter, analyser och insikter om medier nu och i framtiden. Medievärlden Premium är en prenumerationstjänst för dig som behöver bättre beslutsunderlag och vill höja din kompetens i avgörande framtidsfrågor."
+description: "Medievärlden Premium is a subscription service that gives you better intel on the changing media landscape."
+page_type: work-item
+share_image: case/medievarlden-premium/desktop-1.png
 ---
 
 <article role="main" class="case">
@@ -12,13 +14,9 @@ description: "Rapporter, analyser och insikter om medier nu och i framtiden. Med
       <p class="highlight">Medievärlden Premium is a subscription service that gives you better intel on the changing media landscape.</p>
 
       <div class="additional">
-        <p>Medievärlden blev ett eget bolag 2014. Tidigare hade man tillhörts och finansierats av Tidningsutgivarna. För att hitta nya intäkter tog man därför fram konceptet Medievärlden Premium – prenumerationstjänst för de som behöver bättre beslutsunderlag och vill höja sin kompetens i avgörande framtidsfrågor gällande medier.</p>
+        <p>Medievärlden became an own entity in 2014. Prior to that they had belonged to and been funded by <a href="http://tu.se/tu-in-english/">The Swedish Media Publishers’ Association</a>. To be able to find new revenues they created the concept Medievärlden Premium. A new service aimed media executives that should be separated from their main news based and publicly open site.</p>
 
-        <p>Vi har jobbat med Drupal-baserade Medievärlden.se sedan 2010 och valde här att bygga en separat tjänst. Drupal är ett fantastiskt CMS men kommer snabbt till korta när en behöver göra något som är mer än bara ett publiceringsverktyg. Resultatet blev en tjänst byggd med Ruby on Rails med ett tillhörande administrationsverktyg för att hantera innehåll och funktionalitet.</p>
-
-        <p>Ej inloggade besökare kan använda delar av funktionaliteten och delar av innehållet ligger öppet för att man ska få en uppfattning om tjänstens omfattning. För att komma åt allt krävs att man är inloggad och har en aktiv prenumeration.</p>
-
-        <p><a href="/blogg/2014/12/medievarlden-premium/">Ny version av Medievärlden Premium</a></p>
+        <p>We designed and built this new service and provided the staff with a new administrative tool for managing all content, users and subscriptions. Users without a valid subscription can access parts of the content and functionality. The rest lies behind a paywall and users subscribe on a yearly basis.</p>
       </div>
     </div>
 
@@ -26,7 +24,7 @@ description: "Rapporter, analyser och insikter om medier nu och i framtiden. Med
       <div class="sheet">
         <h3><%= t(:cases)[:client] %></h3>
         <ul>
-          <li><a href="http://www.medievarlden.se">Medievärlden</a></li>
+          <li><a href="https://www.medievarlden.se">Medievärlden</a></li>
         </ul>
       </div>
 
@@ -56,8 +54,8 @@ description: "Rapporter, analyser och insikter om medier nu och i framtiden. Med
     </div>
 
     <div class="case__cta">
-      <a href="#" class="expand">More detail</a>
-      <a href="http://www.medievarlden.se" target="_blank" class="link">Visit</a>
+      <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
+      <a href="http://www.medievarlden.se" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -72,35 +70,35 @@ description: "Rapporter, analyser och insikter om medier nu och i framtiden. Med
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-1.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/644887451031445504"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/medievarlden/status/638991983797792768"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-2.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-3.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/axelanden/status/540485121821147136"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-4.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/medievarlden-premium/desktop-5.png"
       }) %>
 

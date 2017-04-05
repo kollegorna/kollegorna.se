@@ -3,7 +3,7 @@
   <%= image_tag '404.svg', alt: '404', role: 'presentation' %>
   <h1><%= t(:err404)[:title] %></h1>
   <p>
-    <a href="/<%= I18n.locale %>">
+    <a href="/<%= I18n.locale %>/">
       <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-larr"></use></svg>
       <%= t(:err404)[:link] %>
     </a>

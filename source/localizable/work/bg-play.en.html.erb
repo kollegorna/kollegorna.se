@@ -1,6 +1,8 @@
 ---
 title: BG Play – case study
-description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges främsta experter dig aktuella nyheter och vidareutbildning för olika områden inom juridiken."
+description: "On BG Play some of Sweden's sharpest legal minds bring you news and training in various legal areas."
+page_type: work-item
+share_image: case/bgplay/desktop-1-video.png
 ---
 
 <article role="main" class="case">
@@ -12,10 +14,13 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
       <p class="highlight">On BG Play some of Sweden's sharpest legal minds bring you news and training in various legal areas.</p>
 
       <div class="additional">
-        <p>En en playtjänst för juridik från Blendow Group för webb-TV och utbildningsprogram som de själva producerar. Tjänsten består av publikt innehåll som Veckans Juridik samt Blendow Lexnova Expertnyheter för betalande prenumeranter. Vem som helst kan är välkommen att registrera ett konto på tjänsten. Som ny användare får du tillgång till en del av utbudet av Blendow Lexnova Expertnyheter under en begränsad tid. För att få tillgång till det du behöver finns olika paket uppdelat på olika rättsområden.</p>
+        <p>The service is split into public content and content that requires a subscription. Depending on which legal areas you might be interested in you can subscribe to different packages.</p>
 
-        <h3>Tester för professionell vidareutbildning</h3>
-        <p>Som advokat kan man i samband med vissa av videoklippen från Blendow Lexnova Expertnyheter genomgå ett test. Om man klarar testet får man tillgodoräkna sig en viss mängd tid för den <a href="https://www.advokatsamfundet.se/Advokatnatet/Advokatverksamheten/Professionell-vidareutbildning/">årliga professionella vidareutbildningen</a> för advokater.</p>
+        <p>Anyone can register and as a new user you'll get access to a small part of the content during a trial period.</p>
+
+        <h3>Tests for professional education</h3>
+
+        <p><a href="https://www.advokatsamfundet.se/Advokatsamfundet-engelska/">The Swedish Bar Association</a> requires all lawyers to do at least 18 hours of structured education per year to to be able to retain their license. To utilize the time spent on the videos we provide a test for some of the videos that the user has to pass.</p>
       </div>
     </div>
 
@@ -52,8 +57,8 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
     </div>
 
     <div class="case__cta">
-      <a href="#" class="expand">More detail</a>
-      <a href="https://www.bgplay.se/" target="_blank" class="link">Visit</a>
+      <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
+      <a href="https://www.bgplay.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -68,23 +73,20 @@ description: "Plattform för webb-TV inom juridik. På BG Play ger Sveriges frä
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/bgplay/desktop-1-video.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
-        :image => "case/bgplay/chapters.png",
-        :caption => "Långa avsnitt är indelade i sektioner så att videon ska startas där det är relevant för användaren."
+      <%= partial("partials/feed/image", :locals => {
+        :image => "case/bgplay/chapters.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
-        :image => "case/bgplay/keep-watching.png",
-        :caption => "Tjänsten håller koll på hur långt man tittat på en video."
+      <%= partial("partials/feed/image", :locals => {
+        :image => "case/bgplay/keep-watching.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
-        :image => "case/bgplay/desktop-2-person.png",
-        :caption => "Profilsidor för de som deltar i de olika programmen."
+      <%= partial("partials/feed/image", :locals => {
+        :image => "case/bgplay/desktop-2-person.png"
       }) %>
 
     </div>

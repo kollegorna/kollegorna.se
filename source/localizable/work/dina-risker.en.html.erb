@@ -1,6 +1,8 @@
 ---
 title: Dina Risker – case study
 description: "How good are you at assessing risk? Play the game Dina Risker that we built together with Edelman Deportivo for the insurance company Dina Försäkringar."
+page_type: work-item
+share_image: case/dina-risker/desktop-1.png
 ---
 
 <article role="main" class="case">
@@ -9,15 +11,28 @@ description: "How good are you at assessing risk? Play the game Dina Risker that
     <div class="case__description">
       <h2>How good are you at assessing risk?</h2>
 
-      <p class="highlight">Play the game Dina Risker that we built together with Edelman Deportivo for the insurance company Dina Försäkringar.</p>
+      <p class="highlight">The insurance company Dina Försäkringar wanted to help people answer that question. Edelman Deportivo created a concept and design that we implemented.</p>
 
       <div class="additional">
-        <p>Resultatet blev spelet Dina Risker. Spelaren får här under tidspress jämföra olika risker, som slumpas fram, mot varandra för att sedan få ett omdöme om ens riskbedömningsförmåga.</p>
+        <p>It all ended up in the game Dina Risker. Within time limitations the player have to compare eight different risks against each other ending up getting a judgement on how good he or she is assesing risks.</p>
 
-        <p>Efter att spelet avslutats får spelaren en unik länk med sitt resultat att dela/skryta med i sociala medier samt möjligheten att läsa och lära sig mer om de olika riskerna hen nyss bedömt.</p>
+        <p>When the game is over the player also gets an unique link with the result to share and brag about on the web. As well as a more in depth information regarding the different risks that were assesed.</p>
+
+        <p>Read more (Swedish):</p>
 
         <p>
-          <a href="http://feber.se/webb/art/332921/dina_frskringar_slpper_riskbed/">Feber.se: Dina Försäkringar släpper riskbedömningsspel</a>
+          <a href="http://news.cision.com/se/dina-forsakringar/r/nastan-varannan-ung-slarvar-med-riskbedomningen--nytt-spel-ska-hjalpa-unga-bli-battre-pa-att-bedoma-,c9784263">Nästan varannan ung slarvar med riskbedömningen - Nytt spel ska hjälpa unga bli bättre på att bedöma riskerna i vardagen</a><br>
+          <small>Dina Försäkringar</small>
+        </p>
+
+        <p>
+          <a href="http://feber.se/webb/art/332921/dina_frskringar_slpper_riskbed/">Dina Försäkringar släpper riskbedömningsspel</a><br>
+          <small>Feber.se</small>
+        </p>
+
+        <p>
+          <a href="https://www.youtube.com/watch?v=q27uBs4zlVE">BRÖT BENET UNDER EN TWERKOFF</a><br>
+          <small>Felicia Bergström Ft. Hejainternet / YouTube</small>
         </p>
       </div>
     </div>
@@ -54,8 +69,8 @@ description: "How good are you at assessing risk? Play the game Dina Risker that
     </div>
 
     <div class="case__cta">
-      <a href="#" class="expand">More detail</a>
-      <a href="https://www.dina.se/" target="_blank" class="link">Visit</a>
+      <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
+      <a href="https://www.dina.se/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
     </div>
   </section>
 
@@ -70,33 +85,33 @@ description: "How good are you at assessing risk? Play the game Dina Risker that
     </div>
     <div class="feed grid">
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/dina-risker/desktop-1.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/dina-risker/desktop-2.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/dina-risker/desktop-3.png"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/dina-risker/desktop-4.png"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/606798114767421440"
       }) %>
 
-      <%= partial("components/feed/tweet", :locals => {
+      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/mattiasronge/status/633323160977440768"
       }) %>
 
-      <%= partial("components/feed/image", :locals => {
+      <%= partial("partials/feed/image", :locals => {
         :image => "case/dina-risker/dashboard.png",
-        :caption => "Adminverktyg som ger en översikt av statistik samt möjlighet att hantera innehållet.",
+        :caption => "Admin interface for handling all the content as well as an analysis of how the game is played.",
         :full_width => "true"
       }) %>
 

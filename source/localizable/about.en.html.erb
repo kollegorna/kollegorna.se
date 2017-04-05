@@ -16,7 +16,7 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
 
         <p>If you already have an idea of what you want to do we can build on it. If not we can produce a complete proposal for you. Or we can hammer it out together.</p>
 
-        <p>Let's make something great together. Get in touch with Per Sandström by <a href="mailto: per@kollegorna.se">e-mail</a> or <a href="tel:+46702420750">phone</a>.</p>
+        <p>Let's make something great together. Get in touch with Per Sandström by <a href="mailto: per@kollegorna.se">e-mail</a>, <a href="skype:ps1100?call">Skype</a> or <a href="tel:+46702420750">phone</a>.</p>
       </div>
     </div>
   </section>
@@ -64,6 +64,16 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
         </div>
       </div>
 
+      <div class="feature">
+        <div class="feature__icon">
+          <%= image_tag 'about/work.svg' %>
+        </div>
+        <div class="feature__content">
+          <h1>Work with us</h1>
+          <p>We're currently looking for a <strong>Rails developer</strong>. <a href="/en/careers/">More information</a>.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -77,7 +87,7 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
     "description": "<%= current_page.data.description %>",
     "url": "<%= current_page.url %>",
     "mainEntityOfPage": "<%= current_page.url %>",
-    "image": "<%= image_path("og-image.jpg") %>",
+    "image": "https://www.kollegorna.se<%= image_path "meta/og-image.jpg" %>",
     "inLanguage": "<%= I18n.locale %>",
     "sameAs": [
       "https://dribbble.com/kollegorna",
