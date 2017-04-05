@@ -17,6 +17,10 @@
     }).setView([40, -74.50], 5);
 //    var map = L.mapbox.map('map').setView([40, -74.50], 5);
     L.mapbox.styleLayer('mapbox://styles/kollegorna/ciy35srsb008g2rmhkm6gca1m').addTo(map);
+    
+    setTimeout(function() {
+      $('.map').css('opacity', '1');
+    }, 2500);
 
     if (map.scrollWheelZoom) {
       map.scrollWheelZoom.disable();

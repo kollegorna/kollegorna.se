@@ -9,6 +9,10 @@
   position: relative;
   width: 100%;
   height: 500px;
+  opacity: 0;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  transition: opacity .25s linear;
 
   @include media($laptop) {
     height: calc(100vh - 135px);

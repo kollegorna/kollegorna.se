@@ -19,3 +19,4 @@
 # Misc
 .DS_Store
 .sass-cache
+.build-time
