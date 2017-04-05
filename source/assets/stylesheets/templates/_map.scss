@@ -1,6 +1,3 @@
-
-
-
 // -----------------------------------------------------------------------------
 // Colleagues Map
 // -----------------------------------------------------------------------------
@@ -9,6 +6,10 @@
   position: relative;
   width: 100%;
   height: 500px;
+  opacity: 0;
+  -webkit-transition: opacity .25s linear;
+  -moz-transition: opacity .25s linear;
+  transition: opacity .25s linear;
 
   @include media($laptop) {
     height: calc(100vh - 135px);
@@ -78,13 +79,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,.5);
+  background-color: $ds-color-light-gray;
 }
 .map__marker {
   width: 100%;
   height: 100%;
   border-radius: 100%;
   background-color: rgba($ds-color-green, .8);
+}
+
+.leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.leaflet-popup-content {
+  border: 1px solid $ds-color-light-gray;
 }
 
 .map__popup {
@@ -119,7 +130,8 @@
   position: relative;
   width: 95%;
   height: 150px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
