@@ -29,6 +29,14 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("partials/feed/blog", :locals => {
+        :title => "Tech Radar 2017",
+        :text => "Varje år gör vi en översikt av ny teknik som vi har fått upp ögonen för. Från och med detta år delar vi med oss av resultatet 🎁",
+        :category => "Inkommande…",
+        :link => "https://radar.kollegorna.se",
+        :image => "feed/tech-radar-2017.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Hej Rails-utvecklare!",
         :text => "Vill du ha en fullt marknadsmässig lön, flexibla arbetstider, kunna jobba var du vill, fina förmåner, fantastiska kollegor och massor av roliga projekt?",
         :category => "Jobba här",

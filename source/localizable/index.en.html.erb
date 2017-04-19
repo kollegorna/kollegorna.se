@@ -29,6 +29,14 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("partials/feed/blog", :locals => {
+        :title => "Tech Radar 2017",
+        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
+        :category => "What's next?",
+        :link => "https://radar.kollegorna.se",
+        :image => "feed/tech-radar-2017.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Hello Rails Developers!",
         :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
         :category => "Work here",
