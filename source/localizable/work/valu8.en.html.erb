@@ -1,0 +1,115 @@
+---
+title: Valu8 – case study
+description: "Valu8 Company Intelligence is an application that helps financial experts screen and get detailed company information about Nordic companies. We've helped them take their product from a desktop environment directly to the web."
+page_type: work-item
+share_image: case/valu8/selected.png
+---
+
+<article role="main" class="case">
+
+  <section class="case__content">
+    <div class="case__description">
+      <h1>Valu8</h1>
+      <h2>Bringing transparency to the vast universe of unlisted companies</h2>
+
+      <p class="highlight">Valu8 Company Intelligence is an application that helps financial experts screen and get detailed company information about Nordic companies. We've helped them take their product from a desktop environment directly to the web.</p>
+
+      <div class="additional">
+        <p>We were tasked with redesigning the company homepage, as well as designing and building a Web version of Valu8's core product, the Valu8 Company Intelligence desktop application.</p>
+
+        <p>The application had existed solely as a desktop application for PC's running Windows for a couple of years. Wanting to add value for the customer and propel the product's evolution, Valu8 decided to make it accessible directly on the Web as well, increasing its reach and accessibility. Our brief was to try to make the jump between the Web and desktop versions as seamless as possible for users, so the interface and functionality should mimic the desktop version, while still catering to the needs of a Web application. Given the target audience and the product's intended use, we opted to design it as a responsive application, that takes advantage of large screens to fit in large amounts of information, but is still usable and accessible on mobile devices.</p>
+
+        <p>As a user, you can use the search and filtering tool to effectively screen for companies. You can then create collections to which you save those that you're interested in. You can deep dive into any company and access detailed company information, annual and quarterly reports, ownership information, and other relevant financial data. The app also provides you with tools for analyzing and comparing information, follow companies of special interest and be notified when they're updated with new information. All data can be exported directly into MS Office file formats.</p>
+
+        <p>The final product consists of two different applications: the front end and user interface is built with Ember.js, which communicates over a REST API with a Ruby on Rails application. The Rails app fetches data from the database and does some heavy work to ensure that the front end application can provide the fastest and best user experience possible.</p>
+
+        <p>Note: In June 2016 Valu8 acquired the fintech service Vembi, which we've designed and built. Learn more about Vembi in our <a href="/en/work/vembi">case study</a>.</p>
+
+        <p>Read more (Swedish):</p>
+
+        <p><a href="http://www.breakit.se/artikel/7420">Sveriges 100 största e-handlare – här är topplistan</a><br>
+        <small>Data from Valu8 being used by the journalists on Breakit.se</small></p>
+
+        <p><a href="http://www.vafinans.se/aktier/nyheter/Finansinformationsfoeretaget-Valu8-koeper-upp-Vembi-1001252767">Finansinformationsföretaget Valu8 köper upp Vembi</a><br>
+        <small>VA Finans</small></p>
+
+      </div>
+    </div>
+
+    <div class="case__facts">
+      <div class="sheet">
+        <h3><%= t(:cases)[:client] %></h3>
+        <ul>
+          <li><a href="http://www.valu8group.com/">Valu8</a></li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:release_date] %></h3>
+        <ul>
+          <li>November 2016</li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:languages] %></h3>
+        <ul>
+          <li>Ember.js</li>
+          <li>Ruby on Rails</li>
+          <li>Middleman</li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:tools] %></h3>
+        <ul>
+          <li>Mixpanel</li>
+          <li>Google Analytics</li>
+          <li>Honeybadger</li>
+          <li>Codeship</li>
+        </ul>
+      </div>
+
+      <div class="sheet">
+        <h3><%= t(:cases)[:platforms] %></h3>
+        <ul>
+          <li>Heroku</li>
+          <li>Amazon S3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case__cta">
+      <a href="#" class="expand"><%= t(:cases)[:more_detail] %></a>
+      <a href="http://www.valu8group.com/" target="_blank" rel="noopener" class="link"><%= t(:cases)[:visit] %></a>
+    </div>
+  </section>
+
+  <section class="case__study case--valu8">
+    <div class="device">
+      <%= image_tag('case/valu8/homepage.png') %>
+    </div>
+
+    <div class="device">
+      <%= image_tag('case/valu8/phones.png') %>
+    </div>
+
+    <div class="device">
+      <%= image_tag('case/valu8/filter.png') %>
+    </div>
+
+    <div class="device">
+      <%= image_tag('case/valu8/selected.png') %>
+    </div>
+
+    <div class="device">
+      <%= image_tag('case/valu8/search.jpg') %>
+    </div>
+
+    <div class="ui">
+      <%= image_tag('case/valu8/ui.png') %>
+    </div>
+  </section>
+  <!-- / .case__media -->
+</article>
+<!-- / .case -->

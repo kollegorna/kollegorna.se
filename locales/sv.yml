@@ -35,6 +35,7 @@ sv:
     testimonials: "Testimonials"
   cases:
     client: "Kund"
+    release_date: "Lanserat"
     tech: "Teknik"
     services: "Tjänster"
     more_detail: "Mer information"

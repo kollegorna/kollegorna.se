@@ -28,6 +28,15 @@
     </div>
 
     <div class="index__feed__blocks feed grid">
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Valu8 Company Intelligence",
+        :text => "Bringing transparency to the vast universe of unlisted companies",
+        :image => "case/thumbnails/valu8-2.png",
+        :background_color => "#e6e6e6",
+        :text_color => "black",
+        :link => "/en/work/valu8"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Tech Radar 2017",
         :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
@@ -50,6 +59,8 @@
         :link => "https://www.spoilmoviessavelives.com/en",
         :image => "feed/spoil-movies-save-lives.jpg"
       }) %>
+
+
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
@@ -93,13 +104,15 @@
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
-        :title => "Releasefest",
-        :text => "A home for Swedish-born digital products.",
-        :image => "feed/case-study-releasefest.jpg",
-        :background_color => "#f7f9f9",
-        :text_color => "#005293",
-        :link => "/en/work/releasefest"
+        :title => "Vembi",
+        :text => "A fintech startup that that provides unique ownership data for Swedish unlisted companies.",
+        :image => "feed/case-study-vembi.jpg",
+        :background_color => "#FFFFFF",
+        :text_color => "#565656",
+        :link => "/en/work/vembi"
       }) %>
+
+
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Genombrott",
@@ -117,21 +130,21 @@
         :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Vembi",
-        :text => "A fintech startup that that provides unique ownership data for Swedish unlisted companies.",
-        :image => "feed/case-study-vembi.jpg",
-        :background_color => "#FFFFFF",
-        :text_color => "#565656",
-        :link => "/en/work/vembi"
-      }) %>
-
       <%= partial("partials/feed/gallery", :locals => {
         :category => "Winter joy!",
         :text => "Hacking hardware with new friends at the office 😊",
         :images => [
           "feed/gallery.jpg"
         ]
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Releasefest",
+        :text => "A home for Swedish-born digital products.",
+        :image => "feed/case-study-releasefest.jpg",
+        :background_color => "#f7f9f9",
+        :text_color => "#005293",
+        :link => "/en/work/releasefest"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {

@@ -1,0 +1,30 @@
+.case--valu8 {
+	.device {
+		@include outer-container;
+		max-width: 1400px;
+		margin-bottom: 40px;
+	}
+
+	.ui {
+		background: #F0F0F0;
+		text-align: center;
+
+		img {
+			@media (min-width: 1400px) {
+				max-width: 1400px;
+			}
+		}
+	}
+
+	.green {
+		@include outer-container;
+		background: #b5cf8a;
+		max-width: 1400px;
+		text-align: center;
+		margin-bottom: 40px;
+
+		img {
+			max-width: 1400px;
+		}
+	}
+}
