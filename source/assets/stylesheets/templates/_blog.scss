@@ -1,5 +1,6 @@
 .blog {
   @include outer-container( $max-width / 2 );
+  min-height: 80vh;
   padding: 0 20px 60px;
 
   &__header {
@@ -32,11 +33,10 @@
       }
 
       a {
+        border-bottom: 1px solid $ds-color-link;
+        color: $ds-color-black;
+        display: inline-block;
         font-weight: 600;
-        color: $ds-color-link;
-        &:hover,
-        &:focus  { color: darken($ds-color-link, 10); }
-        &:active { color: darken($ds-color-link, 20); }
       }
 
       span {
@@ -85,10 +85,11 @@
     }
 
     a {
-      color: $ds-color-link;
+      color: $ds-color-black;
+
       &:hover,
-      &:focus  { color: darken($ds-color-link, 10); }
-      &:active { color: darken($ds-color-link, 20); }
+      &:focus  { color: $ds-color-orange; }
+      &:active { color: $ds-color-orange; }
     }
 
     time {
