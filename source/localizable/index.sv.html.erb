@@ -28,6 +28,15 @@
     </div>
 
     <div class="index__feed__blocks feed grid">
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Valu8 Company Intelligence",
+        :text => "Från desktop till webb – utökad transparens och större insikt i onoterade bolag",
+        :image => "case/thumbnails/valu8-2.png",
+        :background_color => "#e6e6e6",
+        :text_color => "black",
+        :link => "/sv/projekt/valu8"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Tech Radar 2017",
         :text => "Varje år gör vi en översikt av ny teknik som vi har fått upp ögonen för. Från och med detta år delar vi med oss av resultatet 🎁",

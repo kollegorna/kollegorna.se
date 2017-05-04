@@ -40,6 +40,10 @@ sv:
     services: "Tjänster"
     more_detail: "Mer information"
     visit: "Besök"
+    languages: "Språk & Ramverk"
+    tools: "Verktyg"
+    techniques: "Tekniker"
+    platforms: "Plattformar"
   colleagues:
     slogan: "World Wide Workforce"
     description: 'Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken. <a href="/sv/karta/">Se vår världskarta</a>.'
