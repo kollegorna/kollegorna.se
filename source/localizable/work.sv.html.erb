@@ -6,6 +6,12 @@ title: Projekt
   <h1 class="visuallyhidden"><%= current_page.data.title %></h1>
   <section class="work__projects">
     <div class="work__projects__blocks">
+      <%= partial("partials/project", :locals => {
+        :title => "Edumedia Tunisie",
+        :text => "Varumärke, UI/UX-Design, Utveckling",
+        :image => "case/thumbnails/edumedia.png",
+        :link => "/sv/projekt/edumedia-tunisie"
+      }) %>
 
       <%= partial("partials/project", :locals => {
         :title => "Genombrott",
