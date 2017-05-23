@@ -132,7 +132,7 @@
 
       fitVids: function() {
 
-        $('.blog__content').fitVids();
+        $('.blog__content, .case__study').fitVids();
 
       },
 

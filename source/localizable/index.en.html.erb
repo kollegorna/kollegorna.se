@@ -29,6 +29,15 @@
 
     <div class="index__feed__blocks feed grid">
       <%= partial("partials/feed/case_study", :locals => {
+        :title => "Edumedia Tunisie",
+        :text => "Promoting media awareness and critical thinking skills",
+        :image => "case/thumbnails/edumedia.png",
+        :background_color => "#e5ece8",
+        :text_color => "#414543",
+        :link => "/en/work/edumedia-tunisie"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Valu8 Company Intelligence",
         :text => "Bringing transparency to the vast universe of unlisted companies",
         :image => "case/thumbnails/valu8-2.png",
