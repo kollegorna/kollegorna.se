@@ -1,0 +1,214 @@
+.csr {
+  padding: 0 20px 60px 20px;
+
+  &__header {
+    @include outer-container;
+    text-align: center;
+
+    img {
+      max-width: 140px;
+      margin: 0 0 20px 0;
+    }
+
+    &__content {
+      @include span-columns(10);
+      @include shift(1);
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+
+      @include media($desktop) {
+        @include span-columns(5);
+        @include shift(0);
+        padding-top: 20px;
+      }
+
+      h1 {
+        margin: 0 0 20px 0;
+        font-weight: 600;
+        font-size: ds-rem-calc(18);
+        text-align: center;
+
+        @include media($tablet) { font-size: ds-rem-calc(28); }
+        @include media($laptop) {
+          //text-align: left;
+          font-size: ds-rem-calc(42);
+          letter-spacing: ds-rem-calc(-1);
+          line-height: 1.2;
+        }
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: ds-rem-calc(14);
+        text-align: center;
+
+        @include media($laptop) {
+          text-align: left;
+          font-size: ds-rem-calc(22);
+        }
+
+        @include media($tablet) { font-size: ds-rem-calc(20); }
+        @include media($desktop) { font-size: ds-rem-calc(24); }
+
+        a {
+          @extend %ds-underlined;
+        }
+      }
+    }
+  }
+
+  &__features {
+    padding-bottom: 60px;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__row {
+      @include outer-container;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      @include media($tablet) {
+        text-align: left;
+      }
+    }
+  }
+
+  &__feature {
+    @include span-columns(12);
+    @include omega(2n);
+    margin: 20px 0;
+
+    @include media($tablet) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    &__icon {
+      @include span-columns(4);
+      @include shift(4);
+      @include omega();
+      margin-bottom: 20px;
+
+      @include media($tablet) {
+        @include span-columns(2);
+        @include shift(0);
+        @include omega-reset(1n);
+
+        img {
+          width: 80%;
+          max-width: 135px;
+        }
+      }
+    }
+
+    &__content {
+      @include span-columns(8);
+      @include shift(2);
+      @include omega();
+
+      @include media($tablet) {
+        @include span-columns(8);
+        @include shift(0);
+        padding-top: 2  0px;
+      }
+    }
+
+    h2 {
+      font-size: ds-rem-calc(16);
+      margin: 0;
+      font-weight: 600;
+
+      @include media($tablet) { font-size: ds-rem-calc(18); }
+    }
+
+    p, li {
+      margin-top: 10px;
+      font-size: ds-rem-calc(14);
+      line-height: 1.6;
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(16);
+      }
+
+      a {
+        @extend %ds-underlined;
+      }
+    }
+  }
+
+  &__list {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+
+    &.grid .block {
+      width: 100%;
+      @include media($laptop) { width: calc(50% - 10px); }
+      @include media($desktop) { width: calc(33% - 10px); }
+      margin-left: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__donation {
+    background: white;
+    border-radius: 4px;
+    padding: 30px 40px 30px 30px;
+    min-height: 450px;
+    position: relative;
+
+    @include media($tablet) {
+      padding: 50px;
+    }
+
+    &__title {
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      font-size: ds-rem-calc(14);
+      //margin: 0;
+      position: relative;
+      z-index: 1;
+      color: darken($ds-color-white, 40);
+      transition: opacity .2s ease-in-out;
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(16);
+      }
+    }
+
+    &__description {
+
+    }
+
+    a {
+      @extend .underlined;
+    }
+  }
+}
+
+
+.no-touchevents .colleagues {
+  .profile {
+    &.hover {
+      .profile__image {
+        transform: scale(0.6);
+        box-shadow: 0 0 0 10px $ds-color-white;
+      }
+
+      .profile__name,
+      .profile__title,
+      .profile__contact,
+      .profile__links { opacity: 0; }
+      .profile__background { opacity: 0.8; }
+
+      .profile__location {
+        background: $ds-color-white;
+      }
+    }
+  }
+}
