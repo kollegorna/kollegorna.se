@@ -48,6 +48,7 @@
 
     &__content {
       @include outer-container;
+      padding: 0 20px;
     }
 
     &__headline {
@@ -109,6 +110,7 @@
 
     &__row {
       @include outer-container;
+      padding: 0 20px;
       text-align: center;
       position: relative;
       z-index: 1;
@@ -196,6 +198,7 @@
 
   &__section {
     @include outer-container;
+    padding: 0 20px;
 
     &__content {
       @include span-columns(12);

@@ -39,6 +39,7 @@
 
     &__content {
       @include outer-container;
+      padding: 0 20px;
     }
 
     &__headline {
@@ -96,6 +97,7 @@
 
     &__title {
       @include outer-container;
+      padding: 0 20px;
       font-size: ds-rem-calc(18);
       text-align: center;
 
@@ -113,6 +115,7 @@
 
     &__row {
       @include outer-container;
+      padding: 0 20px;
       text-align: center;
       position: relative;
       z-index: 1;
