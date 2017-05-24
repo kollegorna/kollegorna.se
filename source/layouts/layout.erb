@@ -3,7 +3,7 @@
   meta_name        = "Kollegorna"
   meta_title       = t(:meta)[:title]
   meta_description = current_page.data.description || t(:meta)[:description]
-  meta_og_img      = "https://www.kollegorna.se/#{image_path current_page.data.share_image || "meta/og-image.jpg"}"
+  meta_og_img      = "https://www.kollegorna.se#{image_path current_page.data.share_image || "meta/og-image.jpg"}"
   meta_og_title    = current_page.data.title || meta_title
 
 %><!DOCTYPE html>
