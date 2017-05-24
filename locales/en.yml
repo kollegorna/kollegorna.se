@@ -13,6 +13,8 @@ en:
     blog: "blog"
     feed: "feed"
     offline: "offline"
+    csr: "csr"
+    jobs: "careers"
   nav:
     work: "Work"
     colleagues: "Colleagues"
@@ -24,6 +26,8 @@ en:
     nav_show: "Show navigation"
     nav_hide: "Hide navigation"
     labs: "Labs"
+    csr: "CSR"
+    jobs: "Jobs"
   footer:
     new_business: "New business"
     address: "Address"

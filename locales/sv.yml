@@ -12,6 +12,8 @@ sv:
     feed: "feed"
     map: "karta"
     offline: "offline"
+    csr: "csr"
+    jobs: "careers"
   nav:
     work: "Projekt"
     colleagues: "Kollegor"
@@ -23,6 +25,8 @@ sv:
     nav_show: "Visa meny"
     nav_hide: "Dölj meny"
     labs: "Labb"
+    csr: "CSR"
+    jobs: "Jobba här"
   footer:
     new_business: "Hör av dig till…"
     address: "Adress"
