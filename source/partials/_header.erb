@@ -18,11 +18,29 @@
   </nav>
 
   <div class="header__lang">
-    <% if I18n.locale == :en %>
-      <a href="/sv/"><%= image_tag("flag-se.png") %></a>
-    <% else %>
-      <a href="/en/"><%= image_tag("flag-en.png") %></a>
-    <% end %>
+    <ul>
+      <% if I18n.locale == :en %>
+        <li><a href="/sv/">Svenska</a></li>
+        <li class="highlight"><a href="/en/">English</a></li>
+        <li class="drop">
+          More
+          <ul>
+            <li><a class="ar" href="#">العربية</a></li>
+            <li><a href="#">French</a></li>
+          </ul>
+        </li>
+      <% else %>
+        <li class="highlight"><a href="/sv/">Svenska</a></li>
+        <li><a href="/en/">English</a></li>
+        <li class="drop">
+          More
+          <ul>
+            <li><a class="ar" href="#">العربية</a></li>
+            <li><a href="#">French</a></li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
 </header>

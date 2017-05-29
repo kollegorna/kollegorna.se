@@ -6,6 +6,7 @@
 
       init: function() {
         this.mobileNav();
+        this.langNav();
         this.bindClicks();
         this.setupFeed();
         this.setupAnimations();
@@ -29,6 +30,21 @@
             $nav.slideUp();
         });
 
+      },
+
+      langNav: function() {
+        var $langSwitch = $('.header__lang');
+
+        $langSwitch.superfish({
+            delay: 400,
+            animation: {
+                height: "show"
+            },
+            animationOut: {
+                height: "hide"
+            },
+            autoArrows: false
+        });
       },
 
 
