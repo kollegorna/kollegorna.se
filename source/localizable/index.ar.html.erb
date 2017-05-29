@@ -1,0 +1,37 @@
+---
+---
+
+<main role="main" class="index">
+  <section class="index__hero">
+    <div class="index__hero__headline">
+      <p><%= t(:index)[:hello] %></p>
+      <h1><%= t(:index)[:short_bio] %></h1>
+    </div>
+  </section>
+
+  <section class="index__feed feed-ar">
+    <header class="index__feed__header">
+      <h2><%= t(:index)[:from_feed] %></h2>
+    </header>
+
+    <div id="gridloader">
+      <div class="blob blob-0"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+    </div>
+
+    <div class="index__feed__blocks feed grid single-ar">
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "التربية الاعلامية في تونس",
+        :text => "نشر الوعي الاعلامي ومهارات التفكير الناقد",
+        :image => "case/thumbnails/edumedia.png",
+        :background_color => "#e5ece8",
+        :text_color => "#414543",
+        :link => "/ar/work/edumedia-tunisie"
+      }) %>
+    </div>
+  </section>
+</main>

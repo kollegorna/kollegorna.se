@@ -1,5 +1,9 @@
 require 'uglifier'
 
+# Enable for faster dev
+# ignore 'posts/*'
+# ignore '/assets/fonts/*'
+
 # Configure where assets are stored
 config[:css_dir] = 'assets/stylesheets'
 config[:js_dir] = 'assets/javascripts'
@@ -22,7 +26,7 @@ Dir[*masks].each do |file_path|
 end
 
 # Use multilanguage
-activate :i18n, :mount_at_root => false, :langs => [:sv, :en]
+activate :i18n, :mount_at_root => false, :langs => [:sv, :en, :ar]
 
 # Blog
 activate :blog do |blog|
