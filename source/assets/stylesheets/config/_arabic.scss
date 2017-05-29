@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Noto Kufi Arabic";
-    src: url('fonts/notokufiarabic-regular-webfont.eot');
-    src: url('fonts/notokufiarabic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/notokufiarabic-regular-webfont.woff2') format('woff2'),
-         url('fonts/notokufiarabic-regular-webfont.woff') format('woff'),
-         url('fonts/notokufiarabic-regular-webfont.ttf') format('truetype'),
-         url('fonts/notokufiarabic-regular-webfont.svg#svgFontName') format('svg');
+    src: url('../fonts/noto/notokufiarabic-regular-webfont.eot');
+    src: url('../fonts/noto/notokufiarabic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/noto/notokufiarabic-regular-webfont.woff2') format('woff2'),
+         url('../fonts/noto/notokufiarabic-regular-webfont.woff') format('woff'),
+         url('../fonts/noto/notokufiarabic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/noto/notokufiarabic-regular-webfont.svg#svgFontName') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -13,12 +13,12 @@
 
 @font-face {
     font-family: "Noto Kufi Arabic";
-    src: url('fonts/notokufiarabic-bold-webfont.eot');
-    src: url('fonts/notokufiarabic-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/notokufiarabic-bold-webfont.woff2') format('woff2'),
-         url('fonts/notokufiarabic-bold-webfont.woff') format('woff'),
-         url('fonts/notokufiarabic-bold-webfont.ttf') format('truetype'),
-         url('fonts/notokufiarabic-bold-webfont.svg#svgFontName') format('svg');
+    src: url('../fonts/noto/notokufiarabic-bold-webfont.eot');
+    src: url('../fonts/noto/notokufiarabic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/noto/notokufiarabic-bold-webfont.woff2') format('woff2'),
+         url('../fonts/noto/notokufiarabic-bold-webfont.woff') format('woff'),
+         url('../fonts/noto/notokufiarabic-bold-webfont.ttf') format('truetype'),
+         url('../fonts/noto/notokufiarabic-bold-webfont.svg#svgFontName') format('svg');
     font-weight: 700;
     font-style: normal;
 }
