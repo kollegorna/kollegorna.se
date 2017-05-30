@@ -21,8 +21,6 @@
     }
   }
 
-
-
   &__navigation {
     display: none;
     width: 90%;
@@ -180,19 +178,135 @@
 
   &__lang {
     float: right;
+    margin-top: 7px;
 
-    a {
-      color: $ds-color-green;
-      display: block;
-      padding: 11px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-      &:hover,
-      &:focus {
-        opacity: .8;
+      li {
+        display: inline-block;
+
+        a {
+          font-size: ds-rem-calc(12);
+        }
+
+        &.drop {
+          cursor: pointer;
+          position: relative;
+
+          ul {
+            display: none;
+            background: $ds-color-charcoal;
+            position: absolute;
+            text-align: right;
+            right: -10px;
+            top: 45px;
+
+            &:after {
+              bottom: 100%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              right: 20px;
+              border-color: rgba(255, 255, 255, 0);
+              border-bottom-color: $ds-color-charcoal;
+              border-width: 6px;
+              margin-right: 1px;
+            }
+
+            &:before {
+              bottom: 100%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+              right: 20px;
+              border-color: rgba(230, 230, 230, 0);
+              border-bottom-color: #E6E6E6;
+              border-width: 7px;
+              margin-left: -7px;
+            }
+
+            li {
+              display: block;
+              margin: 8px 18px 8px 50px;
+              padding: 0px;
+
+              &:last-of-type {
+                margin-bottom: 18px;
+              }
+
+              a {
+                color: white;
+
+                &.ar {
+                  font-family: Courier, sans-serif;
+                  direction: rtl;
+                  unicode-bidi: embed;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+        }
       }
+    }
+  }
+}
 
-      img {
-        width: 24px;
+// Arabic Styles
+.ar {
+  .header {
+    &__logo {
+      float: right;
+      margin-right: 0px;
+    }
+    &__button { display: none; }
+    &__navigation { display: none!important; }
+
+    &__lang {
+      float: left;
+
+      ul {
+        li {
+          &.drop {
+            ul {
+              right: auto;
+              left: -10px;
+              text-align: left;
+
+              &:after {
+                right: auto;
+                left: 20px;
+              }
+
+              &:before {
+                right: auto;
+                left: 20px;
+              }
+
+              li {
+                margin: 8px 50px 8px 18px;
+
+                &:last-of-type {
+                  margin-bottom: 18px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

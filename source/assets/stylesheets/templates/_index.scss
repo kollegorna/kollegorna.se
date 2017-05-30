@@ -93,6 +93,17 @@
       height: 1800px;
     }
 
+    &.feed-ar {
+      @include media($tablet) {
+        height: auto;
+        margin-bottom: 40px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
     &.expanded {
       margin-bottom: 40px;
       &:after { opacity: 0; }
@@ -168,6 +179,14 @@
       width: 90%;
       max-width: 1500px;
       margin: 0 auto;
+
+      &.single-ar {
+        text-align: center;
+        article {
+          margin: 0 auto;
+          position: static!important;
+        }
+      }
     }
   }
 

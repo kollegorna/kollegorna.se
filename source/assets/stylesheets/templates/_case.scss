@@ -233,3 +233,93 @@
     }
   }
 }
+
+.ar {
+  .case {
+    @include direction-context(right-to-left) {
+      &__content {
+        @include outer-container;
+      }
+
+      &__description {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($laptop) {
+          @include span-columns(7);
+        }
+
+        @include media($desktop) {
+          @include span-columns(8);
+          @include shift(0);
+        }
+      }
+
+      &__facts {
+        @include span-columns(10);
+        @include shift(1);
+        display: none;
+
+        @include media($laptop) {
+          @include span-columns(3);
+          @include shift(0);
+          display: none;
+        }
+      }
+
+      &__cta {
+        @include span-columns(10);
+        @include shift(1);
+
+        @include media($desktop) {
+          @include shift(0);
+        }
+
+        .expand {
+          margin-right: 0;
+          margin-left: 40px;
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            content: "+";
+            display: inline-block;
+            line-height: 26px;
+            width: 30px;
+            font-family: $ds-font-family;
+            border: 2px solid $ds-color-link;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 15px;
+          }
+
+          &.less:after {
+            content: "-";
+          }
+        }
+
+        .link {
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            content: "←";
+            display: inline-block;
+            line-height: 26px;
+            width: 30px;
+            font-family: $ds-font-family;
+            border: 2px solid $ds-color-link;
+            border-radius: 50%;
+            text-align: center;
+            margin-right: 15px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

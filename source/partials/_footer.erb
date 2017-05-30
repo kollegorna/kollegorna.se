@@ -1,3 +1,15 @@
+<% if I18n.locale == :ar %>
+  <section class="cta-ar">
+    <div class="cta-ar__container">
+      <div class="cta-ar__content">
+        <h4>مرحبا!</h4>
+        <h2>لنعمل سويا</h2>
+        <p>للمزيد حول اعمالنا وخدماتنا على صفحتنا بالانكليزية</p>
+        <a href="/en/"></a>
+      </div>
+    </div>
+  </section>
+<% end %>
 <footer class="footer" role="contentinfo">
   <div class="footer__container">
     <div class="footer__logo">
@@ -15,27 +27,45 @@
       </p>
 
       <h4><%= t(:footer)[:address] %></h4>
-      <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank" rel="noopener">Karlbergsvägen 52,<br>113 37 Stockholm</a></p>
+      <% if I18n.locale == :ar %>
+        <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank" rel="noopener">طريق كارلبيريس 52 ###<br>رمز البريد 11337 ستوكهولم</a></p>
+      <% else %>
+        <p><a href="https://www.google.se/maps/place/Kollegorna+AB/@59.3427458,18.0336378,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d6417696cdd:0x2a488a80c7289bb9!8m2!3d59.3427431!4d18.0358265?hl=sv" target="_blank" rel="noopener">Karlbergsvägen 52,<br>113 37 Stockholm</a></p>
+      <% end %>
 
 
       <% if I18n.locale == :en %>
         <h4>Hej!</h4>
         <a href="/sv/">Byt till svenska</a>
-      <% else %>
+      <% elsif I18n.locale == :sv %>
         <h4>Hello!</h4>
+        <a href="/en/">Switch to English</a>
+      <% else %>
+        <h4>Hello</h4>
         <a href="/en/">Switch to English</a>
       <% end %>
     </nav>
-
-    <div class="footer__navigation">
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
-      <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a>
-      <a href="/en/<%= t(:paths)[:csr] %>/"><%= t(:nav)[:csr] %></a>
-      <a href="/en/<%= t(:paths)[:jobs] %>/"><%= t(:nav)[:jobs] %></a>
-      <a href="https://labs.kollegorna.se" target="_blank" rel="noopener"><%= t(:nav)[:labs] %></a>
-    </div>
+    
+    <% if I18n.locale == :ar %>
+      <div class="footer__navigation">
+        <a href="/en/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+        <a href="/en/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
+        <a href="/en/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
+        <a href="/en/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a>
+        <a href="/en/<%= t(:paths)[:csr] %>/"><%= t(:nav)[:csr] %></a>
+        <a href="https://labs.kollegorna.se" target="_blank" rel="noopener"><%= t(:nav)[:labs] %></a>
+      </div>
+    <% else %>
+      <div class="footer__navigation">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a>
+        <a href="/en/<%= t(:paths)[:csr] %>/"><%= t(:nav)[:csr] %></a>
+        <a href="/en/<%= t(:paths)[:jobs] %>/"><%= t(:nav)[:jobs] %></a>
+        <a href="https://labs.kollegorna.se" target="_blank" rel="noopener"><%= t(:nav)[:labs] %></a>
+      </div>
+    <% end %>
 
     <div class="footer__navigation">
       <a href="https://dribbble.com/kollegorna" target="_blank" rel="noopener">Dribbble</a>
