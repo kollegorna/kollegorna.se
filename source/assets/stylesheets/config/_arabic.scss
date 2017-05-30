@@ -25,12 +25,12 @@
 
 .ar {
 	body {
-		direction: rtl;
-    unicode-bidi: embed;
-    font-family: Noto Kufi Arabic;
+    	direction: rtl;
+        unicode-bidi: embed;
+        font-family: Noto Kufi Arabic,Helvetica Neue,Helvetica,sans-serif;
 
-    h1, h2, h3, h4, h5, h6 {
-    	font-family: Noto Kufi Arabic;
-    }
+        h1, h2, h3, h4, h5, h6 {
+        	font-family: Noto Kufi Arabic,Helvetica Neue,Helvetica,sans-serif;
+        }
 	}
 }
