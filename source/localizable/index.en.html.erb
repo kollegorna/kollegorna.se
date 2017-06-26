@@ -10,10 +10,6 @@
   </section>
 
   <section class="index__feed">
-    <header class="index__feed__header">
-      <h2><%= t(:index)[:from_feed] %></h2>
-    </header>
-
     <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
@@ -23,11 +19,13 @@
       <div class="blob blob-5"></div>
     </div>
 
+    <%# REMOVED
     <div class="expand expand--feed">
       See more
-    </div>
+    </div> %>
 
     <div class="index__feed__blocks feed grid">
+
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Edumedia Tunisie",
         :text => "Promoting media awareness and critical thinking skills",
@@ -54,6 +52,10 @@
         :image => "feed/tech-radar-2017.png"
       }) %>
 
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/01.svg') %>
+      </div>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Hello Rails Developers!",
         :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
@@ -68,8 +70,6 @@
         :link => "https://www.spoilmoviessavelives.com/en",
         :image => "feed/spoil-movies-save-lives.jpg"
       }) %>
-
-
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
@@ -89,6 +89,10 @@
         :link => "/en/work/lanneberg-bexelius"
       }) %>
 
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/02.svg') %>
+      </div>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Things Filippos has learned developing Ruby and Rails apps over the past 3+ years",
         :text => "Some of the stuff our superstar backend dev Filippos has learned after more than three years working with Rails. Number 4 will surpr... just kidding :)",
@@ -104,6 +108,10 @@
         :link => "/en/2016/12/osvaldas-valutis/",
         :image => "feed/osvaldas.jpg"
       }) %>
+
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/03.svg') %>
+      </div>
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "November's PDDs",
@@ -121,7 +129,9 @@
         :link => "/en/work/vembi"
       }) %>
 
-
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/01.svg') %>
+      </div>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Genombrott",
@@ -137,14 +147,6 @@
         :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
         :category => "Labs",
         :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
-      }) %>
-
-      <%= partial("partials/feed/gallery", :locals => {
-        :category => "Winter joy!",
-        :text => "Hacking hardware with new friends at the office 😊",
-        :images => [
-          "feed/gallery.jpg"
-        ]
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -163,6 +165,10 @@
         :link => "https://dribbble.com/kollegorna",
         :image => "feed/dribbble-hey.gif"
       }) %>
+
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/05.svg') %>
+      </div>
     </div>
   </section>
 
