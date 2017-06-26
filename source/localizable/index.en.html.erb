@@ -35,6 +35,14 @@
         :link => "/en/work/edumedia-tunisie"
       }) %>
 
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Echo1",
+        :text => "Branding and website design for Echo1, a Singapore-based investor in sound-related companies.",
+        :category => "New Work",
+        :link => "https://www.echo1.co",
+        :image => "feed/echo1.jpg"
+      }) %>
+
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Valu8 Company Intelligence",
         :text => "Bringing transparency to the vast universe of unlisted companies",
