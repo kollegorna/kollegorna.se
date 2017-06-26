@@ -10,10 +10,6 @@
   </section>
 
   <section class="index__feed">
-    <header class="index__feed__header">
-      <h2><%= t(:index)[:from_feed] %></h2>
-    </header>
-
     <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
@@ -21,10 +17,6 @@
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
-
-    <div class="expand expand--feed">
-      Läs mer
     </div>
 
     <div class="index__feed__blocks feed grid">
@@ -35,6 +27,14 @@
         :background_color => "#e5ece8",
         :text_color => "#414543",
         :link => "/sv/projekt/edumedia-tunisie"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Echo1",
+        :text => "Identit och webbplats för Echo1, en Singapore-baserade investerare för ljudrelaterade företag.",
+        :category => "Nytt!",
+        :link => "https://www.echo1.co",
+        :image => "feed/echo1.jpg"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -95,21 +95,6 @@
         :link => "/sv/projekt/celine-beyond"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Välkommen Osvaldas!",
-        :text => "Vi har fått en tidig julklapp i form av en ny UX-designer och front end-utvecklare.",
-        :category => "Nyförvärv",
-        :link => "/sv/2016/12/osvaldas-valutis/",
-        :image => "feed/osvaldas.jpg"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Efter tre år med Ruby on Rails",
-        :text => "En blandad lista av saker som som vår backend-⭐️ Filippos lärt sig under åren. Och ni kan inte tro vad som hä… Skojar bara :)",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
-      }) %>
-
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Releasefest",
         :text => "Låt oss fira det digitala Sverige",
@@ -128,13 +113,6 @@
         :link => "/sv/projekt/skl-genombrott"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "PDD i November",
-        :text => "Var 6:e vecka tar vi en paus från vanligt jobb torsdag – måndag för att istället ha Personal Development Days. Följande gjordes denna gång…",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
-      }) %>
-
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Vembi",
         :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
@@ -142,30 +120,6 @@
         :background_color => "#FFFFFF",
         :text_color => "#565656",
         :link => "/sv/projekt/vembi"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/801793962696646656"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/791282896493481984"
-      }) %>
-
-      <%= partial("partials/feed/gallery", :locals => {
-        :category => "Vinternöje…",
-        :text => "Hårdvaruhack med nya vänner på kontoret 😊",
-        :images => [
-          "feed/gallery.jpg"
-        ]
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/779271643680088064"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/779273525756583940"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
@@ -184,23 +138,7 @@
       }) %>
 
       <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/779272851727810560"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Inblick i designprocessen",
-        :text => "Kolla in vårt konto på Dribbble där ni kan följa mer från våra designers.",
-        :category => "Ögongodis",
-        :link => "https://dribbble.com/kollegorna",
-        :image => "feed/dribbble-hey.gif"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
         :link => "https://twitter.com/kollegorna/status/715079987515105281"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/720241420024414208"
       }) %>
 
       <%= partial("partials/feed/tweet", :locals => {
