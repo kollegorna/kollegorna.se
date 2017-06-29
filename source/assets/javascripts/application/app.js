@@ -8,7 +8,6 @@
         this.mobileNav();
         this.langNav();
         this.bindClicks();
-        this.setupFeed();
         this.setupAnimations();
         this.initComments();
         this.fitVids();
@@ -27,6 +26,10 @@
           setTimeout(function() {
             $('.index__hero').addClass('loaded');
           }, 500);
+
+          setTimeout(function() {
+            Kollegorna.setupFeed();
+          }, 1500);
 
         });
       },
