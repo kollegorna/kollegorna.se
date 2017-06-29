@@ -21,16 +21,10 @@
 
         // Do the injection
         SVGInjector(mySVGsToInject, '', function() {
-
-          setTimeout(function() {
-            $('.index__hero').addClass('loaded');
-          }, 500);
-
-          setTimeout(function() {
-            Kollegorna.setupFeed();
-          }, 1500);
-
+          Kollegorna.setupAnimations();
         });
+
+        Kollegorna.setupAnimations();
       },
 
       mobileNav: function() {
@@ -151,7 +145,13 @@
 
       setupAnimations: function() {
 
-        $('.index__hero__background').addClass('on');
+        setTimeout(function() {
+          $('.index__hero').addClass('loaded');
+        }, 500);
+
+        setTimeout(function() {
+          Kollegorna.setupFeed();
+        }, 1500);
 
       },
 
