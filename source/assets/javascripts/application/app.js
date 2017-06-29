@@ -13,8 +13,23 @@
         this.initComments();
         this.fitVids();
         this.setupMaps();
+        this.injectSVGs();
       },
 
+
+      injectSVGs: function() {
+        // Elements to inject
+        var mySVGsToInject = document.querySelectorAll('img.inject-svg');
+
+        // Do the injection
+        SVGInjector(mySVGsToInject, '', function() {
+
+          setTimeout(function() {
+            $('.index__hero').addClass('loaded');
+          }, 500);
+
+        });
+      },
 
       mobileNav: function() {
 
