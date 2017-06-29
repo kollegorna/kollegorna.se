@@ -6,6 +6,7 @@
 //= require fitvids/jquery.fitvids.js
 //= require mapbox.js/mapbox.js
 //= require superfish/dist/js/superfish.js
+//= require svg-injector/dist/svg-injector.min.js
 //= require application/app
 //  require application/serviceworker
 //= require application/map

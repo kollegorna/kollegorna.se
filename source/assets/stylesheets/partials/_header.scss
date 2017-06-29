@@ -16,8 +16,14 @@
     float: left;
     margin-right: 10px;
 
-    img {
+    svg {
       width: 100%;
+    }
+
+    &:hover {
+      svg {
+        fill: $ds-color-green;
+      }
     }
   }
 
@@ -179,6 +185,17 @@
   &__lang {
     float: right;
     margin-top: 7px;
+
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+
+    &:hover {
+      svg {
+        fill: $ds-color-green;
+      }
+    }
 
     ul {
       margin: 0;

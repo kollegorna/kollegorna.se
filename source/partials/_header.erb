@@ -2,7 +2,10 @@
 
   <div class="header__logo">
     <a href="/<%= I18n.locale %>/">
-      <%= image_tag "logo.svg", alt: "Kollegorna logo" %>
+
+      <svg viewBox="0 0 199.2 199.2">
+        <use xlink:href="<%= image_path("logo.svg") %>#logo"></use>
+      </svg>
     </a>
   </div>
 
@@ -20,7 +23,9 @@
   <div class="header__lang">
     <ul>
         <li class="drop">
-          <%= image_tag("language.svg") %>
+          <svg viewBox="0 0 35 35">
+            <use xlink:href="<%= image_path("language.svg") %>#language"></use>
+          </svg>
           <ul>
             <li><a href="/sv/">Svenska</a></li>
             <li><a href="/en/">English</a></li>

@@ -1,19 +1,19 @@
 #gridloader {
+	margin-top: 40px;
 	margin-bottom: 100px;
 
 	.blob {
 		width: 1rem;
     height: 1rem;
-    background: rgba(0,0,0,0.65);
-    border-radius: 50%;
+    background: rgba(255,255,255,0.65);
     position: absolute;
     left: calc(50% - 0.5rem);
 	}
 
-	.blob-2 { animation: animate-to-2 1.5s infinite; }
+	.blob-2 { animation: animate-to-2 1.5s infinite; border-radius: 50%; }
 	.blob-3 { animation: animate-to-3 1.5s infinite; }
 	.blob-1 { animation: animate-to-1 1.5s infinite; }
-	.blob-4 { animation: animate-to-4 1.5s infinite; }
+	.blob-4 { animation: animate-to-4 1.5s infinite; border-radius: 50%; }
 	.blob-0 { animation: animate-to-0 1.5s infinite; }
 	.blob-5 { animation: animate-to-5 1.5s infinite; }
 
