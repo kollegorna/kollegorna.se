@@ -8,7 +8,6 @@
         this.mobileNav();
         this.langNav();
         this.bindClicks();
-        this.setupAnimations();
         this.initComments();
         this.fitVids();
         this.setupMaps();
