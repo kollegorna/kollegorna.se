@@ -149,8 +149,8 @@
         transition: opacity .2s ease-in-out;
 
         a {
-          color: $ds-color-link;
-          display: block;
+          @extend %ds-underlined;
+          display: table;
           margin-bottom: 5px;
         }
 

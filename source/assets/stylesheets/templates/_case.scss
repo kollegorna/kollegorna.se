@@ -153,11 +153,12 @@
       font-weight: 300;
       cursor: pointer;
       font-size: ds-rem-calc(16);
-      color: $ds-color-link;
+      color: $ds-color-charcoal;
       overflow: hidden;
       white-space: nowrap;
       line-height: 26px;
       vertical-align: middle;
+      transition: all 0.1s ease-out;
 
       &:before {
         content: "+";
@@ -166,13 +167,23 @@
         width: 30px;
         font-family: $ds-font-family;
         border: 2px solid $ds-color-link;
+        color: $ds-color-link;
         border-radius: 50%;
         text-align: center;
         margin-right: 15px;
+        transition: all 0.1s ease-out;
       }
 
       &.less:before {
         content: "-";
+      }
+
+      &:hover {
+        color: $ds-color-link;
+        &:before {
+          color: $ds-color-light-gray;
+          background: $ds-color-link;
+        }
       }
     }
 
@@ -182,9 +193,10 @@
       font-weight: 300;
       cursor: pointer;
       font-size: ds-rem-calc(16);
-      color: $ds-color-link;
+      color: $ds-color-charcoal;
       line-height: 26px;
       vertical-align: middle;
+      transition: all 0.1s ease-out;
 
       &:before {
         content: "→";
@@ -193,10 +205,20 @@
         width: 30px;
         font-family: $ds-font-family;
         border: 2px solid $ds-color-link;
+        color: $ds-color-link;
         border-radius: 50%;
         text-align: center;
         margin-right: 15px;
         transform: rotate(-45deg);
+        transition: all 0.1s ease-out;
+      }
+
+      &:hover {
+        color: $ds-color-link;
+        &:before {
+          color: $ds-color-light-gray;
+          background: $ds-color-link;
+        }
       }
     }
   }
