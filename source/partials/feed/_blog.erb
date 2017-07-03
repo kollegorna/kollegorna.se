@@ -1,7 +1,7 @@
-<article class="block block--blog <%= defined?(full_width) ? "full" : "" %>">
+<article class="block block--blog <%= defined?(full_width) ? "full" : "" %>" style="background: <%= defined?(background_color) ? background_color : "" %>; color: <%= defined?(text_color) ? text_color : "" %>;">
   <a href="<%= defined?(link) ? link : "#" %>" target="_blank" rel="noopener">
     <div class="block__text">
-      <p class="category">
+      <p class="category" style="border-color: <%= defined?(text_color) ? text_color : "" %>;">
         <% if defined?(category) %>
           <%= category %>
         <% else %>
