@@ -1,6 +1,6 @@
 ---
 title: "Snackverkstan i Almedalen 2017: Du har en idé – vi utför den"
-date: 2017-07-03 13:37:00 UTC
+date: 2017-07-03 11:18:00 UTC
 author: per
 description: "Goda idéer är ingen bristvara i Almedalen, men en idé är värdelös utan utförande. Vi vill att fler idéer går från snack till verkstad."
 disable_comments: false
@@ -20,5 +20,4 @@ Idéer kan börja [skickas in](https://docs.google.com/a/kollegorna.se/forms/d/e
 Vår målsättning är att göra Snackverkstan till en återkommande händelse i Almedalen och till nästa års upplaga vill vi involvera fler branschkollegor som kan bidra till att fler idéer genomförs. Signa upp på nyhetsbrevet på [snackverkstan.se](https://snackverkstan.se) för mer information.
 
 På tisdag kl 16–18 kommer vi genomföra en kort presentation av formatet. Vi ser gärna att de som är intresserade av att få sin idé utförd dyker upp och säger hej.
-
 
