@@ -11,13 +11,19 @@
     }
   }
 
+  h1, p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   h1 {
     font-size: ds-rem-calc(42);
     font-weight: 600;
     letter-spacing: ds-rem-calc(-1);
     line-height: 1.2;
     margin-top: 0;
-    margin-bottom: ds-rem-calc(10);
+    margin-bottom: ds-rem-calc(20);
     @include media($mobile) {
       font-size: ds-rem-calc(30);
     }
