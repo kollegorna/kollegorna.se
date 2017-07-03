@@ -158,7 +158,15 @@
 
       initComments: function() {
 
-        $.disqusLoader('.disqus', { scriptUrl: '//kollegorna.disqus.com/embed.js' });
+        var url = window.location.origin + window.location.pathname;
+
+        $.disqusLoader( '.disqus', {
+          scriptUrl: '//kollegorna.disqus.com/embed.js',
+          disqusConfig: function() {
+            this.page.url         = url;
+            this.page.identifier  = url;
+          }
+        });
 
       },
 
