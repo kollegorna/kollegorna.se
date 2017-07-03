@@ -1,12 +1,22 @@
 .offline {
   text-align: center;
-  padding: 20vh ds-rem-calc(20);
+  padding: 0 ds-rem-calc(20) ds-rem-calc(80);
+
+  img {
+    max-width: 100%;
+    max-height: 350px;
+    margin-bottom: 40px;
+    @include media($mobile) {
+      margin-bottom: 20px;
+    }
+  }
 
   h1 {
     font-size: ds-rem-calc(42);
     font-weight: 600;
     letter-spacing: ds-rem-calc(-1);
     line-height: 1.2;
+    margin-top: 0;
     margin-bottom: ds-rem-calc(10);
     @include media($mobile) {
       font-size: ds-rem-calc(30);
