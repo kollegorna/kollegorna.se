@@ -21,6 +21,14 @@
     </div>
 
     <div class="index__feed__blocks feed grid">
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Snack ska bli verkstad!",
+        :text => "Bra idéer är ingen bristvara i Almedalen, men en idé är inte mycket värd utan utförande. Vi vill se till att fler idéer går från snack till verkstad.",
+        :category => "Almedalen 2017",
+        :link => "/sv/2017/07/snackverkstan-almedalen/",
+        :image => "feed/snackverkstan.png"
+      }) %>
+
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Edumedia Tunisie",
         :text => "Pedagogiska verktyg som lär elever mediekunnighet och kritiskt tänkande",
