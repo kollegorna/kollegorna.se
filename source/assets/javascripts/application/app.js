@@ -6,7 +6,6 @@
 
       init: function() {
         this.mobileNav();
-        this.langNav();
         this.bindClicks();
         this.initComments();
         this.fitVids();
@@ -27,6 +26,7 @@
         Kollegorna.setupAnimations();
       },
 
+
       mobileNav: function() {
 
         var $nav = $('.header__navigation'),
@@ -34,28 +34,10 @@
 
         $btn.on('click', function(e){
           e.preventDefault();
+          $nav.toggleClass('is-active');
           $btn.toggleClass('is-active');
-          if($btn.hasClass('is-active'))
-            $nav.slideDown();
-          else
-            $nav.slideUp();
         });
 
-      },
-
-      langNav: function() {
-        var $langSwitch = $('.header__lang');
-
-        $langSwitch.superfish({
-            delay: 400,
-            animation: {
-                height: "show"
-            },
-            animationOut: {
-                height: "hide"
-            },
-            autoArrows: false
-        });
       },
 
 
@@ -200,25 +182,24 @@
             return true;
 
         $maps.lazyLoadGoogleMaps({
-            key: 'AIzaSyD8Z3idP4mO8UBkWokGNLtf47NT522C6YQ',
-            callback: function(container, map)
-            {
-                var $container  = $(container),
-                    center      = new google.maps.LatLng($container.attr('data-lat'), $container.attr('data-lng'));
+          key: 'AIzaSyD8Z3idP4mO8UBkWokGNLtf47NT522C6YQ',
+          callback: function(container, map) {
+            var $container = $(container),
+                center     = new google.maps.LatLng($container.attr('data-lat'), $container.attr('data-lng'));
 
-                map.setOptions({
-                  center: center,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP,
-                  zoom: 14,
-                  scrollwheel: false,
-                  disableDefaultUI: true,
-                  navigationControl: false,
-                  mapTypeControl: false,
-                  scaleControl: false,
-                  draggable: false,
-                  styles: [{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#ff0000"},{"lightness":100},{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"saturation":-100},{"lightness":-100},{"visibility":"simplified"},{"color":"#00C66B"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"lightness":-100},{"visibility":"on"},{"color":"#00C66B"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#ffffff"},{"lightness":100},{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"},{"color":"#ffffff"}]}]
-                });
-            }
+            map.setOptions({
+              center: center,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              zoom: 14,
+              scrollwheel: false,
+              disableDefaultUI: true,
+              navigationControl: false,
+              mapTypeControl: false,
+              scaleControl: false,
+              draggable: false,
+              styles:[{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#ff0000"},{"lightness":100},{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"saturation":-100},{"lightness":-100},{"visibility":"simplified"},{"color":"#00C66B"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"lightness":-100},{"visibility":"on"},{"color":"#00C66B"}]},{"featureType":"transit","elementType":"labels","stylers":[{"hue":"#ffffff"},{"lightness":100},{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"},{"color":"#ffffff"}]}]
+            });
+          }
         });
 
         $('.profile__location').mouseenter(function() {

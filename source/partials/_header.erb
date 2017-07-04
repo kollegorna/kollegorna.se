@@ -2,16 +2,17 @@
 
   <div class="header__logo">
     <a href="/<%= I18n.locale %>/">
-
-      <svg viewBox="0 0 199.2 199.2">
-        <use xlink:href="<%= image_path("logo.svg") %>#logo"></use>
-      </svg>
+      <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-logo"></use></svg>
     </a>
   </div>
 
   <div class="header__button" id="nav-toggler">
-    <a href="#header" role="button" title="<%= t(:nav)[:nav_show] %>"><%= t(:nav)[:nav_show] %><span></span></a>
-    <a href="#nav-toggler" role="button" title="<%= t(:nav)[:nav_hide] %>"><%= t(:nav)[:nav_hide] %><span></span></a>
+    <a href="#header" role="button" title="<%= t(:nav)[:nav_show] %>">
+      <%= t(:nav)[:nav_show] %><span></span>
+    </a>
+    <a href="#nav-toggler" role="button" title="<%= t(:nav)[:nav_hide] %>">
+      <%= t(:nav)[:nav_hide] %><span></span>
+    </a>
   </div>
 
   <nav class="header__navigation">
@@ -20,18 +21,17 @@
     <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
   </nav>
 
-  <div class="header__lang">
+  <div class="header__lang" id="header-lang">
+    <a href="#header-lang" role="button" title="" aria-label="" id="header-lang-tgl">
+      <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
+    </a>
+    <a href="#header-lang-tgl" role="button" title="" aria-label="">
+      <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
+    </a>
     <ul>
-        <li class="drop">
-          <svg viewBox="0 0 35 35">
-            <use xlink:href="<%= image_path("sprite.svg") %>#language"></use>
-          </svg>
-          <ul>
-            <li><a href="/sv/">Svenska</a></li>
-            <li><a href="/en/">English</a></li>
-            <li><a class="ar" href="/ar/">العربية</a></li>
-          </ul>
-        </li>
+      <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/">Svenska</a></li>
+      <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/">English</a></li>
+      <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="ar" href="/ar/">العربية</a></li>
     </ul>
   </div>
 

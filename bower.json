@@ -13,7 +13,6 @@
     "lazyLoadGoogleMaps.js": "osvaldasvalutis/lazyLoadGoogleMaps.js",
     "fitvids": "^1.2.0",
     "mapbox.js": "https://github.com/mapbox/mapbox.js-bower.git#^2.4.0",
-    "superfish": "^1.7.9",
     "svg-injector": "~1.1.3"
   }
 }

@@ -13,14 +13,16 @@
 
   &__logo {
     width: 50px;
+    height: 50px;
     float: left;
     margin-right: 10px;
 
     svg {
       width: 100%;
+      height: 100%;
     }
 
-    &:hover {
+    a:hover {
       svg {
         fill: $ds-color-green;
       }
@@ -29,44 +31,45 @@
 
   &__navigation {
     display: none;
-    width: 90%;
     padding: 20px;
     line-height: 50px;
     background: $ds-color-charcoal;
     box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
     position: absolute;
     z-index: 9;
-    left: 5%;
     top: 100px;
+    right: 20px;
+    left: 20px;
+    animation: slide-in-down-bounce .4s $easing-default, fade-in .4s linear;
 
-    .header:target & {
+    .header:target &,
+    &.is-active {
       display: block;
     }
 
     &:after {
       bottom: 100%;
       border: solid transparent;
-      content: " ";
+      content: "";
       height: 0;
       width: 0;
       position: absolute;
       pointer-events: none;
-      right: 12px;
+      right: 20px;
       border-color: rgba(255, 255, 255, 0);
       border-bottom-color: $ds-color-charcoal;
       border-width: 6px;
       margin-right: 1px;
     }
-
     &:before {
       bottom: 100%;
       border: solid transparent;
-      content: " ";
+      content: "";
       height: 0;
       width: 0;
       position: absolute;
       pointer-events: none;
-      right: 12px;
+      right: 20px;
       border-color: rgba(230, 230, 230, 0);
       border-bottom-color: #E6E6E6;
       border-width: 7px;
@@ -79,7 +82,7 @@
       font-size: 13px;
     }
 
-    @include media($laptop) {
+    @include media($tablet) {
       float: left;
       display: block!important;
       width: auto;
@@ -87,6 +90,13 @@
       background: transparent;
       box-shadow: none;
       padding: 0;
+      animation: none;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
       a {
         color: $ds-color-charcoal;
         margin-left: 20px;
@@ -107,7 +117,7 @@
     float: right;
     margin: 0 0 0 5px;
 
-    @include media($laptop) {
+    @include media($tablet) {
       display: none;
     }
 
@@ -183,103 +193,202 @@
 
 
   &__lang {
+    position: relative;
     float: right;
+    padding-bottom: 10px;
     margin-top: 7px;
 
     svg {
       width: 35px;
       height: 35px;
+      display: block;
     }
 
-    &:hover {
-      svg {
-        fill: $ds-color-green;
+    a {
+      &:hover, &:focus {
+        color: $ds-color-green;
       }
     }
 
+    // toggler
+    > a {
+      display: block;
+
+      &:last-of-type { display: none; }
+    }
+    &:target > a {
+      &:first-of-type { display: none; }
+      &:last-of-type { display: block; }
+    }
+
+    // dropdown
     ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+      font-size: ds-rem-calc(12);
+      text-align: right;
+      background: $ds-color-charcoal;
+      display: none;
+      position: absolute;
+      right: -10px;
+      top: 100%;
+      animation: slide-in-down-bounce .4s $easing-default, fade-in .4s linear;
 
-      li {
-        display: inline-block;
+      &:after {
+        bottom: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        right: 20px;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: $ds-color-charcoal;
+        border-width: 6px;
+        margin-right: 1px;
+      }
 
-        a {
-          font-size: ds-rem-calc(12);
-        }
-
-        &.drop {
-          cursor: pointer;
-          position: relative;
-
-          ul {
-            display: none;
-            background: $ds-color-charcoal;
-            position: absolute;
-            text-align: right;
-            right: -10px;
-            top: 45px;
-
-            &:after {
-              bottom: 100%;
-              border: solid transparent;
-              content: " ";
-              height: 0;
-              width: 0;
-              position: absolute;
-              pointer-events: none;
-              right: 20px;
-              border-color: rgba(255, 255, 255, 0);
-              border-bottom-color: $ds-color-charcoal;
-              border-width: 6px;
-              margin-right: 1px;
-            }
-
-            &:before {
-              bottom: 100%;
-              border: solid transparent;
-              content: " ";
-              height: 0;
-              width: 0;
-              position: absolute;
-              pointer-events: none;
-              right: 20px;
-              border-color: rgba(230, 230, 230, 0);
-              border-bottom-color: #E6E6E6;
-              border-width: 7px;
-              margin-left: -7px;
-            }
-
-            li {
-              display: block;
-              margin: 8px 18px 8px 50px;
-              padding: 0px;
-
-              &:last-of-type {
-                margin-bottom: 18px;
-              }
-
-              a {
-                color: white;
-
-                &.ar {
-                  font-family: Courier, sans-serif;
-                  direction: rtl;
-                  unicode-bidi: embed;
-                }
-              }
-            }
-          }
-
-          &:hover {
-            ul {
-              display: block;
-            }
-          }
-        }
+      &:before {
+        bottom: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        right: 20px;
+        border-color: rgba(230, 230, 230, 0);
+        border-bottom-color: #E6E6E6;
+        border-width: 7px;
+        margin-left: -7px;
       }
     }
+    &:hover,
+    &:target {
+      ul {
+        display: block;
+      }
+    }
+
+    li {
+      display: block;
+      margin: 8px 18px 8px 50px;
+      padding: 0px;
+
+      &:last-child {
+        margin-bottom: 18px;
+      }
+
+      a {
+        color: #fff;
+
+        &.ar {
+          font-family: Courier, sans-serif;
+          direction: rtl;
+          unicode-bidi: embed;
+        }
+      }
+      &.is-selected a {
+        color: $ds-color-orange;
+      }
+    }
+
+    // float: right;
+    // margin-top: 7px;
+    //
+    // svg {
+    //   width: 35px;
+    //   height: 35px;
+    // }
+    //
+    // &:hover {
+    //   svg {
+    //     fill: $ds-color-green;
+    //   }
+    // }
+    //
+    // ul {
+    //   margin: 0;
+    //   padding: 0;
+    //   list-style: none;
+    //
+    //   li {
+    //     display: inline-block;
+    //
+    //     a {
+    //       font-size: ds-rem-calc(12);
+    //     }
+    //
+    //     &.drop {
+    //       cursor: pointer;
+    //       position: relative;
+    //
+    //       ul {
+    //         display: none;
+    //         background: $ds-color-charcoal;
+    //         position: absolute;
+    //         text-align: right;
+    //         right: -10px;
+    //         top: 45px;
+    //
+    //         &:after {
+    //           bottom: 100%;
+    //           border: solid transparent;
+    //           content: " ";
+    //           height: 0;
+    //           width: 0;
+    //           position: absolute;
+    //           pointer-events: none;
+    //           right: 20px;
+    //           border-color: rgba(255, 255, 255, 0);
+    //           border-bottom-color: $ds-color-charcoal;
+    //           border-width: 6px;
+    //           margin-right: 1px;
+    //         }
+    //
+    //         &:before {
+    //           bottom: 100%;
+    //           border: solid transparent;
+    //           content: " ";
+    //           height: 0;
+    //           width: 0;
+    //           position: absolute;
+    //           pointer-events: none;
+    //           right: 20px;
+    //           border-color: rgba(230, 230, 230, 0);
+    //           border-bottom-color: #E6E6E6;
+    //           border-width: 7px;
+    //           margin-left: -7px;
+    //         }
+    //
+    //         li {
+    //           display: block;
+    //           margin: 8px 18px 8px 50px;
+    //           padding: 0px;
+    //
+    //           &:last-of-type {
+    //             margin-bottom: 18px;
+    //           }
+    //
+    //           a {
+    //             color: white;
+    //
+    //             &.ar {
+    //               font-family: Courier, sans-serif;
+    //               direction: rtl;
+    //               unicode-bidi: embed;
+    //             }
+    //           }
+    //         }
+    //       }
+    //
+    //       &:hover {
+    //         ul {
+    //           display: block;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -297,32 +406,24 @@
       float: left;
 
       ul {
-        li {
-          &.drop {
-            ul {
-              right: auto;
-              left: -10px;
-              text-align: left;
+        right: auto;
+        left: -10px;
+        text-align: left;
 
-              &:after {
-                right: auto;
-                left: 20px;
-              }
+        &:after {
+          right: auto;
+          left: 20px;
+        }
+        &:before {
+          right: auto;
+          left: 20px;
+        }
+      }
+      li {
+        margin: 8px 50px 8px 18px;
 
-              &:before {
-                right: auto;
-                left: 20px;
-              }
-
-              li {
-                margin: 8px 50px 8px 18px;
-
-                &:last-of-type {
-                  margin-bottom: 18px;
-                }
-              }
-            }
-          }
+        &:last-of-type {
+          margin-bottom: 18px;
         }
       }
     }
