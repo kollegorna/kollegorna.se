@@ -55,15 +55,15 @@
   }
 
   &__list {
+    @include outer-container;
     max-width: 1400px;
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
 
-    &.grid .block {
-      width: 100%;
-      @include media($laptop) { width: calc(50% - 10px); }
-      @include media($desktop) { width: calc(33% - 10px); }
-      margin-left: 0;
-      overflow: hidden;
+    .block {
+      padding-top: 20px;
+
+      @include media($tablet)  { @include span-columns(6); padding-left: 10px; padding-right: 10px; }
+      @include media($desktop) { @include span-columns(4); }
     }
 
     .profile {
@@ -71,6 +71,7 @@
       border-radius: 4px;
       padding: 30px 40px 30px 30px;
       min-height: 450px;
+      overflow: hidden;
       position: relative;
 
       @include media($tablet) {

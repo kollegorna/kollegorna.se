@@ -229,83 +229,85 @@
     </div>
   </header>
 
-  <section class="colleagues__list grid">
+  <section class="colleagues__list">
 
     <% persons.each do |person| %>
 
-    <article class="profile block" id="<%= person[:id] %>">
-      <div class="profile__background colleague-map" data-lat="<%= person[:locLat] %>" data-lng="<%= person[:locLng] %>">
-      </div>
+      <article class="block">
+        <div class="profile" id="<%= person[:id] %>">
+          <div class="profile__background colleague-map" data-lat="<%= person[:locLat] %>" data-lng="<%= person[:locLng] %>">
+          </div>
 
-      <figure class="profile__image">
-        <img src="<%= image_path("avatars/#{person[:image]}") %>" alt="<%= person[:name] %>">
-      </figure>
+          <figure class="profile__image">
+            <img src="<%= image_path("avatars/#{person[:image]}") %>" alt="<%= person[:name] %>">
+          </figure>
 
-      <h1 class="profile__name"><%= person[:name] %></h1>
-      <h2 class="profile__title"><%= person[:role] %></h2>
+          <h1 class="profile__name"><%= person[:name] %></h1>
+          <h2 class="profile__title"><%= person[:role] %></h2>
 
-      <div class="profile__contact">
-        <a href="mailto:<%= person[:email] %>"><%= person[:email] %></a>
-        <a href="callto:<%= person[:phoneUri] %>"><%= person[:phone] %></a>
-      </div>
+          <div class="profile__contact">
+            <a href="mailto:<%= person[:email] %>"><%= person[:email] %></a>
+            <a href="callto:<%= person[:phoneUri] %>"><%= person[:phone] %></a>
+          </div>
 
-      <div class="profile__location">
-        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-pin"></use></svg>
-        <%= person[:location] %>
-      </div>
-
-      <% if person[:links].present? %>
-
-      <div class="profile__links">
-
-        <% person[:links].each do |linkKey, link| %>
-
-        <a href="<%= link[:link] %>">
-          <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-<%= linkKey %>"></use></svg>
-          <%= link[:name] %>
-        </a>
-
-        <% end %>
-
-      </div>
-
-      <% end %>
-
-      <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Person",
-          "name": "<%= person[:name] %>",
-          "jobTitle": "<%= person[:role] %>",
-          "image": "<%= image_path("avatars/#{person[:image]}") %>",
-          "email": "mailto:<%= person[:email] %>",
-          "address": "<%= person[:location] %>",
-          "telephone": "<%= person[:phone] %>",
-          "url": "<%= current_page.url + "#" + person[:id] %>",
+          <div class="profile__location">
+            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-pin"></use></svg>
+            <%= person[:location] %>
+          </div>
 
           <% if person[:links].present? %>
 
-          "sameAs": [
+          <div class="profile__links">
 
-            <%
-              i = 0
-              length = person[:links].size
-              person[:links].each do |linkKey, link|
-                i += 1
-            %>
+            <% person[:links].each do |linkKey, link| %>
 
-            "<%= link[:link] %>"<%= "," if i != length %>
+            <a href="<%= link[:link] %>">
+              <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-<%= linkKey %>"></use></svg>
+              <%= link[:name] %>
+            </a>
 
             <% end %>
 
-          ]
+          </div>
 
           <% end %>
 
-        }
-      </script>
+          <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Person",
+              "name": "<%= person[:name] %>",
+              "jobTitle": "<%= person[:role] %>",
+              "image": "<%= image_path("avatars/#{person[:image]}") %>",
+              "email": "mailto:<%= person[:email] %>",
+              "address": "<%= person[:location] %>",
+              "telephone": "<%= person[:phone] %>",
+              "url": "<%= current_page.url + "#" + person[:id] %>",
 
-    </article>
+              <% if person[:links].present? %>
+
+              "sameAs": [
+
+                <%
+                  i = 0
+                  length = person[:links].size
+                  person[:links].each do |linkKey, link|
+                    i += 1
+                %>
+
+                "<%= link[:link] %>"<%= "," if i != length %>
+
+                <% end %>
+
+              ]
+
+              <% end %>
+
+            }
+          </script>
+
+        </div>
+      </article>
 
     <% end %>
 
