@@ -22,10 +22,10 @@
   </nav>
 
   <div class="header__lang" id="header-lang">
-    <a href="#header-lang" role="button" title="" aria-label="" id="header-lang-tgl">
+    <a href="#header-lang" role="button" title="<%= t(:lang)[:show] %>" aria-label="<%= t(:lang)[:show] %>" id="header-lang-tgl">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
-    <a href="#header-lang-tgl" role="button" title="" aria-label="">
+    <a href="#header-lang-tgl" role="button" title="<%= t(:lang)[:hide] %>" aria-label="<%= t(:lang)[:hide] %>">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
     <ul>

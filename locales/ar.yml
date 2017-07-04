@@ -20,9 +20,12 @@ ar:
     techniques: "Techniques"
     platforms: "المنصات"
     title: "دراسة الحالة"
+  lang:
+    show: "عرض اللغات"
+    hide: "إخفاء اللغات"
   footer:
-      new_business: "اعمال جديدة"
-      address: "العنوان"
+    new_business: "اعمال جديدة"
+    address: "العنوان"
   nav:
     work: "العمل"
     colleagues: "زملاء العمل"

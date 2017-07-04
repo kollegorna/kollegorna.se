@@ -23,11 +23,14 @@ en:
     blog: "Blog"
     contacts: "Contacts"
     work_with: "Work with us"
-    nav_show: "Show navigation"
-    nav_hide: "Hide navigation"
     labs: "Labs"
     csr: "CSR"
     jobs: "Jobs"
+    nav_show: "Show navigation"
+    nav_hide: "Hide navigation"
+  lang:
+    show: "Show languages"
+    hide: "Hide languages"
   footer:
     new_business: "New business"
     address: "Address"
