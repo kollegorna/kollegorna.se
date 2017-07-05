@@ -2,6 +2,9 @@
   "name": "kollegorna-se-fw-16",
   "version": "0.0.1",
   "description": "Kollegorna's F/W 2016 website refresh",
+  "engines": {
+    "node": "4.8.3"
+  },
   "devDependencies": {
     "bower": "~1.7.2",
     "browser-sync": "~2.11.0",
