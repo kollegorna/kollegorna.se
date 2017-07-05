@@ -16,6 +16,20 @@
   <title><%= current_page.data.title ? "#{current_page.data.title} | #{meta_name}" : "#{meta_name} | #{meta_title}" %></title>
   <meta name="description" content="<%= meta_description %>">
 
+  <!-- preconnect, dns-prefetch -->
+  <link rel="preconnect" href="https://cloud.typography.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://csi.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://maps.gstatic.com">
+  <link rel="dns-prefetch" href="https://cloud.typography.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://csi.gstatic.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.gstatic.com">
+
   <!-- Icons -->
   <link rel="shortcut icon" href="<%= image_path "meta/favicon.ico" %>">
   <link rel="icon" href="<%= image_path "meta/icon-256.png" %>">
