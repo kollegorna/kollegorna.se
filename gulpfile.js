@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var browserSync = require('browser-sync');
 var cp = require('child_process');
 var fs = require('fs');
-var imagemin = require('gulp-imagemin');
+//var imagemin = require('gulp-imagemin');
 
 var messages = {
   reload: 'Reloading...',
@@ -18,25 +18,22 @@ gulp.task('middleman-build', function(done) {
   setBuildTime();
   browserSync.notify(messages.build);
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', function(){
-    var stream = gulp.src('./build/**/*.{jpg,jpeg,png,gif,svg}')
-    .pipe(imagemin([
-      // {
-      //   progressive: true,
-      //   svgoPlugins: [{ cleanupIDs: false }, { removeUselessDefs: false }]
-      // }
-    	imagemin.jpegtran({progressive: true}),
-    	imagemin.svgo({plugins: [
-        { cleanupIDs: false },
-        { removeUselessDefs: false }
-      ]})
-    ], {verbose: true}))
-    .pipe(gulp.dest('./build/'));
-    stream.on('end', function() {
-      done();
-    });
-    stream.on('error', function(err) {
-      done(err);
-    });
+    done();
+    // var stream = gulp.src('./build/**/*.{jpg,jpeg,png,gif,svg}')
+    // .pipe(imagemin([
+    // 	imagemin.jpegtran({progressive: true}),
+    // 	imagemin.svgo({plugins: [
+    //     { cleanupIDs: false },
+    //     { removeUselessDefs: false }
+    //   ]})
+    // ], {verbose: true}))
+    // .pipe(gulp.dest('./build/'));
+    // stream.on('end', function() {
+    //   done();
+    // });
+    // stream.on('error', function(err) {
+    //   done(err);
+    // });
   });
 });
 

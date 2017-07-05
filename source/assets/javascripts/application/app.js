@@ -10,6 +10,7 @@
         this.initComments();
         this.fitVids();
         this.setupMaps();
+        this.setupFeed();
         this.injectSVGs();
       },
 
@@ -130,10 +131,6 @@
         setTimeout(function() {
           $('.index__hero').addClass('loaded');
         }, 500);
-
-        setTimeout(function() {
-          Kollegorna.setupFeed();
-        }, 1500);
 
       },
 

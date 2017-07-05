@@ -8,6 +8,6 @@
     "fs": "0.0.2",
     "gulp": "~3.9.0",
     "gulp-util": "~3.0.5",
-    "gulp-imagemin": "3.0.0"
+    "gulp-imagemin": "3.3.0"
   }
 }
