@@ -20,6 +20,10 @@ gulp.task('middleman-build', function(done) {
   cp.spawn('bundle', ['exec', 'middleman', 'build'], { stdio: 'inherit' }).on('close', function(){
     var stream = gulp.src('./build/**/*.{jpg,jpeg,png,gif,svg}')
     .pipe(imagemin([
+      // {
+      //   progressive: true,
+      //   svgoPlugins: [{ cleanupIDs: false }, { removeUselessDefs: false }]
+      // }
     	imagemin.jpegtran({progressive: true}),
     	imagemin.svgo({plugins: [
         { cleanupIDs: false },
