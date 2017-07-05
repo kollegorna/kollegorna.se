@@ -26,13 +26,8 @@ gulp.task('middleman-build', function(done) {
         { removeUselessDefs: false }
       ]})
     ], {verbose: true}))
-    .pipe(gulp.dest('./build/'));
-    stream.on('end', function() {
-      done();
-    });
-    stream.on('error', function(err) {
-      done(err);
-    });
+    .pipe(gulp.dest('./build/'))
+    .on('finish', done);
   });
 });
 
