@@ -232,6 +232,7 @@
     }
 
     &.feed-ar {
+      min-height: 0;
       @include media($tablet) {
         height: auto;
         margin-bottom: 40px;
