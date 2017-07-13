@@ -35,7 +35,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
 
-      g {
+      .anim {
         opacity: 0;
         transform: scale(0.7);
         transform-origin: center center;
@@ -186,7 +186,7 @@
         opacity: 1;
       }
       svg {
-        g {
+        .anim {
           opacity: 1;
           transform: scale(1);
         }
