@@ -23,7 +23,8 @@ gulp.task('middleman-build', function(done) {
     	imagemin.jpegtran({progressive: true}),
     	imagemin.svgo({plugins: [
         { cleanupIDs: false },
-        { removeUselessDefs: false }
+        { removeUselessDefs: false },
+        { collapseGroups : false }
       ]})
     ], {verbose: true}))
     .pipe(gulp.dest('./build/'))
