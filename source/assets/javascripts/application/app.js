@@ -12,6 +12,7 @@
         this.setupMaps();
         this.setupFeed();
         this.injectSVGs();
+        this.echo1();
       },
 
 
@@ -208,8 +209,33 @@
 
       },
 
+      echo1: function() {
+        var windowHeight = $(window).height();
+        var laptopPos = $('.laptop__site').offset().top;
+        var difference = laptopPos - windowHeight;
+
+        var rtime;
+        var timeout = false;
+        var delta = 200;
+
+        $(window).resize(function() {
+          var scrollTop = $(window).scrollTop();
+          var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
+          $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
+        });
+
+        $(window).scroll(function() {
+          var scrollTop = $(window).scrollTop();
+          var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
+          $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
+        });
+      }
+
     };
 
+    Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+      return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
 
     document.addEventListener("DOMContentLoaded", function(event) {
       Kollegorna.init();
