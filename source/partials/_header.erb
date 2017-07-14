@@ -25,14 +25,16 @@
     <a href="#header-lang" role="button" title="<%= t(:lang)[:show] %>" aria-label="<%= t(:lang)[:show] %>" id="header-lang-tgl">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
-    <a href="#header-lang-tgl" role="button" title="<%= t(:lang)[:hide] %>" aria-label="<%= t(:lang)[:hide] %>">
+    <a id="#header-lang-tgl" role="button" title="<%= t(:lang)[:hide] %>" aria-label="<%= t(:lang)[:hide] %>">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
-    <ul>
-      <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/">Svenska</a></li>
-      <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/">English</a></li>
-      <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="ar" href="/ar/">العربية</a></li>
-    </ul>
+    <div class="header__lang__picker">
+      <ul>
+        <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/">Svenska</a></li>
+        <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/">English</a></li>
+        <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="ar" href="/ar/">العربية</a></li>
+      </ul>
+    </div>
   </div>
 
 </header>

@@ -31,13 +31,21 @@
 
       mobileNav: function() {
 
-        var $nav = $('.header__navigation'),
+        var $langBtn = $('#header-lang-tgl'),
             $btn = $('.header__button a');
 
         $btn.on('click', function(e){
           e.preventDefault();
-          $nav.toggleClass('is-active');
+          $('body').removeClass('open-lang');
+          $('body').toggleClass('open-nav');
           $btn.toggleClass('is-active');
+        });
+
+        $langBtn.on('click', function(e){
+          e.preventDefault();
+          $('body').removeClass('open-nav');
+          $btn.removeClass('is-active');
+          $('body').toggleClass('open-lang');
         });
 
       },

@@ -42,6 +42,12 @@ $easing-default:       $easing-out-cubic !default;
   to		{ transform: scaleY(1); }
 }
 
+@keyframes slide-in-left-bounce {
+  from	{ transform: translateX(0) scaleX(1); }
+  50%		{ transform: translateX(-250px) scaleX(1.1); }
+  to		{ transform: translateX(-250px) scaleX(1); }
+}
+
 
 
 @keyframes fade-in {

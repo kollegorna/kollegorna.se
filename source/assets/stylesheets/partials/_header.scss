@@ -30,22 +30,17 @@
   }
 
   &__navigation {
-    display: none;
-    padding: 20px;
-    line-height: 50px;
     background: $ds-color-charcoal;
     box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
-    position: absolute;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    padding-top: 10px;
     z-index: 9;
-    top: 100px;
-    right: 20px;
-    left: 20px;
-    animation: slide-in-down-bounce .4s $easing-default, fade-in .4s linear;
-
-    .header:target &,
-    &.is-active {
-      display: block;
-    }
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
     &:after {
       bottom: 100%;
@@ -79,17 +74,24 @@
     a {
       color: white;
       display: block;
-      font-size: 13px;
+      font-size: ds-rem-calc(14);
+      margin: 20px 30px;
+      padding: 0px;
+
+      @include media($desktop) {
+        margin: 0;
+      }
     }
 
-    @include media($tablet) {
+    @include media($desktop) {
       float: left;
-      display: block!important;
+      opacity: 1;
       width: auto;
       position: static;
       background: transparent;
       box-shadow: none;
       padding: 0;
+      line-height: 50px;
       animation: none;
 
       &:before,
@@ -137,7 +139,7 @@
         background-image: linear-gradient( to right, $ds-color-charcoal 0%, $ds-color-charcoal 100% );
         background-repeat: no-repeat;
       	background-position: 0 50%;
-      	background-size: 60% $header-btn-stick-height;
+      	background-size: 100% $header-btn-stick-height;
         position: absolute;
         top: 32%;
         bottom: 32%;
@@ -153,14 +155,15 @@
           will-change: width, transform, top, bottom, margin-top;
           content: '';
           position: absolute;
-          left: 0;
+          right: 10%;
+          width: 100%;
         }
         &:before {
           width: 80%;
           top: 0;
         }
         &:after {
-          width: 100%;
+          width: 80%;
           top: 100%;
           margin-top: -$header-btn-stick-height;
         }
@@ -169,11 +172,13 @@
         background-image: none;
 
         &:before {
+          background: $ds-color-green;
           width: 100%;
           transform: rotate(45deg);
           top: 50%;
         }
         &:after {
+          background: $ds-color-green;
           width: 100%;
           transform: rotate(-45deg);
           top: 50%;
@@ -221,61 +226,64 @@
       &:last-of-type { display: block; }
     }
 
-    // dropdown
-    ul {
-      font-size: ds-rem-calc(12);
-      text-align: right;
+    &__picker {
       background: $ds-color-charcoal;
-      display: none;
-      position: absolute;
-      right: -10px;
-      top: 100%;
-      animation: slide-in-down-bounce .4s $easing-default, fade-in .4s linear;
+      opacity: 0;
+      position: fixed;
+      left: 100%;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      padding-top: 10px;
+      transition: opacity 0.4s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
-      &:after {
-        bottom: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        right: 20px;
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: $ds-color-charcoal;
-        border-width: 6px;
-        margin-right: 1px;
-      }
-
-      &:before {
-        bottom: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        right: 20px;
-        border-color: rgba(230, 230, 230, 0);
-        border-bottom-color: #E6E6E6;
-        border-width: 7px;
-        margin-left: -7px;
+      @include media($desktop) {
+        left: 0;
+        top: -50px;
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding-top: 0;
       }
     }
-    &:hover,
-    &:target {
-      ul {
-        display: block;
+
+    // dropdown
+    ul {
+      font-size: ds-rem-calc(14);
+      width: 1200px;
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+
+      @include media($desktop) {
+        height: 50px;
+      }
+
+      &:after {
+        pointer-events: none;
+      	top: 100%;
+      	right: 6px;
+      	border: solid transparent;
+      	content: " ";
+      	height: 0;
+      	width: 0;
+      	position: absolute;
+      	pointer-events: none;
+      	border-color: rgba(34, 34, 34, 0);
+      	border-top-color: #222222;
+      	border-width: 10px;
+      	margin-left: -10px;
       }
     }
 
     li {
       display: block;
-      margin: 8px 18px 8px 50px;
+      margin: 20px 30px;
       padding: 0px;
 
-      &:last-child {
-        margin-bottom: 18px;
+      @include media($desktop) {
+        display: inline-block;
+        margin: 14px 10px 0 10px;
       }
 
       a {
@@ -389,6 +397,32 @@
     //     }
     //   }
     // }
+  }
+}
+
+body.open-nav {
+  transform: translateX(-250px) scaleX(1);
+
+  @include media($desktop) {
+    transform: translateX(0) scaleX(1);
+  }
+
+  .header__navigation {
+    opacity: 1;
+  }
+}
+
+body.open-lang {
+  transform: translateX(-250px) scaleX(1);
+
+  @include media($desktop) {
+    transform: translateY(50px) scaleX(1);
+  }
+
+  .header__lang {
+    &__picker {
+      opacity: 1;
+    }
   }
 }
 
