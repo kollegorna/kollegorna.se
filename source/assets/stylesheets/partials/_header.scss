@@ -40,6 +40,7 @@
     padding-top: 10px;
     z-index: 9;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.4s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
     &:after {
@@ -229,6 +230,7 @@
     &__picker {
       background: $ds-color-charcoal;
       opacity: 0;
+      pointer-events: none;
       position: fixed;
       left: 100%;
       top: 0;
@@ -278,16 +280,23 @@
 
     li {
       display: block;
-      margin: 20px 30px;
+      margin: 0;
       padding: 0px;
 
       @include media($desktop) {
         display: inline-block;
-        margin: 14px 10px 0 10px;
       }
 
       a {
         color: #fff;
+        display: block;
+        margin: 20px 30px;
+        padding: 0px;
+
+        @include media($desktop) {
+          display: inline-block;
+          margin: 14px 10px 0 10px;
+        }
 
         &.ar {
           font-family: Courier, sans-serif;
@@ -403,29 +412,41 @@
 body.open-nav {
   transform: translateX(-250px) scaleX(1);
 
+  @include media(new-breakpoint(max-width 350px)) {
+    transform: translateX(-200px) scaleX(1);
+  }
+
   @include media($desktop) {
     transform: translateX(0) scaleX(1);
   }
 
   .header__navigation {
     opacity: 1;
+    pointer-events: all;
+    z-index: 10;
   }
 }
 
 body.open-lang {
   transform: translateX(-250px) scaleX(1);
 
+  @include media(new-breakpoint(max-width 350px)) {
+    transform: translateX(-200px) scaleX(1);
+  }
+
   @include media($desktop) {
     transform: translateY(50px) scaleX(1);
   }
 
   .header__lang {
-    a {
+    svg {
       color: $ds-color-green;
     }
 
     &__picker {
       opacity: 1;
+      pointer-events: all;
+      z-index: 10;
     }
   }
 }
