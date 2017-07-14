@@ -468,27 +468,50 @@ body.open-lang {
     &__lang {
       float: left;
 
-      ul {
-        right: auto;
-        left: -10px;
-        text-align: left;
+      &__picker {
+        left: auto;
+        right: 100%;
 
-        &:after {
+        ul { text-align: right; }
+
+        @include media($desktop) {
+          left: 0;
           right: auto;
-          left: 20px;
-        }
-        &:before {
-          right: auto;
-          left: 20px;
+          top: -50px;
+          width: 100%;
+          height: 50px;
+          padding-top: 0;
+
+          ul {
+            text-align: left;
+
+            &:after {
+              right: auto;
+            	left: 18px;
+            }
+          }
         }
       }
-      li {
-        margin: 8px 50px 8px 18px;
+    }
+  }
 
-        &:last-of-type {
-          margin-bottom: 18px;
-        }
-      }
+  body.open-nav {
+    transform: translateX(250px) scaleX(1);
+
+    @include media(new-breakpoint(max-width 350px)) {
+      transform: translateX(200px) scaleX(1);
+    }
+  }
+
+  body.open-lang {
+    transform: translateX(250px) scaleX(1);
+
+    @include media(new-breakpoint(max-width 350px)) {
+      transform: translateX(200px) scaleX(1);
+    }
+
+    @include media($desktop) {
+      transform: translateY(50px) scaleX(1);
     }
   }
 }
