@@ -54,6 +54,9 @@
           $('.additional').slideDown(function() {
             $(this).addClass('visible');
 
+            // Reset positions on Echo1 case study
+            Kollegorna.echo1();
+
             $('.expand').animate({
               'opacity': 0
             }, function() {
@@ -210,24 +213,26 @@
       },
 
       echo1: function() {
-        var windowHeight = $(window).height();
-        var laptopPos = $('.laptop__site').offset().top;
-        var difference = laptopPos - windowHeight;
+        $('body').imagesLoaded(function() {
+          var windowHeight = $(window).height();
+          var laptopPos = $('.laptop__site').offset().top;
+          var difference = laptopPos - windowHeight;
 
-        var rtime;
-        var timeout = false;
-        var delta = 200;
+          var rtime;
+          var timeout = false;
+          var delta = 200;
 
-        $(window).resize(function() {
-          var scrollTop = $(window).scrollTop();
-          var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
-          $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
-        });
+          $(window).resize(function() {
+            var scrollTop = $(window).scrollTop();
+            var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
+            $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
+          });
 
-        $(window).scroll(function() {
-          var scrollTop = $(window).scrollTop();
-          var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
-          $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
+          $(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var translateX = scrollTop.map(difference, windowHeight + laptopPos, 0, 100)
+            $('.laptop__site').css('transform', 'translateY(-' + translateX  + '%)');
+          });
         });
       }
 
