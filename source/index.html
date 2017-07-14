@@ -1,1 +1,37 @@
-<meta http-equiv="refresh" content="0; url=/sv/">
+<style type="text/css">
+html {
+  background: #f5f5f5;
+}
+</style>
+<html>
+  <script type="text/javascript">
+    var language = window.navigator.userLanguage || window.navigator.language;
+
+    if(language === "sv" || language === "sv-fi") {
+      window.location.replace("/sv/");
+    } else if(
+      language === "ar-sa"
+      || language === "ar-iq"
+      || language === "ar-eg"
+      || language === "ar-ly"
+      || language === "ar-dz"
+      || language === "ar-ma"
+      || language === "ar-tn"
+      || language === "ar-om"
+      || language === "ar-ye"
+      || language === "ar-sy"
+      || language === "ar-jo"
+      || language === "ar-lb"
+      || language === "ar-kw"
+      || language === "ar-ae"
+      || language === "ar-bh"
+      || language === "ar-qa"
+    ) {
+      window.location.replace("/ar/");
+    } else {
+      window.location.replace("/en/");
+    }
+  </script>
+
+  <meta http-equiv="refresh" content="2; url=/sv/">
+</html>
