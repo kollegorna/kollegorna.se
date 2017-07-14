@@ -420,6 +420,10 @@ body.open-lang {
   }
 
   .header__lang {
+    a {
+      color: $ds-color-green;
+    }
+
     &__picker {
       opacity: 1;
     }
