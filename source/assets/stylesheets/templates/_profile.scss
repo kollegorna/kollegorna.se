@@ -1,0 +1,233 @@
+.person {
+  @include outer-container;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+
+  @include media($desktop) {
+    padding: 0;
+  }
+
+  &__hero {
+    margin-bottom: 20px;
+
+    img {
+      min-width: 1200px;
+      margin-left: -20px;
+
+      @include media($laptop) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__card {
+    @include span-columns(12);
+    background: white;
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+
+    @include media($laptop) {
+      @include span-columns(6);
+      padding: 40px 80px 40px 40px;
+    }
+
+    &__image {
+      display: block;
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      top: -65px;
+      left: 20px;
+
+      @include media($laptop) {
+        left: 40px;
+      }
+
+      img {
+        border-radius: 999em;
+      }
+    }
+
+    &__name {
+      font-size: ds-rem-calc(18);
+      font-weight: 600;
+      letter-spacing: ds-rem-calc(-0.5);
+      margin: ds-rem-calc(60) 0 0;
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(24);
+      }
+    }
+
+    &__title {
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      font-size: ds-rem-calc(14);
+      margin: 0;
+      color: darken($ds-color-white, 40);
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(16);
+      }
+    }
+
+    &__contact {
+      margin-top: 20px;
+      font-size: ds-rem-calc(14);
+      position: relative;
+      z-index: 1;
+
+      a {
+        @extend %ds-underlined;
+        display: table;
+        margin-bottom: 5px;
+      }
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(16);
+      }
+    }
+
+    &__description {
+      p {
+        font-size: ds-rem-calc(16);
+        margin-top: ds-rem-calc(30);
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(18);
+        }
+      }
+    }
+
+    &__links {
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      margin-top: ds-rem-calc(30);
+      position: relative;
+
+      a {
+        display: block;
+        font-size: ds-rem-calc(14);
+        color: $ds-color-charcoal;
+        margin-bottom: 10px;
+        line-height: 15px;
+
+        &:hover { color: $ds-color-link; }
+
+        @include media($tablet) {
+          font-size: ds-rem-calc(16);
+        }
+
+        &.web {
+          margin-top: ds-rem-calc(60);
+          span {
+            @extend %ds-underlined;
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      svg {
+        width: ds-rem-calc(16);
+        height: ds-rem-calc(16);
+        vertical-align: middle;
+        margin-top: ds-rem-calc(-2);
+        margin-right: ds-rem-calc(10);
+      }
+    }
+  }
+
+  &__skills {
+    @include span-columns(12);
+    padding: 0 20px 20px;
+
+    @include media($laptop) {
+      @include span-columns(6);
+      padding: 0 0 40px 40px;
+    }
+
+    .row {
+      float: left;
+      width: 100%;
+    }
+
+    &__list {
+      width: 100%;
+      float: left;
+
+      @include media($tablet) {
+        width: 50%;
+      }
+
+      .title {
+        font-size: ds-rem-calc(12);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: ds-rem-calc(1);
+        margin-bottom: ds-rem-calc(10);
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 16px;
+          height: 6px;
+          margin-right: ds-rem-calc(10);
+          border-radius: 4px;
+          background: $ds-color-kollegorna;
+        }
+
+        &--yellow {
+          &:before {
+            background: $ds-color-yellow;
+          }
+        }
+
+        &--orange {
+          &:before {
+            background: $ds-color-orange;
+          }
+        }
+
+        &--red {
+          &:before {
+            background: $ds-color-red;
+          }
+        }
+
+        &--blue {
+          &:before {
+            background: $ds-color-blue;
+          }
+        }
+
+        &--green {
+          &:before {
+            background: $ds-color-green;
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: block;
+          margin: 0;
+          margin-left: ds-rem-calc(26);
+          margin-bottom: ds-rem-calc(10);
+          padding: 0;
+          font-family: $ds-font-family-complementary;
+          font-weight: 300;
+          font-size: ds-rem-calc(14);
+          color: $ds-color-charcoal;
+        }
+      }
+    }
+  }
+}

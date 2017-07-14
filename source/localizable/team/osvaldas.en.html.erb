@@ -1,0 +1,108 @@
+---
+title: Profile Page
+---
+<main role="main" class="person">
+  <header class="person__hero">
+    <img src="<%= image_path 'profile/profile-hero.svg' %>">
+  </header>
+
+  <section class="person__card">
+    <figure class="person__card__image">
+      <img src="<%= image_path("avatars/osvaldas.jpg") %>" alt="Person">
+    </figure>
+    <h1 class="person__card__name">Osvaldas Valutis</h1>
+    <h2 class="person__card__title">Front-end Developer, Designer</h2>
+
+    <div class="person__card__contact">
+      <a href="mailto:osvaldas@kollegorna.se">osvaldas@kollegorna.se</a>
+    </div>
+
+    <div class="person__card__description">
+      <p>“Web designer who thinks in code” perfectly describes what I do: I solve design problems and implement their technical solutions. My specialisation covers front-end development (HTML, CSS, JavaScript), front-end performance, accessibility and usability. I also do UI/UX design occasionally.</p>
+    </div>
+
+    <div class="person__card__links">
+      <a href="#">
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-twitter"></use></svg>
+        @osvaldas
+      </a>
+      <a href="#">
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-dribbble"></use></svg>
+        osvaldas
+      </a>
+      <a href="#">
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-github"></use></svg>
+        osvaldasvalutis
+      </a>
+      <a href="#">
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-instagram"></use></svg>
+        osvaldas
+      </a>
+      <a class="web" href="#">
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-web"></use></svg>
+        <span>osvaldas.info</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="person__skills">
+    <div class="row">
+    <div class="person__skills__list">
+      <h3 class="title title--yellow">Main expertise</h3>
+      <ul>
+        <li>Front-end development</li>
+        <li>UI/UX design</li>
+      </ul>
+    </div>
+
+    <div class="person__skills__list">
+      <h3 class="title title--orange">Platforms</h3>
+      <ul>
+        <li>LAMP</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="person__skills__list">
+      <h3 class="title title--red">Languages &amp; Frameworks</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>PHP</li>
+        <li>CodeIgniter</li>
+        <li>WordPress</li>
+        <li>Ruby</li>
+        <li>Middleman</li>
+      </ul>
+    </div>
+
+    <div class="person__skills__list">
+      <h3 class="title title--blue">Techniques</h3>
+      <ul>
+        <li>Front-end performance</li>
+        <li>Lazy-loading</li>
+        <li>Responsive design</li>
+        <li>Progressive enhancement</li>
+        <li>Accessibility</li>
+        <li>Usability</li>
+        <li>Touch</li>
+        <li>Progressive Web Apps</li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="person__skills__list">
+      <h3 class="title title--green">Tools</h3>
+      <ul>
+        <li>Sketch</li>
+        <li>Atom</li>
+        <li>Gulp</li>
+        <li>Bower</li>
+      </ul>
+    </div>
+  </section>
+</main>
