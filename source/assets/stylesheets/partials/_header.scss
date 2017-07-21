@@ -72,9 +72,9 @@
         display: none !important;
       }
 
-      $this-stick-height: 2px;
-
       span {
+        $this-stick-height: 2px;
+
         background-image: linear-gradient( to right, $ds-color-charcoal 0%, $ds-color-charcoal 100% );
         background-repeat: no-repeat;
         background-position: 0 50%;
@@ -366,6 +366,7 @@
 
 body {
   transition: transform 0.4s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  will-change: transform;
 }
 
 body.open-nav {
