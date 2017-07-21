@@ -31,23 +31,30 @@
 
       mobileNav: function() {
 
-        var $langBtn = $('#header-lang-tgl'),
-            $btn = $('.header__button a');
+        var $body = $('body'),
+            $langAnchors = $('.header__lang__list a'),
 
-        $btn.on('click', function(e){
+            // excludes lang nav anchors from tab order when the nav is visually hidden
+            toggleLangAnchorsTabIndex = function() {
+              if($body.hasClass('open-lang'))
+                $langAnchors.removeAttr('tabindex');
+              else
+                $langAnchors.attr('tabindex', '-1');
+            };
+
+        $('.header__nav__tgl').on('click', function(e){
           e.preventDefault();
-          $('body').removeClass('open-lang');
-          $('body').toggleClass('open-nav');
-          $btn.toggleClass('is-active');
+          $body.removeClass('open-lang').toggleClass('open-nav');
+          toggleLangAnchorsTabIndex()
         });
 
-        $langBtn.on('click', function(e){
+        $('.header__lang__tgl').on('click', function(e){
           e.preventDefault();
-          $('body').removeClass('open-nav');
-          $btn.removeClass('is-active');
-          $('body').toggleClass('open-lang');
+          $body.removeClass('open-nav').toggleClass('open-lang');
+          toggleLangAnchorsTabIndex()
         });
 
+        toggleLangAnchorsTabIndex();
       },
 
 

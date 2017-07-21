@@ -19,6 +19,11 @@
       margin-left: 0;
     }
 
+    a {
+      display: block;
+      outline-offset: -10px;
+    }
+
     h3 {
       color: inherit;
       max-width: 350px;
