@@ -1,3 +1,5 @@
+<% page_type = current_page.data.page_type || '' %>
+
 <header class="header" role="banner">
 
   <div class="header__logo">
@@ -14,13 +16,13 @@
       <span></span>
     </a>
     <ul class="header__nav__list">
-      <li class="<%= 'is-selected' if current_page.data.page_type.start_with?('work') %>">
+      <li class="<%= 'is-selected' if page_type.start_with?('work') %>">
         <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
       </li>
-      <li class="<%= 'is-selected' if current_page.data.page_type == 'about' %>">
+      <li class="<%= 'is-selected' if page_type == 'about' %>">
         <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
       </li>
-      <li class="<%= 'is-selected' if current_page.data.page_type == 'colleagues' %>">
+      <li class="<%= 'is-selected' if page_type == 'colleagues' %>">
         <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
       </li>
     </ul>
