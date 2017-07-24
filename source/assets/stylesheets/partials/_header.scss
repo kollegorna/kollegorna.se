@@ -151,7 +151,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
         box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
         opacity: 0;
         position: fixed;
-        z-index: 5000;
         top: 0;
         left: 100%;
         padding-top: 10px;
@@ -159,6 +158,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
         #{$this-active-target} &,
         #{$this-active-class}  & {
+          z-index: 5000;
           opacity: 1;
         }
         #{$this-active-target} & {
@@ -264,7 +264,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       background: $ds-color-charcoal;
       opacity: 0;
       position: fixed;
-      z-index: 5000;
       left: 100%;
       top: 0;
       padding-top: 10px;
@@ -300,6 +299,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       #{$this-active-target} &,
       #{$this-active-class}  & {
         opacity: 1;
+        z-index: 5000;
       }
 
       #{$this-active-target} & {
