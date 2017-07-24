@@ -1,0 +1,22 @@
+$iis-gray: #E8E8E8 !default;
+$iis-gray--darker: #DCDCDC !default;
+$iis-gray--darkest: #191919 !default;
+
+.case--iis {
+  .intro {
+    background: $iis-gray--darker;
+    img { width: 100%; }
+  }
+
+  .devices {
+    background: $iis-gray;
+  }
+
+  .screenshots {
+    background: $iis-gray--darkest;
+
+    img {
+      width: 100%;
+    }
+  }
+}
