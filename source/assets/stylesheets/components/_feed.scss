@@ -1,22 +1,32 @@
 .feed {
+  @include clearfix;
+  border: solid transparent; // because packery.js doesn't work with paddings
+  border-width: 0 10px;
+
   .block {
+    width: calc(100% - 20px);
+    float: left;
     overflow: hidden;
-    width: 100%;
     background: $ds-color-white;
     color: $ds-color-charcoal;
     text-align: center;
+    margin: 10px;
 
     @include media($tablet) {
-      width: 80%;
-      margin-left: 10%;
+      width: calc(50% - 20px);
     }
-    @include media($laptop) {
-      width: calc(50% - 10px);
-      margin-left: 0;
+    @include media($tablet-only) {
+      &:nth-child(2n+3) {
+        clear: left;
+      }
     }
+
     @include media($desktop) {
-      width: calc(33% - 10px);
-      margin-left: 0;
+      width: calc(33.333% - 20px);
+
+      &:nth-child(3n+4) {
+        clear: left;
+      }
     }
 
     a {
@@ -238,5 +248,4 @@
   .decoration {
     background: transparent;
   }
-
 }

@@ -7,7 +7,7 @@
   meta_og_title    = current_page.data.title || meta_title
 
 %><!DOCTYPE html>
-<html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>">
+<html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>" data-page-type="<%= current_page.data.page_type %>">
 <head>
 
   <meta charset="utf-8">

@@ -74,6 +74,14 @@ helpers do
     end
   end
 
+  # Renders a SVG asset inline
+  def inline_svg(name)
+    file_path = "./source/assets/images/#{name}.svg"
+    if File.exists?(file_path)
+      File.read(file_path)
+    end
+  end
+
   # Reads current build timestamp from a file
   def get_build_time()
     File.read("./.build-time").to_s

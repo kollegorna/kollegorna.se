@@ -2,8 +2,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
 .header {
   @include outer-container;
-  position: relative;
-  z-index: 9;
   font-family: $ds-font-family-complementary;
   font-size: ds-rem-calc(18);
   font-weight: 300;
@@ -11,6 +9,12 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
   @include media($laptop)  { padding: 30px 20px; }
   @include media($desktop) { padding: 30px 0; }
+
+  html[data-page-type=index] & {
+    opacity: 0;
+    animation: header 1s 0.2s linear forwards;
+    will-change: opacity;
+  }
 
 
   // logo
@@ -420,4 +424,8 @@ body.open-lang {
       transform: translateY(50px) scaleX(1);
     }
   }
+}
+
+@keyframes header {
+  100% { opacity: 1; }
 }

@@ -1,9 +1,10 @@
 ---
+page_type: index
 ---
 
 <main role="main" class="index">
   <section class="index__hero">
-    <%= image_tag "index/hero.svg", :class => "inject-svg" %>
+    <%= inline_svg "index/hero" %>
     <div class="index__hero__headline">
       <p><%= t(:index)[:hello] %></p>
       <h1><%= t(:index)[:short_bio] %></h1>
@@ -11,16 +12,16 @@
   </section>
 
   <section class="index__feed">
-    <div id="gridloader">
+    <!-- <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
+    </div> -->
 
-    <div class="index__feed__blocks feed grid">
+    <div class="index__feed__blocks feed">
       <%= partial("partials/feed/blog", :locals => {
         :title => "Snack ska bli verkstad!",
         :text => "Bra idéer är ingen bristvara i Almedalen, men en idé är inte mycket värd utan utförande. Vi vill se till att fler idéer går från snack till verkstad.",

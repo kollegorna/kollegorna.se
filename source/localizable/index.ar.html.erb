@@ -1,9 +1,10 @@
 ---
+page_type: index
 ---
 
 <main role="main" class="index">
   <section class="index__hero">
-    <%= image_tag "index/hero.svg", :class => "inject-svg", :data => { fallback: image_path("index/hero.png")} %>
+    <%= inline_svg "index/hero" %>
     <div class="index__hero__headline">
       <p><%= t(:index)[:hello] %></p>
       <h1><%= t(:index)[:short_bio] %></h1>
@@ -15,16 +16,16 @@
       <h2><%= t(:index)[:from_feed] %></h2>
     </header>
 
-    <div id="gridloader">
+    <!-- <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
+    </div> -->
 
-    <div class="index__feed__blocks feed grid single-ar">
+    <div class="index__feed__blocks feed single-ar">
       <%= partial("partials/feed/case_study", :locals => {
         :title => "التربية الاعلامية في تونس",
         :text => "نشر الوعي الاعلامي ومهارات التفكير الناقد",
