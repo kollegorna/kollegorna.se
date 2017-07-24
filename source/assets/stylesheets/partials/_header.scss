@@ -6,6 +6,8 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
   font-size: ds-rem-calc(18);
   font-weight: 300;
   padding: 30px 20px;
+  position: relative;
+  z-index: 1000;
 
   @include media($laptop)  { padding: 30px 20px; }
   @include media($desktop) { padding: 30px 0; }
@@ -149,16 +151,15 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
         box-shadow: rgba(96, 95, 94, 0.1) 0 0 4px;
         opacity: 0;
         position: fixed;
+        z-index: 5000;
         top: 0;
         left: 100%;
-        z-index: 9;
         padding-top: 10px;
         transition: opacity 0.4s $easing-out-cubic;
 
         #{$this-active-target} &,
         #{$this-active-class}  & {
           opacity: 1;
-          z-index: 10;
         }
         #{$this-active-target} & {
           right: 0;
@@ -223,7 +224,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
     $this-active-target: "#{&}:target";
     $this-active-class:  "body.open-lang";
 
-    position: relative;
     float: right;
     padding-bottom: 10px;
     margin-top: 7px;
@@ -264,6 +264,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       background: $ds-color-charcoal;
       opacity: 0;
       position: fixed;
+      z-index: 5000;
       left: 100%;
       top: 0;
       padding-top: 10px;
@@ -299,7 +300,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       #{$this-active-target} &,
       #{$this-active-class}  & {
         opacity: 1;
-        z-index: 10;
       }
 
       #{$this-active-target} & {
@@ -316,11 +316,11 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       }
 
       ul {
-        font-size: ds-rem-calc(14);
         width: 1200px;
-        margin: 0 auto;
         max-width: 100%;
+        font-size: ds-rem-calc(14);
         position: relative;
+        margin: 0 auto;
 
         @include media($desktop) {
           height: 50px;
@@ -383,7 +383,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
 body {
   transition: transform 0.4s $easing-out-cubic;
-  will-change: transform;
 }
 
 body.open-nav {

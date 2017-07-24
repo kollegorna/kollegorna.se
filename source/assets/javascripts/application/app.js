@@ -11,22 +11,22 @@
       this.fitVids();
       this.setupMaps();
       this.setupFeed();
-      this.injectSVGs();
+      // this.injectSVGs();
       this.echo1();
     },
 
 
-    injectSVGs: function() {
-      // Elements to inject
-      var mySVGsToInject = document.querySelectorAll('img.inject-svg');
-
-      // Do the injection
-      SVGInjector(mySVGsToInject, '', function() {
-        Kollegorna.setupAnimations();
-      });
-
-      Kollegorna.setupAnimations();
-    },
+    // injectSVGs: function() {
+    //   // Elements to inject
+    //   var mySVGsToInject = document.querySelectorAll('img.inject-svg');
+    //
+    //   // Do the injection
+    //   SVGInjector(mySVGsToInject, '', function() {
+    //     Kollegorna.setupAnimations();
+    //   });
+    //
+    //   Kollegorna.setupAnimations();
+    // },
 
 
     mobileNav: function() {
@@ -36,10 +36,10 @@
 
           // excludes lang nav anchors from tab order when the nav is visually hidden
           toggleLangAnchorsTabIndex = function() {
-            if($body.hasClass('open-lang'))
-              $langAnchors.removeAttr('tabindex');
-            else
-              $langAnchors.attr('tabindex', '-1');
+            // if($body.hasClass('open-lang'))
+            //   $langAnchors.removeAttr('tabindex');
+            // else
+            //   $langAnchors.attr('tabindex', '-1');
           };
 
       $('.header__nav__tgl').on('click', function(e){
