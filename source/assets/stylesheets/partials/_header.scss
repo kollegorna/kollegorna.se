@@ -32,9 +32,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       display: block;
 
       &:hover {
-        svg {
-          fill: $ds-color-green;
-        }
+        color: $ds-color-green;
       }
     }
 
@@ -211,6 +209,9 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
         &:focus {
           color: $ds-color-link;
         }
+      }
+      .is-selected a {
+        color: $ds-color-orange;
       }
     }
   }

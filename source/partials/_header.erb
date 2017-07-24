@@ -14,9 +14,15 @@
       <span></span>
     </a>
     <ul class="header__nav__list">
-      <li><a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a></li>
-      <li><a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a></li>
-      <li><a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a></li>
+      <li class="<%= 'is-selected' if current_page.data.page_type.start_with?('work') %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+      </li>
+      <li class="<%= 'is-selected' if current_page.data.page_type == 'about' %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
+      </li>
+      <li class="<%= 'is-selected' if current_page.data.page_type == 'colleagues' %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
+      </li>
     </ul>
   </nav>
 
