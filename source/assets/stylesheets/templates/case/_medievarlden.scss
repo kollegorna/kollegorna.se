@@ -1,0 +1,36 @@
+$mv-gray: #f0f0f0 !default;
+
+.case--medievarlden {
+  .intro {
+    background: $mv-gray image-url('case/medievarlden/01.jpg') no-repeat 10% top;
+    background-size: 698px 330px;
+    width: 100%;
+    height: 330px;
+
+    @include media($tablet) {
+      background-size: 2095px 990px;
+      background-position: 20% top;
+      height: 990px;
+    }
+    @include media($desktop) {
+      background-size: 2794px 1320px;
+      background-position: 20% top;
+      height: 1320px;
+    }
+    @include media($huge) {
+      background-position: left top;
+    }
+  }
+
+  .ipad {
+    margin-top: -40px;
+
+    @include media($tablet) {
+      margin-top: -200px;
+    }
+  }
+
+  .photos {
+    font-size: 0;
+  }
+}
