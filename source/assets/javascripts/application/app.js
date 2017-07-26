@@ -31,7 +31,8 @@
 
     mobileNav: function() {
 
-      var $body = $('body'),
+      var $doc  = $(document),
+          $body = $('body'),
           $langAnchors = $('.header__lang__list a'),
 
           // excludes lang nav anchors from tab order when the nav is visually hidden
@@ -42,19 +43,33 @@
               $langAnchors.attr('tabindex', '-1');
           };
 
+      toggleLangAnchorsTabIndex();
+
+      // toggle nav
       $('.header__nav__tgl').on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-lang').toggleClass('open-nav');
         toggleLangAnchorsTabIndex();
       });
 
+      // toggle lang nav
       $('.header__lang__tgl').on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-nav').toggleClass('open-lang');
         toggleLangAnchorsTabIndex();
       });
 
-      toggleLangAnchorsTabIndex();
+      // hide navs on outside click
+      $doc.on('ontouchstart' in window ? 'touchend' : 'click', function(e) {
+        if($body.hasClass('open-nav') && !$(e.target).closest('.header__nav').length) {
+          e.preventDefault();
+          $body.removeClass('open-nav');
+        }
+        if($body.hasClass('open-lang') && !$(e.target).closest('.header__lang').length) {
+          e.preventDefault();
+          $body.removeClass('open-lang');
+        }
+      });
     },
 
 
