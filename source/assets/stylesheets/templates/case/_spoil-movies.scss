@@ -1,0 +1,19 @@
+$sm-gray: #202020 !default;
+
+.case--spoilmovies {
+	.intro {
+		width: 100%;
+    padding: ds-rem-calc(100) 0;
+    background: $sm-gray;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(220) 0;
+    }
+    @include media($laptop) {
+      padding: ds-rem-calc(400) 0;
+    }
+	}
+}

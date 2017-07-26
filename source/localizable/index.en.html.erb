@@ -79,12 +79,13 @@ page_type: index
         :link => "/en/2017/02/rails-developer/"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Spoil movies instead of lives",
-        :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
-        :category => "Campaign",
-        :link => "https://www.spoilmoviessavelives.com/en",
-        :image => "feed/spoil-movies-save-lives.jpg"
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Spoil Movies, Save Lives",
+        :text => "Getting people to talk about the importance of organ donation.",
+        :image => "feed/case-study-sm.jpg",
+        :background_color => "#202020",
+        :text_color => "white",
+        :link => "/en/work/spoil-movies-save-lives"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
