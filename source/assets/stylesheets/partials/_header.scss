@@ -62,6 +62,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       white-space: nowrap;
       overflow: hidden;
       float: right;
+      display: none;
       position: relative;
       -webkit-tap-highlight-color: transparent;
 
@@ -78,8 +79,8 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
         &:last-of-type  { display: block; }
       }
 
-      @include media($tablet) {
-        display: none !important;
+      @include media($mobile) {
+        display: block;
       }
 
       span {
