@@ -76,6 +76,33 @@
   <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
 
+  <% if I18n.locale == :ar %>
+    <style>
+      @font-face {
+          font-family: "Noto Kufi Arabic";
+          src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot');
+          src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.woff2') format('woff2'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.woff') format('woff'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.ttf') format('truetype'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.svg#svgFontName') format('svg');
+          font-weight: 400;
+          font-style: normal;
+      }
+      @font-face {
+        font-family: "Noto Kufi Arabic";
+        src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot');
+        src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.woff2') format('woff2'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.woff') format('woff'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.ttf') format('truetype'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.svg#svgFontName') format('svg');
+        font-weight: 700;
+        font-style: normal;
+      }
+    </style>
+  <% end %>
+
   <script>
     var APP_BUILD        = '<%= get_build_time %>',
         APP_ENV          = '<%= environment %>',

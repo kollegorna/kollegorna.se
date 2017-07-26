@@ -1,36 +1,12 @@
-@font-face {
-    font-family: "Noto Kufi Arabic";
-    src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot');
-    src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('notokufiarabic/notokufiarabic-regular-webfont.woff2') format('woff2'),
-         font-url('notokufiarabic/notokufiarabic-regular-webfont.woff') format('woff'),
-         font-url('notokufiarabic/notokufiarabic-regular-webfont.ttf') format('truetype'),
-         font-url('notokufiarabic/notokufiarabic-regular-webfont.svg#svgFontName') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
 
-
-@font-face {
-    font-family: "Noto Kufi Arabic";
-    src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot');
-    src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('notokufiarabic/notokufiarabic-bold-webfont.woff2') format('woff2'),
-         font-url('notokufiarabic/notokufiarabic-bold-webfont.woff') format('woff'),
-         font-url('notokufiarabic/notokufiarabic-bold-webfont.ttf') format('truetype'),
-         font-url('notokufiarabic/notokufiarabic-bold-webfont.svg#svgFontName') format('svg');
-    font-weight: 700;
-    font-style: normal;
-}
 
 .ar {
 	body {
-    	direction: rtl;
-        unicode-bidi: embed;
-        font-family: Noto Kufi Arabic,Helvetica Neue,Helvetica,sans-serif;
-
-        h1, h2, h3, h4, h5, h6 {
-        	font-family: Noto Kufi Arabic,Helvetica Neue,Helvetica,sans-serif;
-        }
+  	direction: rtl;
+    unicode-bidi: embed;
+    font-family: Noto Kufi Arabic, Helvetica Neue, Helvetica, sans-serif;
 	}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Noto Kufi Arabic, Helvetica Neue, Helvetica, sans-serif;
+  }
 }
