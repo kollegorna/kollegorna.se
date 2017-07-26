@@ -33,6 +33,8 @@
 
       var $doc  = $(document),
           $body = $('body'),
+          $tglNav = $('.header__nav__tgl'),
+          $tglLang = $('.header__lang__tgl'),
           $langAnchors = $('.header__lang__list a'),
 
           // excludes lang nav anchors from tab order when the nav is visually hidden
@@ -46,14 +48,14 @@
       toggleLangAnchorsTabIndex();
 
       // toggle nav
-      $('.header__nav__tgl').on('click', function(e){
+      $tglNav.on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-lang').toggleClass('open-nav');
         toggleLangAnchorsTabIndex();
       });
 
       // toggle lang nav
-      $('.header__lang__tgl').on('click', function(e){
+      $tglLang.on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-nav').toggleClass('open-lang');
         toggleLangAnchorsTabIndex();
@@ -61,13 +63,19 @@
 
       // hide navs on outside click
       $doc.on('ontouchstart' in window ? 'touchend' : 'click', function(e) {
-        if($body.hasClass('open-nav') && !$(e.target).closest('.header__nav').length) {
-          e.preventDefault();
-          $body.removeClass('open-nav');
+        if($body.hasClass('open-nav')) {
+          var $target = $(e.target);
+          if(!$target.closest('.header__nav').length && !$target.closest($tglLang).length) {
+            e.preventDefault();
+            $body.removeClass('open-nav');
+          }
         }
-        if($body.hasClass('open-lang') && !$(e.target).closest('.header__lang').length) {
-          e.preventDefault();
-          $body.removeClass('open-lang');
+        if($body.hasClass('open-lang')) {
+          var $target = $(e.target);
+          if(!$target.closest('.header__lang').length && !$target.closest($tglNav).length) {
+            e.preventDefault();
+            $body.removeClass('open-lang');
+          }
         }
       });
     },
