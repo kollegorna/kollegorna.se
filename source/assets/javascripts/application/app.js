@@ -36,22 +36,22 @@
 
           // excludes lang nav anchors from tab order when the nav is visually hidden
           toggleLangAnchorsTabIndex = function() {
-            // if($body.hasClass('open-lang'))
-            //   $langAnchors.removeAttr('tabindex');
-            // else
-            //   $langAnchors.attr('tabindex', '-1');
+            if($body.hasClass('open-lang'))
+              $langAnchors.removeAttr('tabindex');
+            else
+              $langAnchors.attr('tabindex', '-1');
           };
 
       $('.header__nav__tgl').on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-lang').toggleClass('open-nav');
-        toggleLangAnchorsTabIndex()
+        toggleLangAnchorsTabIndex();
       });
 
       $('.header__lang__tgl').on('click', function(e){
         e.preventDefault();
         $body.removeClass('open-nav').toggleClass('open-lang');
-        toggleLangAnchorsTabIndex()
+        toggleLangAnchorsTabIndex();
       });
 
       toggleLangAnchorsTabIndex();
@@ -83,19 +83,19 @@
         });
       });
 
-      $('.index__feed').on('click', '.expand', function(e) {
-        e.preventDefault();
-
-        var height = $('.index__feed__blocks').height();
-
-        $('.index__feed').animate({
-          'height': height + 113
-        }, 1000, function() {
-          $(this).find('.expand').fadeOut(function() {
-            $('.index__feed').css('height', 'auto').addClass('expanded');
-          });
-        });
-      });
+      // $('.index__feed').on('click', '.expand', function(e) {
+      //   e.preventDefault();
+      //
+      //   var height = $('.index__feed__blocks').height();
+      //
+      //   $('.index__feed').animate({
+      //     'height': height + 113
+      //   }, 1000, function() {
+      //     $(this).find('.expand').fadeOut(function() {
+      //       $('.index__feed').css('height', 'auto').addClass('expanded');
+      //     });
+      //   });
+      // });
 
     },
 
@@ -113,7 +113,7 @@
 
     setupFeed: function() {
 
-      var $feed = $('.index__feed__blocks');
+      var $feed = $('.feed');
       if(!$feed.length) return;
 
       $feed.find("a[href^='http']").attr("target", "_blank");
@@ -147,13 +147,13 @@
     },
 
 
-    setupAnimations: function() {
-
-      setTimeout(function() {
-        $('.index__hero').addClass('loaded');
-      }, 500);
-
-    },
+    // setupAnimations: function() {
+    //
+    //   setTimeout(function() {
+    //     $('.index__hero').addClass('loaded');
+    //   }, 500);
+    //
+    // },
 
 
     initComments: function() {
