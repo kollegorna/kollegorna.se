@@ -1,0 +1,139 @@
+'use strict';
+
+const version         = '<%= File.read("./.build-time").to_s %>',
+      appLangs        = ['<%= app.extensions[:i18n].options.langs.join("','") %>'],
+      staticCacheName = version + '-static',
+      pagesCacheName  = version + '-pages',
+      imagesCacheName = version + '-images',
+
+      criticalResources = [
+        '/sv/',
+        '/en/',
+        '/ar/',
+        '/sv/offline/',
+        '/en/offline/',
+        '<%= asset_path :css, "/#{app.config[:css_dir]}/application" %>',
+        '<%= asset_path :js, "/#{app.config[:js_dir]}/application" %>',
+        '<%= asset_path :images, "sprite.svg" %>',
+        '<%= asset_path :images, "index/hero.svg" %>',
+      ],
+      otherResources = [
+        '/sv/projekt/',
+        '/sv/om/',
+        '/sv/kollegor/',
+        '/sv/blogg/',
+        '/en/work/',
+        '/en/about/',
+        '/en/colleagues/',
+        '/en/blog/',
+      ],
+      logMsg = (msg) => {
+        if('<%= app.config[:environment] %>' == 'development') {
+          console.log(msg);
+        }
+      };
+
+function updateStaticCache() {
+  logMsg('updateStaticCache');
+  return caches.open(staticCacheName).then( cache => {
+    cache.addAll(otherResources); // these items won't block the installation of the Service Worker
+    return cache.addAll(criticalResources); // these items must be cached for the Service Worker to complete installation
+  });
+}
+
+function stashInCache(cacheName, request, response) {
+  logMsg('stashInCache');
+  caches.open(cacheName).then(cache => cache.put(request, response));
+}
+
+// Limit the number of items in a specified cache.
+function trimCache(cacheName, maxItems) {
+  logMsg('trimCache');
+  caches.open(cacheName).then( cache => {
+    cache.keys().then(keys => {
+      if(keys.length > maxItems)
+          cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
+    });
+  });
+}
+
+// Remove caches whose name is no longer valid
+function clearOldCaches() {
+  logMsg('clearOldCaches');
+  return caches.keys().then(keys => {
+    return Promise.all(keys.filter(key => key.indexOf(version) !== 0).map(key => caches.delete(key)));
+  });
+}
+
+self.addEventListener('install', event => {
+  logMsg('install');
+  event.waitUntil(updateStaticCache().then( () => self.skipWaiting() ));
+});
+
+self.addEventListener('activate', event => {
+  logMsg('activate');
+  event.waitUntil(clearOldCaches().then( () => self.clients.claim() ));
+});
+
+self.addEventListener('fetch', event => {
+  logMsg('fetch');
+
+  let request = event.request,
+      url     = new URL(request.url);
+
+  // TODO: respond with /offline
+  // if(request.method !== 'GET') { // Ignore non-GET requests
+  //   return;
+  // }
+
+  if(url.pathname == '/') {
+    event.respondWith(caches.match(`/${appLangs[0]}/`));
+    return;
+  }
+
+  // look in the CACHE FIRST, fallback to the network
+  event.respondWith(
+    // TODO: "/about" doesn't get matched with "/about/"
+    caches.match(request).then(response => {
+      // TODO: fix old cache maches for the first visit when $version is updated
+      return response || fetch(request).then(response => {
+        // NETWORK: not cached, try network
+        if(location.origin === url.origin) { // cache only resources from this domain
+          let copy = response.clone();
+          // TODO: check stashing targets
+          if(criticalResources.includes(url.pathname) || criticalResources.includes(url.pathname + '/')) {
+            stashInCache(staticCacheName, request, copy);
+          }
+          else {
+            if(request.headers.get('Accept').startsWith('image')) { // is image
+              stashInCache(imagesCacheName, request, copy);
+            }
+            else { // is page
+              stashInCache(pagesCacheName, request, copy);
+            }
+          }
+        }
+        return response;
+      })
+      .catch(() => {
+        // OFFLINE: not cached and no network available, fallback on offline page/image
+        if(request.headers.get('Accept').startsWith('image')) { // is image: show placeholder
+          return new Response('<svg role="img" aria-labelledby="offline-title" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><title id="offline-title">Offline</title><g fill="none" fill-rule="evenodd"><path fill="#D8D8D8" d="M0 0h400v300H0z"/><text fill="#9B9B9B" font-family="Helvetica Neue,Arial,Helvetica,sans-serif" font-size="72" font-weight="bold"><tspan x="93" y="172">offline</tspan></text></g></svg>', {headers: {'Content-Type': 'image/svg+xml', 'Cache-Control': 'no-store'}});
+        }
+        else { // is other resource
+          let lang = url.pathname.substr(1, 2);
+          lang = appLangs.includes(lang) ? lang : appLangs[0];
+          return caches.match(`/${lang}/offline/`);
+        }
+      });
+    })
+  );
+});
+
+self.addEventListener('message', event => {
+  logMsg('message');
+  if(event.data.command == 'trimCaches') {
+    trimCache(pagesCacheName, 50);
+    trimCache(imagesCacheName, 20);
+  }
+});
