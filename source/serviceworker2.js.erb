@@ -15,6 +15,7 @@ const version         = '<%= File.read("./.build-time").to_s %>',
         '<%= asset_path :css, "/#{app.config[:css_dir]}/application" %>',
         '<%= asset_path :js, "/#{app.config[:js_dir]}/application" %>',
         '<%= asset_path :images, "sprite.svg" %>',
+        '<%= asset_path :images, "offline.svg" %>',
         '<%= asset_path :images, "index/hero.svg" %>',
       ],
       otherResources = [
