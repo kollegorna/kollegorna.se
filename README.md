@@ -38,3 +38,7 @@ Will generate a file in source/posts.
 ## Managing Service Worker
 
 Service Worker file is located `/source/serviceworker.js.erb`. Worker's version number is updated via Gulp. When making a build it writes current timestamp into `/.build-time` file whose value is then used in serviceworker.js.erb file. When making changes for the website make sure the changes are synced with the worker's file.
+
+## SSH access
+
+``ssh root@188.166.23.119``
