@@ -139,7 +139,7 @@
       var $feed = $('.feed');
       if(!$feed.length) return;
 
-      $feed.find("a[href^='http']").attr("target", "_blank");
+      $feed.find("a[href^='http']").attr({target: "_blank", rel: "noopener"});
 
       $feed.packery({
         itemSelector: '.block',
