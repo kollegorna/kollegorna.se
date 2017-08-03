@@ -185,7 +185,7 @@
     <script>
       if(navigator.serviceWorker) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/serviceworker.js', {scope: '/'});
+          navigator.serviceWorker.register('/serviceworker2.js', {scope: '/'});
           if(navigator.serviceWorker.controller) {
             navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
           }
