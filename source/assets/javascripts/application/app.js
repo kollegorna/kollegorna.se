@@ -12,6 +12,7 @@
       this.setupMaps();
       this.setupFeed();
       // this.injectSVGs();
+      this.fetchLabsPosts();
       this.echo1();
     },
 
@@ -251,6 +252,56 @@
       });
 
     },
+
+
+    fetchLabsPosts: function() {
+
+      var $list = $('.js--labs-posts-fetch');
+      if(!$list.length) return;
+
+      var isLocalStorage    = 'localStorage' in window,
+          endpoint          = 'https://labs.kollegorna.se/feed.json',
+          $displayOnSuccess = $('.js--labs-posts-fetch-display'),
+
+          insertHtml = function(data) {
+            $.each(data.slice(0, 3), function(i, item) {
+              $list.append('<li><a href="'+item.url+'" target="_blank" rel="noopener">'+item.title+'</a></li>');
+            });
+            $list.add($displayOnSuccess).removeClass('is-hidden');
+          },
+
+          fetchJson = function(success, error) {
+            error = error || function(){};
+            $.getJSON(endpoint, function(data) {
+              data.length ? success(data) : error();
+            })
+            .fail(error);
+          };
+
+      if(isLocalStorage) {
+        var cacheData = JSON.parse(localStorage.getItem('labsPostsData') || '[]'),
+            cacheTime = localStorage.getItem('labsPostsTime') || 0,
+            curTime   = Date.now()/1000;
+
+        if(curTime-3600*24 > cacheTime) { // re-cache every 24 hours
+          fetchJson(function(data) {
+            localStorage.setItem('labsPostsData', JSON.stringify(data));
+            localStorage.setItem('labsPostsTime', curTime);
+            insertHtml(data);
+          },
+          function() { // try to fallback on localStorage if no data fetched
+            insertHtml(cacheData);
+          });
+        }
+        else {
+          insertHtml(cacheData);
+        }
+      }
+      else { // localStorage is not supported, fallback on Ajax
+        fetchJson(insertHtml);
+      }
+    },
+
 
     echo1: function() {
       $('body').imagesLoaded(function() {
