@@ -5,6 +5,7 @@
   var Kollegorna = {
 
     init: function() {
+      this.miscInits();
       this.mobileNav();
       this.bindClicks();
       this.initComments();
@@ -14,6 +15,14 @@
       // this.injectSVGs();
       this.fetchLabsPosts();
       this.echo1();
+    },
+
+
+    miscInits: function() {
+
+      if(typeof svg4everybody === 'function')
+        svg4everybody();
+
     },
 
 
