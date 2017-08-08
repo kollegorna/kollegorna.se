@@ -133,17 +133,6 @@
     },
 
 
-    caseMediaTweet: function(data) {
-
-      var html = $(data.html.bold());
-      html.find('script').remove();
-      var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
-      var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
-      return html.html();
-
-    },
-
-
     setupFeed: function() {
 
       var $feed = $('.feed');
@@ -161,20 +150,66 @@
         $feed.packery();
       });
 
-      $feed.find('.block--tweet').each(function() {
-        var $tweet = $(this);
-        $.ajax({
-          url: "https://api.twitter.com/1/statuses/oembed.json?url=" + $tweet.attr('data-tweet'),
-          dataType: "jsonp",
-          success: function(data){
-            $tweet.find('.block__text').append(Kollegorna.caseMediaTweet(data));
+
+      // ehance tweets
+      var isLocalStorage = 'localStorage' in window,
+
+          tweetDataToHtml = function(data) {
+            var $html    = $(data.html),
+                username = data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3],
+                avatar   = '<img src="https://avatars.io/twitter/'+username+'?size=large" alt="'+username+'">';
+
+            $html.find('> a:last-of-type').before(avatar).find('script').remove();
+            return $html.prop('outerHTML');
+          },
+          insertHtml = function($tweet, html) {
+            $tweet.find('.block__text').append(html);
             $feed.packery();
           },
-          error: function(){
+          discardTweet = function($tweet) {
             $tweet.remove();
             $feed.packery();
+          },
+          doAjaxCall = function(tweetLink, success, error) {
+            error = error || function(){};
+            $.ajax({
+              url:      'https://api.twitter.com/1/statuses/oembed.json?url='+tweetLink,
+              dataType: 'jsonp',
+              success:  success,
+              error:    error
+            });
+          };
+
+      $feed.find('.block--tweet').each(function() {
+        var $tweet    = $(this),
+            tweetLink = $tweet.attr('data-tweet');
+
+        if(isLocalStorage) {
+          var tweetId   = tweetLink.hashCode();
+              cacheData = localStorage.getItem('tweet-'+tweetId) || false;
+
+          if(!cacheData) { // not cached, do fetch and insert
+            doAjaxCall(tweetLink, function(data) {
+              var html = tweetDataToHtml(data);
+              localStorage.setItem('tweet-'+tweetId, html);
+              insertHtml($tweet, html);
+            },
+            function() { // couldn't fetch, remove tweet
+              discardTweet($tweet);
+            });
           }
-        });
+          else { // already cached, do insert
+            insertHtml($tweet, cacheData);
+          }
+        }
+        else { // localStorage is not supported, fallback on Ajax
+          doAjaxCall(tweetLink, function(data) {
+            insertHtml($tweet, tweetDataToHtml(data));
+          },
+          function() {
+            discardTweet($tweet);
+          });
+        }
       });
 
     },
@@ -213,17 +248,17 @@
 
     // Make tweets look nice. Remove Twitter widget script and add profile
     // image from avatars.io.
-    parseTweets: function(data) {
-
-      var html = $(data.html.bold());
-      html.find('script').remove();
-      var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
-      var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
-      html = '<div class="case__media__tweet__content">' + html.html() + '</div>';
-      html = twitter_profile_image + html;
-      return html;
-
-    },
+    // parseTweets: function(data) {
+    //
+    //   var html = $(data.html.bold());
+    //   html.find('script').remove();
+    //   var twitter_handle = (data.author_url.match(/https?:\/\/(www\.)?twitter\.com\/(#!\/)?@?([^\/]*)/)[3]);
+    //   var twitter_profile_image = '<figure class="case__media__tweet__image polaroid polaroid--circle"><img src="//avatars.io/twitter/' + twitter_handle + '?size=large"></figure>';
+    //   html = '<div class="case__media__tweet__content">' + html.html() + '</div>';
+    //   html = twitter_profile_image + html;
+    //   return html;
+    //
+    // },
 
 
     setupMaps: function() {
@@ -340,9 +375,20 @@
 
   };
 
-  Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+  Number.prototype.map = function(in_min, in_max, out_min, out_max) {
     return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-  }
+  };
+
+  String.prototype.hashCode = function() {
+    var hash = 0, i, chr;
+    if (this.length === 0) return hash;
+    for (i = 0; i < this.length; i++) {
+      chr   = this.charCodeAt(i);
+      hash  = ((hash << 5) - hash) + chr;
+      hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+  };
 
   document.addEventListener("DOMContentLoaded", function(event) {
     Kollegorna.init();
