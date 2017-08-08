@@ -93,7 +93,7 @@ helpers do
     if current_locale == 'en'
       url.sub!("/en", "/#{locale}")
       url.sub!("/work", "/projekt")
-      url.sub!("/about", "om")
+      url.sub!("/about", "/om")
       url.sub!("/colleagues", "/kollegor")
       url.sub!("/map", "/karta")
       url.sub!("/blog", "/blogg")
