@@ -1,4 +1,7 @@
-//= require "modernizr/modernizr.custom"
+//= require modernizr/modernizr.custom
+//= require loadcss
+//= require loadcss/src/onloadCSS
+
 
 // TODO: Enable this when we'll be able to use the fonts in an async manner
 // ;(function() {

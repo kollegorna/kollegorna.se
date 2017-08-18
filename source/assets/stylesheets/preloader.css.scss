@@ -1,0 +1,85 @@
+body > *:not(.preloader) {
+  display: none;
+}
+
+.preloader {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1160px;
+  overflow: hidden;
+  margin: 40px auto 0;
+
+  div {
+    background-color: rgba(0, 0, 0, .1);
+    animation: preloader .5s infinite linear;
+
+    // logo
+    &:nth-child(1) {
+      width: 60px;
+      height: 60px;
+      float: left;
+    }
+
+    // nav items
+    &:nth-child(n+2):nth-child(-n+4) {
+      width: 10%;
+      height: 15px;
+      float: left;
+      margin-top: 25px;
+      margin-left: 2%;
+    }
+
+    // lang tgl
+    &:nth-child(5) {
+      width: 35px;
+      height: 35px;
+      float: right;
+      margin-top: 15px;
+    }
+
+    // cleaner
+    &:nth-child(6) {
+      clear: both;
+    }
+
+    // intro
+    &:nth-child(7) {
+      width: 30%;
+      height: 30px;
+      margin: 130px auto 0;
+    }
+    &:nth-child(8) {
+      width: 70%;
+      height: 30px;
+      margin: 30px auto 0;
+    }
+    &:nth-child(9) {
+      width: 50%;
+      height: 30px;
+      margin: 30px auto 0;
+    }
+
+    // cleaner
+    &:nth-child(10) {
+      clear: both;
+    }
+
+
+    &:nth-child(11),
+    &:nth-child(12) {
+      width: calc(50% - 20px);
+      height: 500px;
+      float: left;
+      margin-top: 130px;
+    }
+    &:nth-child(11) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@keyframes preloader {
+  0%   { opacity: 1; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}

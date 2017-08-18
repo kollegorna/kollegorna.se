@@ -74,6 +74,14 @@ helpers do
     end
   end
 
+  # Renders a javascript asset inline
+  def inline_stylesheet(name)
+    css_path = sitemap.resources.select{ |p| p.source_file.include?("#{name}.css") }.first
+    content_tag :style do
+      css_path.render
+    end
+  end
+
   # Renders a SVG asset inline
   def inline_svg(name)
     file_path = "./source/assets/images/#{name}.svg"
