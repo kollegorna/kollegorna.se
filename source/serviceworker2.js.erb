@@ -1,6 +1,6 @@
 'use strict';
 
-const version         = '<%= File.read("./.build-time").to_s %>',
+const version         = '<%= Time.now.to_i %>',
       appLangs        = ['<%= app.extensions[:i18n].options.langs.join("','") %>'],
       staticCacheName = version + '-static',
       pagesCacheName  = version + '-pages',
