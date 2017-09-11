@@ -37,9 +37,15 @@
     </a>
     <div class="header__lang__list">
       <ul>
-        <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/">Svenska</a></li>
-        <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/">English</a></li>
-        <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="ar" href="/ar/">العربية</a></li>
+        <% if current_article.nil? %>
+          <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="<%= link_to_lang(current_page.url, 'sv') %>">Svenska</a></li>
+          <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="<%= link_to_lang(current_page.url, 'en') %>">English</a></li>
+          <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="<%= link_to_lang(current_page.url, 'ar') %>" href="/ar/">العربية</a></li>
+        <% else %>
+          <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/blogg/">Svenska</a></li>
+          <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/blog/">English</a></li>
+          <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="/ar/" href="/ar/">العربية</a></li>
+        <% end %>
       </ul>
     </div>
   </div>
