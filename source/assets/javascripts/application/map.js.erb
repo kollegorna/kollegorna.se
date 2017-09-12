@@ -17,7 +17,7 @@
     }).setView([40, -74.50], 5);
 //    var map = L.mapbox.map('map').setView([40, -74.50], 5);
     L.mapbox.styleLayer('mapbox://styles/kollegorna/ciy35srsb008g2rmhkm6gca1m').addTo(map);
-    
+
     setTimeout(function() {
       $('.map').css('opacity', '1');
     }, 2500);
@@ -79,6 +79,18 @@
           title: 'Eduardo Nunes',
           location: 'Braga, Portugal',
           profileID: 'map-eduardo'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-9.14851, 38.7228367]
+        },
+        properties: {
+          title: 'Ricardo Marques',
+          location: 'Lisbon, Portugal',
+          profileID: 'map-ricardo'
         }
       },
       {
