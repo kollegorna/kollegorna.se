@@ -1,67 +1,63 @@
-#gridloader {
-	margin-top: 40px;
-	margin-bottom: 100px;
-
-	.blob {
-		width: 1rem;
-    height: 1rem;
-    background: rgba(255,255,255,0.65);
-    position: absolute;
-    left: calc(50% - 0.5rem);
-	}
-
-	.blob-2 { animation: animate-to-2 1.5s infinite; border-radius: 50%; }
-	.blob-3 { animation: animate-to-3 1.5s infinite; }
-	.blob-1 { animation: animate-to-1 1.5s infinite; }
-	.blob-4 { animation: animate-to-4 1.5s infinite; border-radius: 50%; }
-	.blob-0 { animation: animate-to-0 1.5s infinite; }
-	.blob-5 { animation: animate-to-5 1.5s infinite; }
-
-	@keyframes animate-to-2 {
-	    25%, 75% { transform: translateX(-1.5rem) scale(0.75); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-
-	@keyframes animate-to-3 {
-	    25%, 75% { transform: translateX(1.5rem) scale(0.75); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-
-	@keyframes animate-to-1 {
-	    25% { transform: translateX(-1.5rem) scale(0.75); }
-	    50%, 75% { transform: translateX(-4.5rem) scale(0.6); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-
-	@keyframes animate-to-4 {
-	    25% { transform: translateX(1.5rem) scale(0.75); }
-	    50%, 75% { transform: translateX(4.5rem) scale(0.6); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-
-	@keyframes animate-to-0 {
-	    25% { transform: translateX(-1.5rem) scale(0.75); }
-	    50% { transform: translateX(-4.5rem) scale(0.6); }
-	    75% { transform: translateX(-7.5rem) scale(0.5); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-
-	@keyframes animate-to-5 {
-	    25% { transform: translateX(1.5rem) scale(0.75); }
-	    50% { transform: translateX(4.5rem) scale(0.6); }
-	    75% { transform: translateX(7.5rem) scale(0.5); }
-	    95% { transform: translateX(0rem) scale(1); }
-	}
-}
-
-.case__feed {
-	#gridloader {
-		.blob {
-			background: rgba(255,255,255,0.65);
-		}
-	}
-}
-
-.grid {
-  display: none;
-}
+// #gridloader {
+// 	margin-top: 40px;
+// 	margin-bottom: 100px;
+//
+// 	.blob {
+// 		width: 1rem;
+//     height: 1rem;
+//     background: rgba(255,255,255,0.65);
+//     position: absolute;
+//     left: calc(50% - 0.5rem);
+// 	}
+//
+// 	.blob-2 { animation: animate-to-2 1.5s infinite; border-radius: 50%; }
+// 	.blob-3 { animation: animate-to-3 1.5s infinite; }
+// 	.blob-1 { animation: animate-to-1 1.5s infinite; }
+// 	.blob-4 { animation: animate-to-4 1.5s infinite; border-radius: 50%; }
+// 	.blob-0 { animation: animate-to-0 1.5s infinite; }
+// 	.blob-5 { animation: animate-to-5 1.5s infinite; }
+//
+// 	@keyframes animate-to-2 {
+// 	    25%, 75% { transform: translateX(-1.5rem) scale(0.75); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+//
+// 	@keyframes animate-to-3 {
+// 	    25%, 75% { transform: translateX(1.5rem) scale(0.75); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+//
+// 	@keyframes animate-to-1 {
+// 	    25% { transform: translateX(-1.5rem) scale(0.75); }
+// 	    50%, 75% { transform: translateX(-4.5rem) scale(0.6); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+//
+// 	@keyframes animate-to-4 {
+// 	    25% { transform: translateX(1.5rem) scale(0.75); }
+// 	    50%, 75% { transform: translateX(4.5rem) scale(0.6); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+//
+// 	@keyframes animate-to-0 {
+// 	    25% { transform: translateX(-1.5rem) scale(0.75); }
+// 	    50% { transform: translateX(-4.5rem) scale(0.6); }
+// 	    75% { transform: translateX(-7.5rem) scale(0.5); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+//
+// 	@keyframes animate-to-5 {
+// 	    25% { transform: translateX(1.5rem) scale(0.75); }
+// 	    50% { transform: translateX(4.5rem) scale(0.6); }
+// 	    75% { transform: translateX(7.5rem) scale(0.5); }
+// 	    95% { transform: translateX(0rem) scale(1); }
+// 	}
+// }
+//
+// .case__feed {
+// 	#gridloader {
+// 		.blob {
+// 			background: rgba(255,255,255,0.65);
+// 		}
+// 	}
+// }

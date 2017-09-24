@@ -1,6 +1,7 @@
 ---
 title: About us
 description: "We think, lead, tinker, analyze, invent, test, code, solder, design…"
+page_type: about
 ---
 
 <main role="main" class="about">
@@ -36,11 +37,11 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
 
       <div class="feature">
         <div class="feature__icon">
-          <%= image_tag 'about/share.svg' %>
+          <%= image_tag 'about/tech.svg' %>
         </div>
         <div class="feature__content">
-          <h1>We love to share</h1>
-          <p>Whenever it's possible to break out pieces of a project for general use we love it if it can join <a href="https://labs.kollegorna.se">our open source projects</a> (including <a href="https://github.com/kollegorna/kollegorna.se">this site</a>). We've also published <a href="https://rtfm.kollegorna.se">our manual</a> that describes how we work in practice.</p>
+          <h1>Our technology stack</h1>
+          <p>We're experts in Ruby on Rails, but we also like to use Ember.js, Go, Node.js, Middleman and WordPress depending on the project's needs.<br>And don't miss our <a href="https://radar.kollegorna.se">tech radar</a>.</p>
         </div>
       </div>
 
@@ -56,21 +57,23 @@ description: "We think, lead, tinker, analyze, invent, test, code, solder, desig
 
       <div class="feature">
         <div class="feature__icon">
-          <%= image_tag 'about/tech.svg' %>
-        </div>
-        <div class="feature__content">
-          <h1>Our technology stack</h1>
-          <p>We're experts in Ruby on Rails, but we also like to use Ember.js, Go, Node.js, Middleman and WordPress depending on the project's needs.<br>And don't miss our <a href="https://radar.kollegorna.se">tech radar</a>.</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature__icon">
           <%= image_tag 'about/work.svg' %>
         </div>
         <div class="feature__content">
           <h1>Work with us</h1>
           <p>We're currently looking for a <strong>Rails developer</strong>. <a href="/en/careers/">More information</a>.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature__icon">
+          <%= image_tag 'about/share.svg' %>
+        </div>
+        <div class="feature__content">
+          <h1>We love to share</h1>
+          <p>We've published <a href="https://rtfm.kollegorna.se" target="_blank" rel="noopener">our manual</a> that describes how we work in practice. Whenever it's possible to break out pieces of a project for general use we love it if it can join <a href="https://github.com/kollegorna" target="_blank" rel="noopener">our open source projects</a> (including <a href="https://github.com/kollegorna/kollegorna.se" target="_blank" rel="noopener">this site</a>) or our <a href="https://labs.kollegorna.se" target="_blank" rel="noopener">Labs</a> in a form of article. <span class="js--labs-posts-fetch-display is-hidden">Here are the latest ones:</span></p>
+          <ul class="is-hidden js--labs-posts-fetch">
+          </ul>
         </div>
       </div>
 

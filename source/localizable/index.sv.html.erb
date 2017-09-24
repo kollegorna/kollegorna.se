@@ -1,9 +1,10 @@
 ---
+page_type: index
 ---
 
 <main role="main" class="index">
   <section class="index__hero">
-    <%= image_tag "index/hero.svg", :class => "inject-svg" %>
+    <%= inline_svg "index/hero" %>
     <div class="index__hero__headline">
       <p><%= t(:index)[:hello] %></p>
       <h1><%= t(:index)[:short_bio] %></h1>
@@ -11,16 +12,16 @@
   </section>
 
   <section class="index__feed">
-    <div id="gridloader">
+    <!-- <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
+    </div> -->
 
-    <div class="index__feed__blocks feed grid">
+    <div class="index__feed__blocks feed">
       <%= partial("partials/feed/blog", :locals => {
         :title => "Snack ska bli verkstad!",
         :text => "Bra idéer är ingen bristvara i Almedalen, men en idé är inte mycket värd utan utförande. Vi vill se till att fler idéer går från snack till verkstad.",
@@ -49,7 +50,7 @@
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "Echo1",
-        :text => "Identitet och webbplats för Echo1, en Singapore-baserade investerare för ljudrelaterade företag.",
+        :text => "Identitet och webbplats för Echo1, en Singapore-baserad investerare i ljudrelaterade företag.",
         :category => "Nytt!",
         :link => "https://www.echo1.co",
         :image => "feed/echo1.jpg"
@@ -154,7 +155,7 @@
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
-        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Vårt företagsnummer där var under ett tag Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
+        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Förut använde vi Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
         :category => "Labb",
         :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>

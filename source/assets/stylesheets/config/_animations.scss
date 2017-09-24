@@ -48,14 +48,10 @@ $easing-default:       $easing-out-cubic !default;
   to		{ transform: translateX(-250px) scaleX(1); }
 }
 
-
-
 @keyframes fade-in {
   from	{ opacity: 0; }
   to		{ opacity: 1; }
 }
-
-
 
 @keyframes fade-out {
   from	{ opacity: 1; }

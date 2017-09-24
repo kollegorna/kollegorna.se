@@ -228,28 +228,28 @@
     background: $ds-color-charcoal;
 
     .feed {
-      width: 90%;
-      max-width: 1500px;
+      max-width: 900px;
       margin: 0 auto;
 
-      @include media($huge) {
+      @include media($desktop) {
         max-width: 1800px;
       }
 
       .block {
-        overflow: hidden;
         width: 100%;
         background: $ds-color-white;
         color: $ds-color-charcoal;
         text-align: center;
+        clear: none !important;
+        margin: 10px 0;
 
-        @include media($tablet) {
-          width: 80%;
-          margin-left: 10%;
-        }
         @include media($desktop) {
-          width: calc(50% - 10px);
-          margin-left: 0;
+          width: calc(50% - 20px);
+          margin: 10px;
+
+          &:nth-child(2n+3) {
+            clear: left !important;
+          }
         }
       }
     }

@@ -1,38 +1,51 @@
-<header class="header" role="banner" id="header">
+<% page_type = current_page.data.page_type || '' %>
+
+<header class="header" role="banner">
 
   <div class="header__logo">
     <a href="/<%= I18n.locale %>/">
-      <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-logo"></use></svg>
+      <svg><title>Kollegorna</title><use xlink:href="<%= image_path("sprite.svg") %>#icon-logo"></use></svg>
     </a>
   </div>
 
-  <div class="header__button" id="nav-toggler">
-    <a href="#header" role="button" title="<%= t(:nav)[:nav_show] %>">
-      <%= t(:nav)[:nav_show] %><span></span>
+  <nav class="header__nav" id="header-nav">
+    <a class="header__nav__tgl" href="#header-nav" role="button" title="<%= t(:nav)[:nav_show] %>" aria-label="<%= t(:nav)[:nav_show] %>" id="header-nav-tgl">
+      <span></span>
     </a>
-    <a href="#nav-toggler" role="button" title="<%= t(:nav)[:nav_hide] %>">
-      <%= t(:nav)[:nav_hide] %><span></span>
+    <a class="header__nav__tgl" href="#header-nav-tgl" role="button" title="<%= t(:nav)[:nav_hide] %>" aria-label="<%= t(:nav)[:nav_hide] %>">
+      <span></span>
     </a>
-  </div>
-
-  <nav class="header__navigation">
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
-    <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
+    <ul class="header__nav__list">
+      <li class="<%= 'is-selected' if page_type.start_with?('work') %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
+      </li>
+      <li class="<%= 'is-selected' if page_type == 'about' %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
+      </li>
+      <li class="<%= 'is-selected' if page_type == 'colleagues' %>">
+        <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
+      </li>
+    </ul>
   </nav>
 
   <div class="header__lang" id="header-lang">
-    <a href="#header-lang" role="button" title="<%= t(:lang)[:show] %>" aria-label="<%= t(:lang)[:show] %>" id="header-lang-tgl">
+    <a class="header__lang__tgl" href="#header-lang" role="button" title="<%= t(:lang)[:show] %>" aria-label="<%= t(:lang)[:show] %>" id="header-lang-tgl">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
-    <a id="#header-lang-tgl" role="button" title="<%= t(:lang)[:hide] %>" aria-label="<%= t(:lang)[:hide] %>">
+    <a class="header__lang__tgl" href="#header-lang-tgl" role="button" title="<%= t(:lang)[:hide] %>" aria-label="<%= t(:lang)[:hide] %>">
       <svg><use xlink:href="<%= image_path("sprite.svg") %>#icon-lang"></use></svg>
     </a>
-    <div class="header__lang__picker">
+    <div class="header__lang__list">
       <ul>
-        <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/">Svenska</a></li>
-        <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/">English</a></li>
-        <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="ar" href="/ar/">العربية</a></li>
+        <% if current_article.nil? %>
+          <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="<%= link_to_lang(current_page.url, 'sv') %>">Svenska</a></li>
+          <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="<%= link_to_lang(current_page.url, 'en') %>">English</a></li>
+          <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="<%= link_to_lang(current_page.url, 'ar') %>" href="/ar/">العربية</a></li>
+        <% else %>
+          <li<% if I18n.locale == :sv %> class="is-selected"<% end %>><a href="/sv/blogg/">Svenska</a></li>
+          <li<% if I18n.locale == :en %> class="is-selected"<% end %>><a href="/en/blog/">English</a></li>
+          <li<% if I18n.locale == :ar %> class="is-selected"<% end %>><a class="/ar/" href="/ar/">العربية</a></li>
+        <% end %>
       </ul>
     </div>
   </div>

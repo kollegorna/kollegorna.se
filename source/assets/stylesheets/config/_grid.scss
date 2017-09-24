@@ -1,8 +1,9 @@
-$huge: new-breakpoint(min-width 1600px);
-$desktop: new-breakpoint(min-width 1400px);
-$laptop: new-breakpoint(min-width 1024px);
-$tablet: new-breakpoint(min-width 800px);
-$mobile: new-breakpoint(max-width 800px);
+$huge:        new-breakpoint(min-width 1600px);
+$desktop:     new-breakpoint(min-width 1400px);
+$laptop:      new-breakpoint(min-width 1024px);
+$tablet-only: new-breakpoint(min-width 800px max-width 1023px);
+$tablet:      new-breakpoint(min-width 800px);
+$mobile:      new-breakpoint(max-width 799px);
 
 // ------------------------------------------------------------
 // Override Neat's grid settings

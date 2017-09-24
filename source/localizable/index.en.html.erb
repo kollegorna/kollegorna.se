@@ -1,9 +1,11 @@
 ---
+page_type: index
 ---
 
 <main role="main" class="index">
+
   <section class="index__hero">
-    <%= image_tag "index/hero.svg", :class => "inject-svg", :data => { fallback: image_path("index/hero.png")} %>
+    <%= inline_svg "index/hero" %>
     <div class="index__hero__headline">
       <p><%= t(:index)[:hello] %></p>
       <h1><%= t(:index)[:short_bio] %></h1>
@@ -11,16 +13,16 @@
   </section>
 
   <section class="index__feed">
-    <div id="gridloader">
+    <!-- <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
+    </div> -->
 
-    <div class="index__feed__blocks feed grid">
+    <div class="index__feed__blocks feed">
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Echo1",
@@ -71,13 +73,6 @@
       </div>
 
       <%= partial("partials/feed/blog", :locals => {
-        :title => "Hello Rails Developers!",
-        :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
-        :category => "Work here",
-        :link => "/en/2017/02/rails-developer/"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
         :title => "Spoil movies instead of lives",
         :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
         :category => "Campaign",
@@ -117,7 +112,7 @@
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "Welcome Osvaldas!",
-        :text => "A christmas gift in advance, in the form of a UX designer and Front End Developer.",
+        :text => "Osvaldas Valutis, UX designer and Front End Developer, is the latest addition to our team — and a brand new marker in our co-workers map.",
         :category => "New team mate",
         :link => "/en/2016/12/osvaldas-valutis/",
         :image => "feed/osvaldas.jpg"
@@ -126,13 +121,6 @@
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/03.svg') %>
       </div>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "November's PDDs",
-        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to this time...",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
-      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Vembi",
@@ -170,6 +158,13 @@
         :background_color => "#f7f9f9",
         :text_color => "#005293",
         :link => "/en/work/releasefest"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "November's PDDs",
+        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to last November...",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
