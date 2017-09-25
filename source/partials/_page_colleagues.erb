@@ -251,7 +251,7 @@
 
   <section class="colleagues__list">
 
-    <% persons.sort! { |a,b| a[:name].split.last <=> b[:name].split.last }.each do |person| %>
+    <% persons.sort! { |a,b| a[:name] <=> b[:name] }.each do |person| %>
 
       <article class="block">
         <div class="profile" id="<%= person[:id] %>">
