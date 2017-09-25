@@ -1,6 +1,6 @@
 ---
 title: "Ricardo joins our backend team"
-date: 2017-09-11 16:16:00 UTC
+date: 2017-09-26 00:30:00 UTC
 author: eduardo
 description: "We are very excited to announce a brand new colleague: Ricardo Marques has just joined our star-studded backend lineup — and we couldn’t be happier."
 image: /images/posts/2017/ricardo.jpg
