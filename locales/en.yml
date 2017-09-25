@@ -79,6 +79,8 @@ en:
         role: "Front-End Developer, Designer"
     osvaldas:
         role: "Front-End Developer, Designer"
+    ricardo:
+        role: "Developer"
   blog:
     subscribe_rss: "Subscribe via RSS"
     back_to_list: "All posts"
