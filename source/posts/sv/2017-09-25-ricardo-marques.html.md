@@ -1,6 +1,6 @@
 ---
 title: "Välkommen Ricardo!"
-date: 2017-09-26 16:16:00 UTC
+date: 2017-09-25 00:30:00 UTC
 author: per
 description: "Glada dagar! Vi har en ny kollega: Ricardo Marques har precis anslutit till vår stjärnspäckade backend-uppställning."
 image: /images/posts/2017/ricardo.jpg
