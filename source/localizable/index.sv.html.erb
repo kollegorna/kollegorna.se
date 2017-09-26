@@ -31,6 +31,15 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
+        :title => "Echo1",
+        :text => "Identitet och webbplats för Echo1, en Singapore-baserad investerare i ljudrelaterade företag.",
+        :image => "feed/echo1.jpg",
+        :background_color => "#252525",
+        :text_color => "#fdfffc",
+        :link => "/sv/projekt/echo1"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "Edumedia Tunisie",
         :text => "Pedagogiska verktyg som lär elever mediekunnighet och kritiskt tänkande",
         :image => "case/thumbnails/edumedia.png",
@@ -56,13 +65,7 @@ page_type: index
         :image => "feed/snackverkstan.png"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Echo1",
-        :text => "Identitet och webbplats för Echo1, en Singapore-baserad investerare i ljudrelaterade företag.",
-        :category => "Nytt!",
-        :link => "https://www.echo1.co",
-        :image => "feed/echo1.jpg"
-      }) %>
+
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Valu8 Company Intelligence",
