@@ -79,6 +79,8 @@ sv:
         role: "Front-End Developer, Designer"
     osvaldas:
         role: "Front-End Developer, Designer"
+    ricardo:
+        role: "Utvecklare"
   blog:
     subscribe_rss: "Prenumerera via RSS"
     back_to_list: "Alla inlägg"

@@ -111,9 +111,9 @@
       role:         "#{t(:colleagues)[:raymall][:role]}",
       image:        "raymall.jpg",
       email:        "raymall@kollegorna.se",
-      location:     "Santo Domingo, #{t(:colleagues)[:country_dominicanrep]}",
-      locLat:       "18.486058",
-      locLng:       "-69.931212",
+      location:     "Punta Cana, #{t(:colleagues)[:country_dominicanrep]}",
+      locLat:       "18.574455",
+      locLng:       "-68.389463",
       links: {
         github: {
           name: "raymallperez",
@@ -152,8 +152,8 @@
       image:        "filippos.jpg",
       email:        "filippos@kollegorna.se",
       location:     "Stockholm, #{t(:colleagues)[:country_sweden]}",
-      locLat:       "41.545449",
-      locLng:       "-8.426507",
+      locLat:       "59.329323",
+      locLng:       "18.068581",
       links: {
         github: {
           name: "vasilakisfil",
@@ -217,6 +217,26 @@
         },
       }
     },
+    {
+      id:           "ricardo",
+      name:         "Ricardo Marques",
+      role:         "#{t(:colleagues)[:ricardo][:role]}",
+      image:        "ricardo.jpg",
+      email:        "ricardo@kollegorna.se",
+      location:     "Lisbon, #{t(:colleagues)[:country_portugal]}",
+      locLat:       "38.7228367",
+      locLng:       "-9.14851",
+      links: {
+        github: {
+          name: "rsmarques",
+          link: "https://github.com/rsmarques"
+        },
+        linkedin: {
+          name: "Ricardo Marques",
+          link: "https://linkedin.com/in/rsmarques"
+        }
+      }
+    }
   ]
 
 %>
@@ -231,7 +251,7 @@
 
   <section class="colleagues__list">
 
-    <% persons.each do |person| %>
+    <% persons.sort! { |a,b| a[:name] <=> b[:name] }.each do |person| %>
 
       <article class="block">
         <div class="profile" id="<%= person[:id] %>">

@@ -61,16 +61,17 @@
   cursor: pointer;
 }
 
-#map-per     { background-image: image-url('avatars/per.jpg'); }
-#map-henrik  { background-image: image-url('avatars/henrik.jpg'); }
-#map-eduardo { background-image: image-url('avatars/eduardo.jpg'); }
-#map-ivan    { background-image: image-url('avatars/ivan.jpg'); }
-#map-dennis  { background-image: image-url('avatars/dennis.jpg'); }
-#map-raymall { background-image: image-url('avatars/raymall.jpg'); }
-#map-filippos { background-image: image-url('avatars/filippos.jpg'); }
-#map-nikolay { background-image: image-url('avatars/nikolay.jpg'); }
-#map-osvaldas { background-image: image-url('avatars/osvaldas.jpg'); }
-#map-kollegorna-hq { background-image: image-url('map/hq.jpg'); }
+#map-per            { background-image: image-url('avatars/per.jpg'); }
+#map-henrik         { background-image: image-url('avatars/henrik.jpg'); }
+#map-eduardo        { background-image: image-url('avatars/eduardo.jpg'); }
+#map-ricardo        { background-image: image-url('avatars/ricardo.jpg'); }
+#map-ivan           { background-image: image-url('avatars/ivan.jpg'); }
+#map-dennis         { background-image: image-url('avatars/dennis.jpg'); }
+#map-raymall        { background-image: image-url('avatars/raymall.jpg'); }
+#map-filippos       { background-image: image-url('avatars/filippos.jpg'); }
+#map-nikolay        { background-image: image-url('avatars/nikolay.jpg'); }
+#map-osvaldas       { background-image: image-url('avatars/osvaldas.jpg'); }
+#map-kollegorna-hq  { background-image: image-url('map/hq.jpg'); }
 
 .map__container {
   display: block;
@@ -159,7 +160,7 @@
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  border: 2px solid darken($ds-color-green, 10%);
+  border: 2px solid $ds-color-green;
   opacity: 0;
   animation-name: mapMakerPulse;
   animation-duration: 1.5s;
@@ -167,6 +168,14 @@
   animation-direction: normal;
   animation-delay: 0;
   animation-iteration-count: infinite;
+}
+
+.map__marker[title="Kollegorna HQ"] {
+background-color: rgba($ds-color-red, .8);
+
+.marker__pulse {
+  border-color: $ds-color-red;
+}
 }
 
 @keyframes mapMakerPulse {
