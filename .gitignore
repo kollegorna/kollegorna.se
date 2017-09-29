@@ -7,9 +7,6 @@
 # Built site
 /build
 
-# Data
-/data
-
 # Vendor
 /vendor
 
