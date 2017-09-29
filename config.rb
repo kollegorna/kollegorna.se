@@ -66,6 +66,11 @@ end
 # Helpers
 helpers do
 
+  def gravatar_for(email, size=400)
+    hash = Digest::MD5.hexdigest(email.chomp.downcase)
+    "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+  end
+
   # Renders a javascript asset inline
   def inline_javascript(name)
     content_tag :script do
