@@ -1,6 +1,6 @@
 ---
-title: Things I learned developing Ruby and Rails apps over the past 3+ years
-date: 2017-01-30 00:00:00 UTC
+title: Things I learned developing Ruby and Rails apps over the past 3 years
+date: 2017-02-01 01:00:00 UTC
 author: filippos
 disable_comments: false
 ---

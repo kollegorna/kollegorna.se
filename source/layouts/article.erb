@@ -19,16 +19,34 @@
     <footer class="blog__footer">
       <div class="blog__footer__meta">
         <div class="blog__footer__author">
-          <% if(current_article.data.author == "eduardo") %>
-            <a href="mailto:eduardo@kollegorna.se">
-              <img src="<%= image_path('avatars/eduardo.jpg') %>" alt="Eduardo Nunes">
-              Eduardo Nunes
-            </a>
-          <% else %>
-          <a href="mailto:per@kollegorna.se">
-            <img src="<%= image_path('avatars/per.jpg') %>" alt="Per Sandström">
-            Per Sandström
-          </a>
+          <% data.colleagues.each do |author| %>
+            <% if current_article.data.author.is_a?(Array) %>
+              <% current_article.data.author.each do |multiple_authors| %>
+                <% if multiple_authors == author['firstname'].downcase %>
+                  <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+                    <div class="post-author__image">
+                      <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
+                    </div>
+                    <div class="post-author__name">
+                      <a property="email" href="mailto:<%= author['email'] %>">
+                        <span property="givenName"><%= author['firstname'] %></span>
+                        <span property="familyName"><%= author['lastname'] %></span></a>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            <% elsif author['firstname'].downcase == current_article.data.author %>
+              <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+                <div class="post-author__image">
+                  <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
+                </div>
+                <div class="post-author__name">
+                  <a property="email" href="mailto:<%= author['email'] %>">
+                    <span property="givenName"><%= author['firstname'] %></span>
+                    <span property="familyName"><%= author['lastname'] %></span></a>
+                </div>
+              </div>
+            <% end %>
           <% end %>
         </div>
         <div class="blog__footer__rss">
