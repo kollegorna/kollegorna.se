@@ -10,6 +10,9 @@ title: Profile Page
     <figure class="person__card__image">
       <img src="<%= image_path("avatars/osvaldas.jpg") %>" alt="Person">
     </figure>
+
+    <div class="person__card__background colleague-map" data-lat="55.7085666" data-lng="21.1332599"></div>
+
     <h1 class="person__card__name">Osvaldas Valutis</h1>
     <h2 class="person__card__title">Front-end Developer, Designer</h2>
 
@@ -42,6 +45,11 @@ title: Profile Page
         <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-web"></use></svg>
         <span>osvaldas.info</span>
       </a>
+    </div>
+
+    <div class="person__card__location">
+      <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-pin"></use></svg>
+      Klaipeda, Lithuania
     </div>
   </section>
 

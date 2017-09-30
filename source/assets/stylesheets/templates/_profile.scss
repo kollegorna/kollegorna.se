@@ -37,10 +37,11 @@
     &__image {
       display: block;
       position: absolute;
-      width: 130px;
-      height: 130px;
-      top: -65px;
+      width: 180px;
+      height: 180px;
+      top: -90px;
       left: 20px;
+      z-index: 2;
 
       @include media($laptop) {
         left: 40px;
@@ -48,17 +49,42 @@
 
       img {
         border-radius: 999em;
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
       }
+    }
+
+    &__background {
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      transition: opacity .2s ease-in-out;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      // G-maps Hacks
+      .gmnoprint, .gm-style-cc, .gm-style a { display: none!important; }
     }
 
     &__name {
       font-size: ds-rem-calc(18);
       font-weight: 600;
       letter-spacing: ds-rem-calc(-0.5);
-      margin: ds-rem-calc(60) 0 0;
+      margin: ds-rem-calc(100) 0 0;
+      transition: all .3s ease-in-out;
 
       @include media($tablet) {
-        font-size: ds-rem-calc(24);
+        font-size: ds-rem-calc(28);
+      }
+
+      @include media($laptop) {
+        margin: ds-rem-calc(80) 0 0;
       }
     }
 
@@ -68,6 +94,7 @@
       font-size: ds-rem-calc(14);
       margin: 0;
       color: darken($ds-color-white, 40);
+      transition: all .3s ease-in-out;
 
       @include media($tablet) {
         font-size: ds-rem-calc(16);
@@ -79,6 +106,7 @@
       font-size: ds-rem-calc(14);
       position: relative;
       z-index: 1;
+      transition: all .3s ease-in-out;
 
       a {
         @extend %ds-underlined;
@@ -92,6 +120,7 @@
     }
 
     &__description {
+      transition: all .3s ease-in-out;
       p {
         font-size: ds-rem-calc(16);
         margin-top: ds-rem-calc(30);
@@ -107,6 +136,7 @@
       font-weight: 300;
       margin-top: ds-rem-calc(30);
       position: relative;
+      transition: all .3s ease-in-out;
 
       a {
         display: block;
@@ -122,7 +152,8 @@
         }
 
         &.web {
-          margin-top: ds-rem-calc(60);
+          margin-top: ds-rem-calc(30);
+          margin-bottom: ds-rem-calc(100);
           span {
             @extend %ds-underlined;
             display: inline-block;
@@ -136,6 +167,37 @@
         height: ds-rem-calc(16);
         vertical-align: middle;
         margin-top: ds-rem-calc(-2);
+        margin-right: ds-rem-calc(10);
+      }
+    }
+
+    &__location {
+      font-family: $ds-font-family-complementary;
+      font-weight: 300;
+      font-size: ds-rem-calc(14);
+      color: darken($ds-color-white, 40);
+      position: absolute;
+      left: 10px;
+      bottom: 50px;
+      border: 1px solid rgba($ds-color-light-gray, 0);
+      cursor: crosshair;
+      padding: 5px 15px 8px 10px;
+      border-radius: 4px;
+      transition: opacity .2s ease-in-out;
+      z-index: 10;
+
+      @include media($tablet) {
+        font-size: ds-rem-calc(16);
+      }
+
+      @include media($laptop) {
+        left: 30px;
+      }
+
+      svg {
+        width: ds-rem-calc(16);
+        height: ds-rem-calc(16);
+        vertical-align: baseline;
         margin-right: ds-rem-calc(10);
       }
     }
@@ -231,3 +293,20 @@
     }
   }
 }
+
+.no-touchevents .person {
+    .person__card {
+      &.hover {
+        .person__card__name,
+        .person__card__title,
+        .person__card__contact,
+        .person__card__description,
+        .person__card__links { opacity: 0; }
+        .person__card__background { opacity: 0.8; }
+
+        .person__card__location {
+          background: $ds-color-white;
+        }
+      }
+    }
+  }
