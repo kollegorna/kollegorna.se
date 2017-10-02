@@ -5,6 +5,7 @@ author: osvaldas
 meta_description: "Middleman is a Ruby based static site generator which we use heavily both for prototyping (checkout our Middleman boilerplate) and production sites..."
 share_image: /posts/images/service-worker-for-middleman-based-websites/middleman.jpg
 disable_comments: false
+disable_listing: true
 ---
 
 [Middleman](https://middlemanapp.com/) is a Ruby based static site generator which we use heavily both for prototyping (checkout our [Middleman boilerplate](https://github.com/kollegorna/middleman-boilerplate)) and production sites. In my previous article on [Service Worker](/blog/2017/06/service-worker-gotchas/), I overviewed the most common challenges you may face when implementing the technology. This time I’d like to dive into a single specific topic of enabling a worker on Middleman based website as there are a few things to deal with&hellip;

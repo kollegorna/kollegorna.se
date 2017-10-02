@@ -11,7 +11,7 @@
 
   <ul class="blog__list">
 
-    <% posts.each do |post| %>
+    <% posts.select{|a| a.data.disable_listing != true}.each do |post| %>
 
     <li>
       <h2><a href="<%= post.url %>"><%= post.title %></a></h2>
