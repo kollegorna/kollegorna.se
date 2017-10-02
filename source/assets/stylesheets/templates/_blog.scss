@@ -212,6 +212,19 @@
       }
     }
 
+    &__medium {
+      text-align: center;
+      background: $ds-color-white;
+      margin: ds-rem-calc(20 0);
+      padding: ds-rem-calc(40 30 0 30);
+
+      h2 {
+        margin: ds-rem-calc(0 0 30 0);
+        font-size: ds-rem-calc(24);
+        font-weight: 400;
+      }
+    }
+
     &__more {
       position: relative;
       text-align: center;
