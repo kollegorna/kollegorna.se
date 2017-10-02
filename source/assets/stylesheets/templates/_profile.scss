@@ -111,7 +111,7 @@
       a {
         @extend %ds-underlined;
         display: table;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
       @include media($tablet) {
