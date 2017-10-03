@@ -11,8 +11,8 @@
     @include span-columns(10);
     @include shift(1);
 
-    @include media($laptop) {
-      @include span-columns(7);
+    @include media($tablet) {
+      margin-left: 110px;
     }
 
     @include media($desktop) {
