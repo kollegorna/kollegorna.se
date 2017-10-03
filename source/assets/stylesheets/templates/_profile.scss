@@ -151,9 +151,12 @@
           font-size: ds-rem-calc(16);
         }
 
+        &:last-of-type {
+          margin-bottom: ds-rem-calc(100);
+        }
+
         &.web {
           margin-top: ds-rem-calc(30);
-          margin-bottom: ds-rem-calc(100);
           span {
             @extend %ds-underlined;
             display: inline-block;
