@@ -4,4 +4,83 @@ description: "We're a distributed team where everyone is an expert in their fiel
 page_type: colleagues
 ---
 
-<%= partial "partials/page_colleagues" %>
+<main role="main" class="colleagues">
+  <header class="colleagues__header">
+    <div class="colleagues__header__content">
+      <h1><%= t(:colleagues)[:slogan] %></h1>
+      <p><%= t(:colleagues)[:description] %></p>
+    </div>
+  </header>
+
+  <section class="colleagues__list">
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Per Sandström",
+      :role   => "#{t(:colleagues)[:per][:role]}",
+      :image  => "per.jpg",
+      :link   => "/en/team/per"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Henrik Sjökvist",
+      :role   => "#{t(:colleagues)[:henrik][:role]}",
+      :image  => "henrik.jpg",
+      :link   => "/en/team/henrik"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Eduardo Nunes",
+      :role   => "#{t(:colleagues)[:eduardo][:role]}",
+      :image  => "eduardo.jpg",
+      :link   => "/en/team/eduardo"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Ivan Novosad",
+      :role   => "#{t(:colleagues)[:ivan][:role]}",
+      :image  => "ivan.jpg",
+      :link   => "/en/team/ivan"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Raymall Pérez",
+      :role   => "#{t(:colleagues)[:raymall][:role]}",
+      :image  => "raymall.jpg",
+      :link   => "/en/team/raymall"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Dennis Carlsson",
+      :role   => "#{t(:colleagues)[:dennis][:role]}",
+      :image  => "dennis.jpg",
+      :link   => "/en/team/dennis"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Filippos Vasilakis",
+      :role   => "#{t(:colleagues)[:filippos][:role]}",
+      :image  => "filippos.jpg",
+      :link   => "/en/team/filippos"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Nikolay Lechev",
+      :role   => "#{t(:colleagues)[:nikolay][:role]}",
+      :image  => "nikolay.jpg",
+      :link   => "/en/team/nikolay"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Osvaldas Valutis",
+      :role   => "#{t(:colleagues)[:osvaldas][:role]}",
+      :image  => "osvaldas.jpg",
+      :link   => "/en/team/osvaldas"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Ricardo Marques",
+      :role   => "#{t(:colleagues)[:ricardo][:role]}",
+      :image  => "ricardo.jpg",
+      :link   => "/en/team/ricardo"
+    }) %>
+  </section>
+</main>
