@@ -1,13 +1,14 @@
 <article class="block">
   <div class="profile">
+    <div class="profile__box">
+      <a href="<%= link %>"><h1 class="name"><%= name %></h1></a>
+      <h2 class="title"><%= role %></h2>
+      <a class="link" href="<%= link %>"><%= t(:colleagues)[:more] %></a>
+    </div>
+
     <figure class="profile__image">
       <img src="<%= image_path("avatars/#{image}") %>" alt="<%= name %>">
     </figure>
-
-    <h1 class="profile__name"><%= name %></h1>
-    <h2 class="profile__title"><%= role %></h2>
-
-    <a href="<%= link %>"><%= t(:colleagues)[:more] %></a>
 
     <script type="application/ld+json">
       {
