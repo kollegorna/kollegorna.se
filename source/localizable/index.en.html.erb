@@ -24,6 +24,14 @@ page_type: index
 
     <div class="index__feed__blocks feed">
 
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "You Might Also Like",
+        :text => "Our brand new blog is a place for our remote team to talk anything but shop. We think you may like it.",
+        :category => "New Blog",
+        :link => "https://youmightalsolike.us/",
+        :image => "feed/ymal.png"
+      }) %>
+
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Echo1",
         :text => "Branding and website design for Echo1, a Singapore-based investor in sound-related companies.",
