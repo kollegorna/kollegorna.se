@@ -12,12 +12,23 @@
   &__hero {
     margin-bottom: 20px;
 
-    img {
+    svg {
       min-width: 1200px;
       margin-left: -20px;
 
       @include media($laptop) {
         margin-left: 0;
+      }
+
+      .anim {
+        opacity: 0;
+        transform: scale(0.7);
+        transform-origin: center center;
+        animation: profile-hero 0.4s $easing-out-back forwards;
+
+        @for $i from 1 through 96 {
+          &:nth-child(#{$i}) { animation-delay: #{1+0.02*$i}s; }
+        }
       }
     }
   }
@@ -298,18 +309,22 @@
 }
 
 .no-touchevents .person {
-    .person__card {
-      &.hover {
-        .person__card__name,
-        .person__card__title,
-        .person__card__contact,
-        .person__card__description,
-        .person__card__links { opacity: 0; }
-        .person__card__background { opacity: 0.8; }
+  .person__card {
+    &.hover {
+      .person__card__name,
+      .person__card__title,
+      .person__card__contact,
+      .person__card__description,
+      .person__card__links { opacity: 0; }
+      .person__card__background { opacity: 0.8; }
 
-        .person__card__location {
-          background: $ds-color-white;
-        }
+      .person__card__location {
+        background: $ds-color-white;
       }
     }
   }
+}
+
+@keyframes profile-hero {
+  100% { opacity: 1; transform: scale(1); }
+}
