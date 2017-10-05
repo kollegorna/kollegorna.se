@@ -1,3 +1,7 @@
 .visuallyhidden {
   @extend %ds-visuallyhidden;
 }
+
+.is-hidden {
+  display: none !important;
+}

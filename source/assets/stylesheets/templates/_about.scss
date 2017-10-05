@@ -168,14 +168,19 @@
         @include media($tablet) { font-size: ds-rem-calc(18); }
       }
 
-      p {
-        margin-top: 10px;
+      p, ul {
         font-size: ds-rem-calc(14);
         line-height: 1.6;
 
         @include media($tablet) {
           font-size: ds-rem-calc(16);
         }
+      }
+      p {
+        margin-top: 10px;
+      }
+      ul {
+        text-align: left;
       }
 
       &--careers {

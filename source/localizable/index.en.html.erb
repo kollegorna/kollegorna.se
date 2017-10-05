@@ -24,6 +24,14 @@ page_type: index
 
     <div class="index__feed__blocks feed">
 
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "You Might Also Like",
+        :text => "Our brand new blog is a place for our remote team to talk anything but shop. We think you may like it.",
+        :category => "New Blog",
+        :link => "https://youmightalsolike.us/",
+        :image => "feed/ymal.png"
+      }) %>
+
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Echo1",
         :text => "Branding and website design for Echo1, a Singapore-based investor in sound-related companies.",
@@ -31,6 +39,14 @@ page_type: index
         :background_color => "#252525",
         :text_color => "#fdfffc",
         :link => "/en/work/echo1"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Welcome Ricardo!",
+        :text => "Olá Lisboa! Ricardo Marques has just joined our star-studded backend team.",
+        :category => "New colleague",
+        :link => "/en/2017/09/ricardo-marques/",
+        :image => "feed/ricardo.jpg"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
@@ -117,25 +133,9 @@ page_type: index
         :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
       }) %>
 
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Welcome Osvaldas!",
-        :text => "A christmas gift in advance, in the form of a UX designer and Front End Developer.",
-        :category => "New team mate",
-        :link => "/en/2016/12/osvaldas-valutis/",
-        :image => "feed/osvaldas.jpg"
-      }) %>
-
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/03.svg') %>
       </div>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "November's PDDs",
-        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to this time...",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
-      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Vembi",
@@ -173,6 +173,13 @@ page_type: index
         :background_color => "#f7f9f9",
         :text_color => "#005293",
         :link => "/en/work/releasefest"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "November's PDDs",
+        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to last November...",
+        :category => "Labs",
+        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {

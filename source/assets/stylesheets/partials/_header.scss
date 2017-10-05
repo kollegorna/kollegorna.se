@@ -62,6 +62,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       white-space: nowrap;
       overflow: hidden;
       float: right;
+      display: block;
       position: relative;
       -webkit-tap-highlight-color: transparent;
 
@@ -79,7 +80,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       }
 
       @include media($tablet) {
-        display: none !important;
+        display: none;
       }
 
       span {
@@ -144,7 +145,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       @include media($header-extra-mobile) {
         width: 200px;
       }
-      @include media($mobile) {
+      @include media($mobile-only) {
         width: 250px;
         height: 100%;
         background: $ds-color-charcoal;
@@ -386,7 +387,7 @@ body {
 }
 
 body.open-nav {
-  @include media($mobile) {
+  @include media($mobile-only) {
     transform: translateX(-250px) scaleX(1);
 
     .ar & {

@@ -20,7 +20,6 @@
         clear: left;
       }
     }
-
     @include media($desktop) {
       width: calc(33.333% - 20px);
 
@@ -29,9 +28,8 @@
       }
     }
 
-    a {
-      display: block;
-      outline-offset: -10px;
+    &__text {
+      transition: margin .2s linear;
     }
 
     h3 {
@@ -71,6 +69,17 @@
       }
     }
 
+    a {
+      display: block;
+
+      &:hover {
+        .block__text {
+          margin-top: -5px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
     .author {
       font-family: $ds-font-family-complementary;
       font-weight: 300;
@@ -106,10 +115,12 @@
     // Case Studies
     // --
     &--case-study {
-      a{
+      a {
         color: inherit;
         display: block;
+        outline-offset: -10px;
         // background: $ds-color-charcoal;
+
         p.category { color: inherit; }
 
         &.full {
@@ -216,6 +227,14 @@
       }
 
       a { color: #1da1f2; }
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px 0 3px;
+      }
     }
 
     // --

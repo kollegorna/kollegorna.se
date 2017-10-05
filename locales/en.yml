@@ -7,6 +7,7 @@ en:
     work: "work"
     work_types: "work/types"
     colleagues: "colleagues"
+    team: "colleagues"
     about: "about"
     contacts: "contacts"
     careers: "careers"
@@ -21,6 +22,7 @@ en:
     about: "About"
     careers: "Careers"
     blog: "Blog"
+    blog_url: "https://blog.kollegorna.se"
     contacts: "Contacts"
     work_with: "Work with us"
     labs: "Labs"
@@ -61,24 +63,42 @@ en:
     country_dominicanrep: "Dominican Republic"
     country_bulgaria: "Bulgaria"
     country_lithuania: "Lithuania"
+    more: "More"
     per:
         role: "Head of Production + Partner"
+        intro: "I turn your expectations, requirements, data and research into the product you need. I've served clients and their users since 1999 and with a background in design and development I know how to build successful digital services."
     henrik:
         role: "Head of Technology + Partner"
     eduardo:
         role: "Head of Design + Partner"
+        intro: "I’m a cross-media designer with a crush on code. Obsessed with typography, branding, animation, UI and, most of all, the Web. I spend my days searching for elegant solutions to complex problems through design."
     ivan:
         role: "Developer"
+        intro: "I'm a web developer spending most of my time in the backend code, mostly ruby. I'm responsible for the under-the-hood stuff that you usually don't see but are needed to keep the engine running. When I'm not at the computer writing code, I spend my time perfecting my coffee making skills and going to the gym."
     raymall:
         role: "Front-End Developer"
+        intro: "I specialize in Front-End Development, User Experience (UX) concepts and User Interface (UI) design. I’m always curious, thrilled and eager to learn about everything related to the web, its capabilities and its possibilities."
     dennis:
         role: "Developer"
+        intro: "I'm a 21st century digital digital boy – a developer that always striving to learn something new in different fields. Mostly Front-end development but capable enough to get into the Back-end parts. When I'm not staring at text in my terminal I enjoy games, books, cars and skateboarding."
     filippos:
         role: "Web Engineer"
+        intro: "I am a web engineer, meaning that I love working on both sides of HTTP mostly using Ruby and Javascript, although I feel backend a more natural place for me. I have a pure interest in networked services and systems which even lead me to challenge conventional REST through Introspected REST (https://introspected.rest/) manifesto. Apart from software, I really like to read historical novels and play tennis."
     nikolay:
         role: "Front-End Developer, Designer"
+        intro: "I'm a designer with a penchant for UX and great typography. I design and develop meaningful user-centered experiences, while trying to keep my Sketch and CSS files as maintainable as possible. My hobbies include questioning how I can improve my designs and code, the occasional book reading and traveling. I'm also learning photography, for the joy of it."
     osvaldas:
         role: "Front-End Developer, Designer"
+        intro: "“Web designer who thinks in code” perfectly describes what I do: I solve design problems and implement their technical solutions. My specialisation covers front-end development (HTML, CSS, JavaScript), front-end performance, accessibility and usability. I also do UI/UX design occasionally."
+    ricardo:
+        role: "Developer"
+        intro: "I'm a Fullstack Developer with a keen eye for data and algorithmic challenges. Big fan of adopting state-of-the-art technologies, I'm always ready to dive into building disrupting products. Besides engineering, I like to spend my days travelling, relaxing on a beach or hitting some shots around a tennis court."
+    skills:
+      main_expertise: "Main expertise"
+      platforms: "Platforms"
+      languages_frameworks: "Languages & frameworks"
+      techniques: "Techniques"
+      tools: "Tools"
   blog:
     subscribe_rss: "Subscribe via RSS"
     back_to_list: "All posts"
