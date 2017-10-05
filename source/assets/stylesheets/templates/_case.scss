@@ -11,8 +11,8 @@
     @include span-columns(10);
     @include shift(1);
 
-    @include media($laptop) {
-      @include span-columns(7);
+    @include media($tablet) {
+      margin-left: 110px;
     }
 
     @include media($desktop) {
@@ -92,7 +92,11 @@
     transition: opacity .2s ease-in-out .1s, transform .2s ease-in-out .1s;
     transform: translateY(10px);
 
-    @include media($laptop) {
+    @include media($tablet) {
+      margin-left: 110px;
+    }
+
+    @include media($desktop) {
       @include span-columns(3);
       @include shift(0);
       display: none;
@@ -133,6 +137,10 @@
     @include span-columns(10);
     @include shift(1);
     margin-top: 20px;
+
+    @include media($tablet) {
+      margin-left: 110px;
+    }
 
     @include media($desktop) {
       @include shift(0);
