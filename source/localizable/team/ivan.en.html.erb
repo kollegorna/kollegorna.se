@@ -1,0 +1,78 @@
+---
+title: Ivan Novosad
+description: "We're a distributed team where everyone is an expert in their field. From Santo Domingo in the west to Plovdiv in the east with our heart in Stockholm. In our blend of nationalities you find Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic."
+---
+
+<%= partial("partials/page_profile", :locals => {
+    :name         => "Ivan Novosad",
+    :image        => "ivan.jpg",
+    :role         => "#{t(:colleagues)[:ivan][:role]}",
+    :email        => "ivan@kollegorna.se",
+    :phone        => "",
+    :phoneUri     => "",
+    :intro        => "#{t(:colleagues)[:ivan][:intro]}",
+    :location     => "Trnava, #{t(:colleagues)[:country_lithuania]}",
+    :locLat       => "48.370911",
+    :locLng       => "17.583322",
+    :links        => {
+      :github    => {
+        :name     => "ivannovosad",
+        :link     => "https://github.com/ivannovosad"
+      },
+      :twitter   => {
+        :name     => "@ivannovosad",
+        :link     => "https://twitter.com/ivannovosad"
+      }
+    },
+    :web          => {
+      :name       => "",
+      :link       => ""
+    },
+    :main_expertise => {
+      :skill_1    => {
+        :name     => "Ruby on Rails"
+      }
+    },
+    :platforms    => {
+      :skill_1    => {
+        :name     => "Heroku"
+      },
+      :skill_2    => {
+        :name     => "Amazon AWS"
+      }
+    },
+    :languages_frameworks => {
+      :skill_1    => {
+        :name     => "Ruby"
+      },
+      :skill_2    => {
+        :name     => "Rails"
+      },
+      :skill_3    => {
+        :name     => "JavaScript"
+      },
+      :skill_4    => {
+        :name     => "EmberJS"
+      }
+    },
+    :techniques   => {
+      :skill_1    => {
+        :name     => "OOP"
+      }
+    },
+    :tools        => {
+      :skill_1    => {
+        :name     => "RubyMine"
+      },
+      :skill_2    => {
+        :name     => "Atom"
+      },
+      :skill_3    => {
+        :name     => "Postico"
+      },
+      :skill_4    => {
+        :name     => "iTerm"
+      }
+    }
+}) %>
+

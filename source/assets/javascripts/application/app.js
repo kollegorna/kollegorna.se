@@ -288,11 +288,11 @@
         }
       });
 
-      $('.profile__location').mouseenter(function() {
-        $(this).closest('.profile').addClass('hover');
+      $('.person__card__location').mouseenter(function() {
+        $(this).closest('.person__card').addClass('hover');
       })
       .mouseleave(function() {
-        $(this).closest('.profile').removeClass('hover');
+        $(this).closest('.person__card').removeClass('hover');
       });
 
     },

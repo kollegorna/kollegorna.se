@@ -1,0 +1,78 @@
+---
+title: Ivan Novosad
+description: "Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken."
+---
+
+<%= partial("partials/page_profile", :locals => {
+    :name         => "Ivan Novosad",
+    :image        => "ivan.jpg",
+    :role         => "#{t(:colleagues)[:ivan][:role]}",
+    :email        => "ivan@kollegorna.se",
+    :phone        => "",
+    :phoneUri     => "",
+    :intro        => "#{t(:colleagues)[:ivan][:intro]}",
+    :location     => "Trnava, #{t(:colleagues)[:country_lithuania]}",
+    :locLat       => "48.370911",
+    :locLng       => "17.583322",
+    :links        => {
+      :github    => {
+        :name     => "ivannovosad",
+        :link     => "https://github.com/ivannovosad"
+      },
+      :twitter   => {
+        :name     => "@ivannovosad",
+        :link     => "https://twitter.com/ivannovosad"
+      }
+    },
+    :web          => {
+      :name       => "",
+      :link       => ""
+    },
+    :main_expertise => {
+      :skill_1    => {
+        :name     => "Ruby on Rails"
+      }
+    },
+    :platforms    => {
+      :skill_1    => {
+        :name     => "Heroku"
+      },
+      :skill_2    => {
+        :name     => "Amazon AWS"
+      }
+    },
+    :languages_frameworks => {
+      :skill_1    => {
+        :name     => "Ruby"
+      },
+      :skill_2    => {
+        :name     => "Rails"
+      },
+      :skill_3    => {
+        :name     => "JavaScript"
+      },
+      :skill_4    => {
+        :name     => "EmberJS"
+      }
+    },
+    :techniques   => {
+      :skill_1    => {
+        :name     => "OOP"
+      }
+    },
+    :tools        => {
+      :skill_1    => {
+        :name     => "RubyMine"
+      },
+      :skill_2    => {
+        :name     => "Atom"
+      },
+      :skill_3    => {
+        :name     => "Postico"
+      },
+      :skill_4    => {
+        :name     => "iTerm"
+      }
+    }
+}) %>
+
