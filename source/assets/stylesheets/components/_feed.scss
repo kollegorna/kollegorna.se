@@ -28,6 +28,10 @@
       }
     }
 
+    &__text {
+      transition: margin .2s linear;
+    }
+
     h3 {
       color: inherit;
       max-width: 350px;
@@ -66,11 +70,13 @@
     }
 
     a {
-      img {
-        transition: opacity .2s linear;
-      }
-      &:hover img {
-        opacity: .7;
+      display: block;
+
+      &:hover {
+        .block__text {
+          margin-top: -5px;
+          margin-bottom: 5px;
+        }
       }
     }
 
