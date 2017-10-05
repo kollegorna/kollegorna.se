@@ -23,6 +23,14 @@ page_type: index
 
     <div class="index__feed__blocks feed">
       <%= partial("partials/feed/blog", :locals => {
+        :title => "You Might Also Like",
+        :text => "Vi har en ny blogg! Här skriver vi om allt annat än jobb och vi tror att du kommer gilla det.",
+        :category => "Nyhet",
+        :link => "/sv/2017/10/you-might-also-like/",
+        :image => "feed/ymal.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Välkommen Ricardo!",
         :text => "Olá Lisboa! Ricardo Marques har precis anslutit till vårt stjärnspäckade backend-team.",
         :category => "Ny kollega",
@@ -65,8 +73,6 @@ page_type: index
         :image => "feed/snackverkstan.png"
       }) %>
 
-
-
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Valu8 Company Intelligence",
         :text => "Från desktop till webb – utökad transparens och större insikt i onoterade bolag",
@@ -82,13 +88,6 @@ page_type: index
         :category => "Inkommande…",
         :link => "https://radar.kollegorna.se",
         :image => "feed/tech-radar-2017.png"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Hej Rails-utvecklare!",
-        :text => "Vill du ha en fullt marknadsmässig lön, flexibla arbetstider, kunna jobba var du vill, fina förmåner, fantastiska kollegor och massor av roliga projekt?",
-        :category => "Jobba här",
-        :link => "/sv/2017/02/rails-utvecklare/"
       }) %>
 
       <div class="block decoration" aria-hidden="true">
