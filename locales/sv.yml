@@ -66,7 +66,7 @@ sv:
     more: "Mer"
     per:
         role: "Head of Production + Partner"
-        intro: "I turn your expectations, requirements, data and research into the product you need. I've served clients and their users since 1999 and with a background in design and development I know how to build successful digital services."
+        intro: "Jag tar dina förväntningar, krav, data samt research och sätter ihop det till den produkt du behöver. Har jobbat med webben sedan 1999 och med en bakgrund inom design och utveckling vet jag hur man bygger framgångsrika digitala tjänster."
     henrik:
         role: "Head of Technology + Partner"
     eduardo:
@@ -76,7 +76,7 @@ sv:
         role: "Utvecklare"
         intro: "I'm a web developer spending most of my time in the backend code, mostly ruby. I'm responsible for the under-the-hood stuff that you usually don't see but are needed to keep the engine running. When I'm not at the computer writing code, I spend my time perfecting my coffee making skills and going to the gym."
     raymall:
-        role: "Front-End Developer"
+        role: "Front End-utvecklare"
         intro: "I specialize in Front-End Development, User Experience (UX) concepts and User Interface (UI) design. I’m always curious, thrilled and eager to learn about everything related to the web, its capabilities and its possibilities."
     dennis:
         role: "Utvecklare"
@@ -85,20 +85,20 @@ sv:
         role: "Web Engineer"
         intro: "I am a web engineer, meaning that I love working on both sides of HTTP mostly using Ruby and Javascript, although I feel backend a more natural place for me. I have a pure interest in networked services and systems which even lead me to challenge conventional REST through Introspected REST (https://introspected.rest/) manifesto. Apart from software, I really like to read historical novels and play tennis."
     nikolay:
-        role: "Front-End Developer, Designer"
+        role: "Front End-utvecklare, Designer"
         intro: "I'm a designer with a penchant for UX and great typography. I design and develop meaningful user-centered experiences, while trying to keep my Sketch and CSS files as maintainable as possible. My hobbies include questioning how I can improve my designs and code, the occasional book reading and traveling. I'm also learning photography, for the joy of it."
     osvaldas:
-        role: "Front-End Developer, Designer"
+        role: "Front End-utvecklare, Designer"
         intro: "“Web designer who thinks in code” perfectly describes what I do: I solve design problems and implement their technical solutions. My specialisation covers front-end development (HTML, CSS, JavaScript), front-end performance, accessibility and usability. I also do UI/UX design occasionally."
     ricardo:
         role: "Utvecklare"
         intro: "I'm a Fullstack Developer with a keen eye for data and algorithmic challenges. Big fan of adopting state-of-the-art technologies, I'm always ready to dive into building disrupting products. Besides engineering, I like to spend my days travelling, relaxing on a beach or hitting some shots around a tennis court."
     skills:
-      main_expertise: "Main expertise"
-      platforms: "Platforms"
-      languages_frameworks: "Languages & frameworks"
-      techniques: "Techniques"
-      tools: "Tools"
+      main_expertise: "Huvudsaklig expertis"
+      platforms: "Plattformar"
+      languages_frameworks: "Språk & ramverk"
+      techniques: "Tekniker"
+      tools: "Verktyg"
   blog:
     subscribe_rss: "Prenumerera via RSS"
     back_to_list: "Alla inlägg"
