@@ -34,12 +34,17 @@
         <% end %>
       <% end %>
 
-      <% if web.present? %>
-        <% web.each do |linkKey, link| %>
-          <a href="<%= link[:link] %>">
-            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-web"></use></svg>
-            <%= link[:name] %>
-          </a>
+      <% if web[:name].present? %>
+        <a class="web" href="<%= web[:link] %>">
+          <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-web"></use></svg>
+          <span><%= web[:name] %></span>
+        </a>
+      <% end %>
+
+      <% if defined?(additional_links) %>
+        <span class="additional-separator"></span>
+        <% additional_links.each do |linkKey, link| %>
+          <a class="additional" href="<%= link[:link] %>" target="_blank"><%= link[:name] %></a><br>
         <% end %>
       <% end %>
     </div>

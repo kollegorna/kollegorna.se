@@ -174,6 +174,21 @@
             margin-bottom: 5px;
           }
         }
+
+        &.additional {
+          display: inline-block;
+          background: transparent;
+          border: 1px solid $ds-color-green;
+          color: $ds-color-green;
+          font-size: ds-rem-calc(12);
+          padding: 6px 15px;
+          border-radius: 999em;
+
+          &:hover {
+            background: $ds-color-green;
+            color: $ds-color-white;
+          }
+        }
       }
 
       svg {
@@ -182,6 +197,15 @@
         vertical-align: middle;
         margin-top: ds-rem-calc(-2);
         margin-right: ds-rem-calc(10);
+      }
+
+      .additional-separator {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: transparent;
+        margin-top: ds-rem-calc(10);
+        margin-bottom: ds-rem-calc(10);
       }
     }
 
