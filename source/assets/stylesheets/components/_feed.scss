@@ -29,7 +29,7 @@
     }
 
     &__text {
-      transition: margin .2s linear;
+      transition: transform .2s linear;
     }
 
     h3 {
@@ -74,8 +74,7 @@
 
       &:hover {
         .block__text {
-          margin-top: -5px;
-          margin-bottom: 5px;
+          transform: translateY(-5px);
         }
       }
     }

@@ -98,8 +98,7 @@
             color: $ds-color-link;
 
             .block__image {
-              margin-top: -5px;
-              margin-bottom: 5px;
+              transform: translateY(-5px);
               box-shadow: 0 10px 25px 0 rgba(0,0,0,0.1);
             }
           }
