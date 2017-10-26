@@ -6,6 +6,12 @@
   meta_og_img      = "https://www.kollegorna.se#{image_path current_page.data.share_image || "meta/og-image.jpg"}"
   meta_og_title    = h(current_page.data.title || meta_title)
   page_type        = current_page.data.page_type || ''
+  date = DateTime.now.to_date
+  begin
+    date = Date.parse(current_page.data.date.to_s)
+  rescue Exception => _
+  end
+  date = date.strftime('%Y-%m-%d')
 
 %><!DOCTYPE html>
 <html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>" data-page-type="<%= page_type %>">
@@ -16,6 +22,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title><%= current_page.data.title ? "#{current_page.data.title} | #{meta_name}" : "#{meta_name} | #{meta_title}" %></title>
   <meta name="description" content="<%= meta_description %>">
+  <meta name="date" content="<%= date %>" scheme="YYYY-MM-DD">
 
   <!-- preconnect, dns-prefetch, prefetch, preload -->
   <link rel="preconnect" href="https://cloud.typography.com">
