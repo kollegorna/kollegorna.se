@@ -110,7 +110,7 @@ helpers do
       url.sub!("/karta", "/map")
       url.sub!("/blogg", "/blog")
     elsif current_locale == 'ar'
-      url = "/ar/"
+      url.sub!("/ar", "/#{locale}")
     end
     url
   end
