@@ -25,6 +25,14 @@ page_type: index
     <div class="index__feed__blocks feed">
 
       <%= partial("partials/feed/blog", :locals => {
+          :title => "Personal Development Days November 2017",
+          :text => "Every sixth week we have something called Personal Development Days, starting on Thursday and ending on Monday. Here's what we did this time.",
+          :category => "Blog",
+          :link => "https://blog.kollegorna.se/personal-development-days-november-2017-5114a0386678",
+          :image => "feed/pdd-nov-17.jpeg"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "You Might Also Like",
         :text => "Our brand new blog is a place for our remote team to talk anything but shop. We think you may like it.",
         :category => "New Blog",
@@ -50,20 +58,20 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
+        :title => "Tech Radar 2017",
+        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
+        :category => "What's next?",
+        :link => "https://radar.kollegorna.se",
+        :image => "feed/tech-radar-2017.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Corporate Social Responsibility",
         :text => "Get to know some of the ways we're trying to make the world just that little bit better.",
         :category => "Sustainability",
         :link => "/en/csr",
         :background_color => "#f5f5f5",
         :image => "feed/csr.jpg"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Tech Radar 2017",
-        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
-        :category => "What's next?",
-        :link => "https://radar.kollegorna.se",
-        :image => "feed/tech-radar-2017.png"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -95,6 +103,14 @@ page_type: index
         :background_color => "#202020",
         :text_color => "white",
         :link => "/en/work/spoil-movies-save-lives"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "3+ years of Ember, 6 months of React",
+        :text => "One of our engineers tries React after years of working with Ember, and writes home about it. Buckle up!",
+        :image => "feed/ember-react.jpg",
+        :category => "Blog",
+        :link => "https://blog.kollegorna.se/3-years-of-ember-6-months-of-react-34ce909a5ce1"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -143,13 +159,6 @@ page_type: index
         :background_color => "#0d121e",
         :text_color => "#e0e9ff",
         :link => "/en/work/skl-genombrott"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Voicemail using Slack, S3, 46elks and dash of Go",
-        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
       <div class="block decoration" aria-hidden="true">
