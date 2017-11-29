@@ -95,6 +95,7 @@
 
   &__features {
     padding-bottom: 60px;
+    @include iphonex-notch;
 
     &__title {
       @include outer-container;
