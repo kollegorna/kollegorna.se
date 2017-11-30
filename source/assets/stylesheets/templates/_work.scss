@@ -35,6 +35,9 @@
   }
 
   &__projects {
+
+    @include iphonex-notch;
+
     &__blocks {
       @include outer-container;
       max-width: 1420px;

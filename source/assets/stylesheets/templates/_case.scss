@@ -235,6 +235,8 @@
     padding: 60px 0;
     background: $ds-color-charcoal;
 
+    @include iphonex-notch;
+
     .feed {
       max-width: 900px;
       margin: 0 auto;
