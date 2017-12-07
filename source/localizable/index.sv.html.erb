@@ -23,6 +23,14 @@ page_type: index
 
     <div class="index__feed__blocks feed">
       <%= partial("partials/feed/blog", :locals => {
+          :title => "Alla får vara tomte i jul",
+          :text => "Hemlig Tomte är en Secret Santa-tjänst som hjälper dig att anordna detta skojiga julklappsutbyte.",
+          :category => "Case",
+          :link => "https://hemligtomte.se",
+          :image => "feed/hemlig-tomte.png"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "You Might Also Like",
         :text => "Vi har en ny blogg! Här skriver vi om allt annat än jobb och vi tror att du kommer gilla det.",
         :category => "Nyhet",
