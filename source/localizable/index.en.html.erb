@@ -25,6 +25,14 @@ page_type: index
     <div class="index__feed__blocks feed">
 
       <%= partial("partials/feed/blog", :locals => {
+          :title => "Hemlig Tomte helps everyone become Santa Claus",
+          :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
+          :category => "Case",
+          :link => "https://hemligtomte.se",
+          :image => "feed/hemlig-tomte.png"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
           :title => "Personal Development Days November 2017",
           :text => "Every sixth week we have something called Personal Development Days, starting on Thursday and ending on Monday. Here's what we did this time.",
           :category => "Blog",
