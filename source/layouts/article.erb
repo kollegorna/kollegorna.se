@@ -1,15 +1,25 @@
 <% wrap_layout :layout do %>
 
 <main role="main">
-
   <article class="blog" role="article">
-
     <header class="blog__header blog__header--article">
       <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a></span>
       <h1><%= current_article.title %></h1>
       <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
       </time>
+
+      <% if I18n.locale == :en %>
+        <div class="blog__header__medium">
+          <a href="https://blog.kollegorna.se">
+
+              <h2>Want to read newer posts?<br>
+                <span class="cta">Find us on Medium.</span></h2>
+
+              <%= image_tag "blog/medium-2.jpg" %>
+          </a>
+        </div>
+      <% end %>
     </header>
 
     <div class="blog__content">
