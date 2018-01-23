@@ -25,6 +25,14 @@ page_type: index
     <div class="index__feed__blocks feed">
 
       <%= partial("partials/feed/blog", :locals => {
+          :title => "JustHostMe Rebranding",
+          :text => "We've just completed the redesign of 🇬🇧 JustHostMe's brand and website.",
+          :category => "Dribbble",
+          :link => "https://dribbble.com/shots/4137271-JustHostMe-Rebranding",
+          :image => "feed/jhm.jpg"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
           :title => "Kollegorna reviews 2017 — Part 1",
           :text => "Our team looks back at the things we've liked best about 2017.",
           :category => "You Might Also Like",
