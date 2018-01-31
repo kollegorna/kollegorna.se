@@ -19,43 +19,78 @@ $jhm-white: #FFFFFF;
 
   .objects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25vw 25vw 25vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vw 100vw 50vw 100vw;
     grid-template-areas:
-      "flag hp"
-      "phone hp"
-      "phone mini";
+      "flag"
+      "phone"
+      "mini"
+      "hp";
 
-      .item {
-        text-align: center;
-        display: flex;
-        align-items: center;
+    @include media($tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vw 50vw 50vw;
+      grid-template-areas:
+        "flag hp"
+        "phone hp"
+        "phone mini";
+    }
 
-        img {
-          margin: 0 auto;
-        }
+    @include media($desktop) {
+      grid-template-rows: 25vw 25vw 25vw;
+    }
 
-        &--flag {
-          grid-area: flag;
-          background-color: $jhm-blue--dark;
+    @include media($huge) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 50vw;
+      grid-template-areas:
+        "flag hp mini phone";
+    }
+
+    .item {
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 auto;
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      &--flag {
+        grid-area: flag;
+        background-color: $jhm-blue--dark;
+
+        @include media($tablet) {
           img { max-width: ds-rem-calc(318); }
         }
-        &--mini {
-          grid-area: mini;
-          background-color: $jhm-red;
+      }
+      &--mini {
+        grid-area: mini;
+        background-color: $jhm-red;
+
+        @include media($tablet) {
           img { max-width: ds-rem-calc(446); }
         }
-        &--hp {
-          grid-area: hp;
-          background-color: $jhm-blue;
+      }
+      &--hp {
+        grid-area: hp;
+        background-color: $jhm-blue;
+
+        @include media($tablet) {
           img { max-width: ds-rem-calc(186); }
         }
-        &--phone {
-          grid-area: phone;
-          background-color: $jhm-beige;
+      }
+      &--phone {
+        grid-area: phone;
+        background-color: $jhm-beige;
+
+        @include media($tablet) {
           img { max-width: ds-rem-calc(368); }
         }
       }
+    }
   }
 }
 
