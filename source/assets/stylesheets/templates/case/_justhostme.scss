@@ -1,0 +1,99 @@
+$jhm-blue--dark: #020027 !default;
+$jhm-blue: #0E2C5E;
+$jhm-red: #D0343E;
+$jhm-mint: #E2FDEF;
+$jhm-beige: #F9FBF2;
+$jhm-white: #FFFFFF;
+
+.case--justhostme {
+
+  .logo {
+    background: $jhm-beige;
+    text-align: center;
+    padding: ds-rem-calc(160) ds-rem-calc(20);
+
+    img {
+      max-width: 1100px;
+    }
+  }
+
+  .objects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25vw 25vw 25vw;
+    grid-template-areas:
+      "flag hp"
+      "phone hp"
+      "phone mini";
+
+      .item {
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin: 0 auto;
+        }
+
+        &--flag {
+          grid-area: flag;
+          background-color: $jhm-blue--dark;
+          img { max-width: ds-rem-calc(318); }
+        }
+        &--mini {
+          grid-area: mini;
+          background-color: $jhm-red;
+          img { max-width: ds-rem-calc(446); }
+        }
+        &--hp {
+          grid-area: hp;
+          background-color: $jhm-blue;
+          img { max-width: ds-rem-calc(186); }
+        }
+        &--phone {
+          grid-area: phone;
+          background-color: $jhm-beige;
+          img { max-width: ds-rem-calc(368); }
+        }
+      }
+  }
+}
+
+@keyframes dasharray {
+  0% { stroke-dashoffset: -4600px; }
+  40% { stroke-dashoffset: 0; }
+  60% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 4600px; }
+}
+@keyframes black_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, 10px);
+  }
+}
+@keyframes red_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(250px, -100px);
+  }
+}
+@keyframes yellow_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, -100px);
+  }
+}
+@keyframes orange_orb {
+  0% {
+    transform: rotate(25deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-225deg) translate(-50px, 50px);
+  }
+}
