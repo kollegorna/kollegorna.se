@@ -24,12 +24,13 @@ page_type: index
 
     <div class="index__feed__blocks feed">
 
-      <%= partial("partials/feed/blog", :locals => {
-          :title => "JustHostMe Rebranding",
-          :text => "We've just completed the redesign of JustHostMe's brand and website.",
-          :category => "Dribbble",
-          :link => "https://dribbble.com/shots/4137271-JustHostMe-Rebranding",
-          :image => "feed/jhm.jpg"
+      <%= partial("partials/feed/case_study", :locals => {
+          :title => "JustHostMe",
+          :text => "Branding and website design for Echo1, a Singapore-based investor in sound-related companies.",
+          :image => "feed/justhostme.jpg",
+          :background_color => "#a8394b",
+          :text_color => "#fdfffc",
+          :link => "/en/work/echo1"
         }) %>
 
       <%= partial("partials/feed/blog", :locals => {
