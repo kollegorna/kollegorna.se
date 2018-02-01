@@ -207,7 +207,6 @@ $jhm-white: #FFFFFF;
     }
 
     @include media($huge) {
-      grid-template-rows: minmax(50vh, 50vw);
       grid-template-columns: 1fr 1fr;
     }
 
