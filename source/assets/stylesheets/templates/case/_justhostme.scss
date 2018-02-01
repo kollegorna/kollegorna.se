@@ -40,10 +40,11 @@ $jhm-white: #FFFFFF;
     }
 
     @include media($huge) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 50vw;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 25vw 25vw;
       grid-template-areas:
-        "flag hp mini phone";
+        "phone flag hp"
+        "phone mini hp";
     }
 
     .item {
@@ -65,6 +66,9 @@ $jhm-white: #FFFFFF;
         @include media($tablet) {
           img { max-width: ds-rem-calc(318); }
         }
+        @include media($huge) {
+          background: $jhm-blue;
+        }
       }
       &--mini {
         grid-area: mini;
@@ -74,6 +78,9 @@ $jhm-white: #FFFFFF;
         @include media($tablet) {
           img { max-width: ds-rem-calc(446); }
         }
+        @include media($huge) {
+          background: $jhm-beige;
+        }
       }
       &--hp {
         grid-area: hp;
@@ -82,6 +89,9 @@ $jhm-white: #FFFFFF;
         @include media($tablet) {
           img { max-width: ds-rem-calc(186); }
         }
+        @include media($huge) {
+          background: $jhm-red;
+        }
       }
       &--phone {
         grid-area: phone;
@@ -89,6 +99,9 @@ $jhm-white: #FFFFFF;
 
         @include media($tablet) {
           img { max-width: ds-rem-calc(368); }
+        }
+        @include media($huge) {
+          background: $jhm-blue--dark;
         }
       }
     }
