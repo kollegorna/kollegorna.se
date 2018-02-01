@@ -13,19 +13,18 @@ $jhm-white: #FFFFFF;
     padding: ds-rem-calc(160) ds-rem-calc(20);
 
     img {
-      max-width: 1100px;
+      width: ds-rem-calc(1100);
     }
   }
 
   .objects {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50vw 100vw 50vw 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vw 100vw 50vw;
     grid-template-areas:
-      "flag"
-      "phone"
-      "mini"
-      "hp";
+      "flag flag"
+      "phone hp"
+      "mini mini";
 
     @include media($tablet) {
       grid-template-columns: 1fr 1fr;
@@ -61,6 +60,7 @@ $jhm-white: #FFFFFF;
       &--flag {
         grid-area: flag;
         background-color: $jhm-blue--dark;
+        img { max-height: 70%; }
 
         @include media($tablet) {
           img { max-width: ds-rem-calc(318); }
@@ -69,6 +69,7 @@ $jhm-white: #FFFFFF;
       &--mini {
         grid-area: mini;
         background-color: $jhm-red;
+        img { max-width: 70%; }
 
         @include media($tablet) {
           img { max-width: ds-rem-calc(446); }
@@ -89,6 +90,141 @@ $jhm-white: #FFFFFF;
         @include media($tablet) {
           img { max-width: ds-rem-calc(368); }
         }
+      }
+    }
+  }
+
+  .homepage {
+    position: relative;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(50);
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 95%;
+      background: $jhm-blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__image {
+      position: relative;
+      max-width: ds-rem-calc(1340);
+      overflow: hidden;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.10), 0 0 10px 0 rgba(0,0,0,0.05);
+      margin: 0 auto;
+
+      @include media($tablet) {
+        border-radius: ds-rem-calc(10);
+      }
+    }
+  }
+
+  .grid {
+    margin-top: ds-rem-calc(10);
+    text-align: center;
+
+    @include media($tablet) {
+      margin-top: ds-rem-calc(50);
+    }
+
+    img {
+      width: ds-rem-calc(1200);
+    }
+  }
+
+  .comparison {
+    background: $jhm-beige;
+    margin-top: ds-rem-calc(20);
+    padding: ds-rem-calc(20) 0;
+    text-align: center;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(80) ds-rem-calc(40);
+    }
+
+    img {
+      width: ds-rem-calc(1100);
+    }
+  }
+
+  .love {
+    background: $jhm-blue;
+    text-align: center;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(50);
+    }
+
+    img {
+      width: ds-rem-calc(1200);
+
+      @include media($tablet) {
+        border-radius: ds-rem-calc(20);
+      }
+    }
+  }
+
+  .branded {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mini"
+      "cards"
+      "matches";
+
+    @include media($tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vw 50vw;
+      grid-template-areas:
+        "mini mini"
+        "cards matches";
+    }
+
+    @include media($desktop) {
+      grid-template-rows: 50vw 50vw;
+      grid-template-areas:
+        "mini mini"
+        "cards matches";
+    }
+
+    @include media($huge) {
+      grid-template-rows: minmax(50vh, 50vw);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .item {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: ds-rem-calc(50);
+
+      img {
+        margin: 0 auto;
+        max-width: 95%;
+        max-height: 90%;
+      }
+
+      &--mini {
+        grid-area: mini;
+        background-color: $jhm-beige;
+
+        @include media($tablet) {
+          img { max-width: 80%; }
+        }
+      }
+      &--cards {
+        grid-area: cards;
+        background-color: $jhm-blue;
+      }
+      &--matches {
+        grid-area: matches;
+        background-color: $jhm-blue--dark;
       }
     }
   }
