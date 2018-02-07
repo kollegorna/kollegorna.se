@@ -299,6 +299,7 @@
 
 
     fetchLabsPosts: function() {
+      return; // DISABLED
 
       var $list = $('.js--labs-posts-fetch');
       if(!$list.length) return;
