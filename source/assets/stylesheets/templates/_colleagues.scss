@@ -1,8 +1,12 @@
 $extra-mobile: new-breakpoint(min-width 556px);
 
 .colleagues {
+  @include media($tablet) {
+    margin-bottom: -22px;
+  }
+
   @include media($desktop) {
-    padding: 0 20px 60px 20px;
+    padding: 0 20px;
   }
 
   &__header {
@@ -92,7 +96,7 @@ $extra-mobile: new-breakpoint(min-width 556px);
   &__list {
     @include outer-container;
     max-width: 1400px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     @include iphonex-notch;
 
     @include media($extra-mobile) {
@@ -100,20 +104,25 @@ $extra-mobile: new-breakpoint(min-width 556px);
     }
 
     @include media($tablet) {
-      margin-top: -100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: -62px;
     }
 
     .block {
-      padding-top: 30px;
+      padding-top: 20px;
 
       @include media($tablet)  {
         @include span-columns(6);
+        padding-top: 30px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-top: 40px;
       }
 
-      @include media($desktop) { @include span-columns(4); }
+      @include media($desktop) {
+        @include span-columns(4);
+        padding-top: 40px;
+      }
     }
 
     .profile {
