@@ -16,7 +16,6 @@
 %><!DOCTYPE html>
 <html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>" data-page-type="<%= page_type %>">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -134,10 +133,8 @@
     ga('require', 'linkid', 'linkid.js');
     ga('send', 'pageview');
   </script>
-
 </head>
 <body>
-
   <%= partial "partials/header" %>
 
   <%= yield %>
@@ -201,6 +198,5 @@
     </script>
 
   <% end %>
-
 </body>
 </html>
