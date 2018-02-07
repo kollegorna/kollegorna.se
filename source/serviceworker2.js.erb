@@ -16,17 +16,15 @@ const version         = '<%= Time.now.to_i %>',
         '<%= asset_path :js, "/#{app.config[:js_dir]}/application" %>',
         '<%= asset_path :images, "sprite.svg" %>',
         '<%= asset_path :images, "offline.svg" %>',
-        '<%= asset_path :images, "index/hero.svg" %>',
+        '<%= asset_path :images, "about/hero.svg" %>',
       ],
       otherResources = [
         '/sv/projekt/',
         '/sv/om/',
         '/sv/kollegor/',
-        '/sv/blogg/',
         '/en/work/',
         '/en/about/',
         '/en/colleagues/',
-        '/en/blog/',
       ],
       logMsg = (msg) => {
         if('<%= app.config[:environment] %>' == 'development') {
