@@ -13,7 +13,7 @@
         <div class="blog__header__medium">
           <a href="https://blog.kollegorna.se">
             <h2>Want to read newer posts?<br><span class="cta">Find us on Medium.</span></h2>
-            <%= image_tag "blog/medium-2.jpg" %>
+            <!-- <%= image_tag "blog/medium-2.jpg" %> -->
           </a>
         </div>
       <% end %>
@@ -56,12 +56,12 @@
             <% end %>
           <% end %>
         </div>
-        <div class="blog__footer__rss">
+        <!-- <div class="blog__footer__rss">
           <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
             <%= t(:blog)[:subscribe_rss] %>
             <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg>
           </a>
-        </div>
+        </div> -->
       </div>
 
       <% if I18n.locale == :en %>
