@@ -3,7 +3,7 @@ title: "Service Worker gotchas"
 date: 2017-06-12 16:00:00 EET
 author: osvaldas
 meta_description: "We’ve learned there quite a few gotchas to grasp in order to get Service Worker working correctly…"
-share_image: /posts/images/service-worker-gotchas/kollegorna-offline-page.jpg
+share_image: /images/posts/service-worker-gotchas/kollegorna-offline-page.jpg
 disable_comments: false
 disable_listing: true
 ---
@@ -109,7 +109,7 @@ I will be using ES6 syntax and functions for Service Worker file related code ex
 
 Berry on the cake: besides coding a Service Worker, you should also make a custom “offline” page with its own URL (e.g. `/offline/`) which is a part of Service Worker experience. It will be displayed when a requested page is inaccessible due to internet connection problems or server failure. The _how to_ – later in the article. Our “offline” page at Kollegorna is pretty simple:
 
-![“Offline” page](/posts/images/service-worker-gotchas/kollegorna-offline-page.jpg)
+![“Offline” page](/images/posts/service-worker-gotchas/kollegorna-offline-page.jpg)
 
 ## Service Worker lifecycle and events hierarchy
 
@@ -117,7 +117,7 @@ Each time the user visits your website, the browser downloads the worker’s fil
 
 Once the worker file has been registered, the browser then acts by the _instructions_ defined in that file. Actually the browser triggers few events on different occasions. All we need to do is to _catch_ them and act accordingly, be it to cache a file or respond with a resource. Some events are triggered only once in worker’s lifecycle and some – multiple of times. Take a look at the scheme to see who is who:
 
-![Service Worker lifecycle and events hierarchy](/posts/images/service-worker-gotchas/lifecycle-events-hierarchy.jpg)
+![Service Worker lifecycle and events hierarchy](/images/posts/service-worker-gotchas/lifecycle-events-hierarchy.jpg)
 
 As you see, it all starts with `install` event which is fired only _once_ in worker’s lifecycle. It is responsible for installing the service worker and initially caching the most important pages and assets of a website:
 
@@ -273,7 +273,7 @@ This could be very suitable for CMS-based websites as you don’t need to manage
 
 We have already learned how to cache and serve the “offline” page and turns out we can do the same with images: cache and serve a custom image for the image-type requests that failed. Another one nifty UX improvement, design is in details:
 
-![Serving “offline” image](/posts/images/service-worker-gotchas/kollegorna-offline-image.jpg)
+![Serving “offline” image](/images/posts/service-worker-gotchas/kollegorna-offline-image.jpg)
 
 Actually there are at least two ways of implementing the “offline” image:
 
@@ -545,21 +545,21 @@ We have enabled automated Service Workers on Trellis (Wordpress LEMP stack) and 
 
 I found Chrome DevTools to be a very handy tool for debugging Service Workers. It has this nice _Network Throttling_ feature which makes it easy to simulate offline experience:
 
-![Chrome DevTools: Network Throttling](/posts/images/service-worker-gotchas/devtools-network-throttling.jpg)
+![Chrome DevTools: Network Throttling](/images/posts/service-worker-gotchas/devtools-network-throttling.jpg)
 
 Debugging worker might be tricky sometimes, because you first have to unregister the current worker before testing the updated code, otherwise you’ll find yourself doing a Sisyphus work – investigating the old code. In Chrome you can unregister the worker manually via `DevTools → Application → Service Workers`:
 
-![Chrome DevTools: Service Workers](/posts/images/service-worker-gotchas/devtools-service-workers.jpg)
+![Chrome DevTools: Service Workers](/images/posts/service-worker-gotchas/devtools-service-workers.jpg)
 
 In some cases I find `Clear Storage` to work better for me as it completely wipes out all the cached stuff and I am always served with the latest one when debugging:
 
-![Chrome DevTools: Clear Storage](/posts/images/service-worker-gotchas/devtools-clear-storage.jpg)
+![Chrome DevTools: Clear Storage](/images/posts/service-worker-gotchas/devtools-clear-storage.jpg)
 
 Since Service Worker is a relatively new technology it could not do without alteration on interpreting various rules and directives. Therefore always be sure to test your worker on the future browser releases like [Chrome Canary](https://www.google.com/chrome/browser/canary.html) or [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 
 Once you have your worker up and running, you can reasonably hope for 100/100 score on Chrome’s website performance evaluation tool – [Lighthouse](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwit69ai4orUAhXC2CwKHXVXBMgQFggvMAA&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flighthouse%2Fblipmdconlkpinefehnmjammfjpmpbjk%3Fhl%3Den&usg=AFQjCNFvomjeSTNsyil51bzJfvzQWOp_lA&sig2=Zo4u5jzNkdhXR0pkoXNiHg):
 
-![Chrome Lighthouse Score](/posts/images/service-worker-gotchas/chrome-lighthouse-score.jpg)
+![Chrome Lighthouse Score](/images/posts/service-worker-gotchas/chrome-lighthouse-score.jpg)
 
 * * *
 
