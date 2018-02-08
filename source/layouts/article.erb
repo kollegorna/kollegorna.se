@@ -8,16 +8,20 @@
       <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
       </time>
-
-      <% if I18n.locale == :en %>
-        <div class="blog__header__medium">
-          <a href="https://blog.kollegorna.se">
-            <h2>Want to read newer posts?<br><span class="cta">Find us on Medium.</span></h2>
-            <!-- <%= image_tag "blog/medium-2.jpg" %> -->
-          </a>
-        </div>
-      <% end %>
     </header>
+
+    <% if I18n.locale == :en %>
+      <div class="blog__medium">
+        <a href="https://blog.kollegorna.se">
+          <h2>Want to read newer posts?<br><span class="cta">Find us on Medium.</span></h2>
+          <div class="-logos">
+            <svg><title>Kollegorna</title><use xlink:href="<%= image_path("sprite.svg") %>#icon-logo"></use></svg>
+            <span>+</span>
+            <svg><title>Medium</title><use xlink:href="<%= image_path("sprite.svg") %>#icon-medium"></use></svg>
+          </div>
+        </a>
+      </div>
+    <% end %>
 
     <div class="blog__content">
       <%= yield %>
@@ -68,12 +72,12 @@
       </div>
 
       <% if I18n.locale == :en %>
-        <a href="https://blog.kollegorna.se">
-          <div class="blog__footer__medium">
+        <div class="blog__footer__medium">
+          <a href="https://blog.kollegorna.se">
             <h2>Want to read newer posts?<br>Find us on Medium.</h2>
             <%= image_tag "blog/medium.png" %>
-          </div>
-        </a>
+          </a>
+        </div>
       <% else %>
         <div class="blog__footer__more">
           <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
@@ -82,11 +86,9 @@
     </footer>
 
     <% if !current_article.data.disable_comments %>
-
-    <div class="blog__comments">
-      <div class="disqus">Loading comments &hellip;</div>
-    </div>
-
+      <div class="blog__comments">
+        <div class="disqus">Loading comments &hellip;</div>
+      </div>
     <% end %>
 
   </article>
