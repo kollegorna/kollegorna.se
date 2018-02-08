@@ -1,4 +1,4 @@
-- per:
+per:
   firstname: Per
   lastname: Sandström
   title: Designer + Partner
@@ -9,7 +9,7 @@
   phone: 070 - 242 07 50
   does: "webb- & interaktionsdesign, front end, Drupal"
 
-- henrik:
+henrik:
   firstname: Henrik
   lastname: Sjökvist
   title: Utvecklare + Partner
@@ -19,7 +19,7 @@
   phone: 073 – 505 29 29
   does: "Ruby, Rails, Go, JavaScript"
 
-- samuel:
+samuel:
   firstname: Samuel
   lastname: Carlsson
   title: Utvecklare + Partner
@@ -29,7 +29,7 @@
   phone: 070 - 695 10 92
   does: "Ruby, Rails, Symfony, JavaScript"
 
-- stai:
+stai:
   firstname: Joakim
   lastname: Stai
   email: stai@kollegorna.se
@@ -40,7 +40,7 @@
   phone: 08 - 519 710 85
   does: "Drupal, JavaScript, serverkonfigurering och optimering"
 
-- filippos:
+filippos:
   firstname: Filippos
   lastname: Vasilakis
   email: filippos@kollegorna.se
@@ -49,7 +49,7 @@
   github: vasilakisfil
   does: "Ruby, Rails"
 
-- ivan:
+ivan:
   firstname: Ivan
   lastname: Novosad
   email: ivan@kollegorna.se
@@ -58,7 +58,7 @@
   github: ivannovosad
   does: "Ruby, Rails, Javascript"
 
-- urban:
+urban:
   firstname: Urban
   lastname: Sandén
   email: urban@kollegorna.se
@@ -67,7 +67,7 @@
   github: urre
   does: "Webb- & interaktionsdesign, front end, Javascript"
 
-- dennis:
+dennis:
   firstname: Dennis
   lastname: Carlsson
   email: dennis@kollegorna.se
@@ -76,7 +76,7 @@
   github: dencarlsson
   does: "Front end, Ruby, Rails"
 
-- raymall:
+raymall:
   firstname: Raymall
   lastname: Pérez
   email: raymall@kollegorna.se
@@ -85,14 +85,14 @@
   github: raymallperez
   does: "UI/UX design, front end"
 
-- eduardo:
+eduardo:
   firstname: Eduardo
   lastname: Nunes
   email: eduardo@kollegorna.se
   title: Frontend-utvecklare
   does: "UI/UX design, front end"
 
-- osvaldas:
+osvaldas:
   firstname: Osvaldas
   lastname: Valutis
   email: osvaldas@kollegorna.se
@@ -100,9 +100,16 @@
   does: "UI/UX design, front end"
   twitter: osvaldas
 
-- ricardo:
+ricardo:
   firstname: Ricardo
   lastname: Marques
   email: ricardo@kollegorna.se
   title: Utvecklare
   does: "Ruby, Rails, Javascript"
+
+nikolay:
+  firstname: Nikolay
+  lastname: Lechev
+  email: nikolay@kollegorna.se
+  title: Frontend-utvecklare
+  does: "UI/UX design, front end"

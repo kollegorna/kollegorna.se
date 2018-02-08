@@ -38,6 +38,8 @@
         color: $ds-color-black;
         display: inline-block;
         font-weight: 600;
+
+        &:hover { color: $ds-color-link; }
       }
 
       span {
@@ -61,6 +63,7 @@
 
       time {
         font-size: ds-rem-calc(16);
+
         @include media($mobile) {
           display: block;
           margin-top: 20px;
@@ -82,7 +85,7 @@
       @include clearfix;
       padding: ds-rem-calc(20);
       background: $ds-color-white;
-      border-radius: ds-rem-calc(10);
+      border-radius: ds-rem-calc(5);
       display: block;
       border: none;
       transition: box-shadow .15s linear;
@@ -166,8 +169,8 @@
       color: $ds-color-black;
 
       &:hover,
-      &:focus  { color: $ds-color-orange; }
-      &:active { color: $ds-color-orange; }
+      &:focus  { color: $ds-color-link; }
+      &:active { color: darken($ds-color-link, 5%); }
     }
 
     time {
@@ -227,7 +230,7 @@
         text-align: center;
         background: $ds-color-white;
         display: block;
-        margin: ds-rem-calc(20 0);
+        margin: ds-rem-calc(30 0 20);
         padding: ds-rem-calc(40 30 0 30);
         transition: box-shadow .15s linear;
 
@@ -253,6 +256,7 @@
 
     &__author {
       font-weight: 600;
+
       @include media($tablet) {
         @include span-columns(6);
         padding-right: 20px;
@@ -264,25 +268,11 @@
 
       .post-author {
         @extend %ds-clearfix;
-        margin-bottom: 15px;
-
-      	@media(max-width: 640px) {
-      		text-align: center;
-      		margin-top: 20px;
-      	}
-
-      	& + & {
-      		margin-top: 30px;
-      	}
       }
 
       .post-author__image {
         float: left;
         height: 50px;
-
-      	@media(max-width: 640px) {
-      		float: none;
-      	}
 
         img {
           @extend .polaroid;
@@ -303,6 +293,12 @@
       		float: none;
       		margin-top: 10px;
       	}
+
+        a {
+          &:hover {
+            color: $ds-color-link;
+          }
+        }
       }
     }
 

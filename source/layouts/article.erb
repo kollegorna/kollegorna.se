@@ -1,4 +1,8 @@
-<% wrap_layout :layout do %>
+<%
+  article_authors = current_article.data.author.is_a?(Array) ? current_article.data.author : [current_article.data.author]
+  article_authors = data.colleagues.reject{|k, v| !article_authors.include? k }.each
+  wrap_layout :layout do
+%>
 
 <main role="main">
   <article class="blog" role="article">
@@ -30,34 +34,17 @@
     <footer class="blog__footer">
       <div class="blog__footer__meta">
         <div class="blog__footer__author">
-          <% data.colleagues.each do |author| %>
-            <% if current_article.data.author.is_a?(Array) %>
-              <% current_article.data.author.each do |multiple_authors| %>
-                <% if multiple_authors == author['firstname'].downcase %>
-                  <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
-                    <div class="post-author__image">
-                      <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
-                    </div>
-                    <div class="post-author__name">
-                      <a property="email" href="mailto:<%= author['email'] %>">
-                        <span property="givenName"><%= author['firstname'] %></span>
-                        <span property="familyName"><%= author['lastname'] %></span></a>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            <% elsif author['firstname'].downcase == current_article.data.author %>
-              <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
-                <div class="post-author__image">
-                  <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
-                </div>
-                <div class="post-author__name">
-                  <a property="email" href="mailto:<%= author['email'] %>">
-                    <span property="givenName"><%= author['firstname'] %></span>
-                    <span property="familyName"><%= author['lastname'] %></span></a>
-                </div>
+          <% article_authors.each_with_index do |(k, author), i| %>
+            <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+              <div class="post-author__image">
+                <img property="image" src="<%= gravatar_for(author['email']) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
               </div>
-            <% end %>
+              <div class="post-author__name">
+                <a property="email" href="mailto:<%= author['email'] %>">
+                  <span property="givenName"><%= author['firstname'] %></span>
+                  <span property="familyName"><%= author['lastname'] %></span></a>
+              </div>
+            </div>
           <% end %>
         </div>
 
@@ -107,22 +94,25 @@
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
+    "image": "https://www.kollegorna.se<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
     "publisher": {
       "@type": "Organization",
       "name": "Kollegorna",
       "url": "https://www.kollegorna.se",
       "logo": "https://www.kollegorna.se<%= image_path "logo.svg" %>"
     },
-    "author": {
-      "@type": "Person",
-      "name": "Per Sandström",
-      "email": "mailto:per@kollegorna.se",
-      "address": "Karlbergsvägen 52, 113 37 Stockholm",
-      "telephone": "+46702420750",
-      "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
-      "image": "https://www.kollegorna.se<%= image_path "profile-images/per.jpg" %>"
-    }
+    "author": [
+      <% article_authors.each_with_index do |(k, author), i| %>
+        {
+          "@type": "Person",
+          "name": "<%= author['firstname'] %> <%= author['lastname'] %>",
+          "email": "mailto:<%= author['email'] %>",
+          "url": "https://www.kollegorna.se<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}/#{k}" %>",
+          "image": "https://www.kollegorna.se<%= image_path "profile-images/#{k}.jpg" %>"
+        }
+        <%= "," if article_authors.count-1 != i %>
+      <% end %>
+    ]
   }
 </script>
 
