@@ -1,6 +1,90 @@
 ---
 title: Kollegor
 description: "Vi är ett distribuerat team där alla är experter inom sitt område. Från Santo Domingo i väst till Plovdiv i öst med hjärtat i Stockholm. I nationsmixen finns Sverige, Grekland, Slovakien, Bulgarien, Litauen, Portugal och Dominikanska Republiken."
+page_type: colleagues
 ---
 
-<%= partial "partials/page_colleagues" %>
+<main role="main" class="colleagues">
+  <header class="colleagues__header">
+    <div class="colleagues__header__content">
+      <h1><%= t(:colleagues)[:slogan] %></h1>
+      <p><%= t(:colleagues)[:description] %></p>
+    </div>
+  </header>
+
+  <div class="colleagues__team">
+    <%= image_tag 'team/team.jpg' %>
+  </div>
+
+  <section class="colleagues__list">
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Dennis Carlsson",
+      :role   => "#{t(:colleagues)[:dennis][:role]}",
+      :image  => "dennis.jpg",
+      :link   => "/sv/kollegor/dennis"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Eduardo Nunes",
+      :role   => "#{t(:colleagues)[:eduardo][:role]}",
+      :image  => "eduardo.jpg",
+      :link   => "/sv/kollegor/eduardo"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Filippos Vasilakis",
+      :role   => "#{t(:colleagues)[:filippos][:role]}",
+      :image  => "filippos.jpg",
+      :link   => "/sv/kollegor/filippos"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Henrik Sjökvist",
+      :role   => "#{t(:colleagues)[:henrik][:role]}",
+      :image  => "henrik.jpg",
+      :link   => "/sv/kollegor/henrik"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Ivan Novosad",
+      :role   => "#{t(:colleagues)[:ivan][:role]}",
+      :image  => "ivan.jpg",
+      :link   => "/sv/kollegor/ivan"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Nikolay Lechev",
+      :role   => "#{t(:colleagues)[:nikolay][:role]}",
+      :image  => "nikolay.jpg",
+      :link   => "/sv/kollegor/nikolay"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Osvaldas Valutis",
+      :role   => "#{t(:colleagues)[:osvaldas][:role]}",
+      :image  => "osvaldas.jpg",
+      :link   => "/sv/kollegor/osvaldas"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Per Sandström",
+      :role   => "#{t(:colleagues)[:per][:role]}",
+      :image  => "per.jpg",
+      :link   => "/sv/kollegor/per"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Raymall Pérez",
+      :role   => "#{t(:colleagues)[:raymall][:role]}",
+      :image  => "raymall.jpg",
+      :link   => "/sv/kollegor/raymall"
+    }) %>
+
+    <%= partial("partials/colleague", :locals => {
+      :name   => "Ricardo Marques",
+      :role   => "#{t(:colleagues)[:ricardo][:role]}",
+      :image  => "ricardo.jpg",
+      :link   => "/sv/kollegor/ricardo"
+    }) %>
+  </section>
+</main>

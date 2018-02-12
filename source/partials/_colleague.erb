@@ -1,0 +1,25 @@
+<article class="block">
+  <div class="profile">
+    <div class="profile__box">
+      <a href="<%= link %>"><h1 class="name"><%= name %></h1></a>
+      <h2 class="title"><%= role %></h2>
+      <a class="link" href="<%= link %>"><%= t(:colleagues)[:more] %></a>
+    </div>
+
+    <figure class="profile__image">
+      <img src="<%= image_path("profile-images/#{image}") %>" alt="<%= name %>">
+    </figure>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "<%= name %>",
+        "jobTitle": "<%= role %>",
+        "image": "<%= image_path("profile-images/#{image}") %>",
+        "url": "https://www.kollegorna.se<%= link %>"
+      }
+    </script>
+
+  </div>
+</article>

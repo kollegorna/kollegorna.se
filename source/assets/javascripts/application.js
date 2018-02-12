@@ -5,6 +5,7 @@
 //= require lazyLoadGoogleMaps.js/jquery.lazyLoadGoogleMaps.js
 //= require fitvids/jquery.fitvids.js
 //= require mapbox.js/mapbox.js
-//= require svg-injector/dist/svg-injector.min.js
+//= require "svg4everybody/dist/svg4everybody"
+//  require svg-injector/dist/svg-injector.min.js
 //= require application/app
 //= require application/map

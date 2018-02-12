@@ -49,7 +49,7 @@
           left: 0;
         }
       }
-    } 
+    }
   }
 }
 
@@ -62,8 +62,14 @@
   font-size: ds-rem-calc(18);
   padding: 40px 20px;
 
-  @include media($laptop) { padding: 60px 20px; text-align: left; }
+  @include media($tablet) {
+    padding: 60px 20px;
+    text-align: left;
+    @include iphonex-notch;
+  }
   @include media($desktop) { padding: 60px 0; }
+
+  @include iphonex-notch;
 
   h4 {
     font-size: ds-rem-calc(14);
@@ -94,20 +100,14 @@
   }
 
   &__logo {
-    width: 50px;
-    float: left;
-    margin-bottom: 20px;
-
-    @include media($laptop) { margin-right: 10px; }
+    @include span-columns(12);
 
     svg {
       width: 50px;
       height: 50px;
     }
 
-    @include span-columns(12);
-
-    @include media($laptop) {
+    @include media($tablet) {
       @include span-columns(3);
     }
   }
@@ -115,7 +115,10 @@
   &__contacts {
     @include span-columns(12);
 
-    @include media($laptop) {
+    @include media($mobile) {
+      margin-top: 20px;
+    }
+    @include media($tablet) {
       @include span-columns(3);
     }
   }
@@ -123,12 +126,33 @@
   &__navigation {
     @include span-columns(12);
 
-    @include media($laptop) {
+    @include media($mobile) {
+      position: relative;
+      padding-top: 15px;
+      margin-top: 15px;
+
+      &:before {
+        width: 150px;
+        height: 1px;
+        background-color: rgba($ds-color-white, .1);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include media($tablet) {
       @include span-columns(3);
     }
 
     a {
       display: block;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -136,23 +160,18 @@
 .ar {
   @include direction-context(right-to-left) {
     .footer {
-      @include media($laptop) { text-align: right; }
+      @include media($tablet) {
+        text-align: right;
+      }
 
       &__container {
         @include outer-container;
       }
 
       &__logo {
-        float: right;
-
-        @include media($laptop) {
-          margin-right: 0px;
-          margin-left: 10px;
-        }
-
         @include span-columns(12);
 
-        @include media($laptop) {
+        @include media($tablet) {
           @include span-columns(3);
         }
       }
@@ -160,7 +179,7 @@
       &__contacts {
         @include span-columns(12);
 
-        @include media($laptop) {
+        @include media($tablet) {
           @include span-columns(3);
         }
       }
@@ -168,7 +187,7 @@
       &__navigation {
         @include span-columns(12);
 
-        @include media($laptop) {
+        @include media($tablet) {
           @include span-columns(3);
         }
       }

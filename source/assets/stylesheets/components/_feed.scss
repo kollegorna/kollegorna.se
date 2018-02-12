@@ -1,27 +1,35 @@
 .feed {
+  @include clearfix;
+  border: solid transparent; // because packery.js doesn't work with paddings
+  border-width: 0 10px;
+
   .block {
+    width: calc(100% - 20px);
+    float: left;
     overflow: hidden;
-    width: 100%;
     background: $ds-color-white;
     color: $ds-color-charcoal;
     text-align: center;
+    margin: 10px;
 
     @include media($tablet) {
-      width: 80%;
-      margin-left: 10%;
+      width: calc(50% - 20px);
     }
-    @include media($laptop) {
-      width: calc(50% - 10px);
-      margin-left: 0;
+    @include media($tablet-only) {
+      &:nth-child(2n+3) {
+        clear: left;
+      }
     }
     @include media($desktop) {
-      width: calc(33% - 10px);
-      margin-left: 0;
+      width: calc(33.333% - 20px);
+
+      &:nth-child(3n+4) {
+        clear: left;
+      }
     }
 
-    a {
-      display: block;
-      outline-offset: -10px;
+    &__text {
+      transition: transform .2s linear;
     }
 
     h3 {
@@ -61,6 +69,16 @@
       }
     }
 
+    a {
+      display: block;
+
+      &:hover {
+        .block__text {
+          transform: translateY(-5px);
+        }
+      }
+    }
+
     .author {
       font-family: $ds-font-family-complementary;
       font-weight: 300;
@@ -96,10 +114,12 @@
     // Case Studies
     // --
     &--case-study {
-      a{
+      a {
         color: inherit;
         display: block;
+        outline-offset: -10px;
         // background: $ds-color-charcoal;
+
         p.category { color: inherit; }
 
         &.full {
@@ -206,6 +226,14 @@
       }
 
       a { color: #1da1f2; }
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px 0 3px;
+      }
     }
 
     // --
@@ -238,5 +266,4 @@
   .decoration {
     background: transparent;
   }
-
 }

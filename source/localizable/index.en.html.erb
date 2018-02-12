@@ -1,9 +1,11 @@
 ---
+page_type: index
 ---
 
 <main role="main" class="index">
+
   <section class="index__hero">
-    <%= image_tag "index/hero.svg", :class => "inject-svg", :data => { fallback: image_path("index/hero.png")} %>
+    <%= inline_svg "index/hero" %>
     <div class="index__hero__headline">
       <p><%= t(:index)[:hello] %></p>
       <h1><%= t(:index)[:short_bio] %></h1>
@@ -11,16 +13,57 @@
   </section>
 
   <section class="index__feed">
-    <div id="gridloader">
+    <!-- <div id="gridloader">
       <div class="blob blob-0"></div>
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="blob blob-4"></div>
       <div class="blob blob-5"></div>
-    </div>
+    </div> -->
 
-    <div class="index__feed__blocks feed grid">
+    <div class="index__feed__blocks feed">
+
+      <%= partial("partials/feed/case_study", :locals => {
+          :title => "JustHostMe",
+          :text => "Branding and website design for JustHostMe, British Web hosting provider.",
+          :image => "feed/justhostme.jpg",
+          :background_color => "#a8394b",
+          :text_color => "#fdfffc",
+          :link => "/en/work/justhostme"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Kollegorna reviews 2017 — Part 1",
+          :text => "Our team looks back at the things we've liked best about 2017.",
+          :category => "You Might Also Like",
+          :link => "https://youmightalsolike.us/2017-in-review-part-1-our-consumer-highlights-74c1d268a841",
+          :image => "feed/yir1.jpg"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Hemlig Tomte helps everyone become Santa Claus",
+          :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
+          :category => "New Release",
+          :link => "https://blog.kollegorna.se/santa-as-a-service-fd664fe4b6c0",
+          :image => "feed/hemlig-tomte.png"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Personal Development Days November 2017",
+          :text => "Every sixth week we have something called Personal Development Days, starting on Thursday and ending on Monday. Here's what we did this time.",
+          :category => "Blog",
+          :link => "https://blog.kollegorna.se/personal-development-days-november-2017-5114a0386678",
+          :image => "feed/pdd-nov-17.jpeg"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "You Might Also Like",
+        :text => "Our brand new blog is a place for our remote team to talk anything but shop. We think you may like it.",
+        :category => "New Blog",
+        :link => "https://youmightalsolike.us/",
+        :image => "feed/ymal.png"
+      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Echo1",
@@ -32,12 +75,11 @@
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
-        :title => "Corporate Social Responsibility",
-        :text => "Get to know some of the ways we're trying to make the world just that little bit better.",
-        :category => "Sustainability",
-        :link => "/en/csr",
-        :background_color => "#f5f5f5",
-        :image => "feed/csr.jpg"
+        :title => "Welcome Ricardo!",
+        :text => "Olá Lisboa! Ricardo Marques has just joined our star-studded backend team.",
+        :category => "New colleague",
+        :link => "/en/2017/09/ricardo-marques/",
+        :image => "feed/ricardo.jpg"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
@@ -46,6 +88,15 @@
         :category => "What's next?",
         :link => "https://radar.kollegorna.se",
         :image => "feed/tech-radar-2017.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Corporate Social Responsibility",
+        :text => "Get to know some of the ways we're trying to make the world just that little bit better.",
+        :category => "Sustainability",
+        :link => "/en/csr",
+        :background_color => "#f5f5f5",
+        :image => "feed/csr.jpg"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -70,19 +121,21 @@
         <%= image_tag('feed/decoration/01.svg') %>
       </div>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Hello Rails Developers!",
-        :text => "Do you want a competitive salary, flexible work hours, being able to work from wherever you want, great benefits, amazing colleagues and lots of fun projects?",
-        :category => "Work here",
-        :link => "/en/2017/02/rails-developer/"
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Spoil Movies, Save Lives",
+        :text => "Getting people to talk about the importance of organ donation.",
+        :image => "feed/case-study-sm.jpg",
+        :background_color => "#202020",
+        :text_color => "white",
+        :link => "/en/work/spoil-movies-save-lives"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
-        :title => "Spoil movies instead of lives",
-        :text => "As an organ donor you can save up to eight lives. All it takes to become one is a status update.<br>DO IT!",
-        :category => "Campaign",
-        :link => "https://www.spoilmoviessavelives.com/en",
-        :image => "feed/spoil-movies-save-lives.jpg"
+        :title => "3+ years of Ember, 6 months of React",
+        :text => "One of our engineers tries React after years of working with Ember, and writes home about it. Buckle up!",
+        :image => "feed/ember-react.jpg",
+        :category => "Blog",
+        :link => "https://blog.kollegorna.se/3-years-of-ember-6-months-of-react-34ce909a5ce1"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -107,32 +160,9 @@
         <%= image_tag('feed/decoration/02.svg') %>
       </div>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Things Filippos has learned developing Ruby and Rails apps over the past 3+ years",
-        :text => "Some of the stuff our superstar backend dev Filippos has learned after more than three years working with Rails. Number 4 will surpr... just kidding :)",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2017/01/ruby-cool-things/"
-      }) %>
-
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Welcome Osvaldas!",
-        :text => "A christmas gift in advance, in the form of a UX designer and Front End Developer.",
-        :category => "New team mate",
-        :link => "/en/2016/12/osvaldas-valutis/",
-        :image => "feed/osvaldas.jpg"
-      }) %>
-
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/03.svg') %>
       </div>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "November's PDDs",
-        :text => "Every six weeks, we all take a break from work to focus on what we call Personal Development Days. Here's what we were up to this time...",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2016/11/november-pdd/"
-      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Vembi",
@@ -154,30 +184,6 @@
         :background_color => "#0d121e",
         :text_color => "#e0e9ff",
         :link => "/en/work/skl-genombrott"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Voicemail using Slack, S3, 46elks and dash of Go",
-        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
-      }) %>
-
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Releasefest",
-        :text => "A home for Swedish-born digital products.",
-        :image => "feed/case-study-releasefest.jpg",
-        :background_color => "#f7f9f9",
-        :text_color => "#005293",
-        :link => "/en/work/releasefest"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Our design process",
-        :text => "Check out our Dribbble account where you can follow the work of our designers.",
-        :category => "Eye candy",
-        :link => "https://dribbble.com/kollegorna",
-        :image => "feed/dribbble-hey.gif"
       }) %>
 
       <div class="block decoration" aria-hidden="true">

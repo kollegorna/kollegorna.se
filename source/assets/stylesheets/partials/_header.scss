@@ -2,15 +2,27 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
 .header {
   @include outer-container;
-  position: relative;
-  z-index: 9;
   font-family: $ds-font-family-complementary;
   font-size: ds-rem-calc(18);
   font-weight: 300;
   padding: 30px 20px;
+  position: relative;
+  z-index: 1000;
 
-  @include media($laptop)  { padding: 30px 20px; }
+  @include iphonex-notch;
+  max-width: 95%;
+
+  @include media($laptop)  {
+    @include outer-container;
+    padding: 30px 20px;
+  }
   @include media($desktop) { padding: 30px 0; }
+
+  html[data-page-type=index] & {
+    opacity: 0;
+    animation: header 1s 0.2s linear forwards;
+    will-change: opacity;
+  }
 
 
   // logo
@@ -28,9 +40,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       display: block;
 
       &:hover {
-        svg {
-          fill: $ds-color-green;
-        }
+        color: $ds-color-green;
       }
     }
 
@@ -58,6 +68,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       white-space: nowrap;
       overflow: hidden;
       float: right;
+      display: block;
       position: relative;
       -webkit-tap-highlight-color: transparent;
 
@@ -75,7 +86,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       }
 
       @include media($tablet) {
-        display: none !important;
+        display: none;
       }
 
       span {
@@ -140,7 +151,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       @include media($header-extra-mobile) {
         width: 200px;
       }
-      @include media($mobile) {
+      @include media($mobile-only) {
         width: 250px;
         height: 100%;
         background: $ds-color-charcoal;
@@ -149,14 +160,13 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
         position: fixed;
         top: 0;
         left: 100%;
-        z-index: 9;
         padding-top: 10px;
         transition: opacity 0.4s $easing-out-cubic;
 
         #{$this-active-target} &,
         #{$this-active-class}  & {
+          z-index: 5000;
           opacity: 1;
-          z-index: 10;
         }
         #{$this-active-target} & {
           right: 0;
@@ -208,6 +218,9 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
           color: $ds-color-link;
         }
       }
+      .is-selected a {
+        color: $ds-color-orange;
+      }
     }
   }
 
@@ -218,7 +231,6 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
     $this-active-target: "#{&}:target";
     $this-active-class:  "body.open-lang";
 
-    position: relative;
     float: right;
     padding-bottom: 10px;
     margin-top: 7px;
@@ -294,7 +306,7 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       #{$this-active-target} &,
       #{$this-active-class}  & {
         opacity: 1;
-        z-index: 10;
+        z-index: 5000;
       }
 
       #{$this-active-target} & {
@@ -311,11 +323,11 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
       }
 
       ul {
-        font-size: ds-rem-calc(14);
         width: 1200px;
-        margin: 0 auto;
         max-width: 100%;
+        font-size: ds-rem-calc(14);
         position: relative;
+        margin: 0 auto;
 
         @include media($desktop) {
           height: 50px;
@@ -378,11 +390,10 @@ $header-extra-mobile: new-breakpoint(max-width 350px);
 
 body {
   transition: transform 0.4s $easing-out-cubic;
-  will-change: transform;
 }
 
 body.open-nav {
-  @include media($mobile) {
+  @include media($mobile-only) {
     transform: translateX(-250px) scaleX(1);
 
     .ar & {
@@ -420,4 +431,8 @@ body.open-lang {
       transform: translateY(50px) scaleX(1);
     }
   }
+}
+
+@keyframes header {
+  100% { opacity: 1; }
 }

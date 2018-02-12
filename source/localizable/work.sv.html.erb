@@ -1,11 +1,19 @@
 ---
 title: Projekt
+page_type: work
 ---
 
 <main role="main" class="work">
   <h1 class="visuallyhidden"><%= current_page.data.title %></h1>
   <section class="work__projects">
     <div class="work__projects__blocks">
+      <%= partial("partials/project", :locals => {
+        :title => "Echo1",
+        :text => "Varumärke, UI/UX Design, Utveckling",
+        :image => "case/thumbnails/echo1.jpg",
+        :link => "/sv/projekt/echo1"
+      }) %>
+
       <%= partial("partials/project", :locals => {
         :title => "Edumedia Tunisie",
         :text => "Varumärke, UI/UX-Design, Utveckling",

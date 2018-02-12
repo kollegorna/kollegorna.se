@@ -1,10 +1,18 @@
 ---
 title: Projects
+page_type: work
 ---
 
 <main role="main" class="work">
   <section class="work__projects">
     <div class="work__projects__blocks">
+      <%= partial("partials/project", :locals => {
+        :title => "JustHostMe",
+        :text => "Branding, UI/UX Design, Web Development",
+        :image => "case/thumbnails/justhostme.jpg",
+        :link => "/en/work/justhostme"
+      }) %>
+
       <%= partial("partials/project", :locals => {
         :title => "Echo1",
         :text => "Branding, UI/UX Design, Web Development",
@@ -27,6 +35,13 @@ title: Projects
       }) %>
 
       <%= partial("partials/project", :locals => {
+        :title => "IIS Domains Campaign Manager",
+        :text => "UI/UX Design, Web Development",
+        :image => "case/thumbnails/iis.png",
+        :link => "/en/work/iis-domains-campaign"
+      }) %>
+
+      <%= partial("partials/project", :locals => {
         :title => "Valu8",
         :text => "UI/UX Design, Web Development",
         :image => "case/thumbnails/valu8.png",
@@ -38,6 +53,13 @@ title: Projects
         :text => "Branding, UI/UX Design, Web Development",
         :image => "case/thumbnails/celine-beyond.png",
         :link => "/en/work/celine-beyond"
+      }) %>
+
+      <%= partial("partials/project", :locals => {
+        :title => "Spoil Movies, Save Lives",
+        :text => "UI/UX Design, Web Development",
+        :image => "case/thumbnails/spoilmovies.jpg",
+        :link => "/en/work/spoil-movies-save-lives"
       }) %>
 
       <%= partial("partials/project", :locals => {
@@ -59,13 +81,6 @@ title: Projects
         :text => "Branding, UI/UX Design, Web Development",
         :image => "case/thumbnails/vembi.png",
         :link => "/en/work/vembi"
-      }) %>
-
-      <%= partial("partials/project", :locals => {
-        :title => "IIS Domains Campaign Manager",
-        :text => "UI/UX Design, Web Development",
-        :image => "case/thumbnails/iis.png",
-        :link => "/en/work/iis-domains-campaign"
       }) %>
 
       <%= partial("partials/project", :locals => {

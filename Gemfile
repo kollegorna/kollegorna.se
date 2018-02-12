@@ -10,3 +10,4 @@ gem "middleman-autoprefixer"
 gem "middleman-livereload"
 gem 'middleman-minify-html'
 gem 'redcarpet', '~> 3.2.3'
+gem 'json'

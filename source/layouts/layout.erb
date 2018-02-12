@@ -2,19 +2,27 @@
 
   meta_name        = "Kollegorna"
   meta_title       = t(:meta)[:title]
-  meta_description = current_page.data.description || t(:meta)[:description]
+  meta_description = h(current_page.data.description || t(:meta)[:description])
   meta_og_img      = "https://www.kollegorna.se#{image_path current_page.data.share_image || "meta/og-image.jpg"}"
-  meta_og_title    = current_page.data.title || meta_title
+  meta_og_title    = h(current_page.data.title || meta_title)
+  page_type        = current_page.data.page_type || ''
+  date = DateTime.now.to_date
+  begin
+    date = Date.parse(current_page.data.date.to_s)
+  rescue Exception => _
+  end
+  date = date.strftime('%Y-%m-%d')
 
 %><!DOCTYPE html>
-<html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>">
+<html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>" data-page-type="<%= page_type %>">
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title><%= current_page.data.title ? "#{current_page.data.title} | #{meta_name}" : "#{meta_name} | #{meta_title}" %></title>
   <meta name="description" content="<%= meta_description %>">
+  <meta name="date" content="<%= date %>" scheme="YYYY-MM-DD">
 
   <!-- preconnect, dns-prefetch, prefetch, preload -->
   <link rel="preconnect" href="https://cloud.typography.com">
@@ -72,15 +80,47 @@
   <!-- Other social networks -->
   <link rel="image_src" href="<%= meta_og_img %>" />
 
+  <!--  CSS -->
   <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
 
-  <script>
-    var APP_BUILD        = '<%= get_build_time %>',
-        APP_ENV          = '<%= environment %>',
-        FONTS_FILE_WOFF  = '<%= asset_path :css, "fonts/woff.css" %>',
-        FONTS_FILE_WOFF2 = '<%= asset_path :css, "fonts/woff2.css" %>';
-  </script>
+  <% if I18n.locale == :ar %>
+    <style>
+      @font-face {
+          font-family: "Noto Kufi Arabic";
+          src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot');
+          src: font-url('notokufiarabic/notokufiarabic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.woff2') format('woff2'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.woff') format('woff'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.ttf') format('truetype'),
+               font-url('notokufiarabic/notokufiarabic-regular-webfont.svg#svgFontName') format('svg');
+          font-weight: 400;
+          font-style: normal;
+      }
+      @font-face {
+        font-family: "Noto Kufi Arabic";
+        src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot');
+        src: font-url('notokufiarabic/notokufiarabic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.woff2') format('woff2'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.woff') format('woff'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.ttf') format('truetype'),
+             font-url('notokufiarabic/notokufiarabic-bold-webfont.svg#svgFontName') format('svg');
+        font-weight: 700;
+        font-style: normal;
+      }
+    </style>
+  <% end %>
+
+  <!-- JS -->
+  <% #Enable this when we'll be able to use the fonts in an async manner %>
+  <!--
+    <script>
+      var APP_BUILD        = '<%= get_build_time %>',
+          APP_ENV          = '<%= environment %>',
+          FONTS_FILE_WOFF  = '<%= asset_path :css, "fonts/woff.css" %>',
+          FONTS_FILE_WOFF2 = '<%= asset_path :css, "fonts/woff2.css" %>';
+    </script>
+  -->
 
   <%= inline_javascript "head" %>
 
@@ -104,7 +144,7 @@
 
   <%= partial "partials/footer" %>
 
-  <% if current_page.data.page_type == "work-item" %>
+  <% if page_type == "work-item" %>
 
     <script type="application/ld+json">
       {
@@ -152,7 +192,7 @@
     <script>
       if(navigator.serviceWorker) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/serviceworker.js', {scope: '/'});
+          navigator.serviceWorker.register('/serviceworker2.js', {scope: '/'});
           if(navigator.serviceWorker.controller) {
             navigator.serviceWorker.controller.postMessage({'command': 'trimCaches'});
           }
