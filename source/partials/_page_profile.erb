@@ -1,0 +1,111 @@
+<main role="main" class="person">
+  <header class="person__hero">
+    <%= inline_svg "profile/profile-hero" %>
+  </header>
+
+  <section class="person__card">
+    <figure class="person__card__image">
+      <img src="<%= image_path("profile-images/#{image}") %>" alt="Person">
+    </figure>
+
+    <div class="person__card__background colleague-map" data-lat="<%= locLat %>" data-lng="<%= locLng %>"></div>
+
+    <h1 class="person__card__name"><%= name %></h1>
+    <h2 class="person__card__title"><%= role %></h2>
+
+    <div class="person__card__contact">
+      <a href="mailto:<%= email %>"><%= email %></a>
+      <% if phone.present? %>
+        <a href="tel:<%= phoneUri %>"><%= phone %></a>
+      <% end %>
+    </div>
+
+    <div class="person__card__description">
+      <p><%= intro %></p>
+    </div>
+
+    <div class="person__card__links">
+      <% if links.present? %>
+        <% links.each do |linkKey, link| %>
+          <a href="<%= link[:link] %>">
+            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-<%= linkKey %>"></use></svg>
+            <%= link[:name] %>
+          </a>
+        <% end %>
+      <% end %>
+
+      <% if web[:name].present? %>
+        <a class="web" href="<%= web[:link] %>">
+          <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-web"></use></svg>
+          <span><%= web[:name] %></span>
+        </a>
+      <% end %>
+    </div>
+
+    <div class="person__card__location">
+      <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-pin"></use></svg>
+      <%= location %>
+    </div>
+  </section>
+
+  <section class="person__skills">
+    <div class="row">
+    <% if main_expertise.present? %>
+      <div class="person__skills__list">
+        <h3 class="title title--yellow"><%= t(:colleagues)[:skills][:main_expertise] %></h3>
+        <ul>
+          <% main_expertise.each do |skillKey, skill| %>
+            <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if platforms.present? %>
+      <div class="person__skills__list">
+        <h3 class="title title--orange"><%= t(:colleagues)[:skills][:platforms] %></h3>
+        <ul>
+          <% platforms.each do |skillKey, skill| %>
+            <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+
+    <div class="row">
+    <% if languages_frameworks.present? %>
+      <div class="person__skills__list">
+        <h3 class="title title--red"><%= t(:colleagues)[:skills][:languages_frameworks] %></h3>
+        <ul>
+          <% languages_frameworks.each do |skillKey, skill| %>
+            <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if techniques.present? %>
+      <div class="person__skills__list">
+        <h3 class="title title--blue"><%= t(:colleagues)[:skills][:techniques] %></h3>
+        <ul>
+          <% techniques.each do |skillKey, skill| %>
+            <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+
+    <% if tools.present? %>
+      <div class="person__skills__list">
+        <h3 class="title title--green"><%= t(:colleagues)[:skills][:tools] %></h3>
+        <ul>
+          <% tools.each do |skillKey, skill| %>
+            <li><%= skill[:name] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</main>

@@ -1,0 +1,282 @@
+$jhm-blue--dark: #020027 !default;
+$jhm-blue: #0E2C5E;
+$jhm-red: #D0343E;
+$jhm-mint: #E2FDEF;
+$jhm-beige: #F9FBF2;
+$jhm-white: #FFFFFF;
+
+.case--justhostme {
+
+  .logo {
+    background: $jhm-beige;
+    text-align: center;
+    padding: ds-rem-calc(160) ds-rem-calc(20);
+
+    img {
+      width: ds-rem-calc(1100);
+    }
+  }
+
+  .objects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vw 100vw 50vw;
+    grid-template-areas:
+      "flag flag"
+      "phone hp"
+      "mini mini";
+
+    @include media($tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vw 50vw 50vw;
+      grid-template-areas:
+        "flag hp"
+        "phone hp"
+        "phone mini";
+    }
+
+    @include media($desktop) {
+      grid-template-rows: 25vw 25vw 25vw;
+    }
+
+    @include media($huge) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 25vw 25vw;
+      grid-template-areas:
+        "phone flag hp"
+        "phone mini hp";
+    }
+
+    .item {
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 auto;
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      &--flag {
+        grid-area: flag;
+        background-color: $jhm-blue--dark;
+        img { max-height: 70%; }
+
+        @include media($tablet) {
+          img { max-width: ds-rem-calc(318); }
+        }
+        @include media($huge) {
+          background: $jhm-blue;
+        }
+      }
+      &--mini {
+        grid-area: mini;
+        background-color: $jhm-red;
+        img { max-width: 70%; }
+
+        @include media($tablet) {
+          img { max-width: ds-rem-calc(446); }
+        }
+        @include media($huge) {
+          background: $jhm-beige;
+        }
+      }
+      &--hp {
+        grid-area: hp;
+        background-color: $jhm-blue;
+
+        @include media($tablet) {
+          img { max-width: ds-rem-calc(186); }
+        }
+        @include media($huge) {
+          background: $jhm-red;
+        }
+      }
+      &--phone {
+        grid-area: phone;
+        background-color: $jhm-beige;
+
+        @include media($tablet) {
+          img { max-width: ds-rem-calc(368); }
+        }
+        @include media($huge) {
+          background: $jhm-blue--dark;
+        }
+      }
+    }
+  }
+
+  .homepage {
+    position: relative;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(50);
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 95%;
+      background: $jhm-blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__image {
+      position: relative;
+      max-width: ds-rem-calc(1340);
+      overflow: hidden;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.10), 0 0 10px 0 rgba(0,0,0,0.05);
+      margin: 0 auto;
+
+      @include media($tablet) {
+        border-radius: ds-rem-calc(10);
+      }
+    }
+  }
+
+  .grid {
+    margin-top: ds-rem-calc(10);
+    text-align: center;
+
+    @include media($tablet) {
+      margin-top: ds-rem-calc(50);
+    }
+
+    img {
+      width: ds-rem-calc(1200);
+    }
+  }
+
+  .comparison {
+    background: $jhm-beige;
+    margin-top: ds-rem-calc(20);
+    padding: ds-rem-calc(20) 0;
+    text-align: center;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(80) ds-rem-calc(40);
+    }
+
+    img {
+      width: ds-rem-calc(1100);
+    }
+  }
+
+  .love {
+    background: $jhm-blue;
+    text-align: center;
+
+    @include media($tablet) {
+      padding: ds-rem-calc(50);
+    }
+
+    img {
+      width: ds-rem-calc(1200);
+
+      @include media($tablet) {
+        border-radius: ds-rem-calc(20);
+      }
+    }
+  }
+
+  .branded {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mini"
+      "cards"
+      "matches";
+
+    @include media($tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vw 50vw;
+      grid-template-areas:
+        "mini mini"
+        "cards matches";
+    }
+
+    @include media($desktop) {
+      grid-template-rows: 50vw 50vw;
+      grid-template-areas:
+        "mini mini"
+        "cards matches";
+    }
+
+    @include media($huge) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .item {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: ds-rem-calc(50);
+
+      img {
+        margin: 0 auto;
+        max-width: 95%;
+        max-height: 90%;
+      }
+
+      &--mini {
+        grid-area: mini;
+        background-color: $jhm-beige;
+
+        @include media($tablet) {
+          img { max-width: 80%; }
+        }
+      }
+      &--cards {
+        grid-area: cards;
+        background-color: $jhm-blue;
+      }
+      &--matches {
+        grid-area: matches;
+        background-color: $jhm-blue--dark;
+      }
+    }
+  }
+}
+
+@keyframes dasharray {
+  0% { stroke-dashoffset: -4600px; }
+  40% { stroke-dashoffset: 0; }
+  60% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 4600px; }
+}
+@keyframes black_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, 10px);
+  }
+}
+@keyframes red_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(250px, -100px);
+  }
+}
+@keyframes yellow_orb {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, -100px);
+  }
+}
+@keyframes orange_orb {
+  0% {
+    transform: rotate(25deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-225deg) translate(-50px, 50px);
+  }
+}

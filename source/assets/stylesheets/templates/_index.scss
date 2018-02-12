@@ -90,6 +90,8 @@
     transform: translateY(50px);
     animation: index-feed 1s 0.4s $easing-out-back forwards;
 
+    @include iphonex-notch;
+
     h2 {
       font-family: $ds-font-family-complementary;
       font-size: ds-rem-calc(16);

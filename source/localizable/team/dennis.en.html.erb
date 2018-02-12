@@ -1,0 +1,84 @@
+---
+title: Dennis Carlsson
+description: "We're a distributed team where everyone is an expert in their field. From Santo Domingo in the west to Plovdiv in the east with our heart in Stockholm. In our blend of nationalities you find Sweden, Greece, Slovakia, Bulgaria, Lithuania, Portugal and the Dominican Republic."
+---
+
+<%= partial("partials/page_profile", :locals => {
+    :name         => "Dennis Carlsson",
+    :image        => "dennis.jpg",
+    :role         => "#{t(:colleagues)[:dennis][:role]}",
+    :email        => "dennis@kollegorna.se",
+    :phone        => "",
+    :phoneUri     => "",
+    :intro        => "#{t(:colleagues)[:dennis][:intro]}",
+    :location     => "Falkenberg, #{t(:colleagues)[:country_sweden]}",
+    :locLat       => "56.9027",
+    :locLng       => "12.4888",
+    :links        => {
+      :github    => {
+        :name     => "dencarlsson",
+        :link     => "https://github.com/dencarlsson"
+      },
+      :twitter   => {
+        :name     => "@dencarlsson",
+        :link     => "https://twitter.com/dencarlsson"
+      }
+    },
+    :web          => {
+      :name       => "denniscarlsson.com",
+      :link       => "http://denniscarlsson.com/"
+    },
+    :main_expertise => {
+      :skill_1    => {
+        :name     => "Front-end development"
+      }
+    },
+    :platforms    => {
+      :skill_1    => {
+        :name     => "Heroku"
+      },
+      :skill_2    => {
+        :name     => "DigitalOcean"
+      }
+    },
+    :languages_frameworks => {
+      :skill_1    => {
+        :name     => "Rails"
+      },
+      :skill_2    => {
+        :name     => "Ruby"
+      },
+      :skill_3    => {
+        :name     => "Javascript"
+      },
+      :skill_4    => {
+        :name     => "CSS"
+      },
+      :skill_5    => {
+        :name     => "Symfony"
+      }
+    },
+    :techniques   => {
+      :skill_1    => {
+        :name     => "Responsive Design & Development"
+      },
+      :skill_2    => {
+        :name     => "Trial & Error (think Dark Souls)"
+      }
+    },
+    :tools        => {
+      :skill_1    => {
+        :name     => "Terminal"
+      },
+      :skill_2    => {
+        :name     => "Vim"
+      },
+      :skill_3    => {
+        :name     => "Sketch"
+      },
+      :skill_4    => {
+        :name     => "Pen & Paper"
+      }
+    }
+}) %>
+

@@ -7,10 +7,11 @@
   },
   "devDependencies": {
     "bower": "~1.7.2",
-    "browser-sync": "~2.11.0",
+    "browser-sync": "~2.23.5",
     "fs": "0.0.2",
     "gulp": "~3.9.0",
     "gulp-util": "~3.0.5",
-    "gulp-imagemin": "3.3.0"
+    "gulp-imagemin": "3.3.0",
+    "qs": "~> 1.0.0"
   }
 }

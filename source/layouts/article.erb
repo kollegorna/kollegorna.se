@@ -1,15 +1,25 @@
 <% wrap_layout :layout do %>
 
 <main role="main">
-
   <article class="blog" role="article">
-
     <header class="blog__header blog__header--article">
       <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a></span>
       <h1><%= current_article.title %></h1>
       <time datetime="<%= current_article.date.strftime('%FT%R') %>">
         <%= current_article.date.strftime('%Y-%m-%d') %>
       </time>
+
+      <% if I18n.locale == :en %>
+        <div class="blog__header__medium">
+          <a href="https://blog.kollegorna.se">
+
+              <h2>Want to read newer posts?<br>
+                <span class="cta">Find us on Medium.</span></h2>
+
+              <%= image_tag "blog/medium-2.jpg" %>
+          </a>
+        </div>
+      <% end %>
     </header>
 
     <div class="blog__content">
@@ -19,10 +29,35 @@
     <footer class="blog__footer">
       <div class="blog__footer__meta">
         <div class="blog__footer__author">
-          <a href="mailto:per@kollegorna.se">
-            <img src="<%= image_path('avatars/per.jpg') %>" alt="Per Sandström">
-            Per Sandström
-          </a>
+          <% data.colleagues.each do |author| %>
+            <% if current_article.data.author.is_a?(Array) %>
+              <% current_article.data.author.each do |multiple_authors| %>
+                <% if multiple_authors == author['firstname'].downcase %>
+                  <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+                    <div class="post-author__image">
+                      <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
+                    </div>
+                    <div class="post-author__name">
+                      <a property="email" href="mailto:<%= author['email'] %>">
+                        <span property="givenName"><%= author['firstname'] %></span>
+                        <span property="familyName"><%= author['lastname'] %></span></a>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            <% elsif author['firstname'].downcase == current_article.data.author %>
+              <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+                <div class="post-author__image">
+                  <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
+                </div>
+                <div class="post-author__name">
+                  <a property="email" href="mailto:<%= author['email'] %>">
+                    <span property="givenName"><%= author['firstname'] %></span>
+                    <span property="familyName"><%= author['lastname'] %></span></a>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
         </div>
         <div class="blog__footer__rss">
           <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
@@ -31,9 +66,21 @@
           </a>
         </div>
       </div>
-      <div class="blog__footer__more">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
-      </div>
+
+      <% if I18n.locale == :en %>
+        <a href="https://blog.kollegorna.se">
+          <div class="blog__footer__medium">
+            <h2>Want to read newer posts?<br>
+              Find us on Medium.</h2>
+
+            <%= image_tag "blog/medium.png" %>
+          </div>
+        </a>
+      <% else %>
+        <div class="blog__footer__more">
+          <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
+        </div>
+      <% end %>
     </footer>
 
     <% if !current_article.data.disable_comments %>
@@ -74,7 +121,7 @@
       "address": "Karlbergsvägen 52, 113 37 Stockholm",
       "telephone": "+46702420750",
       "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
-      "image": "https://www.kollegorna.se<%= image_path "avatars/per.jpg" %>"
+      "image": "https://www.kollegorna.se<%= image_path "profile-images/per.jpg" %>"
     }
   }
 </script>

@@ -14,7 +14,7 @@ share_image: case/genombrott/workplace.png
       <p class="highlight">Genombrott is a comprehensive tool for healthcare professionals from the Swedish Association of Local Authorities and Regions (SKL), currently being evaluated within psychiatric care.</p>
 
       <div class="additional">
-        <p>SKL wanted to create a digital tool that supports work of change within the Swedish healthcare. The method is based on the Breakthrough Series from The Institute for Healthcare Improvement. The tool helps the workplaces to collect ideas, complete projects (called PDSA:s – plan, do, study, act) based on these, study the outcome and the make a decision whether that idea should be incorporated in the operations permanently.</p>
+        <p>SKL wanted to create a digital tool that supports work of change within the Swedish healthcare. The method is based on the Breakthrough Series from The Institute for Healthcare Improvement. The tool helps the workplaces to collect ideas, complete projects (called PDSA's, short for Plan, Do, Study, Act) based on these, study the outcome and then make a decision whether that idea should be incorporated in the operations permanently.</p>
 
         <p>Genombrott was released in a first version in November 2014 and was by then primarily used by the psychiatric care. Since then other healthcare areas has begun using the tool and we've improved it based on the feedback obtained from those tests.</p>
 
@@ -69,53 +69,39 @@ share_image: case/genombrott/workplace.png
     </div>
   </section>
 
-  <section class="case__feed">
-    <div id="gridloader">
-      <div class="blob blob-0"></div>
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-      <div class="blob blob-4"></div>
-      <div class="blob blob-5"></div>
+  <section class="case__study case--genombrott">
+    <div class="photos">
+      <%= image_tag('case/genombrott/01.jpg') %>
+      <%= image_tag('case/genombrott/02.jpg', :class => "half") %>
+      <%= image_tag('case/genombrott/03.jpg', :class => "half") %>
+      <%= image_tag('case/genombrott/04.jpg') %>
+      <%= image_tag('case/genombrott/06.jpg') %>
     </div>
+    <div class="video">
+      <%= partial("partials/feed/vimeo", :locals => {
+        :video => "https://player.vimeo.com/video/119757512?title=0&byline=0&portrait=0"
+      }) %>
+    </div>
+    <div class="artboards">
+
+      <%= image_tag('case/genombrott/05.jpg') %>
+    </div>
+  </section>
+
+  <%# We might bring back the feed later on... %>
+  <!-- section class="case__feed">
     <div class="feed grid">
 
       <%= partial("partials/feed/vimeo", :locals => {
-        :video => "https://player.vimeo.com/video/123012724?title=0&byline=0&portrait=0"
+        :video => "https://player.vimeo.com/video/119757512?title=0&byline=0&portrait=0"
       }) %>
 
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/workplace.png",
-        :caption => "Every workplace have their own dashboard."
-      }) %>
-
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/stats.png",
-        :caption => "Stats for different periods."
-      }) %>
-
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/survey.png",
-        :caption => "After performing different changes these can be evaluated by creating surveys."
-      }) %>
-
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/periods.png",
-        :caption => "All workplaces can setup measurement periods that fits their operations."
-      }) %>
-
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/pdsa-overview.png",
-        :caption => "Quick and simple overview of differents PDSA:s."
-      }) %>
-
-      <%= partial("partials/feed/image", :locals => {
-        :image => "case/genombrott/inspiration.png",
-        :caption => "After performing a PDSA it can be shared within a global library for inspiration that's accessible to all workplaces using the tool."
+      <%= partial("partials/feed/tweet", :locals => {
+        :link => "https://twitter.com/catrinhagerholm/status/791355897050238976"
       }) %>
 
     </div>
-  </section>
+  </section -->
   <!-- / .case__media -->
 </article>
 <!-- / .case -->
