@@ -142,7 +142,6 @@
   <%= partial "partials/footer" %>
 
   <% if page_type == "work-item" %>
-
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -160,7 +159,6 @@
         }
       }
     </script>
-
   <% end %>
 
   <script type="application/ld+json">
@@ -185,7 +183,6 @@
   <%= javascript_include_tag "application", defer: true %>
 
   <% if production? %>
-
     <script>
       if(navigator.serviceWorker) {
         window.addEventListener('load', function() {
@@ -196,7 +193,6 @@
         });
       }
     </script>
-
   <% end %>
 </body>
 </html>
