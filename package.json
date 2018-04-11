@@ -17,6 +17,7 @@
   "dependencies": {
     "bourbon-neat": "^1.8.0",
     "disqusLoader.js": "osvaldasvalutis/disqusLoader.js",
+    "fg-loadcss": "^2.0.1",
     "fitvids": "^2.0.0",
     "imagesloaded": "~4.1.4",
     "jquery": "~3.3.1",

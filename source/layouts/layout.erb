@@ -80,8 +80,11 @@
   <link rel="image_src" href="<%= meta_og_img %>" />
 
   <!--  CSS -->
-  <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
+  <link as="style" href="https://cloud.typography.com/6077114/7879172/css/fonts.css" onload="this.rel='stylesheet'" rel="preload" />
+  <noscript>
+    <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
+  </noscript>
 
   <% if I18n.locale == :ar %>
     <style>

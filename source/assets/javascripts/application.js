@@ -6,5 +6,7 @@
 //= require fitvids/dist/fitvids.min.js
 //= require svg4everybody/dist/svg4everybody
 //  require svg-injector/dist/svg-injector.min.js
+//= require fg-loadcss/src/loadCSS.js
+//= require fg-loadcss/src/cssrelpreload.js
 //= require application/app
 //= require application/map
