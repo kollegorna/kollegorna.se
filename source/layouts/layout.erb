@@ -81,10 +81,15 @@
 
   <!--  CSS -->
   <%= stylesheet_link_tag "application" %>
+
   <link as="style" href="https://cloud.typography.com/6077114/7879172/css/fonts.css" onload="this.rel='stylesheet'" rel="preload" />
   <noscript>
     <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   </noscript>
+
+  <% if page_type == "map" %>
+    <link as="style" href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" onload="this.rel='stylesheet'" rel="preload" />
+  <% end %>
 
   <% if I18n.locale == :ar %>
     <style>
@@ -184,7 +189,6 @@
   </script>
 
   <% if page_type == "map" %>
-    <%= stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" %>
     <%= javascript_include_tag "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js", defer: true %>
   <% end %>
 
