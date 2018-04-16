@@ -23,6 +23,13 @@ page_type: index
 
     <div class="index__feed__blocks feed">
       <%= partial("partials/feed/blog", :locals => {
+          :title => "Din guide i krogdjungeln",
+          :text => "Nöjesguidens krogrecensioner finns nu smakfullt paketerade i en app för iOS och Android.",
+          :category => "Case",
+          :link => "https://ng.se/app",
+          :image => "feed/ng-app.jpg"
+        }) %>
+      <%= partial("partials/feed/blog", :locals => {
           :title => "Alla får vara tomte i jul",
           :text => "Hemlig Tomte är en Secret Santa-tjänst som hjälper dig att anordna detta skojiga julklappsutbyte.",
           :category => "Case",
