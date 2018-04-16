@@ -1,11 +1,12 @@
 //= require jquery
 //= require packery/dist/packery.pkgd.min.js
 //= require imagesloaded/imagesloaded.pkgd.min.js
-//= require disqusLoader.js/jquery.disqusloader.js
+//  require disqusLoader.js/jquery.disqusloader.js
 //= require lazyLoadGoogleMaps.js/jquery.lazyLoadGoogleMaps.js
-//= require fitvids/jquery.fitvids.js
-//= require mapbox.js/mapbox.js
-//= require "svg4everybody/dist/svg4everybody"
+//= require fitvids/dist/fitvids.min.js
+//= require svg4everybody/dist/svg4everybody
 //  require svg-injector/dist/svg-injector.min.js
+//= require fg-loadcss/src/loadCSS.js
+//= require fg-loadcss/src/cssrelpreload.js
 //= require application/app
 //= require application/map

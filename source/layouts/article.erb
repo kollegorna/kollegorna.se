@@ -1,9 +1,11 @@
-<% wrap_layout :layout do %>
+<%
+  article_authors = current_article.data.author.is_a?(Array) ? current_article.data.author : [current_article.data.author]
+  article_authors = data.colleagues.reject{|k, v| !article_authors.include? k }.each
+  wrap_layout :layout do
+%>
 
 <main role="main">
-
   <article class="blog" role="article">
-
     <header class="blog__header blog__header--article">
       <span><a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:nav)[:blog] %></a></span>
       <h1><%= current_article.title %></h1>
@@ -12,6 +14,19 @@
       </time>
     </header>
 
+    <% if I18n.locale == :en %>
+      <div class="blog__medium">
+        <a href="https://blog.kollegorna.se">
+          <h2>Want to read newer posts?<br><span class="cta">Find us on Medium.</span></h2>
+          <div class="-logos">
+            <svg><title>Kollegorna</title><use xlink:href="<%= image_path("sprite.svg") %>#icon-logo"></use></svg>
+            <span>+</span>
+            <svg><title>Medium</title><use xlink:href="<%= image_path("sprite.svg") %>#icon-medium"></use></svg>
+          </div>
+        </a>
+      </div>
+    <% end %>
+
     <div class="blog__content">
       <%= yield %>
     </div>
@@ -19,53 +34,37 @@
     <footer class="blog__footer">
       <div class="blog__footer__meta">
         <div class="blog__footer__author">
-          <% data.colleagues.each do |author| %>
-            <% if current_article.data.author.is_a?(Array) %>
-              <% current_article.data.author.each do |multiple_authors| %>
-                <% if multiple_authors == author['firstname'].downcase %>
-                  <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
-                    <div class="post-author__image">
-                      <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
-                    </div>
-                    <div class="post-author__name">
-                      <a property="email" href="mailto:<%= author['email'] %>">
-                        <span property="givenName"><%= author['firstname'] %></span>
-                        <span property="familyName"><%= author['lastname'] %></span></a>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-            <% elsif author['firstname'].downcase == current_article.data.author %>
-              <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
-                <div class="post-author__image">
-                  <img property="image" src="<%= gravatar_for( author['email'] ) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
-                </div>
-                <div class="post-author__name">
-                  <a property="email" href="mailto:<%= author['email'] %>">
-                    <span property="givenName"><%= author['firstname'] %></span>
-                    <span property="familyName"><%= author['lastname'] %></span></a>
-                </div>
+          <% article_authors.each_with_index do |(k, author), i| %>
+            <div class="post-author" property="author" vocab="http://schema.org/" typeof="Person">
+              <div class="post-author__image">
+                <img property="image" src="<%= gravatar_for(author['email']) %>" alt="Bild på <%= author['firstname'] %> <%= author['lastname'] %>">
               </div>
-            <% end %>
+              <div class="post-author__name">
+                <a property="email" href="mailto:<%= author['email'] %>">
+                  <span property="givenName"><%= author['firstname'] %></span>
+                  <span property="familyName"><%= author['lastname'] %></span></a>
+              </div>
+            </div>
           <% end %>
         </div>
-        <div class="blog__footer__rss">
-          <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
-            <%= t(:blog)[:subscribe_rss] %>
-            <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg>
-          </a>
-        </div>
+
+        <% if I18n.locale == :sv %>
+          <div class="blog__footer__rss">
+            <a href="/<%= I18n.locale %>/<%= t(:paths)[:feed] %>" class="blog-rss-link">
+              <%= t(:blog)[:subscribe_rss] %>
+              <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-rss"></use></svg>
+            </a>
+          </div>
+        <% end %>
       </div>
 
       <% if I18n.locale == :en %>
-        <a href="https://blog.kollegorna.se">
-          <div class="blog__footer__medium">
-            <h2>Want to read newer posts?<br>
-              Find us on Medium.</h2>
-
+        <div class="blog__footer__medium">
+          <a href="https://blog.kollegorna.se">
+            <h2>Want to read newer posts?<br>Find us on Medium.</h2>
             <%= image_tag "blog/medium.png" %>
-          </div>
-        </a>
+          </a>
+        </div>
       <% else %>
         <div class="blog__footer__more">
           <a href="/<%= I18n.locale %>/<%= t(:paths)[:blog] %>/"><%= t(:blog)[:back_to_list] %></a>
@@ -74,11 +73,9 @@
     </footer>
 
     <% if !current_article.data.disable_comments %>
-
-    <div class="blog__comments">
-      <div class="disqus">Loading comments &hellip;</div>
-    </div>
-
+      <div class="blog__comments">
+        <div class="disqus">Loading comments &hellip;</div>
+      </div>
     <% end %>
 
   </article>
@@ -97,22 +94,25 @@
     "dateModified": "<%= current_article.date.strftime('%Y-%m-%d') %>",
     "description": "<%= current_article.data.description %>",
     "articleBody": <%= yield.to_json %>,
-    "image": "<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
+    "image": "https://www.kollegorna.se<%= current_article.data.image.present? ? current_article.data.image : image_path('meta/og-image.jpg') %>",
     "publisher": {
       "@type": "Organization",
       "name": "Kollegorna",
       "url": "https://www.kollegorna.se",
       "logo": "https://www.kollegorna.se<%= image_path "logo.svg" %>"
     },
-    "author": {
-      "@type": "Person",
-      "name": "Per Sandström",
-      "email": "mailto:per@kollegorna.se",
-      "address": "Karlbergsvägen 52, 113 37 Stockholm",
-      "telephone": "+46702420750",
-      "url": "<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}#per" %>",
-      "image": "https://www.kollegorna.se<%= image_path "profile-images/per.jpg" %>"
-    }
+    "author": [
+      <% article_authors.each_with_index do |(k, author), i| %>
+        {
+          "@type": "Person",
+          "name": "<%= author['firstname'] %> <%= author['lastname'] %>",
+          "email": "mailto:<%= author['email'] %>",
+          "url": "https://www.kollegorna.se<%= "/#{I18n.locale}/#{t(:paths)[:colleagues]}/#{k}" %>",
+          "image": "https://www.kollegorna.se<%= image_path "profile-images/#{k}.jpg" %>"
+        }
+        <%= "," if article_authors.count-1 != i %>
+      <% end %>
+    ]
   }
 </script>
 

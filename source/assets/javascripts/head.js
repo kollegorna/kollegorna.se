@@ -1,5 +1,3 @@
-//= require "modernizr/modernizr.custom"
-
 // TODO: Enable this when we'll be able to use the fonts in an async manner
 // ;(function() {
 //

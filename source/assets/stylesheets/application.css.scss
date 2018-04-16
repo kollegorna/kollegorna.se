@@ -1,12 +1,12 @@
-//=require mapbox.js/mapbox.css
+//require mapbox.js/theme/style.css
 
 @charset "utf-8";
 
 // --
 // Libraries
 // --
-@import "normalize-scss/normalize";
-@import "neat/app/assets/stylesheets/neat";
+@import "normalize-scss/sass/normalize/import-now";
+@import "bourbon-neat/app/assets/stylesheets/neat";
 
 // --
 // Kollegorna Design System

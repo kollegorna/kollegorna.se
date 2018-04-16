@@ -8,7 +8,7 @@
       this.miscInits();
       this.mobileNav();
       this.bindClicks();
-      this.initComments();
+      // this.initComments();
       this.fitVids();
       this.setupMaps();
       this.setupFeed();
@@ -224,24 +224,24 @@
     // },
 
 
-    initComments: function() {
-
-      var url = window.location.origin + window.location.pathname;
-
-      $.disqusLoader( '.disqus', {
-        scriptUrl: '//kollegorna.disqus.com/embed.js',
-        disqusConfig: function() {
-          this.page.url         = url;
-          this.page.identifier  = url;
-        }
-      });
-
-    },
+    // initComments: function() {
+    //
+    //   var url = window.location.origin + window.location.pathname;
+    //
+    //   $.disqusLoader( '.disqus', {
+    //     scriptUrl: '//kollegorna.disqus.com/embed.js',
+    //     disqusConfig: function() {
+    //       this.page.url         = url;
+    //       this.page.identifier  = url;
+    //     }
+    //   });
+    //
+    // },
 
 
     fitVids: function() {
 
-      $('.blog__content, .case__study').fitVids();
+      fitvids('.blog__content, .case__study');
 
     },
 
@@ -299,6 +299,7 @@
 
 
     fetchLabsPosts: function() {
+      return; // DISABLED
 
       var $list = $('.js--labs-posts-fetch');
       if(!$list.length) return;

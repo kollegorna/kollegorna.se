@@ -1,4 +1,10 @@
-<% page_type = current_page.data.page_type || '' %>
+<%
+  nav = {
+    "/#{I18n.locale}/#{t(:paths)[:work]}/" => t(:nav)[:work],
+    "/#{I18n.locale}/#{t(:paths)[:about]}/" => t(:nav)[:about],
+    "/#{I18n.locale}/#{t(:paths)[:colleagues]}/" => t(:nav)[:colleagues]
+  }
+%>
 
 <header class="header" role="banner">
 
@@ -12,19 +18,17 @@
     <a class="header__nav__tgl" href="#header-nav" role="button" title="<%= t(:nav)[:nav_show] %>" aria-label="<%= t(:nav)[:nav_show] %>" id="header-nav-tgl">
       <span></span>
     </a>
+
     <a class="header__nav__tgl" href="#header-nav-tgl" role="button" title="<%= t(:nav)[:nav_hide] %>" aria-label="<%= t(:nav)[:nav_hide] %>">
       <span></span>
     </a>
+
     <ul class="header__nav__list">
-      <li class="<%= 'is-selected' if page_type.start_with?('work') %>">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:work] %>/"><%= t(:nav)[:work] %></a>
-      </li>
-      <li class="<%= 'is-selected' if page_type == 'about' %>">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:about] %>/"><%= t(:nav)[:about] %></a>
-      </li>
-      <li class="<%= 'is-selected' if page_type == 'colleagues' %>">
-        <a href="/<%= I18n.locale %>/<%= t(:paths)[:colleagues] %>/"><%= t(:nav)[:colleagues] %></a>
-      </li>
+      <% nav.each_pair do |key, val| %>
+        <li class="<%= "is-selected" if current_page.url.start_with?(key) %>">
+          <a href="<%= key %>"><%= val %></a>
+        </li>
+      <% end %>
     </ul>
   </nav>
 

@@ -23,6 +23,46 @@ page_type: index
     </div> -->
 
     <div class="index__feed__blocks feed">
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Taste this",
+          :text => "A well cooked app for iOS and Android that serves Nöjesguidens restaurant reviews.",
+          :category => "Case",
+          :link => "https://ng.se/app",
+          :image => "feed/ng-app.jpg"
+        }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+          :title => "JustHostMe",
+          :text => "Branding and website design for JustHostMe, British Web hosting provider.",
+          :image => "feed/justhostme.jpg",
+          :background_color => "#a8394b",
+          :text_color => "#fdfffc",
+          :link => "/en/work/justhostme"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Kollegorna reviews 2017 — Part 1",
+          :text => "Our team looks back at the things we've liked best about 2017.",
+          :category => "You Might Also Like",
+          :link => "https://youmightalsolike.us/2017-in-review-part-1-our-consumer-highlights-74c1d268a841",
+          :image => "feed/yir1.jpg"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Hemlig Tomte helps everyone become Santa Claus",
+          :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
+          :category => "New Release",
+          :link => "https://blog.kollegorna.se/santa-as-a-service-fd664fe4b6c0",
+          :image => "feed/hemlig-tomte.png"
+        }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Personal Development Days November 2017",
+          :text => "Every sixth week we have something called Personal Development Days, starting on Thursday and ending on Monday. Here's what we did this time.",
+          :category => "Blog",
+          :link => "https://blog.kollegorna.se/personal-development-days-november-2017-5114a0386678",
+          :image => "feed/pdd-nov-17.jpeg"
+        }) %>
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "You Might Also Like",
@@ -50,20 +90,20 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
+        :title => "Tech Radar 2017",
+        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
+        :category => "What's next?",
+        :link => "https://radar.kollegorna.se",
+        :image => "feed/tech-radar-2017.png"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
         :title => "Corporate Social Responsibility",
         :text => "Get to know some of the ways we're trying to make the world just that little bit better.",
         :category => "Sustainability",
         :link => "/en/csr",
         :background_color => "#f5f5f5",
         :image => "feed/csr.jpg"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Tech Radar 2017",
-        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
-        :category => "What's next?",
-        :link => "https://radar.kollegorna.se",
-        :image => "feed/tech-radar-2017.png"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -95,6 +135,14 @@ page_type: index
         :background_color => "#202020",
         :text_color => "white",
         :link => "/en/work/spoil-movies-save-lives"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "3+ years of Ember, 6 months of React",
+        :text => "One of our engineers tries React after years of working with Ember, and writes home about it. Buckle up!",
+        :image => "feed/ember-react.jpg",
+        :category => "Blog",
+        :link => "https://blog.kollegorna.se/3-years-of-ember-6-months-of-react-34ce909a5ce1"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -143,13 +191,6 @@ page_type: index
         :background_color => "#0d121e",
         :text_color => "#e0e9ff",
         :link => "/en/work/skl-genombrott"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Voicemail using Slack, S3, 46elks and dash of Go",
-        :text => "Telemarketers love to harvest phone numbers from the Swedish company registry. Our contact details there used to include Per's mobile phone number, which over time became a threat to his sanity.",
-        :category => "Labs",
-        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
       }) %>
 
       <div class="block decoration" aria-hidden="true">

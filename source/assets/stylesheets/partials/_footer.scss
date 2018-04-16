@@ -57,13 +57,17 @@
   color: darken( $ds-color-white, 20 );
   background: $ds-color-charcoal;
   text-align: center;
-  position: relative;
-  z-index: 9;
   font-size: ds-rem-calc(18);
   padding: 40px 20px;
 
-  @include media($tablet) { padding: 60px 20px; text-align: left; }
+  @include media($tablet) {
+    padding: 60px 20px;
+    text-align: left;
+    @include iphonex-notch;
+  }
   @include media($desktop) { padding: 60px 0; }
+
+  @include iphonex-notch;
 
   h4 {
     font-size: ds-rem-calc(14);

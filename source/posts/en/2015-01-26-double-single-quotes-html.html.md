@@ -16,6 +16,6 @@ All victories should be honored, no matter the size.
 
 Remember this the next time you copy and paste the code snippet from Google Fonts…
 
-![screenshot from Google Fonts](/images/2015/2015-01-26-double-single-quotes-html.png)
+![screenshot from Google Fonts](/images/posts/double-single-quotes-html/google-fonts.png)
 
 *Update 2015-01-26: [This clever pull request](https://github.com/kollegorna/using-quotes-consistent-in-html/pull/1) points out that not using quotes at all shakes off even more weight. Well played sir.*
