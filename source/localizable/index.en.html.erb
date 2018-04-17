@@ -23,6 +23,13 @@ page_type: index
     </div> -->
 
     <div class="index__feed__blocks feed">
+      <%= partial("partials/feed/blog", :locals => {
+          :title => "Taste this",
+          :text => "A well cooked app for iOS and Android that serves Nöjesguidens restaurant reviews.",
+          :category => "Case",
+          :link => "https://ng.se/app",
+          :image => "feed/ng-app.jpg"
+        }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Surviving Mars",

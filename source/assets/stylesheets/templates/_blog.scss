@@ -349,10 +349,11 @@
     text-align: center;
     color: darken($ds-color-white, 50);
     margin-top: 40px;
+    display: none;
 
-    .no-js & {
-      display: none;
-    }
+    // .no-js & {
+    //   display: none;
+    // }
   }
 
   time {

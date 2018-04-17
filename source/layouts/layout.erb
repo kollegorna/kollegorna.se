@@ -14,7 +14,7 @@
   date = date.strftime('%Y-%m-%d')
 
 %><!DOCTYPE html>
-<html lang="<%= I18n.locale || "sv" %>" class="no-js <%= I18n.locale %>" data-page-type="<%= page_type %>">
+<html lang="<%= I18n.locale || "sv" %>" class="html--lang-<%= I18n.locale %>" data-page-type="<%= page_type %>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
@@ -80,8 +80,16 @@
   <link rel="image_src" href="<%= meta_og_img %>" />
 
   <!--  CSS -->
-  <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
   <%= stylesheet_link_tag "application" %>
+
+  <link as="style" href="https://cloud.typography.com/6077114/7879172/css/fonts.css" onload="this.rel='stylesheet'" rel="preload" />
+  <noscript>
+    <%= stylesheet_link_tag "https://cloud.typography.com/6077114/7879172/css/fonts.css" %>
+  </noscript>
+
+  <% if page_type == "map" %>
+    <link as="style" href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" onload="this.rel='stylesheet'" rel="preload" />
+  <% end %>
 
   <% if I18n.locale == :ar %>
     <style>
@@ -121,7 +129,7 @@
     </script>
   -->
 
-  <%= inline_javascript "head" %>
+  <%#= inline_javascript "head" %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -142,7 +150,6 @@
   <%= partial "partials/footer" %>
 
   <% if page_type == "work-item" %>
-
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -160,7 +167,6 @@
         }
       }
     </script>
-
   <% end %>
 
   <script type="application/ld+json">
@@ -182,10 +188,13 @@
     }
   </script>
 
+  <% if page_type == "map" %>
+    <%= javascript_include_tag "https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js", defer: true %>
+  <% end %>
+
   <%= javascript_include_tag "application", defer: true %>
 
   <% if production? %>
-
     <script>
       if(navigator.serviceWorker) {
         window.addEventListener('load', function() {
@@ -196,7 +205,6 @@
         });
       }
     </script>
-
   <% end %>
 </body>
 </html>

@@ -2,8 +2,14 @@
   &__content {
     @include outer-container;
     margin-bottom: 40px;
+
     @include media($laptop) {
       margin-bottom: 80px;
+    }
+
+    @include media($desktop) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -11,13 +17,9 @@
     @include span-columns(10);
     @include shift(1);
 
-    @include media($tablet) {
-      margin-left: 110px;
-    }
-
-    @include media($desktop) {
+    @include media($laptop) {
       @include span-columns(8);
-      @include shift(0);
+      @include shift(1);
     }
 
     h1 {
@@ -92,19 +94,15 @@
     transition: opacity .2s ease-in-out .1s, transform .2s ease-in-out .1s;
     transform: translateY(10px);
 
-    @include media($tablet) {
-      margin-left: 110px;
-    }
-
-    @include media($desktop) {
+    @include media($laptop) {
       @include span-columns(3);
       @include shift(0);
-      display: none;
     }
 
     &.visible {
       opacity: 1;
       transform: translateY(0);
+      display: block;
     }
 
     h3 {
@@ -137,14 +135,6 @@
     @include span-columns(10);
     @include shift(1);
     margin-top: 20px;
-
-    @include media($tablet) {
-      margin-left: 110px;
-    }
-
-    @include media($desktop) {
-      @include shift(0);
-    }
 
     a {
       margin-bottom: 10px;

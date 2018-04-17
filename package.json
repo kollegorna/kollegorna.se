@@ -13,5 +13,19 @@
     "gulp-util": "~3.0.5",
     "gulp-imagemin": "3.3.0",
     "qs": "~> 1.0.0"
+  },
+  "dependencies": {
+    "bourbon-neat": "^1.8.0",
+    "disqusLoader.js": "osvaldasvalutis/disqusLoader.js",
+    "fg-loadcss": "^2.0.1",
+    "fitvids": "^2.0.0",
+    "imagesloaded": "~4.1.4",
+    "jquery": "~3.3.1",
+    "kollegorna-design-system": "kollegorna/design-system",
+    "lazyLoadGoogleMaps.js": "osvaldasvalutis/lazyLoadGoogleMaps.js",
+    "normalize-scss": "~7.0.1",
+    "packery": "~2.1.1",
+    "svg-injector": "~1.1.3",
+    "svg4everybody": "^2.1.9"
   }
 }
