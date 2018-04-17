@@ -7,6 +7,13 @@ page_type: work
   <section class="work__projects">
     <div class="work__projects__blocks">
       <%= partial("partials/project", :locals => {
+        :title => "Surviving Mars",
+        :text => "UI/UX Design, Web Development",
+        :image => "case/thumbnails/surviving-mars.jpg",
+        :link => "/en/work/surviving-mars"
+      }) %>
+
+      <%= partial("partials/project", :locals => {
         :title => "JustHostMe",
         :text => "Branding, UI/UX Design, Web Development",
         :image => "case/thumbnails/justhostme.jpg",

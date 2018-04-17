@@ -1,0 +1,21 @@
+.case--surviving-mars {
+  background-color: #0b0102;
+  width: 100%;
+  overflow: hidden;
+
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      max-width: 120%;
+      margin-left: -10%;
+
+      @include media($tablet) {
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}

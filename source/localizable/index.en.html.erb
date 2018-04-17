@@ -32,29 +32,46 @@ page_type: index
         }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
-          :title => "JustHostMe",
-          :text => "Branding and website design for JustHostMe, British Web hosting provider.",
-          :image => "feed/justhostme.jpg",
-          :background_color => "#a8394b",
-          :text_color => "#fdfffc",
-          :link => "/en/work/justhostme"
-        }) %>
+        :title => "Surviving Mars",
+        :text => "Website design for Surviving Mars, space colony sim by Paradox Interactive & Haemimont Games.",
+        :image => "feed/case-study-mars.jpg",
+        :background_color => "#0a0204",
+        :text_color => "#fffcd0",
+        :link => "/en/work/surviving-mars"
+      }) %>
 
       <%= partial("partials/feed/blog", :locals => {
-          :title => "Kollegorna reviews 2017 — Part 1",
-          :text => "Our team looks back at the things we've liked best about 2017.",
-          :category => "You Might Also Like",
-          :link => "https://youmightalsolike.us/2017-in-review-part-1-our-consumer-highlights-74c1d268a841",
-          :image => "feed/yir1.jpg"
-        }) %>
+        :title => "Kollegorna reviews 2017 — Part 2",
+        :text => "Our team recalls some of their biggest personal breakthroughs from last year.",
+        :category => "You Might Also Like",
+        :link => "https://youmightalsolike.us/2017-in-review-part-2-our-personal-highlights-a072960073c",
+        :image => "feed/yir2.jpg"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "JustHostMe",
+        :text => "Branding and website design for JustHostMe, British Web hosting provider.",
+        :image => "feed/justhostme.jpg",
+        :background_color => "#a8394b",
+        :text_color => "#fdfffc",
+        :link => "/en/work/justhostme"
+      }) %>
 
       <%= partial("partials/feed/blog", :locals => {
-          :title => "Hemlig Tomte helps everyone become Santa Claus",
-          :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
-          :category => "New Release",
-          :link => "https://blog.kollegorna.se/santa-as-a-service-fd664fe4b6c0",
-          :image => "feed/hemlig-tomte.png"
-        }) %>
+        :title => "Kollegorna reviews 2017 — Part 1",
+        :text => "Our team looks back at the things we've liked best about 2017.",
+        :category => "You Might Also Like",
+        :link => "https://youmightalsolike.us/2017-in-review-part-1-our-consumer-highlights-74c1d268a841",
+        :image => "feed/yir1.jpg"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Hemlig Tomte helps everyone become Santa Claus",
+        :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
+        :category => "New Release",
+        :link => "https://blog.kollegorna.se/santa-as-a-service-fd664fe4b6c0",
+        :image => "feed/hemlig-tomte.png"
+      }) %>
 
       <%= partial("partials/feed/blog", :locals => {
           :title => "Personal Development Days November 2017",
