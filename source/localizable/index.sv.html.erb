@@ -22,6 +22,23 @@ page_type: index
     </div> -->
 
     <div class="index__feed__blocks feed">
+      <%= partial("partials/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/1012308279991693313"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Surviving Mars",
+        :text => "Kolonisera Mars (och försök överleva) i Paradox Interactives senaste storslagna rymdsaga.",
+        :image => "feed/case-study-mars.jpg",
+        :background_color => "#0a0204",
+        :text_color => "#fffcd0",
+        :link => "/en/work/surviving-mars"
+      }) %>
+
+      <%= partial("partials/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/996356994847182848"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
           :title => "Din guide i krogdjungeln",
           :text => "Nöjesguidens krogrecensioner finns nu smakfullt paketerade i en app för iOS och Android.",
@@ -29,6 +46,32 @@ page_type: index
           :link => "https://ng.se/app",
           :image => "feed/ng-app.jpg"
         }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Årskrönika 2017 — Del 2",
+        :text => "En sammanfattning av allas personliga höjdpunkter från året som gick.",
+        :category => "You Might Also Like",
+        :link => "https://youmightalsolike.us/2017-in-review-part-2-our-personal-highlights-a072960073c",
+        :image => "feed/yir2.jpg"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "JustHostMe",
+        :text => "Identitet och webb för JustHostMe, ett brittiskt hostingföretag.",
+        :image => "feed/justhostme.jpg",
+        :background_color => "#a8394b",
+        :text_color => "#fdfffc",
+        :link => "/en/work/justhostme"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Årskrönika 2017 — Del 1",
+        :text => "En översikt av det vi mest uppskattade som konsumenter från det gångna året.",
+        :category => "You Might Also Like",
+        :link => "https://youmightalsolike.us/2017-in-review-part-1-our-consumer-highlights-74c1d268a841",
+        :image => "feed/yir1.jpg"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
           :title => "Alla får vara tomte i jul",
           :text => "Hemlig Tomte är en Secret Santa-tjänst som hjälper dig att anordna detta skojiga julklappsutbyte.",
@@ -45,14 +88,6 @@ page_type: index
         :image => "feed/ymal.png"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Välkommen Ricardo!",
-        :text => "Olá Lisboa! Ricardo Marques har precis anslutit till vårt stjärnspäckade backend-team.",
-        :category => "Ny kollega",
-        :link => "/sv/2017/09/ricardo-marques/",
-        :image => "feed/ricardo.jpg"
-      }) %>
-
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Echo1",
         :text => "Identitet och webbplats för Echo1, en Singapore-baserad investerare i ljudrelaterade företag.",
@@ -61,6 +96,10 @@ page_type: index
         :text_color => "#fdfffc",
         :link => "/sv/projekt/echo1"
       }) %>
+
+      <div class="block decoration" aria-hidden="true">
+        <%= image_tag('feed/decoration/03.svg') %>
+      </div>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Edumedia Tunisie",
@@ -80,31 +119,6 @@ page_type: index
         :image => "feed/csr.jpg"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Snack ska bli verkstad!",
-        :text => "Bra idéer är ingen bristvara i Almedalen, men en idé är inte mycket värd utan utförande. Vi vill se till att fler idéer går från snack till verkstad.",
-        :category => "Almedalen 2017",
-        :link => "/sv/2017/07/snackverkstan-almedalen/",
-        :image => "feed/snackverkstan.png"
-      }) %>
-
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Valu8 Company Intelligence",
-        :text => "Från desktop till webb – utökad transparens och större insikt i onoterade bolag",
-        :image => "case/thumbnails/valu8-2.png",
-        :background_color => "#e6e6e6",
-        :text_color => "black",
-        :link => "/sv/projekt/valu8"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Tech Radar 2017",
-        :text => "Varje år gör vi en översikt av ny teknik som vi har fått upp ögonen för. Från och med detta år delar vi med oss av resultatet 🎁",
-        :category => "Inkommande…",
-        :link => "https://radar.kollegorna.se",
-        :image => "feed/tech-radar-2017.png"
-      }) %>
-
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/01.svg') %>
       </div>
@@ -115,14 +129,6 @@ page_type: index
         :category => "Skaffa nu!",
         :link => "https://snaskblock.se",
         :image => "feed/snaskblock.png"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Spoila filmer istället för liv",
-        :text => "Som organdonator kan du rädda upp till åtta liv. Allt som krävs för att bli en är en statusuppdatering. DO IT!",
-        :category => "Kampanj",
-        :link => "https://www.spoilmoviessavelives.com/sv",
-        :image => "feed/spoil-movies-save-lives.jpg"
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
@@ -148,57 +154,12 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
-        :title => "Releasefest",
-        :text => "Låt oss fira det digitala Sverige",
-        :image => "feed/case-study-releasefest.jpg",
-        :background_color => "#f7f9f9",
-        :text_color => "#005293",
-        :link => "/sv/projekt/releasefest"
-      }) %>
-
-      <%= partial("partials/feed/case_study", :locals => {
         :title => "Genombrott",
         :text => "Digitalt verktyg för förbättringsarbete inom vården",
         :image => "feed/case-study-skl.jpg",
         :background_color => "#0d121e",
         :text_color => "#e0e9ff",
         :link => "/sv/projekt/skl-genombrott"
-      }) %>
-
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Vembi",
-        :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
-        :image => "feed/case-study-vembi.jpg",
-        :background_color => "#FFFFFF",
-        :text_color => "#565656",
-        :link => "/sv/projekt/vembi"
-      }) %>
-
-      <div class="block decoration" aria-hidden="true">
-        <%= image_tag('feed/decoration/03.svg') %>
-      </div>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "En telefonsvarare med Slack, S3, 46elks och lite Go",
-        :text => "Telefonsförsäljare älskar att samla på sig telefonnummer från Bolagsverkets företagsregister. Förut använde vi Pers mobilnummer, vilket med tiden blev ett hot mot hans hälsa.",
-        :category => "Labb",
-        :link => "https://labs.kollegorna.se/blog/2015/10/voicemail-slack-s3-46elks-golang/"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Fungerande distribuerade team",
-        :text => "Sedan ett par år tillbaka så arbetar vi med fjärrteam som sitter utspridda över hela jorden. Så här gör vi för att arbeta effektivt.",
-        :category => "Distansarbete",
-        :link => "/sv/2015/11/fjarrteam/",
-        :image => "feed/lumbergh.svg"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/715079987515105281"
-      }) %>
-
-      <%= partial("partials/feed/tweet", :locals => {
-        :link => "https://twitter.com/kollegorna/status/708327597248290816"
       }) %>
 
       <div class="block decoration" aria-hidden="true">
