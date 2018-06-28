@@ -56,6 +56,33 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
+        :title => "Genombrott",
+        :text => "Vi utvecklar ett digitalt verktyg för SKL för förbättringsarbete inom vården",
+        :image => "feed/case-study-skl.jpg",
+        :background_color => "#0d121e",
+        :text_color => "#e0e9ff",
+        :link => "/sv/projekt/skl-genombrott"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Valu8 Company Intelligence",
+        :text => "Få bättre förståelse om privata bolag",
+        :image => "case/thumbnails/valu8-2.png",
+        :background_color => "#e6e6e6",
+        :text_color => "black",
+        :link => "/sv/projekt/valu8"
+      }) %>
+
+      <%= partial("partials/feed/blog", :locals => {
+        :title => "Vårt sociala ansvarstagande",
+        :text => "Att bidra till ett bättre samhälle är en fundamental del av vår företagskultur.",
+        :category => "Hållbarhet",
+        :link => "/en/csr",
+        :background_color => "#f5f5f5",
+        :image => "feed/csr.jpg"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
         :title => "JustHostMe",
         :text => "Identitet och webb för JustHostMe, ett brittiskt hostingföretag.",
         :image => "feed/justhostme.jpg",
@@ -72,13 +99,14 @@ page_type: index
         :image => "feed/yir1.jpg"
       }) %>
 
-      <%= partial("partials/feed/blog", :locals => {
-          :title => "Alla får vara tomte i jul",
-          :text => "Hemlig Tomte är en Secret Santa-tjänst som hjälper dig att anordna detta skojiga julklappsutbyte.",
-          :category => "Case",
-          :link => "https://hemligtomte.se",
-          :image => "feed/hemlig-tomte.png"
-        }) %>
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Vembi",
+        :text => "Fintech-startup som tillhandahåller unik ägarinformation för svenska onoterade aktiebolag.",
+        :image => "feed/case-study-vembi.jpg",
+        :background_color => "#FFFFFF",
+        :text_color => "#565656",
+        :link => "/sv/projekt/vembi"
+      }) %>
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "You Might Also Like",
@@ -111,25 +139,16 @@ page_type: index
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
-        :title => "Vårt sociala ansvarstagande",
-        :text => "Att bidra till ett bättre samhälle är en fundamental del av vår företagskultur.",
-        :category => "Hållbarhet",
-        :link => "/en/csr",
-        :background_color => "#f5f5f5",
-        :image => "feed/csr.jpg"
-      }) %>
+          :title => "Alla får vara tomte i jul",
+          :text => "Hemlig Tomte är en Secret Santa-tjänst som hjälper dig att anordna detta skojiga julklappsutbyte.",
+          :category => "Case",
+          :link => "https://hemligtomte.se",
+          :image => "feed/hemlig-tomte.png"
+        }) %>
 
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/01.svg') %>
       </div>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Slutsnaskat",
-        :text => "Handlar du hos Mathem eller Coop? Vår snaskblocker hjälper dig att shoppa sundare.",
-        :category => "Skaffa nu!",
-        :link => "https://snaskblock.se",
-        :image => "feed/snaskblock.png"
-      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Lanneberg Bexelius",
@@ -153,14 +172,7 @@ page_type: index
         :link => "/sv/projekt/celine-beyond"
       }) %>
 
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Genombrott",
-        :text => "Digitalt verktyg för förbättringsarbete inom vården",
-        :image => "feed/case-study-skl.jpg",
-        :background_color => "#0d121e",
-        :text_color => "#e0e9ff",
-        :link => "/sv/projekt/skl-genombrott"
-      }) %>
+
 
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/05.svg') %>
