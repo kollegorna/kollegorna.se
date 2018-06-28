@@ -40,6 +40,10 @@ page_type: index
         :link => "/en/work/surviving-mars"
       }) %>
 
+      <%= partial("partials/feed/tweet", :locals => {
+        :link => "https://twitter.com/kollegorna/status/996356994847182848"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Kollegorna reviews 2017 — Part 2",
         :text => "Our team recalls some of their biggest personal breakthroughs from last year.",
@@ -65,6 +69,24 @@ page_type: index
         :image => "feed/yir1.jpg"
       }) %>
 
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Genombrott",
+        :text => "Turning ideas into improvements in the Swedish healthcare system.",
+        :image => "feed/case-study-skl.jpg",
+        :background_color => "#0d121e",
+        :text_color => "#e0e9ff",
+        :link => "/en/work/skl-genombrott"
+      }) %>
+
+      <%= partial("partials/feed/case_study", :locals => {
+        :title => "Valu8 Company Intelligence",
+        :text => "Bringing transparency to the vast universe of unlisted companies",
+        :image => "case/thumbnails/valu8-2.png",
+        :background_color => "#e6e6e6",
+        :text_color => "black",
+        :link => "/en/work/valu8"
+      }) %>
+
       <%= partial("partials/feed/blog", :locals => {
         :title => "Hemlig Tomte helps everyone become Santa Claus",
         :text => "A SaaS (Santa as a Service) that helps you easily set up a Secret Santa exchange with your family, friends, neighbors and colleagues.",
@@ -72,14 +94,6 @@ page_type: index
         :link => "https://blog.kollegorna.se/santa-as-a-service-fd664fe4b6c0",
         :image => "feed/hemlig-tomte.png"
       }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-          :title => "Personal Development Days November 2017",
-          :text => "Every sixth week we have something called Personal Development Days, starting on Thursday and ending on Monday. Here's what we did this time.",
-          :category => "Blog",
-          :link => "https://blog.kollegorna.se/personal-development-days-november-2017-5114a0386678",
-          :image => "feed/pdd-nov-17.jpeg"
-        }) %>
 
       <%= partial("partials/feed/blog", :locals => {
         :title => "You Might Also Like",
@@ -96,22 +110,6 @@ page_type: index
         :background_color => "#252525",
         :text_color => "#fdfffc",
         :link => "/en/work/echo1"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Welcome Ricardo!",
-        :text => "Olá Lisboa! Ricardo Marques has just joined our star-studded backend team.",
-        :category => "New colleague",
-        :link => "/en/2017/09/ricardo-marques/",
-        :image => "feed/ricardo.jpg"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "Tech Radar 2017",
-        :text => "Every year, we ask the team to come up with a list of the tech they’re keeping an eye on. This year, we're sharing it with you 🎁",
-        :category => "What's next?",
-        :link => "https://radar.kollegorna.se",
-        :image => "feed/tech-radar-2017.png"
       }) %>
 
       <%= partial("partials/feed/blog", :locals => {
@@ -132,35 +130,9 @@ page_type: index
         :link => "/en/work/edumedia-tunisie"
       }) %>
 
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Valu8 Company Intelligence",
-        :text => "Bringing transparency to the vast universe of unlisted companies",
-        :image => "case/thumbnails/valu8-2.png",
-        :background_color => "#e6e6e6",
-        :text_color => "black",
-        :link => "/en/work/valu8"
-      }) %>
-
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/01.svg') %>
       </div>
-
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Spoil Movies, Save Lives",
-        :text => "Getting people to talk about the importance of organ donation.",
-        :image => "feed/case-study-sm.jpg",
-        :background_color => "#202020",
-        :text_color => "white",
-        :link => "/en/work/spoil-movies-save-lives"
-      }) %>
-
-      <%= partial("partials/feed/blog", :locals => {
-        :title => "3+ years of Ember, 6 months of React",
-        :text => "One of our engineers tries React after years of working with Ember, and writes home about it. Buckle up!",
-        :image => "feed/ember-react.jpg",
-        :category => "Blog",
-        :link => "https://blog.kollegorna.se/3-years-of-ember-6-months-of-react-34ce909a5ce1"
-      }) %>
 
       <%= partial("partials/feed/case_study", :locals => {
         :title => "Celine Beyond",
@@ -201,14 +173,6 @@ page_type: index
         <%= image_tag('feed/decoration/01.svg') %>
       </div>
 
-      <%= partial("partials/feed/case_study", :locals => {
-        :title => "Genombrott",
-        :text => "Turning ideas into improvements in the Swedish healthcare system.",
-        :image => "feed/case-study-skl.jpg",
-        :background_color => "#0d121e",
-        :text_color => "#e0e9ff",
-        :link => "/en/work/skl-genombrott"
-      }) %>
 
       <div class="block decoration" aria-hidden="true">
         <%= image_tag('feed/decoration/05.svg') %>
