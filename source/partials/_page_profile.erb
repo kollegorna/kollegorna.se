@@ -43,8 +43,9 @@
 
       <% if defined?(additional_links) %>
         <span class="additional-separator"></span>
+        <svg><use xlink:href="<%= image_path 'sprite.svg' %>#icon-link"></use></svg>
         <% additional_links.each do |linkKey, link| %>
-          <a class="additional" href="<%= link[:link] %>" target="_blank"><%= link[:name] %></a><br>
+          <a class="additional" href="<%= link[:link] %>" target="_blank"><%= link[:name] %></a>
         <% end %>
       <% end %>
     </div>
